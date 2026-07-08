@@ -14,9 +14,9 @@ def extract_domains(raw_input_path: Path, output_path: Path) -> list[str]:
     domains_table = pd.read_parquet(raw_input_path)
 
     # Print basic information about the dataset
-    print("Available columns:", list(domains_table.columns))
-    print("Preview:")
-    print(domains_table.head())
+    #print("Available columns:", list(domains_table.columns))
+    #print("Preview:")
+    #print(domains_table.head())
 
     # The uploaded dataset has a column called  "root_domain"
     # That column contains the domains

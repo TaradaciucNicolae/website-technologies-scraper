@@ -4,10 +4,10 @@ from pathlib import Path
 
 
 @dataclass
-class TechnologyEvidence: # Proof that explains why a technology was detected.
+class TechnologyEvidence: # Explanation that explains why a technology was detected.
     source: str
     matched: str
-    proof: str
+    explanation: str
 
 
 @dataclass
@@ -84,7 +84,7 @@ def detect_technologies(
     return detections
 
 
-# Collect all proof items for a single technology rule.
+# Collect all explanation items for a single technology rule.
 def collect_evidence_for_rule(
     rule: TechnologyRule,
     html_lower: str,
@@ -96,7 +96,7 @@ def collect_evidence_for_rule(
     evidence.extend(collect_html_evidence(html_lower, rule.html_signatures))
     evidence.extend(collect_header_evidence(normalized_headers, rule.header_signatures))
 
-    # Return all proof items found for this rule.
+    # Return all explanation items found for this rule.
     return evidence
 
 
@@ -118,7 +118,7 @@ def collect_html_evidence(
             TechnologyEvidence(
                 source="html",
                 matched=signature,
-                proof=f"Found '{signature}' in the HTML response."
+                explanation=f"Found '{signature}' in the HTML response."
             )
         )
     # Return HTML evidence items for the matched signatures.
@@ -155,11 +155,12 @@ def collect_header_evidence(
                 # Non-empty signature: the header value must contain it.
                 continue
 
+            # If signature is empty, the matched value stays empty because header presence was enough.
             evidence.append(
                 TechnologyEvidence(
                     source="headers",
-                    matched=f"{header_name}: {signature or '<present>'}",
-                    proof=(
+                    matched=f"{header_name}: {signature}",
+                    explanation=(
                         f"Found HTTP header '{header_name}' "
                         f"with value '{header_value}'."
                     ),
