@@ -3,17 +3,15 @@ from pathlib import Path
 # A Parquet file is basically a table, so pandas is a convenient tool here.
 import pandas as pd
 
-RAW_INPUT_PATH = Path("data/raw/domains.snappy.parquet")
-OUTPUT_PATH = Path("data/domains.txt")
 
-def main() -> None:
+def extract_domains(raw_input_path: Path, output_path: Path) -> list[str]:
 
-    if not RAW_INPUT_PATH.exists():
+    if not raw_input_path.exists():
         raise FileNotFoundError(
-            f"Input file not found: {RAW_INPUT_PATH}\n"
+            f"Input file not found: {raw_input_path}\n"
         )
-    
-    domains_table = pd.read_parquet(RAW_INPUT_PATH)
+
+    domains_table = pd.read_parquet(raw_input_path)
 
     # Print basic information about the dataset
     print("Available columns:", list(domains_table.columns))
@@ -27,7 +25,7 @@ def main() -> None:
     # Check that the expected column exists
     if DOMAIN_COLUMN not in domains_table.columns:
         raise ValueError(
-            f"Column '{DOMAIN_COLUMN}' was not found in {RAW_INPUT_PATH}.\n"
+            f"Column '{DOMAIN_COLUMN}' was not found in {raw_input_path}.\n"
         )
 
     # Selecting the domain column
@@ -56,19 +54,18 @@ def main() -> None:
     domain_list = domains.tolist()
 
     # Make sure the output folder exists
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
 
     # Write domains to the output file
     output_text = "\n".join(domain_list) + "\n"
 
-    OUTPUT_PATH.write_text(output_text, encoding="utf-8")
+    output_path.write_text(output_text, encoding="utf-8")
 
 
     # Summary:
-    print(f"Input file: {RAW_INPUT_PATH}")
+    print(f"Input file: {raw_input_path}")
     print(f"Extracted domains: {len(domain_list)}")
-    print(f"Output file: {OUTPUT_PATH}")
+    print(f"Output file: {output_path}")
 
+    return domain_list
 
-if __name__ == "__main__":
-    main()
