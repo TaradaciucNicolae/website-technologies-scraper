@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Shopify",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "html_signatures": ["cdn.shopify.com", "shopify"],
+    "header_signatures": {}
+  },
+  {
+    "name": "WordPress",
+    "category": "CMS",
+    "confidence": "high",
+    "html_signatures": ["wp-content", "wp-includes"],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Tag Manager",
+    "category": "Tag Manager",
+    "confidence": "high",
+    "html_signatures": ["googletagmanager.com", "gtm.js"],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cloudflare",
+    "category": "CDN / Security",
+    "confidence": "high",
+    "html_signatures": [],
+    "header_signatures": {
+      "server": ["cloudflare"],
+      "cf-ray": [""]
+    }
+  }
+]
