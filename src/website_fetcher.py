@@ -5,7 +5,8 @@ import requests
 @dataclass
 class WebsiteFetchResult:
     domain: str
-    attempted_url: str
+    attempted_urls: list[str]
+    successful_url: str | None
     final_url: str | None
     status_code: int | None
     headers: dict[str, str]
@@ -34,7 +35,8 @@ def fetch_website(domain: str, timeout_seconds: int = 10) -> WebsiteFetchResult:
 
             return WebsiteFetchResult( # Return the result if the request is successful
                 domain=domain,
-                attempted_url=attempted_url,
+                attempted_urls=attempted_urls,
+                successful_url=attempted_url,
                 final_url=response.url,
                 status_code=response.status_code,
                 headers=dict(response.headers),
@@ -48,7 +50,8 @@ def fetch_website(domain: str, timeout_seconds: int = 10) -> WebsiteFetchResult:
 
     return WebsiteFetchResult( # Return the result with error information if all attempts fail
         domain=domain,
-        attempted_url=f"https://{domain}",
+        attempted_urls=attempted_urls,
+        successful_url=None,
         final_url=None,
         status_code=None,
         headers={},
