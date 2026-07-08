@@ -1,4 +1,6 @@
 from pathlib import Path
+
+import json
 from src.extract_domains import extract_domains
 from src.website_fetcher import WebsiteFetchResult, fetch_website
 
@@ -11,6 +13,7 @@ from src.technology_detector import (
 RULES_PATH = Path("rules/technology_rules.json")
 RAW_INPUT_PATH = Path("data/raw/domains.snappy.parquet")
 DOMAINS_OUTPUT_PATH = Path("data/domains.txt")
+RESULTS_OUTPUT_PATH = Path("data/output/technology_detections_sample.json")
 
 
 def print_fetch_result(result: WebsiteFetchResult) -> None:
@@ -41,10 +44,55 @@ def print_detected_technologies(detections: list[TechnologyDetection]) -> None:
 
 
 
+
+
+def build_result_record(
+    fetch_result: WebsiteFetchResult,
+    detections: list[TechnologyDetection],
+) -> dict:
+    
+
+
+    technologies: list[dict] = []
+
+    for detection in detections:
+        evidence_items: list[dict] = []
+
+        for evidence in detection.evidence:
+            evidence_items.append(
+                {
+                    "source": evidence.source,
+                    "matched": evidence.matched,
+                    "explanation": evidence.explanation,
+                }
+            )
+
+        technologies.append(
+            {
+                "name": detection.name,
+                "category": detection.category,
+                "confidence": detection.confidence,
+                "evidence": evidence_items,
+            }
+        )
+
+    return {
+        "domain": fetch_result.domain,
+        "attempted_urls": fetch_result.attempted_urls,
+        "successful_url": fetch_result.successful_url,
+        "final_url": fetch_result.final_url,
+        "status_code": fetch_result.status_code,
+        "error": fetch_result.error,
+        "technologies_found": len(technologies),
+        "technologies": technologies,
+    }
+
+
+
 def main() -> None:
     domains = extract_domains(RAW_INPUT_PATH, DOMAINS_OUTPUT_PATH)
     rules = load_technology_rules(RULES_PATH)
-
+    results: list[dict] = []
 
     for domain in domains[:3]:
         domain = domain.strip()
@@ -62,9 +110,23 @@ def main() -> None:
         print_fetch_result(result)
         print_detected_technologies(detections)
 
+        results.append(build_result_record(result, detections))
 
 
+    RESULTS_OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    RESULTS_OUTPUT_PATH.write_text(json.dumps(results, indent=2),encoding="utf-8",)
+    print(f"Saved results to {RESULTS_OUTPUT_PATH}")
+    
+    different_technologies: set[str] = set()
 
+    for result_record in results:
+        technologies = result_record["technologies"]
+
+        for technology in technologies:
+            technology_name = technology["name"]
+            different_technologies.add(technology_name)
+
+    print(f"Different technologies found: {len(different_technologies)}")
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,138 @@
+[
+  {
+    "domain": "100wwcstlw.org",
+    "attempted_urls": [
+      "https://100wwcstlw.org"
+    ],
+    "successful_url": "https://100wwcstlw.org",
+    "final_url": "https://100wwcstlw.org/",
+    "status_code": 200,
+    "error": null,
+    "technologies_found": 1,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "CDN / Security",
+        "confidence": "high",
+        "evidence": [
+          {
+            "source": "headers",
+            "matched": "server: cloudflare",
+            "explanation": "Found HTTP header 'server' with value 'cloudflare'."
+          },
+          {
+            "source": "headers",
+            "matched": "cf-ray: ",
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1817f5e1898b9e7-otp'."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "domain": "11853prospecthill.com",
+    "attempted_urls": [
+      "https://11853prospecthill.com"
+    ],
+    "successful_url": "https://11853prospecthill.com",
+    "final_url": "https://11853prospecthill.com/",
+    "status_code": 200,
+    "error": null,
+    "technologies_found": 2,
+    "technologies": [
+      {
+        "name": "Google Tag Manager",
+        "category": "Tag Manager",
+        "confidence": "high",
+        "evidence": [
+          {
+            "source": "html",
+            "matched": "googletagmanager.com",
+            "explanation": "Found 'googletagmanager.com' in the HTML response."
+          },
+          {
+            "source": "html",
+            "matched": "gtm.js",
+            "explanation": "Found 'gtm.js' in the HTML response."
+          }
+        ]
+      },
+      {
+        "name": "Cloudflare",
+        "category": "CDN / Security",
+        "confidence": "high",
+        "evidence": [
+          {
+            "source": "headers",
+            "matched": "server: cloudflare",
+            "explanation": "Found HTTP header 'server' with value 'cloudflare'."
+          },
+          {
+            "source": "headers",
+            "matched": "cf-ray: ",
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1817f62bcd3c9e4-otp'."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "domain": "11thhourracing.org",
+    "attempted_urls": [
+      "https://11thhourracing.org"
+    ],
+    "successful_url": "https://11thhourracing.org",
+    "final_url": "https://11thhourracing.org/",
+    "status_code": 200,
+    "error": null,
+    "technologies_found": 3,
+    "technologies": [
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "confidence": "high",
+        "evidence": [
+          {
+            "source": "html",
+            "matched": "wp-includes",
+            "explanation": "Found 'wp-includes' in the HTML response."
+          }
+        ]
+      },
+      {
+        "name": "Google Tag Manager",
+        "category": "Tag Manager",
+        "confidence": "high",
+        "evidence": [
+          {
+            "source": "html",
+            "matched": "googletagmanager.com",
+            "explanation": "Found 'googletagmanager.com' in the HTML response."
+          },
+          {
+            "source": "html",
+            "matched": "gtm.js",
+            "explanation": "Found 'gtm.js' in the HTML response."
+          }
+        ]
+      },
+      {
+        "name": "Cloudflare",
+        "category": "CDN / Security",
+        "confidence": "high",
+        "evidence": [
+          {
+            "source": "headers",
+            "matched": "server: cloudflare",
+            "explanation": "Found HTTP header 'server' with value 'cloudflare'."
+          },
+          {
+            "source": "headers",
+            "matched": "cf-ray: ",
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1817f672de823c9-otp'."
+          }
+        ]
+      }
+    ]
+  }
+]
