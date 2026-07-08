@@ -94,7 +94,7 @@ def main() -> None:
     rules = load_technology_rules(RULES_PATH)
     results: list[dict] = []
 
-    for domain in domains[:3]:
+    for domain in domains:
         domain = domain.strip()
 
         if not domain:

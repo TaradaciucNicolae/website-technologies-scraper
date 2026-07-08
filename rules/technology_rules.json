@@ -3,21 +3,114 @@
     "name": "Shopify",
     "category": "Ecommerce",
     "confidence": "high",
-    "html_signatures": ["cdn.shopify.com", "shopify"],
+    "html_signatures": ["cdn.shopify.com", "shopify.theme", "shopify-features", "x-shopify"],
+    "header_signatures": {}
+  },
+  {
+    "name": "WooCommerce",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "html_signatures": ["woocommerce", "wc-cart-fragments", "wp-content/plugins/woocommerce"],
     "header_signatures": {}
   },
   {
     "name": "WordPress",
     "category": "CMS",
     "confidence": "high",
-    "html_signatures": ["wp-content", "wp-includes"],
+    "html_signatures": ["wp-content", "wp-includes", "content=\"wordpress"],
+    "header_signatures": {}
+  },
+  {
+    "name": "Wix",
+    "category": "CMS",
+    "confidence": "high",
+    "html_signatures": ["wixstatic.com", "wix-code", "x-wix"],
+    "header_signatures": {
+      "x-wix-request-id": [""]
+    }
+  },
+  {
+    "name": "Squarespace",
+    "category": "CMS",
+    "confidence": "high",
+    "html_signatures": ["static1.squarespace.com", "squarespace.com/universal", "squarespace"],
+    "header_signatures": {}
+  },
+  {
+    "name": "Webflow",
+    "category": "CMS",
+    "confidence": "high",
+    "html_signatures": ["webflow.js", "uploads-ssl.webflow.com", "data-wf-page"],
+    "header_signatures": {}
+  },
+  {
+    "name": "Weebly",
+    "category": "CMS",
+    "confidence": "high",
+    "html_signatures": ["weebly.com", "weeblycloud.com", "cdn2.editmysite.com"],
     "header_signatures": {}
   },
   {
     "name": "Google Tag Manager",
     "category": "Tag Manager",
     "confidence": "high",
-    "html_signatures": ["googletagmanager.com", "gtm.js"],
+    "html_signatures": ["googletagmanager.com/gtm.js", "gtm-"],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Analytics",
+    "category": "Analytics",
+    "confidence": "high",
+    "html_signatures": ["google-analytics.com/analytics.js", "googletagmanager.com/gtag/js", "gtag("],
+    "header_signatures": {}
+  },
+  {
+    "name": "Meta Pixel",
+    "category": "Marketing",
+    "confidence": "high",
+    "html_signatures": ["connect.facebook.net", "fbq(", "facebook pixel"],
+    "header_signatures": {}
+  },
+  {
+    "name": "Hotjar",
+    "category": "Analytics",
+    "confidence": "high",
+    "html_signatures": ["static.hotjar.com", "hotjar.com", "hjid"],
+    "header_signatures": {}
+  },
+  {
+    "name": "Klaviyo",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "html_signatures": ["static.klaviyo.com", "klaviyo", "learnq"],
+    "header_signatures": {}
+  },
+  {
+    "name": "HubSpot",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "html_signatures": ["js.hs-scripts.com", "js.hsforms.net", "hubspot"],
+    "header_signatures": {}
+  },
+  {
+    "name": "Mailchimp",
+    "category": "Email Marketing",
+    "confidence": "medium",
+    "html_signatures": ["list-manage.com", "mc-embedded-subscribe", "chimpstatic.com"],
+    "header_signatures": {}
+  },
+  {
+    "name": "Intercom",
+    "category": "Customer Support",
+    "confidence": "high",
+    "html_signatures": ["widget.intercom.io", "window.intercomsettings", "intercom("],
+    "header_signatures": {}
+  },
+  {
+    "name": "Zendesk",
+    "category": "Customer Support",
+    "confidence": "high",
+    "html_signatures": ["static.zdassets.com", "zendesk", "zopim.com"],
     "header_signatures": {}
   },
   {
@@ -27,7 +120,73 @@
     "html_signatures": [],
     "header_signatures": {
       "server": ["cloudflare"],
-      "cf-ray": [""]
+      "cf-ray": [""],
+      "cf-cache-status": [""]
     }
+  },
+  {
+    "name": "Vercel",
+    "category": "Hosting",
+    "confidence": "high",
+    "html_signatures": ["_next/static"],
+    "header_signatures": {
+      "server": ["vercel"],
+      "x-vercel-id": [""],
+      "x-vercel-cache": [""]
+    }
+  },
+  {
+    "name": "Netlify",
+    "category": "Hosting",
+    "confidence": "high",
+    "html_signatures": ["netlify"],
+    "header_signatures": {
+      "server": ["netlify"],
+      "x-nf-request-id": [""]
+    }
+  },
+  {
+    "name": "React",
+    "category": "JavaScript Framework",
+    "confidence": "medium",
+    "html_signatures": ["data-reactroot", "react-dom", "__react"],
+    "header_signatures": {}
+  },
+  {
+    "name": "Next.js",
+    "category": "JavaScript Framework",
+    "confidence": "high",
+    "html_signatures": ["__next_data__", "_next/static", "next-head-count"],
+    "header_signatures": {
+      "x-nextjs-cache": [""]
+    }
+  },
+  {
+    "name": "Vue.js",
+    "category": "JavaScript Framework",
+    "confidence": "medium",
+    "html_signatures": ["vue.js", "__vue__", "data-v-"],
+    "header_signatures": {}
+  },
+  {
+    "name": "Bootstrap",
+    "category": "CSS Framework",
+    "confidence": "medium",
+    "html_signatures": ["bootstrap.min.css", "bootstrap.min.js", "class=\"container"],
+    "header_signatures": {}
+  },
+  {
+    "name": "jQuery",
+    "category": "JavaScript Library",
+    "confidence": "high",
+    "html_signatures": ["jquery.min.js", "jquery.js", "jquery-migrate"],
+    "header_signatures": {}
+  },
+  {
+    "name": "reCAPTCHA",
+    "category": "Security",
+    "confidence": "high",
+    "html_signatures": ["google.com/recaptcha", "g-recaptcha", "recaptcha/api.js"],
+    "header_signatures": {}
   }
 ]
