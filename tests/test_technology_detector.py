@@ -41,7 +41,7 @@ class TechnologyDetectorTests(unittest.TestCase):
 
 
 
-    # Test detection using only the presence of a header.
+    # # Test detection using only a header value.
     def test_detects_cloudflare_from_header_value(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -86,7 +86,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertEqual(detections, [])
 
 
-    #   Test detection when HTML and headers contain multiple technology signatures.
+    # Test detection when HTML and headers contain multiple technology signatures.
     def test_detects_multiple_technologies_from_html_and_headers(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -111,7 +111,43 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Cloudflare", detected_names)
 
 
+    # Test that detection works even when HTML and headers use uppercase letters.
+    def test_detects_signatures_case_insensitively(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
 
+        detections = detect_technologies(
+            html='<script src="https://CDN.SHOPIFY.COM/app.js"></script>',
+            headers={"Server": "CLOUDFLARE"},
+            rules=rules,
+        )
+
+        detected_names = [detection.name for detection in detections]
+
+        self.assertIn("Shopify", detected_names)
+        self.assertIn("Cloudflare", detected_names)
+
+
+    # Test that a detected technology includes evidence explaining the match.
+    def test_detection_includes_evidence_details(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
+
+        detections = detect_technologies(
+            html='<script src="https://cdn.shopify.com/app.js"></script>',
+            headers={},
+            rules=rules,
+        )
+
+        shopify_detection = next(
+            detection
+            for detection in detections
+            if detection.name == "Shopify"
+        )
+
+        self.assertEqual(shopify_detection.category, "Ecommerce")
+        self.assertEqual(shopify_detection.confidence, "high")
+        self.assertGreater(len(shopify_detection.evidence), 0)
+        self.assertEqual(shopify_detection.evidence[0].source, "html")
+        self.assertEqual(shopify_detection.evidence[0].matched, "cdn.shopify.com")
 
 if __name__ == "__main__":
     unittest.main()
