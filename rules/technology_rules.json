@@ -4,6 +4,7 @@
     "category": "Ecommerce",
     "confidence": "high",
     "html_signatures": ["cdn.shopify.com", "shopify.theme", "shopify-features", "x-shopify"],
+    "cookie_signatures": ["_shopify", "_shopify_y", "_shopify_s", "_shopify_sa_t", "_shopify_sa_p"],
     "header_signatures": {}
   },
   {
@@ -11,6 +12,7 @@
     "category": "Ecommerce",
     "confidence": "high",
     "html_signatures": ["woocommerce", "wc-cart-fragments", "wp-content/plugins/woocommerce"],
+    "cookie_signatures": ["woocommerce_cart_hash", "woocommerce_items_in_cart", "wp_woocommerce_session"],
     "header_signatures": {}
   },
   {
@@ -18,6 +20,7 @@
     "category": "CMS",
     "confidence": "high",
     "html_signatures": ["wp-content", "wp-includes", "content=\"wordpress"],
+    "cookie_signatures": ["wordpress_", "wp-settings", "wp_logged_in"],
     "header_signatures": {}
   },
   {
@@ -25,6 +28,7 @@
     "category": "CMS",
     "confidence": "high",
     "html_signatures": ["wixstatic.com", "wix-code", "x-wix"],
+    "cookie_signatures": ["wixsession", "wix_browser_sess"],
     "header_signatures": {
       "x-wix-request-id": [""]
     }
@@ -34,6 +38,7 @@
     "category": "CMS",
     "confidence": "high",
     "html_signatures": ["static1.squarespace.com", "squarespace.com/universal", "squarespace"],
+    "cookie_signatures": ["ss_cid", "ss_cpvisit", "ss_cvisit", "ss_cvr"],
     "header_signatures": {}
   },
   {
@@ -41,21 +46,24 @@
     "category": "CMS",
     "confidence": "high",
     "html_signatures": ["webflow.js", "uploads-ssl.webflow.com", "data-wf-page"],
+    "cookie_signatures": [],
     "header_signatures": {}
   },
-    {
+  {
     "name": "Weebly",
     "category": "CMS",
     "confidence": "high",
     "domain_signatures": ["weebly.com"],
     "html_signatures": ["weebly.com", "weeblycloud.com", "cdn2.editmysite.com"],
+    "cookie_signatures": [],
     "header_signatures": {}
-    },
+  },
   {
     "name": "Google Tag Manager",
     "category": "Tag Manager",
     "confidence": "high",
     "html_signatures": ["googletagmanager.com/gtm.js", "gtm-"],
+    "cookie_signatures": [],
     "header_signatures": {}
   },
   {
@@ -63,6 +71,7 @@
     "category": "Analytics",
     "confidence": "high",
     "html_signatures": ["google-analytics.com/analytics.js", "googletagmanager.com/gtag/js", "gtag("],
+    "cookie_signatures": ["_ga", "_gid", "_gat", "_gac_", "_ga_"],
     "header_signatures": {}
   },
   {
@@ -70,6 +79,7 @@
     "category": "Marketing",
     "confidence": "high",
     "html_signatures": ["connect.facebook.net", "fbq(", "facebook pixel"],
+    "cookie_signatures": ["_fbp", "_fbc"],
     "header_signatures": {}
   },
   {
@@ -77,6 +87,7 @@
     "category": "Analytics",
     "confidence": "high",
     "html_signatures": ["static.hotjar.com", "hotjar.com", "hjid"],
+    "cookie_signatures": ["_hjSession", "_hjSessionUser", "_hjIncludedInSessionSample"],
     "header_signatures": {}
   },
   {
@@ -84,6 +95,7 @@
     "category": "Marketing Automation",
     "confidence": "high",
     "html_signatures": ["static.klaviyo.com", "klaviyo", "learnq"],
+    "cookie_signatures": ["__kla_id"],
     "header_signatures": {}
   },
   {
@@ -91,6 +103,7 @@
     "category": "Marketing Automation",
     "confidence": "high",
     "html_signatures": ["js.hs-scripts.com", "js.hsforms.net", "hubspot"],
+    "cookie_signatures": ["hubspotutk", "__hssc", "__hssrc", "__hstc"],
     "header_signatures": {}
   },
   {
@@ -98,6 +111,7 @@
     "category": "Email Marketing",
     "confidence": "medium",
     "html_signatures": ["list-manage.com", "mc-embedded-subscribe", "chimpstatic.com"],
+    "cookie_signatures": [],
     "header_signatures": {}
   },
   {
@@ -105,6 +119,7 @@
     "category": "Customer Support",
     "confidence": "high",
     "html_signatures": ["widget.intercom.io", "window.intercomsettings", "intercom("],
+    "cookie_signatures": ["intercom-id", "intercom-session", "intercom-device-id"],
     "header_signatures": {}
   },
   {
@@ -112,6 +127,7 @@
     "category": "Customer Support",
     "confidence": "high",
     "html_signatures": ["static.zdassets.com", "zendesk", "zopim.com"],
+    "cookie_signatures": ["__zlcmid"],
     "header_signatures": {}
   },
   {
@@ -119,6 +135,7 @@
     "category": "CDN / Security",
     "confidence": "high",
     "html_signatures": [],
+    "cookie_signatures": ["__cf_bm", "cf_clearance", "__cflb"],
     "header_signatures": {
       "server": ["cloudflare"],
       "cf-ray": [""],
@@ -130,6 +147,7 @@
     "category": "Hosting",
     "confidence": "high",
     "html_signatures": ["_next/static"],
+    "cookie_signatures": [],
     "header_signatures": {
       "server": ["vercel"],
       "x-vercel-id": [""],
@@ -141,6 +159,7 @@
     "category": "Hosting",
     "confidence": "high",
     "html_signatures": ["netlify"],
+    "cookie_signatures": [],
     "header_signatures": {
       "server": ["netlify"],
       "x-nf-request-id": [""]
@@ -151,6 +170,7 @@
     "category": "JavaScript Framework",
     "confidence": "medium",
     "html_signatures": ["data-reactroot", "react-dom", "__react"],
+    "cookie_signatures": [],
     "header_signatures": {}
   },
   {
@@ -158,6 +178,7 @@
     "category": "JavaScript Framework",
     "confidence": "high",
     "html_signatures": ["__next_data__", "_next/static", "next-head-count"],
+    "cookie_signatures": [],
     "header_signatures": {
       "x-nextjs-cache": [""]
     }
@@ -167,6 +188,7 @@
     "category": "JavaScript Framework",
     "confidence": "medium",
     "html_signatures": ["vue.js", "__vue__", "data-v-"],
+    "cookie_signatures": [],
     "header_signatures": {}
   },
   {
@@ -174,6 +196,7 @@
     "category": "CSS Framework",
     "confidence": "medium",
     "html_signatures": ["bootstrap.min.css", "bootstrap.min.js", "class=\"container"],
+    "cookie_signatures": [],
     "header_signatures": {}
   },
   {
@@ -181,6 +204,7 @@
     "category": "JavaScript Library",
     "confidence": "high",
     "html_signatures": ["jquery.min.js", "jquery.js", "jquery-migrate"],
+    "cookie_signatures": [],
     "header_signatures": {}
   },
   {
@@ -188,6 +212,7 @@
     "category": "Security",
     "confidence": "high",
     "html_signatures": ["google.com/recaptcha", "g-recaptcha", "recaptcha/api.js"],
+    "cookie_signatures": ["_GRECAPTCHA"],
     "header_signatures": {}
   }
 ]

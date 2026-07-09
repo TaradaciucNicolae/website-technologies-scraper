@@ -32,6 +32,7 @@ class TechnologyRule: # A rule for detecting a specific technology.
     category: str
     confidence: str
     html_signatures: list[str]
+    cookie_signatures: list[str]
     header_signatures: dict[str, list[str]]
     domain_signatures: list[str]
 
@@ -49,6 +50,7 @@ def load_technology_rules(rules_path: Path) -> list[TechnologyRule]:
                 category=raw_rule["category"],
                 confidence=raw_rule["confidence"],
                 html_signatures=raw_rule.get("html_signatures", []),
+                cookie_signatures=raw_rule.get("cookie_signatures", []),
                 header_signatures=raw_rule.get("header_signatures", {}),
                 domain_signatures=raw_rule.get("domain_signatures", [])
             )
