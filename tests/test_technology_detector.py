@@ -247,7 +247,39 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("weebly.com", domain_evidence.excerpt)
         self.assertEqual(domain_evidence.confidence, "high")
         self.assertIn("domain", domain_evidence.explanation.lower())
-        
+
+
+
+            # Test detection using only a cookie name.
+    def test_detects_google_analytics_from_cookie_name(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
+
+        detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
+            html="",
+            headers={},
+            rules=rules,
+            cookies={"_ga": "GA1.1.123456789.123456789"},
+        )
+
+        google_analytics_detection = next(
+            detection
+            for detection in detections
+            if detection.name == "Google Analytics"
+        )
+
+        cookie_evidence = next(
+            evidence
+            for evidence in google_analytics_detection.evidence
+            if evidence.type == "cookie"
+        )
+
+        self.assertEqual(cookie_evidence.source, "cookies")
+        self.assertEqual(cookie_evidence.location, "cookie_name")
+        self.assertEqual(cookie_evidence.matched_value, "_ga")
+        self.assertIn("_ga", cookie_evidence.excerpt)
+        self.assertEqual(cookie_evidence.confidence, "high")
 
 if __name__ == "__main__":
     unittest.main()

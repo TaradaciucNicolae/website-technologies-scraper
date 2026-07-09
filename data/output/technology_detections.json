@@ -11,6 +11,15 @@
         "confidence": "high",
         "evidence": [
           {
+            "type": "cookie",
+            "source": "cookies",
+            "location": "cookie_name",
+            "matched_value": "__cf_bm",
+            "excerpt": "__cf_bm=DO3GSsSxJ.s9GDLHNAjSDRwYvNfZpjNAE9b5mYgd0Cw-1783595922.14315-1.0.1.1-.DpRyhezYN5alTj.xnZn4eWq05E4RuBIwpg_18.ve_7...",
+            "confidence": "high",
+            "explanation": "Found cookie name '__cf_bm' matching signature '__cf_bm'."
+          },
+          {
             "type": "header",
             "source": "headers",
             "location": "server",
@@ -23,8 +32,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186e2ce1a2cc9de-OTP",
-            "excerpt": "cf-ray: a186e2ce1a2cc9de-OTP",
+            "matched_value": "a186edf16e030537-OTP",
+            "excerpt": "cf-ray: a186edf16e030537-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -46,11 +55,11 @@
         "https://100wwcstlw.org"
       ],
       "successful_url": "https://100wwcstlw.org",
-      "elapsed_ms": 710,
+      "elapsed_ms": 651,
       "content_type": "text/html",
       "redirect_count": 0,
       "cookies": {
-        "__cf_bm": "CU2HOy1wgaS44.WOnMvatFX_Mp_YyiTyKwxSIjfsMvw-1783595465.9343016-1.0.1.1-LdOwv5oUzO7xgdlEW4hUuf_cq1bpjZw.Qsh54DGSvW.hHB.T1d00e6CCYxIdPpldUBa9hL9XP64h10cXtfuWA.fi_r3vDa3nQjJJ5mNEqRoBbJ_uLDp53thuHEjU_eb0"
+        "__cf_bm": "DO3GSsSxJ.s9GDLHNAjSDRwYvNfZpjNAE9b5mYgd0Cw-1783595922.14315-1.0.1.1-.DpRyhezYN5alTj.xnZn4eWq05E4RuBIwpg_18.ve_7w05WIKDHsIA0DqdiRX3.8yRTiptZvbvvqygIACngWMDmLh.mD9hp_YPY5sXBSm7ps9ot74SIlAhpLK6DSVZ2e"
       }
     }
   },
@@ -123,6 +132,15 @@
         "confidence": "high",
         "evidence": [
           {
+            "type": "cookie",
+            "source": "cookies",
+            "location": "cookie_name",
+            "matched_value": "__cf_bm",
+            "excerpt": "__cf_bm=V4EpbdE6rO0yQBi2JhVKR1yQZMj.uJM70K1Vermwj6k-1783595922.7748082-1.0.1.1-cFAwF21k8IAIzDVxOoo7GzcmT_d.M1rjJwUfW152T...",
+            "confidence": "high",
+            "explanation": "Found cookie name '__cf_bm' matching signature '__cf_bm'."
+          },
+          {
             "type": "header",
             "source": "headers",
             "location": "server",
@@ -135,8 +153,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186e2d29e7ee3f6-OTP",
-            "excerpt": "cf-ray: a186e2d29e7ee3f6-OTP",
+            "matched_value": "a186edf5592cb68f-OTP",
+            "excerpt": "cf-ray: a186edf5592cb68f-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -144,8 +162,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-cache-status",
-            "matched_value": "UPDATING",
-            "excerpt": "cf-cache-status: UPDATING",
+            "matched_value": "HIT",
+            "excerpt": "cf-cache-status: HIT",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-cache-status'."
           }
@@ -190,11 +208,11 @@
         "https://11853prospecthill.com"
       ],
       "successful_url": "https://11853prospecthill.com",
-      "elapsed_ms": 751,
+      "elapsed_ms": 652,
       "content_type": "text/html",
       "redirect_count": 0,
       "cookies": {
-        "__cf_bm": "WXWxKabMKWpyaHfobREWtWHnWPL4COIWsTDKW9QbKuc-1783595466.6558173-1.0.1.1-nnaVyKfeFZ2IgKPITd17ehVJdlphzICSnlUEMSbu5uK3UoVfK1XcDftRo0N.MkVULEy_.glFP_fft5sPkEHy4Sy8qyIXtD9NH6fJJ6OYmJ_dZNqrrX4ds8CE44oFzoHQ"
+        "__cf_bm": "V4EpbdE6rO0yQBi2JhVKR1yQZMj.uJM70K1Vermwj6k-1783595922.7748082-1.0.1.1-cFAwF21k8IAIzDVxOoo7GzcmT_d.M1rjJwUfW152TAgozWe8lz8.eoqTGrwZsxcWNxdW5NDVvDXDCe5qk_Ib3CO.C9ZKVYXckDolpHA3AajcHalw.xvl3ma1yrUK8S_i"
       }
     }
   },
@@ -276,6 +294,15 @@
         "confidence": "high",
         "evidence": [
           {
+            "type": "cookie",
+            "source": "cookies",
+            "location": "cookie_name",
+            "matched_value": "__cf_bm",
+            "excerpt": "__cf_bm=QkyrbA2P0SJX_c9j0yd6ExGVLDmfKr.A6MOXUwElLqg-1783595923.564139-1.0.1.1-U.h7xTNNGJidP7HLz4mXjZVl_g_P9bYrsyor1J6pm4...",
+            "confidence": "high",
+            "explanation": "Found cookie name '__cf_bm' matching signature '__cf_bm'."
+          },
+          {
             "type": "header",
             "source": "headers",
             "location": "server",
@@ -288,8 +315,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186e2d7fdea97d4-OTP",
-            "excerpt": "cf-ray: a186e2d7fdea97d4-OTP",
+            "matched_value": "a186edfa4d830f22-OTP",
+            "excerpt": "cf-ray: a186edfa4d830f22-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -352,11 +379,11 @@
         "https://11thhourracing.org"
       ],
       "successful_url": "https://11thhourracing.org",
-      "elapsed_ms": 1401,
+      "elapsed_ms": 1272,
       "content_type": "text/html; charset=UTF-8",
       "redirect_count": 0,
       "cookies": {
-        "__cf_bm": "CbahTwNYVHDgyvH6MOghtYmr21PzIpHotyjnNiS_qkg-1783595467.5134983-1.0.1.1-I6K3XoMhS7LWxWXJorHhLrh4doLaDWfIDRApLqigaeQMzYXO4vnRV.HBhOLNrQKqJXNNzmRCZZD4jIvpoi9WRl6dCbttLomuJGLaZslLPS1PfI0GedQacw4g3cx4Ol7K"
+        "__cf_bm": "QkyrbA2P0SJX_c9j0yd6ExGVLDmfKr.A6MOXUwElLqg-1783595923.564139-1.0.1.1-U.h7xTNNGJidP7HLz4mXjZVl_g_P9bYrsyor1J6pm4rGrkSMXUUyPach6VApelVR5Qc.pL7iT9oPiHKP_8oPRzqCUgwsPiFNg6g0B37j6Oy3.LLeJGCIGGJMaXeic0eI"
       }
     }
   },
@@ -406,6 +433,15 @@
         "confidence": "high",
         "evidence": [
           {
+            "type": "cookie",
+            "source": "cookies",
+            "location": "cookie_name",
+            "matched_value": "__cf_bm",
+            "excerpt": "__cf_bm=gg7jrdwgDn9Fyu2tSFBFn_Z8wnu8GRRAV7n7GsdoswY-1783595924.8555734-1.0.1.1-F9zTNFFNRrVFQsvAQSuwi6rBg4HM9YAyiE.a4qIbp...",
+            "confidence": "high",
+            "explanation": "Found cookie name '__cf_bm' matching signature '__cf_bm'."
+          },
+          {
             "type": "header",
             "source": "headers",
             "location": "server",
@@ -418,8 +454,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186e2e0abf1e4b9-OTP",
-            "excerpt": "cf-ray: a186e2e0abf1e4b9-OTP",
+            "matched_value": "a186ee025cd0c9c4-OTP",
+            "excerpt": "cf-ray: a186ee025cd0c9c4-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -498,11 +534,11 @@
         "https://1planettechnologies.weebly.com"
       ],
       "successful_url": "https://1planettechnologies.weebly.com",
-      "elapsed_ms": 855,
+      "elapsed_ms": 813,
       "content_type": "text/html; charset=UTF-8",
       "redirect_count": 0,
       "cookies": {
-        "__cf_bm": "vlVxFlsjUy0.X1_d7LrZMAS9pQfNi1luY_TsdwkDR00-1783595468.9043088-1.0.1.1-V01V9LJ_HYLcWFBLF2ZthAYcHZZj9gvJfl_UCQS4D7nuhjJI.NkRpukDFpWfCLkFmVXfhsMAP5vj8WZqitZOc1.OLaop9YzH52Nzo7bvEqCljQLQm1JD1TX3_ArCyH6j"
+        "__cf_bm": "gg7jrdwgDn9Fyu2tSFBFn_Z8wnu8GRRAV7n7GsdoswY-1783595924.8555734-1.0.1.1-F9zTNFFNRrVFQsvAQSuwi6rBg4HM9YAyiE.a4qIbpD1n45fkXKiXrCdkCLiFoCkq2E3ZdkCuSsiBHgD6ZW04kF9JgdJJ_t2otYO7spClpQA.Il60GdVhnyHjyyBurlpz"
       }
     }
   },
@@ -530,8 +566,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186e2e61ce2e4ad-OTP",
-            "excerpt": "cf-ray: a186e2e61ce2e4ad-OTP",
+            "matched_value": "a186ee07ed87c9e4-OTP",
+            "excerpt": "cf-ray: a186ee07ed87c9e4-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           }
@@ -545,441 +581,10 @@
         "http://1stclairavewest.com"
       ],
       "successful_url": "http://1stclairavewest.com",
-      "elapsed_ms": 640,
+      "elapsed_ms": 664,
       "content_type": "text/html; charset=UTF-8",
       "redirect_count": 0,
       "cookies": {}
-    }
-  },
-  {
-    "domain": "1stlocksheathscouts.org.uk",
-    "normalized_url": "https://1stlocksheathscouts.org.uk",
-    "final_url": "https://1stlocksheathscouts.org.uk/",
-    "status": 403,
-    "technologies": [
-      {
-        "name": "Cloudflare",
-        "category": "CDN / Security",
-        "confidence": "high",
-        "evidence": [
-          {
-            "type": "header",
-            "source": "headers",
-            "location": "server",
-            "matched_value": "cloudflare",
-            "excerpt": "server: cloudflare",
-            "confidence": "high",
-            "explanation": "Found 'cloudflare' in HTTP header 'server'."
-          },
-          {
-            "type": "header",
-            "source": "headers",
-            "location": "cf-ray",
-            "matched_value": "a186e2ea1dfbb682-OTP",
-            "excerpt": "cf-ray: a186e2ea1dfbb682-OTP",
-            "confidence": "high",
-            "explanation": "Found HTTP header 'cf-ray'."
-          }
-        ]
-      }
-    ],
-    "errors": [],
-    "fetch_metadata": {
-      "attempted_urls": [
-        "https://1stlocksheathscouts.org.uk"
-      ],
-      "successful_url": "https://1stlocksheathscouts.org.uk",
-      "elapsed_ms": 630,
-      "content_type": "text/html; charset=UTF-8",
-      "redirect_count": 0,
-      "cookies": {
-        "__cf_bm": "pFgVrLAXrwpnf2nR2U6Yvd8SNIDaXXCGMz1on3W7vJ8-1783595470.418289-1.0.1.1-NjkR6FXa5i8YOJlJJhazbBuVix4fyiS_6Op_golKw7DAVAOCBKOz.SQWCDJPtX5q8FuRuv6jwzg54DMg_CYpZJlILwrRX2Ccg4SZRZRssXMTWIz1K1tHLnvGX9Cr02Kl"
-      }
-    }
-  },
-  {
-    "domain": "1ststopsupply.com",
-    "normalized_url": "http://1ststopsupply.com",
-    "final_url": "http://1ststopsupply.com/",
-    "status": 409,
-    "technologies": [
-      {
-        "name": "Cloudflare",
-        "category": "CDN / Security",
-        "confidence": "high",
-        "evidence": [
-          {
-            "type": "header",
-            "source": "headers",
-            "location": "server",
-            "matched_value": "cloudflare",
-            "excerpt": "server: cloudflare",
-            "confidence": "high",
-            "explanation": "Found 'cloudflare' in HTTP header 'server'."
-          },
-          {
-            "type": "header",
-            "source": "headers",
-            "location": "cf-ray",
-            "matched_value": "a186e2edebd197d4-OTP",
-            "excerpt": "cf-ray: a186e2edebd197d4-OTP",
-            "confidence": "high",
-            "explanation": "Found HTTP header 'cf-ray'."
-          }
-        ]
-      }
-    ],
-    "errors": [],
-    "fetch_metadata": {
-      "attempted_urls": [
-        "https://1ststopsupply.com",
-        "http://1ststopsupply.com"
-      ],
-      "successful_url": "http://1ststopsupply.com",
-      "elapsed_ms": 612,
-      "content_type": "text/html; charset=UTF-8",
-      "redirect_count": 0,
-      "cookies": {}
-    }
-  },
-  {
-    "domain": "2-com.net",
-    "normalized_url": "https://2-com.net",
-    "final_url": "https://2-com.net/",
-    "status": 200,
-    "technologies": [
-      {
-        "name": "Google Analytics",
-        "category": "Analytics",
-        "confidence": "high",
-        "evidence": [
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "googletagmanager.com/gtag/js",
-            "excerpt": "...oogle Analytics --> <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-TY0XG5MCQR\"></script> <script> windo...",
-            "confidence": "high",
-            "explanation": "Found 'googletagmanager.com/gtag/js' in the HTML response."
-          },
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "gtag(",
-            "excerpt": "...indow.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Dat...",
-            "confidence": "high",
-            "explanation": "Found 'gtag(' in the HTML response."
-          }
-        ]
-      },
-      {
-        "name": "Cloudflare",
-        "category": "CDN / Security",
-        "confidence": "high",
-        "evidence": [
-          {
-            "type": "header",
-            "source": "headers",
-            "location": "server",
-            "matched_value": "cloudflare",
-            "excerpt": "server: cloudflare",
-            "confidence": "high",
-            "explanation": "Found 'cloudflare' in HTTP header 'server'."
-          },
-          {
-            "type": "header",
-            "source": "headers",
-            "location": "cf-ray",
-            "matched_value": "a186e2f1beade598-OTP",
-            "excerpt": "cf-ray: a186e2f1beade598-OTP",
-            "confidence": "high",
-            "explanation": "Found HTTP header 'cf-ray'."
-          },
-          {
-            "type": "header",
-            "source": "headers",
-            "location": "cf-cache-status",
-            "matched_value": "DYNAMIC",
-            "excerpt": "cf-cache-status: DYNAMIC",
-            "confidence": "high",
-            "explanation": "Found HTTP header 'cf-cache-status'."
-          }
-        ]
-      },
-      {
-        "name": "Bootstrap",
-        "category": "CSS Framework",
-        "confidence": "medium",
-        "evidence": [
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "class=\"container",
-            "excerpt": "...header-bg header-bg-solid\" tabindex=\"-1\"> <div class=\"container\"> <div class=\"row\"> <...",
-            "confidence": "medium",
-            "explanation": "Found 'class=\"container' in the HTML response."
-          }
-        ]
-      },
-      {
-        "name": "reCAPTCHA",
-        "category": "Security",
-        "confidence": "high",
-        "evidence": [
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "google.com/recaptcha",
-            "excerpt": "...script> <script async defer src=\"https://www.google.com/recaptcha/api.js\"></script> <!-- Global site tag (gtag.js) -...",
-            "confidence": "high",
-            "explanation": "Found 'google.com/recaptcha' in the HTML response."
-          },
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "recaptcha/api.js",
-            "excerpt": "...<script async defer src=\"https://www.google.com/recaptcha/api.js\"></script> <!-- Global site tag (gtag.js) - Google...",
-            "confidence": "high",
-            "explanation": "Found 'recaptcha/api.js' in the HTML response."
-          }
-        ]
-      }
-    ],
-    "errors": [],
-    "fetch_metadata": {
-      "attempted_urls": [
-        "https://2-com.net"
-      ],
-      "successful_url": "https://2-com.net",
-      "elapsed_ms": 1020,
-      "content_type": "text/html; charset=utf-8",
-      "redirect_count": 0,
-      "cookies": {
-        "__cf_bm": "Jn8XHBe6cnMYCAAtoPsmz_L4w9qfukLcSi3WyMWu6Xg-1783595471.6359274-1.0.1.1-lCanVcKVTTC8He6kd1FIBIYi2SdgmMLROnfNbCHbyjaCA8jV2sDq7QW7uHdpwqC4vOcW8wkmEY5XSArFSeJOZlgxKZgoSeiP1Zp57sj3L1ZW1AU878_yU6EmYadi0S0f"
-      }
-    }
-  },
-  {
-    "domain": "2020wealthadvisory.com",
-    "normalized_url": "https://2020wealthadvisory.com",
-    "final_url": "https://2020wealthadvisory.com/",
-    "status": 200,
-    "technologies": [
-      {
-        "name": "WordPress",
-        "category": "CMS",
-        "confidence": "high",
-        "evidence": [
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "wp-content",
-            "excerpt": "...property=\"og:image\" content=\"https://2020wealthadvisory.com/wp-content/uploads/2022/03/2020wealth-intropost-leanne-FB.jpeg\" /> <me...",
-            "confidence": "high",
-            "explanation": "Found 'wp-content' in the HTML response."
-          },
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "wp-includes",
-            "excerpt": "...und:#32373c;color:#fff;text-decoration:none} /*# sourceURL=/wp-includes/css/classic-themes.min.css */ </style> <style id=\"rank-math...",
-            "confidence": "high",
-            "explanation": "Found 'wp-includes' in the HTML response."
-          },
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "content=\"wordpress",
-            "excerpt": "...ealthadvisory.com/xmlrpc.php?rsd\" /> <meta name=\"generator\" content=\"WordPress 7.0\" /> <link rel='shortlink' href='https://2020wealthadvis...",
-            "confidence": "high",
-            "explanation": "Found 'content=\"wordpress' in the HTML response."
-          }
-        ]
-      },
-      {
-        "name": "Cloudflare",
-        "category": "CDN / Security",
-        "confidence": "high",
-        "evidence": [
-          {
-            "type": "header",
-            "source": "headers",
-            "location": "server",
-            "matched_value": "cloudflare",
-            "excerpt": "server: cloudflare",
-            "confidence": "high",
-            "explanation": "Found 'cloudflare' in HTTP header 'server'."
-          },
-          {
-            "type": "header",
-            "source": "headers",
-            "location": "cf-ray",
-            "matched_value": "a186e2f82b2c77e9-OTP",
-            "excerpt": "cf-ray: a186e2f82b2c77e9-OTP",
-            "confidence": "high",
-            "explanation": "Found HTTP header 'cf-ray'."
-          },
-          {
-            "type": "header",
-            "source": "headers",
-            "location": "cf-cache-status",
-            "matched_value": "HIT",
-            "excerpt": "cf-cache-status: HIT",
-            "confidence": "high",
-            "explanation": "Found HTTP header 'cf-cache-status'."
-          }
-        ]
-      },
-      {
-        "name": "jQuery",
-        "category": "JavaScript Library",
-        "confidence": "high",
-        "evidence": [
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "jquery.min.js",
-            "excerpt": "...\" src=\"https://2020wealthadvisory.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1\"></script> <script id=\"jquery-migrate-js\" src=\"ht...",
-            "confidence": "high",
-            "explanation": "Found 'jquery.min.js' in the HTML response."
-          },
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "jquery-migrate",
-            "excerpt": "...es/js/jquery/jquery.min.js?ver=3.7.1\"></script> <script id=\"jquery-migrate-js\" src=\"https://2020wealthadvisory.com/wp-includes/js/jque...",
-            "confidence": "high",
-            "explanation": "Found 'jquery-migrate' in the HTML response."
-          }
-        ]
-      }
-    ],
-    "errors": [],
-    "fetch_metadata": {
-      "attempted_urls": [
-        "https://2020wealthadvisory.com"
-      ],
-      "successful_url": "https://2020wealthadvisory.com",
-      "elapsed_ms": 614,
-      "content_type": "text/html; charset=UTF-8",
-      "redirect_count": 0,
-      "cookies": {
-        "__cf_bm": "hvQz10.__dTxgEVXCDISSRyVuYB7asj5BfqYBLkpjFM-1783595472.6686335-1.0.1.1-1APh22H8ceUDcriubR5hE2P1ZbzgVcZ76gpx7EMiHXSjvq9ydBxFRo40.3SYdveDUOnQajwOC5nSiFOt2QCJfNVLBBx0BJWo1362DW73NX8a2XkNeN95j3yrOlzs7qxT"
-      }
-    }
-  },
-  {
-    "domain": "231selfstorage.com",
-    "normalized_url": "https://231selfstorage.com",
-    "final_url": "https://231selfstorage.com/",
-    "status": 200,
-    "technologies": [
-      {
-        "name": "WordPress",
-        "category": "CMS",
-        "confidence": "high",
-        "evidence": [
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "wp-content",
-            "excerpt": "...eta property=\"og:image\" content=\"https://231selfstorage.com/wp-content/uploads/2024/11/4-231-self-storage-6x6-1.jpg\" /> <meta pro...",
-            "confidence": "high",
-            "explanation": "Found 'wp-content' in the HTML response."
-          },
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "wp-includes",
-            "excerpt": "...-wp-admin--admin-bar--position-offset:0px}} /*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */ </style> <style id...",
-            "confidence": "high",
-            "explanation": "Found 'wp-includes' in the HTML response."
-          }
-        ]
-      },
-      {
-        "name": "Google Analytics",
-        "category": "Analytics",
-        "confidence": "high",
-        "evidence": [
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "googletagmanager.com/gtag/js",
-            "excerpt": "...!-- Google tag (gtag.js) --> <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-E0YXT93YEH\"> </script> <script> window.dataLayer = w...",
-            "confidence": "high",
-            "explanation": "Found 'googletagmanager.com/gtag/js' in the HTML response."
-          },
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "gtag(",
-            "excerpt": "...pt> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); g...",
-            "confidence": "high",
-            "explanation": "Found 'gtag(' in the HTML response."
-          }
-        ]
-      },
-      {
-        "name": "Cloudflare",
-        "category": "CDN / Security",
-        "confidence": "high",
-        "evidence": [
-          {
-            "type": "header",
-            "source": "headers",
-            "location": "server",
-            "matched_value": "cloudflare",
-            "excerpt": "server: cloudflare",
-            "confidence": "high",
-            "explanation": "Found 'cloudflare' in HTTP header 'server'."
-          },
-          {
-            "type": "header",
-            "source": "headers",
-            "location": "cf-ray",
-            "matched_value": "a186e2fc8ad1c9f3-OTP",
-            "excerpt": "cf-ray: a186e2fc8ad1c9f3-OTP",
-            "confidence": "high",
-            "explanation": "Found HTTP header 'cf-ray'."
-          },
-          {
-            "type": "header",
-            "source": "headers",
-            "location": "cf-cache-status",
-            "matched_value": "EXPIRED",
-            "excerpt": "cf-cache-status: EXPIRED",
-            "confidence": "high",
-            "explanation": "Found HTTP header 'cf-cache-status'."
-          }
-        ]
-      }
-    ],
-    "errors": [],
-    "fetch_metadata": {
-      "attempted_urls": [
-        "https://231selfstorage.com"
-      ],
-      "successful_url": "https://231selfstorage.com",
-      "elapsed_ms": 866,
-      "content_type": "text/html; charset=UTF-8",
-      "redirect_count": 0,
-      "cookies": {
-        "__cf_bm": "ph_93i7P4Kx4EoZ3wlQqWKwGS1dI04qx3Wu_h0vrMYI-1783595473.3662362-1.0.1.1-A0UdO.QPxltsRj3TYpN4mihz997bIPizUL8B02Y5JxMpI6HWweeH67dCnbDcpMtL0gkQvvvvpwqiqoG7SA67fUAagfa1VNpwdvCUGYxMXhQirDjOhjPv4Aa7Cmwd2gdM"
-      }
     }
   }
 ]

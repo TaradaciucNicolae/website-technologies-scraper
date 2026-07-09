@@ -40,11 +40,11 @@ def print_detected_technologies(detections: list[TechnologyDetection]) -> None:
         return
 
     for detection in detections:
-        print("-" * 60)
+        print("\n","-" * 60)
         print(f"  - {detection.name} ({detection.category}, confidence: {detection.confidence})")
 
         for evidence in detection.evidence:
-            print(f"Evidence: [{evidence.type}] {evidence.location} -> {evidence.matched_value}")
+            print(f"\nEvidence: [{evidence.type}] {evidence.location} -> {evidence.matched_value}")
             print(f"Excerpt: {evidence.excerpt}")
             print(f"Explanation: {evidence.explanation}")
 
@@ -113,7 +113,7 @@ def main() -> None:
     rules = load_technology_rules(RULES_PATH)
     results: list[dict] = []
 
-    for domain in domains[:10]:
+    for domain in domains[:5]:
         domain = domain.strip()
 
         if not domain:
@@ -125,7 +125,8 @@ def main() -> None:
             final_url=result.final_url,
             html=result.html,
             headers=result.headers,
-            rules=rules
+            rules=rules,
+            cookies=result.cookies,
         )
 
         print_fetch_result(result)

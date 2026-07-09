@@ -94,18 +94,22 @@ def detect_technologies(
     html: str,
     headers: dict[str, str],
     rules: list[TechnologyRule],
+    cookies: dict[str, str] | None = None,
 ) -> list[TechnologyDetection]:
-
+    
     # Normalize the headers
     normalized_headers = {
         key.lower(): value
         for key, value in headers.items()
     }
 
+    if cookies is None:
+        cookies = {}
+
     detections: list[TechnologyDetection] = []
 
     for rule in rules:
-        evidence = collect_evidence_for_rule(rule, domain, final_url, html, normalized_headers)
+        evidence = collect_evidence_for_rule(rule, domain, final_url, html, normalized_headers, cookies)
 
         if not evidence:
             continue
@@ -130,6 +134,7 @@ def collect_evidence_for_rule(
     final_url: str | None,
     html: str,
     normalized_headers: dict[str, str],
+    cookies: dict[str, str],
 ) -> list[TechnologyEvidence]:
 
     evidence: list[TechnologyEvidence] = []
@@ -139,6 +144,9 @@ def collect_evidence_for_rule(
     )
     evidence.extend(
         collect_html_evidence(html, rule.html_signatures, rule.confidence)
+    )
+    evidence.extend(
+        collect_cookie_evidence(cookies, rule.cookie_signatures, rule.confidence)
     )
     evidence.extend(
         collect_header_evidence(normalized_headers, rule.header_signatures, rule.confidence)
@@ -215,6 +223,43 @@ def collect_html_evidence(
     # Return HTML evidence items for the matched signatures.
     return evidence
 
+
+# Find technology signatures inside response cookie names.
+def collect_cookie_evidence(
+    cookies: dict[str, str],
+    signatures: list[str],
+    confidence: str,
+) -> list[TechnologyEvidence]:
+    evidence: list[TechnologyEvidence] = []
+
+    for cookie_name, cookie_value in cookies.items():
+        cookie_name_lower = cookie_name.lower()
+
+        for signature in signatures:
+            normalized_signature = signature.lower()
+
+            if normalized_signature not in cookie_name_lower:
+                continue
+
+            excerpt = f"{cookie_name}={cookie_value}"
+
+            if len(excerpt) > 120:
+                excerpt = excerpt[:120] + "..."
+
+            evidence.append(
+                TechnologyEvidence(
+                    type="cookie",
+                    source="cookies",
+                    location="cookie_name",
+                    matched_value=signature,
+                    excerpt=excerpt,
+                    confidence=confidence,
+                    explanation=f"Found cookie name '{cookie_name}' matching signature '{signature}'.",
+                )
+            )
+            break
+
+    return evidence
 
 # Find technology signatures inside HTTP response headers.
 def collect_header_evidence(
