@@ -15,7 +15,7 @@
             "source": "cookies",
             "location": "cookie_name",
             "matched_value": "__cf_bm",
-            "excerpt": "__cf_bm=IdDdAIB5aa6_y3VXJeYAudBQ4gGJH0N3IR9w4KOV5.8-1783598304.656247-1.0.1.1-VIc76oPb0Lyt5pFwkncOqiYxYvA_QAjuaC9dCxaq5D...",
+            "excerpt": "__cf_bm=b6pRvcRgmnRIXBNxejVyIsRusNo3DDv0IATvP3s0x94-1783598733.2843015-1.0.1.1-RS3CprLmDeNb3u_S.vZElFXjtZgt0UuF_trUbZMAR...",
             "confidence": "high",
             "explanation": "Found cookie name '__cf_bm' matching signature '__cf_bm'."
           },
@@ -32,8 +32,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a187281c1c3ce4b5-OTP",
-            "excerpt": "cf-ray: a187281c1c3ce4b5-OTP",
+            "matched_value": "a18732930a55e4b5-OTP",
+            "excerpt": "cf-ray: a18732930a55e4b5-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -55,11 +55,11 @@
         "https://100wwcstlw.org"
       ],
       "successful_url": "https://100wwcstlw.org",
-      "elapsed_ms": 670,
+      "elapsed_ms": 664,
       "content_type": "text/html",
       "redirect_count": 0,
       "cookies": {
-        "__cf_bm": "IdDdAIB5aa6_y3VXJeYAudBQ4gGJH0N3IR9w4KOV5.8-1783598304.656247-1.0.1.1-VIc76oPb0Lyt5pFwkncOqiYxYvA_QAjuaC9dCxaq5DlvmWeZGnFsQwYI7mu91lLd2BNqY2fnQ8lwQcV24RXxcyNi9Jlly6GnzUrUIPEjVEW1BuSBxs.I3XFsoXJz4TB8"
+        "__cf_bm": "b6pRvcRgmnRIXBNxejVyIsRusNo3DDv0IATvP3s0x94-1783598733.2843015-1.0.1.1-RS3CprLmDeNb3u_S.vZElFXjtZgt0UuF_trUbZMAR3FAQ30iC3Nj1rQBQrxKNKSRZrLJF7yh2AbNhO82epLmqs.zWaI5LXSswL5ynx4KJ02taGHyRHLrour1SXF8DqCh"
       }
     }
   },
@@ -127,7 +127,7 @@
             "source": "cookies",
             "location": "cookie_name",
             "matched_value": "__cf_bm",
-            "excerpt": "__cf_bm=AyYEcGI4tnUpbcVHzUvibptqCb.cooAPJo_kfGNQZqM-1783598305.3320947-1.0.1.1-JImErxSkgVoNDVf0z1aeu8SS91ZGmPHV_sCyjmH76...",
+            "excerpt": "__cf_bm=MzN_LYSqF6kjJp0en2zpVjhSwnB.IovoWLdZ5XKcu5k-1783598734.052563-1.0.1.1-lx1Z_RlWvCuc6uS.ImVgIoXFHd0sAoIQH3lMFmdWSe...",
             "confidence": "high",
             "explanation": "Found cookie name '__cf_bm' matching signature '__cf_bm'."
           },
@@ -144,8 +144,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a187282058f8e4b5-OTP",
-            "excerpt": "cf-ray: a187282058f8e4b5-OTP",
+            "matched_value": "a1873297dc1777e9-OTP",
+            "excerpt": "cf-ray: a1873297dc1777e9-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -191,6 +191,22 @@
             "explanation": "Found 'jquery.min.js' in a script URL."
           }
         ]
+      },
+      {
+        "name": "Magento",
+        "category": "Ecommerce",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "html_contains",
+            "source": "html",
+            "location": "html",
+            "matched_value": "mage-",
+            "excerpt": "...}}#section-f0224ee5-f279-4d1d-8b8a-2ce60c58e0c3 .hoverable-image--reverse{-webkit-flex-direction:row-reverse;-ms-flex-directi...",
+            "confidence": "high",
+            "explanation": "Found 'mage-' in the HTML response."
+          }
+        ]
       }
     ],
     "errors": [],
@@ -199,11 +215,11 @@
         "https://11853prospecthill.com"
       ],
       "successful_url": "https://11853prospecthill.com",
-      "elapsed_ms": 656,
+      "elapsed_ms": 719,
       "content_type": "text/html",
       "redirect_count": 0,
       "cookies": {
-        "__cf_bm": "AyYEcGI4tnUpbcVHzUvibptqCb.cooAPJo_kfGNQZqM-1783598305.3320947-1.0.1.1-JImErxSkgVoNDVf0z1aeu8SS91ZGmPHV_sCyjmH76smFzqENyZv4iHxYL41fk1n_6h301nFFDtly.bVapuW2cve03ug6eikSYM5AkcUOVz2_DBPF7qhaT6cMcLDmWkqE"
+        "__cf_bm": "MzN_LYSqF6kjJp0en2zpVjhSwnB.IovoWLdZ5XKcu5k-1783598734.052563-1.0.1.1-lx1Z_RlWvCuc6uS.ImVgIoXFHd0sAoIQH3lMFmdWSe_pv2QKjyB9gV7pRm3C2ZSCMoMsiSOUtx574_iNPb8C1fFBjPku3IajYd0A_gj1Qdy1EqPld93cCZlPvKSEU4nt"
       }
     }
   },
@@ -397,7 +413,7 @@
             "source": "cookies",
             "location": "cookie_name",
             "matched_value": "__cf_bm",
-            "excerpt": "__cf_bm=zApPSLUAd55hAqXnws4szDLBSfTJ3zbHEiZoVx_0Lkc-1783598307.0449817-1.0.1.1-Z1oPCi58n_wlLqSd8lP.01XD9LSPdUm8YTzocqz7_...",
+            "excerpt": "__cf_bm=DVQtLoKM0uFu8_kKQZucRF91cAe8yZ0i3HgTVmt3pxE-1783598736.963751-1.0.1.1-51_ILWvf45sXi.ohftNe3Zsxq3ToQ5CRhG2E0xiZqj...",
             "confidence": "high",
             "explanation": "Found cookie name '__cf_bm' matching signature '__cf_bm'."
           },
@@ -414,8 +430,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a187282b0d5bc9cb-OTP",
-            "excerpt": "cf-ray: a187282b0d5bc9cb-OTP",
+            "matched_value": "a18732aa09c9ca23-OTP",
+            "excerpt": "cf-ray: a18732aa09c9ca23-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -506,6 +522,38 @@
             "explanation": "Found 'jquery-migrate' in a script URL."
           }
         ]
+      },
+      {
+        "name": "Magento",
+        "category": "Ecommerce",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "html_contains",
+            "source": "html",
+            "location": "html",
+            "matched_value": "mage-",
+            "excerpt": "...aaijer --> <meta name=\"robots\" content=\"max-snippet:-1,max-image-preview:large,max-video-preview:-1\" /> <meta name=\"descripti...",
+            "confidence": "high",
+            "explanation": "Found 'mage-' in the HTML response."
+          }
+        ]
+      },
+      {
+        "name": "Webpack",
+        "category": "Build Tool",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "type": "html_contains",
+            "source": "html",
+            "location": "html",
+            "matched_value": "webpackChunk",
+            "excerpt": "...l[u],t.o(e,a)&&e[a]&&e[a][0](),e[a]=0;return t.O(s)},o=self.webpackChunksage=self.webpackChunksage||[];o.forEach(r.bind(null,0)),o.p...",
+            "confidence": "medium",
+            "explanation": "Found 'webpackChunk' in the HTML response."
+          }
+        ]
       }
     ],
     "errors": [],
@@ -514,11 +562,11 @@
         "https://11thhourracing.org"
       ],
       "successful_url": "https://11thhourracing.org",
-      "elapsed_ms": 1361,
+      "elapsed_ms": 1363,
       "content_type": "text/html; charset=UTF-8",
       "redirect_count": 0,
       "cookies": {
-        "__cf_bm": "zApPSLUAd55hAqXnws4szDLBSfTJ3zbHEiZoVx_0Lkc-1783598307.0449817-1.0.1.1-Z1oPCi58n_wlLqSd8lP.01XD9LSPdUm8YTzocqz7_vSjti436OPEBDlmBFXWkR41LcIgs5ahflzz9GkvNOSN0AChkve96dwpnsOOqTCWo3nz62pLDGdf5c1zLKn0xZf9"
+        "__cf_bm": "DVQtLoKM0uFu8_kKQZucRF91cAe8yZ0i3HgTVmt3pxE-1783598736.963751-1.0.1.1-51_ILWvf45sXi.ohftNe3Zsxq3ToQ5CRhG2E0xiZqjNvg.ia_sAMwqBbBUpDqXYQ_LHl1UmDPr5bIoloee7yNI_oS70116lGqHiJjDDLIp1b4PWCyJNiAcRAQyk_S_k9"
       }
     }
   },
@@ -689,7 +737,7 @@
             "source": "cookies",
             "location": "cookie_name",
             "matched_value": "__cf_bm",
-            "excerpt": "__cf_bm=sV34d4ZqX6ROXSooYtA8tbyDMGOAlI66tAKvCftcSGQ-1783598309.3547933-1.0.1.1-a03sVd8EQeYnDrN7SZ1uIJAgQ0C_ivyZQbXmrGnuD...",
+            "excerpt": "__cf_bm=jOl_PK6SZ9wx9LwhzsnXVmcDL.iX3EsJrGwo3fbVwrk-1783598739.9814036-1.0.1.1-zxWzpPRuvJXGYe3QaVXWRSseFsqGaMnm3FIxvT_Sx...",
             "confidence": "high",
             "explanation": "Found cookie name '__cf_bm' matching signature '__cf_bm'."
           },
@@ -706,8 +754,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a18728397898c9d9-OTP",
-            "excerpt": "cf-ray: a18728397898c9d9-OTP",
+            "matched_value": "a18732bcd9d2e4b5-OTP",
+            "excerpt": "cf-ray: a18732bcd9d2e4b5-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -771,6 +819,22 @@
             "explanation": "Found 'jquery.min.js' in a script URL."
           }
         ]
+      },
+      {
+        "name": "Magento",
+        "category": "Ecommerce",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "html_contains",
+            "source": "html",
+            "location": "html",
+            "matched_value": "mage-",
+            "excerpt": "...false\"></iframe></div> <div><div class=\"wsite-image wsite-image-border-none \" style=\"padding-top:10px;padding-bottom:10px;ma...",
+            "confidence": "high",
+            "explanation": "Found 'mage-' in the HTML response."
+          }
+        ]
       }
     ],
     "errors": [],
@@ -779,11 +843,11 @@
         "https://1planettechnologies.weebly.com"
       ],
       "successful_url": "https://1planettechnologies.weebly.com",
-      "elapsed_ms": 881,
+      "elapsed_ms": 851,
       "content_type": "text/html; charset=UTF-8",
       "redirect_count": 0,
       "cookies": {
-        "__cf_bm": "sV34d4ZqX6ROXSooYtA8tbyDMGOAlI66tAKvCftcSGQ-1783598309.3547933-1.0.1.1-a03sVd8EQeYnDrN7SZ1uIJAgQ0C_ivyZQbXmrGnuDGiiDHqinN1m0dTJNm02SEqBq9zM14IQ4bBSvY00G4WI.spux2lUrnZDsSxN34XwoAj16JkMf0ivKH.kTkerDcYO"
+        "__cf_bm": "jOl_PK6SZ9wx9LwhzsnXVmcDL.iX3EsJrGwo3fbVwrk-1783598739.9814036-1.0.1.1-zxWzpPRuvJXGYe3QaVXWRSseFsqGaMnm3FIxvT_Sx8JAD6CLwOEBohb5SkFK6470nUfobmueZInFjT.Vizd1_ZoO8FbPpaf.cGNvabrokgx_8m_fxybQ2aQX_HxDrb2U"
       }
     }
   },
@@ -811,8 +875,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a18728405fefe4b8-OTP",
-            "excerpt": "cf-ray: a18728405fefe4b8-OTP",
+            "matched_value": "a18732c57b85e4b3-OTP",
+            "excerpt": "cf-ray: a18732c57b85e4b3-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           }
@@ -826,7 +890,7 @@
         "http://1stclairavewest.com"
       ],
       "successful_url": "http://1stclairavewest.com",
-      "elapsed_ms": 671,
+      "elapsed_ms": 617,
       "content_type": "text/html; charset=UTF-8",
       "redirect_count": 0,
       "cookies": {}
