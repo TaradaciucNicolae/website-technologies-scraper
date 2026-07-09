@@ -2,6 +2,8 @@ from dataclasses import dataclass
 import json
 from pathlib import Path
 from bs4 import BeautifulSoup
+from src.javascript_asset_fetcher import JavaScriptAsset
+
 
 @dataclass
 class TechnologyEvidence: # Explanation that explains why a technology was detected.
@@ -34,6 +36,7 @@ class TechnologyRule: # A rule for detecting a specific technology.
     domain_signatures: list[str]
     html_signatures: list[str]
     script_url_signatures: list[str]
+    js_asset_signatures: list[str]
     stylesheet_url_signatures: list[str]
     meta_generator_signatures: list[str]
     dom_marker_signatures: list[str]
@@ -56,6 +59,7 @@ def load_technology_rules(rules_path: Path) -> list[TechnologyRule]:
                 domain_signatures=raw_rule.get("domain_signatures", []),
                 html_signatures=raw_rule.get("html_signatures", []),
                 script_url_signatures=raw_rule.get("script_url_signatures", []),
+                js_asset_signatures=raw_rule.get("js_asset_signatures", []),
                 stylesheet_url_signatures=raw_rule.get("stylesheet_url_signatures", []),
                 meta_generator_signatures=raw_rule.get("meta_generator_signatures", []),
                 dom_marker_signatures=raw_rule.get("dom_marker_signatures", []),
@@ -103,6 +107,7 @@ def detect_technologies(
     headers: dict[str, str],
     rules: list[TechnologyRule],
     cookies: dict[str, str] | None = None,
+    javascript_assets: list[JavaScriptAsset] | None = None,
 ) -> list[TechnologyDetection]:
     
     # Normalize the headers
@@ -113,11 +118,14 @@ def detect_technologies(
 
     if cookies is None:
         cookies = {}
+    
+    if javascript_assets is None:
+        javascript_assets = []
 
     detections: list[TechnologyDetection] = []
 
     for rule in rules:
-        evidence = collect_evidence_for_rule(rule, domain, final_url, html, normalized_headers, cookies)
+        evidence = collect_evidence_for_rule(rule, domain, final_url, html, normalized_headers, cookies, javascript_assets)
 
         if not evidence:
             continue
@@ -143,6 +151,7 @@ def collect_evidence_for_rule(
     html: str,
     normalized_headers: dict[str, str],
     cookies: dict[str, str],
+    javascript_assets: list[JavaScriptAsset],
 ) -> list[TechnologyEvidence]:
 
     evidence: list[TechnologyEvidence] = []
@@ -164,6 +173,15 @@ def collect_evidence_for_rule(
     evidence.extend(
         collect_cookie_evidence(cookies, rule.cookie_signatures, rule.confidence)
     )
+
+    evidence.extend(
+        collect_javascript_asset_evidence(
+            javascript_assets,
+            rule.js_asset_signatures,
+            rule.confidence,
+        )
+    )
+
     evidence.extend(
         collect_header_evidence(normalized_headers, rule.header_signatures, rule.confidence)
     )
@@ -472,6 +490,47 @@ def collect_cookie_evidence(
             break
 
     return evidence
+
+
+# Find technology signatures inside fetched JavaScript assets.
+def collect_javascript_asset_evidence(
+    javascript_assets: list[JavaScriptAsset],
+    signatures: list[str],
+    confidence: str,
+) -> list[TechnologyEvidence]:
+    evidence: list[TechnologyEvidence] = []
+
+    for javascript_asset in javascript_assets:
+        if javascript_asset.error is not None:
+            continue
+
+        javascript_content_lower = javascript_asset.content.lower()
+
+        for signature in signatures:
+            normalized_signature = signature.lower()
+
+            if not normalized_signature:
+                continue
+
+            if normalized_signature not in javascript_content_lower:
+                continue
+
+            evidence.append(
+                TechnologyEvidence(
+                    type="js_asset",
+                    source="javascript",
+                    location=javascript_asset.url,
+                    matched_value=signature,
+                    excerpt=build_excerpt(javascript_asset.content, signature),
+                    confidence=confidence,
+                    explanation=f"Found '{signature}' inside a JavaScript asset.",
+                )
+            )
+            break
+
+    return evidence
+
+
 
 # Find technology signatures inside HTTP response headers.
 def collect_header_evidence(

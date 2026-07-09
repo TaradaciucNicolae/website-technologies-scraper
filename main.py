@@ -2,6 +2,7 @@ from pathlib import Path
 import csv
 import json
 from src.extract_domains import extract_domains
+from src.javascript_asset_fetcher import JavaScriptAsset, fetch_javascript_assets
 from src.website_fetcher import WebsiteFetchResult, fetch_website
 
 from src.technology_detector import (
@@ -57,7 +58,11 @@ def print_detected_technologies(detections: list[TechnologyDetection]) -> None:
 def build_result_record(
     fetch_result: WebsiteFetchResult,
     detections: list[TechnologyDetection],
+    javascript_assets: list[JavaScriptAsset] | None = None,
 ) -> dict:
+
+    if javascript_assets is None:
+        javascript_assets = []
 
     technologies: list[dict] = []
 
@@ -105,8 +110,26 @@ def build_result_record(
             "content_type": fetch_result.content_type,
             "redirect_count": fetch_result.redirect_count,
             "cookies": fetch_result.cookies,
+            "javascript_assets": build_javascript_asset_metadata(javascript_assets),
         },
     }
+
+
+def build_javascript_asset_metadata(javascript_assets: list[JavaScriptAsset]) -> list[dict]:
+    asset_metadata_items: list[dict] = []
+
+    for javascript_asset in javascript_assets:
+        asset_metadata_items.append(
+            {
+                "url": javascript_asset.url,
+                "status_code": javascript_asset.status_code,
+                "content_type": javascript_asset.content_type,
+                "bytes_read": len(javascript_asset.content.encode("utf-8")),
+                "error": javascript_asset.error,
+            }
+        )
+
+    return asset_metadata_items
 
 
 
@@ -224,6 +247,10 @@ def main() -> None:
             continue
 
         result = fetch_website(domain)
+        javascript_assets = fetch_javascript_assets(
+            html=result.html,
+            base_url=result.final_url,
+        )
         detections = detect_technologies(
             domain=result.domain,
             final_url=result.final_url,
@@ -231,12 +258,14 @@ def main() -> None:
             headers=result.headers,
             rules=rules,
             cookies=result.cookies,
+            javascript_assets=javascript_assets,
         )
 
         print_fetch_result(result)
+        print(f"JavaScript assets fetched: {len(javascript_assets)}")
         print_detected_technologies(detections)
 
-        results.append(build_result_record(result, detections))
+        results.append(build_result_record(result, detections, javascript_assets))
 
 
     save_json_results(results, RESULTS_OUTPUT_PATH)

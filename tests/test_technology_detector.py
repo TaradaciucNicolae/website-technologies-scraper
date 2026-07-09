@@ -1,6 +1,7 @@
 import unittest
 from pathlib import Path
 
+from src.javascript_asset_fetcher import JavaScriptAsset
 from src.technology_detector import detect_technologies, load_technology_rules
 
 
@@ -504,6 +505,48 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertEqual(cookie_evidence.matched_value, "_clck")
         self.assertIn("_clck", cookie_evidence.excerpt)
         self.assertEqual(cookie_evidence.confidence, "high")
+
+
+    # Test detection from the content of a fetched JavaScript asset.
+    def test_detects_segment_from_javascript_asset(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
+        javascript_assets = [
+            JavaScriptAsset(
+                url="https://example.com/assets/app.bundle.js",
+                status_code=200,
+                content_type="application/javascript",
+                content="analytics.load('example-write-key'); analytics.track('Page Loaded');",
+                error=None,
+            )
+        ]
+
+        detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
+            html='<script src="/assets/app.bundle.js"></script>',
+            headers={},
+            rules=rules,
+            javascript_assets=javascript_assets,
+        )
+
+        segment_detection = next(
+            detection
+            for detection in detections
+            if detection.name == "Segment"
+        )
+
+        javascript_evidence = next(
+            evidence
+            for evidence in segment_detection.evidence
+            if evidence.type == "js_asset"
+        )
+
+        self.assertEqual(javascript_evidence.source, "javascript")
+        self.assertEqual(javascript_evidence.location, "https://example.com/assets/app.bundle.js")
+        self.assertEqual(javascript_evidence.matched_value, "analytics.load")
+        self.assertIn("analytics.load", javascript_evidence.excerpt)
+        self.assertEqual(javascript_evidence.confidence, "high")
+
 
 if __name__ == "__main__":
     unittest.main()
