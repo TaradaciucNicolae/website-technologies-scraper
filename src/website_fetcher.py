@@ -12,6 +12,7 @@ class WebsiteFetchResult:
     final_url: str | None
     status_code: int | None
     headers: dict[str, str]
+    cookies: dict[str, str]
     html: str
     error: str | None
     elapsed_ms: int | None
@@ -50,6 +51,7 @@ def fetch_website(domain: str, timeout_seconds: int = 10) -> WebsiteFetchResult:
                 final_url=response.url,
                 status_code=response.status_code,
                 headers=dict(response.headers),
+                cookies=response.cookies.get_dict(),
                 html=response.text,
                 error=None,
                 elapsed_ms=elapsed_ms,
@@ -69,6 +71,7 @@ def fetch_website(domain: str, timeout_seconds: int = 10) -> WebsiteFetchResult:
         final_url=None,
         status_code=None,
         headers={},
+        cookies={},
         html="",
         error=last_error,
         elapsed_ms=elapsed_ms,

@@ -27,6 +27,7 @@ def print_fetch_result(result: WebsiteFetchResult) -> None:
     print(f"Content type: {result.content_type or '-'}")
     print(f"Redirects:    {result.redirect_count}")
     print(f"Headers:      {len(result.headers)}")
+    print(f"Cookies:      {len(result.cookies)}")
     print(f"HTML length:  {len(result.html)} characters")
     print(f"Error:        {result.error or '-'}")
     
@@ -101,6 +102,7 @@ def build_result_record(
             "elapsed_ms": fetch_result.elapsed_ms,
             "content_type": fetch_result.content_type,
             "redirect_count": fetch_result.redirect_count,
+            "cookies": fetch_result.cookies,
         },
     }
 

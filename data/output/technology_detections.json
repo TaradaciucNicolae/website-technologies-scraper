@@ -23,8 +23,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186d418fb21c9e8-OTP",
-            "excerpt": "cf-ray: a186d418fb21c9e8-OTP",
+            "matched_value": "a186da96d872f4c8-OTP",
+            "excerpt": "cf-ray: a186da96d872f4c8-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -46,9 +46,12 @@
         "https://100wwcstlw.org"
       ],
       "successful_url": "https://100wwcstlw.org",
-      "elapsed_ms": 670,
+      "elapsed_ms": 668,
       "content_type": "text/html",
-      "redirect_count": 0
+      "redirect_count": 0,
+      "cookies": {
+        "__cf_bm": "yLtxGGuRtOLpbCF9jcahWFcaj4r.24djWTVOqiHhk7g-1783595129.411933-1.0.1.1-IkYA5FrWLJHgxJFlsKHrmAxYJNM24_qew2hb37q91eCcL_9ThwcfUP7kdXjrb8DtsKA4wZomIcDx38JhZD4sRqwVES03Go1AQs_CGOKXuMizxOAvv_DBHvZe5JS6SKy."
+      }
     }
   },
   {
@@ -132,8 +135,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186d41d0a7de45d-OTP",
-            "excerpt": "cf-ray: a186d41d0a7de45d-OTP",
+            "matched_value": "a186da9afe1ab9ea-OTP",
+            "excerpt": "cf-ray: a186da9afe1ab9ea-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -141,8 +144,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-cache-status",
-            "matched_value": "UPDATING",
-            "excerpt": "cf-cache-status: UPDATING",
+            "matched_value": "HIT",
+            "excerpt": "cf-cache-status: HIT",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-cache-status'."
           }
@@ -187,9 +190,12 @@
         "https://11853prospecthill.com"
       ],
       "successful_url": "https://11853prospecthill.com",
-      "elapsed_ms": 676,
+      "elapsed_ms": 689,
       "content_type": "text/html",
-      "redirect_count": 0
+      "redirect_count": 0,
+      "cookies": {
+        "__cf_bm": "fo4M7vGPzecT7OmVFKtVm6HbuVEGuUktqdIhqOhQRfM-1783595130.0735986-1.0.1.1-U5xZUtpsZSv7ABKdODRFH2dN4zPHXunlciRFbTgMw7S44ro8zufuLNOIMHhTPxtW_caJFaUsQQgNAh5SgJMB57LkSdhwjR0tEndnF4rQgccsXJV8gyMvdmrqCFmhzz_t"
+      }
     }
   },
   {
@@ -282,8 +288,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186d4221839ca25-OTP",
-            "excerpt": "cf-ray: a186d4221839ca25-OTP",
+            "matched_value": "a186da9fe8b5e429-OTP",
+            "excerpt": "cf-ray: a186da9fe8b5e429-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -346,9 +352,12 @@
         "https://11thhourracing.org"
       ],
       "successful_url": "https://11thhourracing.org",
-      "elapsed_ms": 1665,
+      "elapsed_ms": 1365,
       "content_type": "text/html; charset=UTF-8",
-      "redirect_count": 0
+      "redirect_count": 0,
+      "cookies": {
+        "__cf_bm": "NXaCtXU1V7BaWG9HBU0gpFEu4jgnIIn2BWC7PZbRlPY-1783595130.8702314-1.0.1.1-jsQPsXT8GqhF3BJOuZ7hlXQwT6vPB2CmMMgj3gJ1iJ.uOs9jyFO9h9XuPg0g0g2C__rhqh6PaEjOxIoCNr2A22YrAPHDUN9SwlQ9KUtr27Wu2dt5DfTe4sxMr1YLUxvJ"
+      }
     }
   },
   {
@@ -409,8 +418,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186d42cdfc6ca1c-OTP",
-            "excerpt": "cf-ray: a186d42cdfc6ca1c-OTP",
+            "matched_value": "a186daa8de1fe4b3-OTP",
+            "excerpt": "cf-ray: a186daa8de1fe4b3-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -489,9 +498,12 @@
         "https://1planettechnologies.weebly.com"
       ],
       "successful_url": "https://1planettechnologies.weebly.com",
-      "elapsed_ms": 858,
+      "elapsed_ms": 877,
       "content_type": "text/html; charset=UTF-8",
-      "redirect_count": 0
+      "redirect_count": 0,
+      "cookies": {
+        "__cf_bm": "YPxdVWlPNtKMiWqF71cskkmvzH16VkGxl913PIQf7FE-1783595132.2951074-1.0.1.1-t2ByzuSyzEwvHB5at7WcLvtFZTIHYPfGhQN5a.2sjYvnGfrcdtdhJ7Knxzw5Kg25DFvpt6nIdvXuTdOjSJ8Dh9Y1F94nj8O6q7D8ZxyskU_WiUMPiqV88TGwXkYpvAo6"
+      }
     }
   },
   {
@@ -518,8 +530,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186d4326d2ae4aa-OTP",
-            "excerpt": "cf-ray: a186d4326d2ae4aa-OTP",
+            "matched_value": "a186daae3bc4c9e0-OTP",
+            "excerpt": "cf-ray: a186daae3bc4c9e0-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           }
@@ -533,9 +545,10 @@
         "http://1stclairavewest.com"
       ],
       "successful_url": "http://1stclairavewest.com",
-      "elapsed_ms": 658,
+      "elapsed_ms": 632,
       "content_type": "text/html; charset=UTF-8",
-      "redirect_count": 0
+      "redirect_count": 0,
+      "cookies": {}
     }
   },
   {
@@ -562,8 +575,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186d4365a4ee4b5-OTP",
-            "excerpt": "cf-ray: a186d4365a4ee4b5-OTP",
+            "matched_value": "a186dab22a9ae4b0-OTP",
+            "excerpt": "cf-ray: a186dab22a9ae4b0-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           }
@@ -576,9 +589,12 @@
         "https://1stlocksheathscouts.org.uk"
       ],
       "successful_url": "https://1stlocksheathscouts.org.uk",
-      "elapsed_ms": 617,
+      "elapsed_ms": 612,
       "content_type": "text/html; charset=UTF-8",
-      "redirect_count": 0
+      "redirect_count": 0,
+      "cookies": {
+        "__cf_bm": "5Uy1VuCgfqtK8nYdnRZgYGUbyeGaNzKHi3xGWfX5LlE-1783595133.787332-1.0.1.1-9k8WdHuL7djQf98sVhZ8MktvU.91gXSysve7tbtzIMMjO2CzvrY0EusKG0xoaDTW_NOQKGdvqvgg8J565aEU5FOHiOvvyHQWK2j5fOB_VI5dWj.HXPOX1ptJToXewduZ"
+      }
     }
   },
   {
@@ -605,8 +621,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186d43a6872e4b4-OTP",
-            "excerpt": "cf-ray: a186d43a6872e4b4-OTP",
+            "matched_value": "a186dab6288ce4a7-OTP",
+            "excerpt": "cf-ray: a186dab6288ce4a7-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           }
@@ -620,9 +636,10 @@
         "http://1ststopsupply.com"
       ],
       "successful_url": "http://1ststopsupply.com",
-      "elapsed_ms": 657,
+      "elapsed_ms": 658,
       "content_type": "text/html; charset=UTF-8",
-      "redirect_count": 0
+      "redirect_count": 0,
+      "cookies": {}
     }
   },
   {
@@ -674,8 +691,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186d43e6e45e4a8-OTP",
-            "excerpt": "cf-ray: a186d43e6e45e4a8-OTP",
+            "matched_value": "a186daba6b0c7607-OTP",
+            "excerpt": "cf-ray: a186daba6b0c7607-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -738,9 +755,12 @@
         "https://2-com.net"
       ],
       "successful_url": "https://2-com.net",
-      "elapsed_ms": 1006,
+      "elapsed_ms": 1004,
       "content_type": "text/html; charset=utf-8",
-      "redirect_count": 0
+      "redirect_count": 0,
+      "cookies": {
+        "__cf_bm": "be8qomQShaRSaS_bek7P3.Yk2_qbxFaS6TCS4UiaO_s-1783595135.1063812-1.0.1.1-rugo6y4ANxsJoTsaSCYWHg4j9rw4I.q16Ag3flTGNZ2_C0E1JwtSjR9oAgqE2cU0vuCadJvPzaUSjaWn0pHurggbZQWz.2fuKOkpUBt3o8H.4sAGcTsOzx2DVSwvark8"
+      }
     }
   },
   {
@@ -801,8 +821,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186d444aef9c9ec-OTP",
-            "excerpt": "cf-ray: a186d444aef9c9ec-OTP",
+            "matched_value": "a186dac08d8f0544-OTP",
+            "excerpt": "cf-ray: a186dac08d8f0544-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -849,9 +869,12 @@
         "https://2020wealthadvisory.com"
       ],
       "successful_url": "https://2020wealthadvisory.com",
-      "elapsed_ms": 632,
+      "elapsed_ms": 648,
       "content_type": "text/html; charset=UTF-8",
-      "redirect_count": 0
+      "redirect_count": 0,
+      "cookies": {
+        "__cf_bm": "NmPnsvDPf2FjVXkZ9.Cd6EBiHPO6ZKbi6DmjdWi2WKo-1783595136.091057-1.0.1.1-ILakf2Tsno6Rzz5FtmM4fUv.E.XxSLiLFEl6RcpD3CW3qfwPssdL.glWPKyRe1lMJ1n9.gklunWRu.IfmIS0Q25DavmiKOaRIdvSz6roPvG9X9VhMRvTshR_v6n4pKl."
+      }
     }
   },
   {
@@ -928,8 +951,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186d4493c1be413-OTP",
-            "excerpt": "cf-ray: a186d4493c1be413-OTP",
+            "matched_value": "a186dac4dcd8e44e-OTP",
+            "excerpt": "cf-ray: a186dac4dcd8e44e-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -937,8 +960,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-cache-status",
-            "matched_value": "EXPIRED",
-            "excerpt": "cf-cache-status: EXPIRED",
+            "matched_value": "HIT",
+            "excerpt": "cf-cache-status: HIT",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-cache-status'."
           }
@@ -951,9 +974,12 @@
         "https://231selfstorage.com"
       ],
       "successful_url": "https://231selfstorage.com",
-      "elapsed_ms": 891,
+      "elapsed_ms": 645,
       "content_type": "text/html; charset=UTF-8",
-      "redirect_count": 0
+      "redirect_count": 0,
+      "cookies": {
+        "__cf_bm": ".Z3Z8zMmZWYAm2nFtWlEqp7lDkvLvhregu4rOF.YX_M-1783595136.7792785-1.0.1.1-gNZ190SbA9WBVKPwGRJs3kxrQOJU_q3IfBmU1kBuxCI8XYFXarMfTZK9Yb5iwgFwsJjg6fe8B76KVd87U0MKUrh1vKY9dVFPUsNWJoPO0Pm2BFDFnmYImtZYuRSUFP4z"
+      }
     }
   }
 ]
