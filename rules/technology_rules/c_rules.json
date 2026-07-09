@@ -1,0 +1,373 @@
+[
+  {
+    "name": "Calendly",
+    "category": "Scheduling",
+    "confidence": "high",
+    "domain_signatures": [
+      "calendly.com"
+    ],
+    "html_signatures": [
+      "calendly",
+      "calendly-inline-widget"
+    ],
+    "script_url_signatures": [
+      "assets.calendly.com/assets/external/widget.js"
+    ],
+    "js_asset_signatures": [
+      "Calendly.initInlineWidget",
+      "calendly-inline-widget"
+    ],
+    "package_url_signatures": [
+      "react-calendly"
+    ],
+    "stylesheet_url_signatures": [
+      "assets.calendly.com/assets/external/widget.css"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "calendly-inline-widget"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Chakra UI",
+    "category": "UI Component Library",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "chakra-ui",
+      "chakra-button",
+      "chakra-stack"
+    ],
+    "script_url_signatures": [
+      "@chakra-ui/react"
+    ],
+    "js_asset_signatures": [
+      "@chakra-ui/react",
+      "chakra-ui",
+      "ChakraProvider"
+    ],
+    "package_url_signatures": [
+      "@chakra-ui/react",
+      "@chakra-ui/icons"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "chakra-button",
+      "chakra-stack",
+      "chakra-ui"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Chart.js",
+    "category": "JavaScript Library",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "chart.js",
+      "new Chart("
+    ],
+    "script_url_signatures": [
+      "chart.min.js",
+      "chart.umd.js",
+      "cdn.jsdelivr.net/npm/chart.js",
+      "cdnjs.cloudflare.com/ajax/libs/Chart.js"
+    ],
+    "js_asset_signatures": [
+      "new Chart(",
+      "Chart.register",
+      "Chart.defaults"
+    ],
+    "package_url_signatures": [
+      "chart.js"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cloudflare",
+    "category": "CDN / Security",
+    "confidence": "high",
+    "domain_signatures": [
+      "pages.dev",
+      "workers.dev"
+    ],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "static.cloudflareinsights.com",
+      "/cdn-cgi/"
+    ],
+    "js_asset_signatures": [
+      "__cfBeacon",
+      "CloudflareApps",
+      "/cdn-cgi/"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "/cdn-cgi/"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "__cf_bm",
+      "cf_clearance",
+      "__cflb"
+    ],
+    "header_signatures": {
+      "server": [
+        "cloudflare"
+      ],
+      "cf-ray": [
+        ""
+      ],
+      "cf-cache-status": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "Cloudflare Zaraz",
+    "category": "Tag Manager / CDN",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "zaraz"
+    ],
+    "script_url_signatures": [
+      "static.cloudflareinsights.com/zaraz",
+      "/cdn-cgi/zaraz/"
+    ],
+    "js_asset_signatures": [
+      "zaraz.track",
+      "zarazData",
+      "/cdn-cgi/zaraz/"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "zaraz"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cloudinary",
+    "category": "Media CDN",
+    "confidence": "high",
+    "domain_signatures": [
+      "res.cloudinary.com"
+    ],
+    "html_signatures": [
+      "res.cloudinary.com",
+      "cloudinary.com"
+    ],
+    "script_url_signatures": [
+      "widget.cloudinary.com",
+      "upload-widget.cloudinary.com",
+      "cloudinary-core"
+    ],
+    "js_asset_signatures": [
+      "cloudinary",
+      "cloudinary-core",
+      "res.cloudinary.com"
+    ],
+    "package_url_signatures": [
+      "cloudinary-core",
+      "@cloudinary/url-gen",
+      "@cloudinary/react"
+    ],
+    "stylesheet_url_signatures": [
+      "cloudinary.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-cloudinary",
+      "cld-responsive"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Constant Contact",
+    "category": "Email Marketing",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "constantcontact"
+    ],
+    "script_url_signatures": [
+      "static.ctctcdn.com",
+      "constantcontact.com"
+    ],
+    "js_asset_signatures": [
+      "ctct",
+      "constantcontact",
+      "static.ctctcdn.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "ctctcdn.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Contentful",
+    "category": "Headless CMS",
+    "confidence": "medium",
+    "domain_signatures": [
+      "ctfassets.net",
+      "contentful.com"
+    ],
+    "html_signatures": [
+      "ctfassets.net",
+      "contentful"
+    ],
+    "script_url_signatures": [
+      "ctfassets.net",
+      "contentful"
+    ],
+    "js_asset_signatures": [
+      "contentful",
+      "ctfassets.net"
+    ],
+    "package_url_signatures": [
+      "contentful",
+      "@contentful/rich-text-react-renderer"
+    ],
+    "stylesheet_url_signatures": [
+      "ctfassets.net"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ConvertKit",
+    "category": "Email Marketing",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "convertkit",
+      "ck_form"
+    ],
+    "script_url_signatures": [
+      "f.convertkit.com",
+      "convertkit.com"
+    ],
+    "js_asset_signatures": [
+      "convertkit",
+      "f.convertkit.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "convertkit.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "ck_form"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cookiebot",
+    "category": "Consent Management",
+    "confidence": "high",
+    "domain_signatures": [
+      "cookiebot.com",
+      "consent.cookiebot.com"
+    ],
+    "html_signatures": [
+      "Cookiebot",
+      "data-cbid",
+      "consent.cookiebot.com"
+    ],
+    "script_url_signatures": [
+      "consent.cookiebot.com/uc.js",
+      "cookiebot.com/uc.js"
+    ],
+    "js_asset_signatures": [
+      "Cookiebot",
+      "CookieConsent",
+      "data-cbid"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "cookiebot.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-cbid",
+      "CookieDeclaration"
+    ],
+    "cookie_signatures": [
+      "CookieConsent",
+      "CookieConsentBulkTicket"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Crazy Egg",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "crazyegg"
+    ],
+    "script_url_signatures": [
+      "script.crazyegg.com/pages/scripts"
+    ],
+    "js_asset_signatures": [
+      "CE_SNAPSHOT_NAME",
+      "CrazyEgg",
+      "script.crazyegg.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_ceir",
+      "_ceg.s"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Crisp",
+    "category": "Customer Support",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "CRISP_WEBSITE_ID",
+      "crisp.chat"
+    ],
+    "script_url_signatures": [
+      "client.crisp.chat"
+    ],
+    "js_asset_signatures": [
+      "$crisp",
+      "CRISP_WEBSITE_ID",
+      "client.crisp.chat"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "crisp-client"
+    ],
+    "header_signatures": {}
+  }
+]

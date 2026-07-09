@@ -1,0 +1,203 @@
+[
+  {
+    "name": "NestJS",
+    "category": "Backend Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "nestjs"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "nestjs"
+      ]
+    }
+  },
+  {
+    "name": "Netlify",
+    "category": "Hosting",
+    "confidence": "high",
+    "domain_signatures": [
+      "netlify.app"
+    ],
+    "html_signatures": [
+      "netlify",
+      "netlify-identity-widget"
+    ],
+    "script_url_signatures": [
+      "identity.netlify.com",
+      "netlify-identity-widget"
+    ],
+    "js_asset_signatures": [
+      "netlifyIdentity",
+      "netlify",
+      "/.netlify/"
+    ],
+    "package_url_signatures": [
+      "netlify-identity-widget"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "netlify"
+      ],
+      "x-nf-request-id": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "New Relic",
+    "category": "Monitoring",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "NREUM",
+      "newrelic"
+    ],
+    "script_url_signatures": [
+      "js-agent.newrelic.com"
+    ],
+    "js_asset_signatures": [
+      "NREUM",
+      "newrelic",
+      "js-agent.newrelic.com"
+    ],
+    "package_url_signatures": [
+      "@newrelic/browser-agent"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Next.js",
+    "category": "JavaScript Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "__NEXT_DATA__"
+    ],
+    "script_url_signatures": [
+      "_next/static"
+    ],
+    "js_asset_signatures": [
+      "__NEXT_DATA__",
+      "next/router",
+      "next/dist",
+      "_next/static"
+    ],
+    "package_url_signatures": [
+      "next"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "__next_data__",
+      "next-head-count"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-nextjs-cache": [
+        ""
+      ],
+      "x-matched-path": [
+        ""
+      ],
+      "x-nextjs-matched-path": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "Node.js",
+    "category": "Backend Runtime",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "Node.js"
+      ]
+    }
+  },
+  {
+    "name": "Nosto",
+    "category": "Personalization / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "nostojs",
+      "nosto"
+    ],
+    "script_url_signatures": [
+      "connect.nosto.com",
+      "nosto.com"
+    ],
+    "js_asset_signatures": [
+      "nostojs",
+      "nosto",
+      "connect.nosto.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "nosto_element",
+      "nosto"
+    ],
+    "cookie_signatures": [
+      "nosto"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Nuxt.js",
+    "category": "JavaScript Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "__NUXT__"
+    ],
+    "script_url_signatures": [
+      "_nuxt/"
+    ],
+    "js_asset_signatures": [
+      "__NUXT__",
+      "_nuxt/",
+      "nuxtApp"
+    ],
+    "package_url_signatures": [
+      "nuxt",
+      "@nuxt/kit"
+    ],
+    "stylesheet_url_signatures": [
+      "_nuxt/"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-n-head"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  }
+]

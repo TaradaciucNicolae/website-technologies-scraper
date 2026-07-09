@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Zendesk",
+    "category": "Customer Support",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "zendesk"
+    ],
+    "script_url_signatures": [
+      "static.zdassets.com",
+      "zopim.com"
+    ],
+    "js_asset_signatures": [
+      "zE(",
+      "zEmbed",
+      "Zendesk",
+      "zdassets.com",
+      "zopim"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "__zlcmid"
+    ],
+    "header_signatures": {}
+  }
+]

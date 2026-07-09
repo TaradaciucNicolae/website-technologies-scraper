@@ -1,0 +1,63 @@
+[
+  {
+    "name": "Yandex Cloud",
+    "category": "Cloud / Hosting",
+    "confidence": "medium",
+    "domain_signatures": [
+      "yandexcloud.net",
+      "storage.yandexcloud.net"
+    ],
+    "html_signatures": [
+      "yandexcloud.net",
+      "storage.yandexcloud.net"
+    ],
+    "script_url_signatures": [
+      "yandexcloud.net",
+      "storage.yandexcloud.net"
+    ],
+    "js_asset_signatures": [
+      "yandexcloud.net",
+      "storage.yandexcloud.net"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "yandexcloud.net",
+      "storage.yandexcloud.net"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "Yandex"
+      ]
+    }
+  },
+  {
+    "name": "Yotpo",
+    "category": "Reviews / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "yotpo"
+    ],
+    "script_url_signatures": [
+      "staticw2.yotpo.com",
+      "yotpo.com"
+    ],
+    "js_asset_signatures": [
+      "yotpo",
+      "staticw2.yotpo.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "yotpo.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "yotpo"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  }
+]

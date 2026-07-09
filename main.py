@@ -17,7 +17,7 @@ from src.technology_detector import (
     load_technology_rules,
 )
 
-RULES_PATH = Path("rules/technology_rules.json")
+RULES_PATH = Path("rules/technology_rules")
 RAW_INPUT_PATH = Path("data/raw/domains.snappy.parquet")
 DOMAINS_OUTPUT_PATH = Path("data/domains.txt")
 RESULTS_OUTPUT_PATH = Path("data/output/technology_detections.json")

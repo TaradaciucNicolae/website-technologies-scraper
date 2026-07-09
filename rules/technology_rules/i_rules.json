@@ -1,0 +1,157 @@
+[
+  {
+    "name": "IBM Cloud",
+    "category": "Cloud / Hosting",
+    "confidence": "medium",
+    "domain_signatures": [
+      "cloud.ibm.com",
+      "appdomain.cloud",
+      "mybluemix.net"
+    ],
+    "html_signatures": [
+      "appdomain.cloud",
+      "mybluemix.net"
+    ],
+    "script_url_signatures": [
+      "appdomain.cloud",
+      "mybluemix.net"
+    ],
+    "js_asset_signatures": [
+      "appdomain.cloud",
+      "mybluemix.net"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "appdomain.cloud",
+      "mybluemix.net"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-global-transaction-id": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "Imgix",
+    "category": "Media CDN",
+    "confidence": "high",
+    "domain_signatures": [
+      "imgix.net"
+    ],
+    "html_signatures": [
+      "imgix.net",
+      "ixlib"
+    ],
+    "script_url_signatures": [
+      "imgix.js",
+      "cdn.jsdelivr.net/npm/imgix.js"
+    ],
+    "js_asset_signatures": [
+      "imgix",
+      "ixlib",
+      "imgix.js"
+    ],
+    "package_url_signatures": [
+      "imgix.js",
+      "react-imgix",
+      "@imgix/js-core"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "ix-src"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Imperva",
+    "category": "CDN / Security",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "imperva",
+      "incapsula"
+    ],
+    "script_url_signatures": [
+      "incapsula.com",
+      "imperva.com"
+    ],
+    "js_asset_signatures": [
+      "incapsula",
+      "imperva",
+      "visid_incap"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "incap_ses",
+      "visid_incap"
+    ],
+    "header_signatures": {
+      "x-iinfo": [
+        ""
+      ],
+      "x-cdn": [
+        "Imperva"
+      ]
+    }
+  },
+  {
+    "name": "Intercom",
+    "category": "Customer Support",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "window.intercomsettings",
+      "intercom("
+    ],
+    "script_url_signatures": [
+      "widget.intercom.io"
+    ],
+    "js_asset_signatures": [
+      "intercomSettings",
+      "Intercom(",
+      "widget.intercom.io"
+    ],
+    "package_url_signatures": [
+      "@intercom/messenger-js-sdk"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "intercom-id",
+      "intercom-session",
+      "intercom-device-id"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Iterable",
+    "category": "Marketing Automation",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "iterable"
+    ],
+    "script_url_signatures": [
+      "iterable.com"
+    ],
+    "js_asset_signatures": [
+      "_iaq",
+      "iterable"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "name": "Joomla",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "joomla",
+      "com_content",
+      "option=com_",
+      "joomla-script-options",
+      "Joomla.JText"
+    ],
+    "script_url_signatures": [
+      "/media/system/js/",
+      "/media/jui/js/"
+    ],
+    "js_asset_signatures": [
+      "Joomla.JText",
+      "Joomla.submitbutton",
+      "joomla-script-options"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "/media/system/css/"
+    ],
+    "meta_generator_signatures": [
+      "joomla"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "joomla_user_state",
+      "joomla_remember_me"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "jQuery",
+    "category": "JavaScript Library",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "jquery.min.js",
+      "jquery.js",
+      "jquery-migrate",
+      "cdn.jsdelivr.net/npm/jquery",
+      "unpkg.com/jquery",
+      "cdnjs.cloudflare.com/ajax/libs/jquery"
+    ],
+    "js_asset_signatures": [
+      "jQuery.fn",
+      "window.jQuery",
+      "$.fn.jquery"
+    ],
+    "package_url_signatures": [
+      "jquery"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Judge.me",
+    "category": "Reviews / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "judgeme",
+      "judge.me"
+    ],
+    "script_url_signatures": [
+      "cdn.judge.me",
+      "judge.me"
+    ],
+    "js_asset_signatures": [
+      "judgeme",
+      "judge.me",
+      "jdgm"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "cdn.judge.me",
+      "judge.me"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "jdgm-widget",
+      "jdgm-review-widget"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  }
+]

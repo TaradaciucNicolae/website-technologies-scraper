@@ -1,0 +1,304 @@
+[
+  {
+    "name": "Railway",
+    "category": "Hosting",
+    "confidence": "high",
+    "domain_signatures": [
+      "railway.app",
+      "up.railway.app"
+    ],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "railway.app",
+      "up.railway.app"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "React",
+    "category": "JavaScript Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "react-dom",
+      "__react"
+    ],
+    "script_url_signatures": [
+      "cdn.jsdelivr.net/npm/react",
+      "unpkg.com/react",
+      "cdnjs.cloudflare.com/ajax/libs/react"
+    ],
+    "js_asset_signatures": [
+      "React.createElement",
+      "react-dom",
+      "__REACT_DEVTOOLS_GLOBAL_HOOK__"
+    ],
+    "package_url_signatures": [
+      "react",
+      "react-dom"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-reactroot"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "reCAPTCHA",
+    "category": "Security",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "google.com/recaptcha",
+      "recaptcha/api.js"
+    ],
+    "js_asset_signatures": [
+      "grecaptcha",
+      "recaptcha/api.js"
+    ],
+    "package_url_signatures": [
+      "react-google-recaptcha"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "g-recaptcha"
+    ],
+    "cookie_signatures": [
+      "_GRECAPTCHA"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Recharge",
+    "category": "Subscriptions / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "rechargeapps",
+      "recharge"
+    ],
+    "script_url_signatures": [
+      "rechargeapps.com",
+      "static.rechargecdn.com"
+    ],
+    "js_asset_signatures": [
+      "RechargeWidget",
+      "rechargeapps",
+      "rechargecdn"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "rechargeapps.com",
+      "rechargecdn.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "recharge-subscription-widget"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ReConvert",
+    "category": "Upsell / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "reconvert"
+    ],
+    "script_url_signatures": [
+      "reconvert.io",
+      "cdn.reconvert.io"
+    ],
+    "js_asset_signatures": [
+      "reconvert"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "reconvert"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Reddit Pixel",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "rdt(",
+      "reddit pixel"
+    ],
+    "script_url_signatures": [
+      "www.redditstatic.com/ads/pixel.js"
+    ],
+    "js_asset_signatures": [
+      "rdt(",
+      "redditstatic.com/ads/pixel"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "rdt_uuid"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Remix",
+    "category": "JavaScript Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "__remixContext",
+      "remix-route"
+    ],
+    "script_url_signatures": [
+      "/build/_shared/",
+      "/build/routes/"
+    ],
+    "js_asset_signatures": [
+      "__remixContext",
+      "remixRouteModules",
+      "/build/_shared/"
+    ],
+    "package_url_signatures": [
+      "@remix-run/react",
+      "@remix-run/router"
+    ],
+    "stylesheet_url_signatures": [
+      "/build/_shared/",
+      "/build/routes/"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Reviews.io",
+    "category": "Reviews / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "reviews.io"
+    ],
+    "script_url_signatures": [
+      "reviews.io",
+      "widget.reviews.io"
+    ],
+    "js_asset_signatures": [
+      "REVIEWS.io"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "reviews.io"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "reviews-io"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Route",
+    "category": "Shipping / Ecommerce App",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "routeapp",
+      "route-protection"
+    ],
+    "script_url_signatures": [
+      "routeapp.io",
+      "route.com"
+    ],
+    "js_asset_signatures": [
+      "RouteApp",
+      "route.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "route-protection"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Ruby on Rails",
+    "category": "Backend Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "csrf-param",
+      "rails-ujs",
+      "data-turbo-track"
+    ],
+    "script_url_signatures": [
+      "rails-ujs"
+    ],
+    "js_asset_signatures": [
+      "Rails.start",
+      "rails-ujs",
+      "data-turbo-track"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-turbo-track"
+    ],
+    "cookie_signatures": [
+      "_rails_session"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "RudderStack",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [
+      "rudderstack.com"
+    ],
+    "html_signatures": [
+      "rudderanalytics",
+      "rudderstack"
+    ],
+    "script_url_signatures": [
+      "cdn.rudderlabs.com",
+      "rudder-analytics"
+    ],
+    "js_asset_signatures": [
+      "rudderanalytics.load",
+      "rudderanalytics.track",
+      "rudderstack"
+    ],
+    "package_url_signatures": [
+      "rudder-sdk-js",
+      "@rudderstack/analytics-js"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "rudder"
+    ],
+    "header_signatures": {}
+  }
+]

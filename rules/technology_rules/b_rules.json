@@ -1,0 +1,283 @@
+[
+  {
+    "name": "Backbone.js",
+    "category": "JavaScript Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "backbone.js"
+    ],
+    "script_url_signatures": [
+      "backbone.js",
+      "backbone-min.js",
+      "cdn.jsdelivr.net/npm/backbone",
+      "cdnjs.cloudflare.com/ajax/libs/backbone.js"
+    ],
+    "js_asset_signatures": [
+      "Backbone.Model",
+      "Backbone.View",
+      "Backbone.Router"
+    ],
+    "package_url_signatures": [
+      "backbone"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "BigCommerce",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [
+      "mybigcommerce.com"
+    ],
+    "html_signatures": [
+      "BigCommerce",
+      "stencil-utils",
+      "%%GLOBAL_",
+      "stencilUtils"
+    ],
+    "script_url_signatures": [
+      "cdn11.bigcommerce.com",
+      "bigcommerce.com"
+    ],
+    "js_asset_signatures": [
+      "stencilUtils",
+      "BigCommerce",
+      "cdn11.bigcommerce.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "cdn11.bigcommerce.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "SHOP_SESSION_TOKEN"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Blazor",
+    "category": "JavaScript Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "blazor"
+    ],
+    "script_url_signatures": [
+      "_framework/blazor.webassembly.js",
+      "_framework/blazor.server.js"
+    ],
+    "js_asset_signatures": [
+      "Blazor.start",
+      "blazor.webassembly.js",
+      "blazor.server.js",
+      "_framework/"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Bloomreach",
+    "category": "Search / Personalization",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "bloomreach",
+      "br_uid_2"
+    ],
+    "script_url_signatures": [
+      "bloomreach.com",
+      "brcdn.com"
+    ],
+    "js_asset_signatures": [
+      "brtrk",
+      "bloomreach",
+      "exponea"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "bloomreach"
+    ],
+    "cookie_signatures": [
+      "br_uid_2"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Bold Commerce",
+    "category": "Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "boldcommerce",
+      "bold_options",
+      "bold-product"
+    ],
+    "script_url_signatures": [
+      "boldapps.net",
+      "boldcommerce.com"
+    ],
+    "js_asset_signatures": [
+      "BOLD",
+      "boldapps",
+      "BoldCommerce"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "boldapps.net",
+      "boldcommerce.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "bold_options",
+      "bold-product"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Bootstrap",
+    "category": "CSS Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "bootstrap.min.js",
+      "cdn.jsdelivr.net/npm/bootstrap",
+      "cdnjs.cloudflare.com/ajax/libs/bootstrap"
+    ],
+    "js_asset_signatures": [
+      "bootstrap.Modal",
+      "data-bs-toggle",
+      "Bootstrap"
+    ],
+    "package_url_signatures": [
+      "bootstrap",
+      "@popperjs/core"
+    ],
+    "stylesheet_url_signatures": [
+      "bootstrap.min.css",
+      "cdn.jsdelivr.net/npm/bootstrap",
+      "cdnjs.cloudflare.com/ajax/libs/bootstrap"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Braintree",
+    "category": "Payments",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "braintree"
+    ],
+    "script_url_signatures": [
+      "js.braintreegateway.com",
+      "braintreegateway.com"
+    ],
+    "js_asset_signatures": [
+      "braintree.client",
+      "braintreegateway",
+      "Braintree"
+    ],
+    "package_url_signatures": [
+      "braintree-web"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "braintree"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Braze",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "braze",
+      "appboy"
+    ],
+    "script_url_signatures": [
+      "js.appboycdn.com",
+      "braze.com"
+    ],
+    "js_asset_signatures": [
+      "appboy",
+      "braze",
+      "js.appboycdn.com"
+    ],
+    "package_url_signatures": [
+      "@braze/web-sdk"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Bulma",
+    "category": "CSS Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "bulma",
+      "navbar-burger",
+      "hero-body"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "bulma"
+    ],
+    "package_url_signatures": [
+      "bulma"
+    ],
+    "stylesheet_url_signatures": [
+      "bulma.min.css",
+      "cdn.jsdelivr.net/npm/bulma",
+      "cdnjs.cloudflare.com/ajax/libs/bulma"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "navbar-burger",
+      "hero-body"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Bun",
+    "category": "JavaScript Runtime",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "Bun"
+      ]
+    }
+  }
+]

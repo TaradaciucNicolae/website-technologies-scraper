@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Elementor",
+    "category": "WordPress Page Builder",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "elementor"
+    ],
+    "script_url_signatures": [
+      "elementor/assets",
+      "elementor-pro"
+    ],
+    "js_asset_signatures": [
+      "elementorFrontend",
+      "elementorModules",
+      "elementor/assets"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "elementor/assets",
+      "elementor-pro"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "elementor",
+      "data-elementor-type",
+      "elementor-section",
+      "elementor-widget",
+      "elementor-element"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Ember.js",
+    "category": "JavaScript Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "ember-application",
+      "ember-view",
+      "Ember.Application"
+    ],
+    "script_url_signatures": [
+      "ember.js",
+      "ember.min.js",
+      "cdn.jsdelivr.net/npm/ember-source"
+    ],
+    "js_asset_signatures": [
+      "Ember.Application",
+      "Ember.Router",
+      "ember-source"
+    ],
+    "package_url_signatures": [
+      "ember-source",
+      "ember-cli"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "ember-view",
+      "data-ember-action"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Express",
+    "category": "Backend Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "express"
+      ]
+    }
+  }
+]

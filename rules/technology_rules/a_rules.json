@@ -1,0 +1,654 @@
+[
+  {
+    "name": "ActiveCampaign",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "activecampaign",
+      "vgo('process')"
+    ],
+    "script_url_signatures": [
+      "trackcmp.net",
+      "activehosted.com"
+    ],
+    "js_asset_signatures": [
+      "vgo(",
+      "trackcmp.net",
+      "activehosted"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Adyen",
+    "category": "Payments",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "adyen"
+    ],
+    "script_url_signatures": [
+      "checkoutshopper-live.adyen.com",
+      "adyen.com"
+    ],
+    "js_asset_signatures": [
+      "AdyenCheckout",
+      "checkoutshopper",
+      "adyen"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "checkoutshopper-live.adyen.com",
+      "adyen.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "adyen-checkout"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Affirm",
+    "category": "Payments",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "affirm"
+    ],
+    "script_url_signatures": [
+      "affirm.com",
+      "cdn1.affirm.com"
+    ],
+    "js_asset_signatures": [
+      "affirm.ui",
+      "affirm.js",
+      "cdn1.affirm.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "affirm.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "affirm-as-low-as"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Afterpay",
+    "category": "Payments",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "afterpay"
+    ],
+    "script_url_signatures": [
+      "afterpay.com",
+      "static.afterpay.com"
+    ],
+    "js_asset_signatures": [
+      "AfterPay",
+      "afterpay.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "afterpay.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "afterpay-placement"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "AfterShip",
+    "category": "Shipping / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "aftership"
+    ],
+    "script_url_signatures": [
+      "aftership.com",
+      "assets.aftership.com"
+    ],
+    "js_asset_signatures": [
+      "AfterShip",
+      "automizely"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "aftership.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "aftership"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Akamai",
+    "category": "CDN / Security",
+    "confidence": "high",
+    "domain_signatures": [
+      "akamaihd.net",
+      "edgesuite.net",
+      "edgekey.net"
+    ],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "akamai",
+      "akamaihd.net"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "AkamaiGHost"
+      ],
+      "x-akamai-transformed": [
+        ""
+      ],
+      "akamai-cache-status": [
+        ""
+      ],
+      "x-akamai-request-id": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "Algolia",
+    "category": "Search",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "algolia",
+      "algoliasearch"
+    ],
+    "script_url_signatures": [
+      "algolia.net",
+      "algoliasearch"
+    ],
+    "js_asset_signatures": [
+      "algoliasearch",
+      "algolia"
+    ],
+    "package_url_signatures": [
+      "algoliasearch",
+      "instantsearch.js"
+    ],
+    "stylesheet_url_signatures": [
+      "algolia"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "ais-"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Alpine.js",
+    "category": "JavaScript Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "Alpine.start"
+    ],
+    "script_url_signatures": [
+      "cdn.jsdelivr.net/npm/alpinejs",
+      "unpkg.com/alpinejs",
+      "alpine.min.js"
+    ],
+    "js_asset_signatures": [
+      "Alpine.start",
+      "x-data",
+      "alpinejs"
+    ],
+    "package_url_signatures": [
+      "alpinejs",
+      "@alpinejs/collapse",
+      "@alpinejs/intersect"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "x-data",
+      "x-init",
+      "x-show",
+      "x-bind"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Amazon CloudFront",
+    "category": "CDN / Security",
+    "confidence": "high",
+    "domain_signatures": [
+      "cloudfront.net"
+    ],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cloudfront.net"
+    ],
+    "js_asset_signatures": [
+      "cloudfront.net",
+      "CloudFront"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "cloudfront.net"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "CloudFront"
+      ],
+      "via": [
+        "cloudfront"
+      ],
+      "x-amz-cf-id": [
+        ""
+      ],
+      "x-cache": [
+        "CloudFront"
+      ],
+      "x-amz-cf-pop": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "Amazon Web Services",
+    "category": "Cloud / Hosting",
+    "confidence": "medium",
+    "domain_signatures": [
+      "amazonaws.com",
+      "awsapps.com",
+      "awsstatic.com",
+      "execute-api.",
+      "amplifyapp.com"
+    ],
+    "html_signatures": [
+      "amazonaws.com",
+      "awsstatic.com"
+    ],
+    "script_url_signatures": [
+      "amazonaws.com",
+      "awsstatic.com"
+    ],
+    "js_asset_signatures": [
+      "amazonaws.com",
+      "awsstatic.com",
+      "AWS.config"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "amazonaws.com",
+      "awsstatic.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-amz-cf-id": [
+        ""
+      ],
+      "x-amz-request-id": [
+        ""
+      ],
+      "x-amz-id-2": [
+        ""
+      ],
+      "server": [
+        "AmazonS3"
+      ],
+      "x-amzn-requestid": [
+        ""
+      ],
+      "x-amzn-trace-id": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "Amplitude",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "amplitude.getInstance",
+      "amplitude.track"
+    ],
+    "script_url_signatures": [
+      "cdn.amplitude.com/libs/analytics-browser",
+      "cdn.amplitude.com/libs/amplitude"
+    ],
+    "js_asset_signatures": [
+      "amplitude.init",
+      "amplitude.track",
+      "amplitude.getInstance"
+    ],
+    "package_url_signatures": [
+      "@amplitude/analytics-browser",
+      "amplitude-js"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "amplitude_id"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Angular",
+    "category": "JavaScript Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "platform-browser"
+    ],
+    "script_url_signatures": [
+      "cdn.jsdelivr.net/npm/@angular",
+      "unpkg.com/@angular"
+    ],
+    "js_asset_signatures": [
+      "ng-version",
+      "zone.js",
+      "@angular/core"
+    ],
+    "package_url_signatures": [
+      "@angular/core",
+      "@angular/common",
+      "@angular/router",
+      "zone.js",
+      "rxjs"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "ng-version",
+      "_ngcontent-",
+      "_nghost-"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "AngularJS",
+    "category": "JavaScript Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "angular.js",
+      "angular.min.js",
+      "cdn.jsdelivr.net/npm/angular",
+      "unpkg.com/angular",
+      "cdnjs.cloudflare.com/ajax/libs/angular.js"
+    ],
+    "js_asset_signatures": [
+      "angular.module",
+      "ng-app",
+      "angular.element"
+    ],
+    "package_url_signatures": [
+      "angular"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "ng-app",
+      "ng-controller"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Ant Design",
+    "category": "UI Component Library",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "ant-btn",
+      "ant-layout",
+      "ant-select"
+    ],
+    "script_url_signatures": [
+      "antd.min.js",
+      "cdn.jsdelivr.net/npm/antd",
+      "unpkg.com/antd"
+    ],
+    "js_asset_signatures": [
+      "antd",
+      "ant-design",
+      "ant-btn"
+    ],
+    "package_url_signatures": [
+      "antd",
+      "@ant-design/icons"
+    ],
+    "stylesheet_url_signatures": [
+      "antd.min.css",
+      "antd/dist",
+      "cdn.jsdelivr.net/npm/antd"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "ant-btn",
+      "ant-layout",
+      "ant-select",
+      "ant-form"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Apple Pay",
+    "category": "Payments",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "apple-pay",
+      "ApplePaySession"
+    ],
+    "script_url_signatures": [
+      "apple-pay"
+    ],
+    "js_asset_signatures": [
+      "ApplePaySession",
+      "apple-pay"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "apple-pay-button"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ASP.NET",
+    "category": "Backend Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "__doPostBack",
+      "WebForm_DoPostBackWithOptions",
+      "Sys.WebForms",
+      "aspnetForm"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "ASP.NET_SessionId",
+      ".ASPXAUTH"
+    ],
+    "header_signatures": {
+      "x-aspnet-version": [
+        ""
+      ],
+      "x-powered-by": [
+        "ASP.NET"
+      ],
+      "x-aspnetmvc-version": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "ASP.NET Core",
+    "category": "Backend Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "aspnetcore-browser-refresh",
+      "aspnetcore"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      ".AspNetCore.",
+      ".AspNetCore.Session",
+      ".AspNetCore.Identity.Application",
+      ".AspNetCore.Antiforgery"
+    ],
+    "header_signatures": {
+      "server": [
+        "Kestrel"
+      ],
+      "x-powered-by": [
+        "ASP.NET"
+      ]
+    }
+  },
+  {
+    "name": "Astro",
+    "category": "JavaScript Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "astro-island",
+      "astro-slot"
+    ],
+    "script_url_signatures": [
+      "_astro/"
+    ],
+    "js_asset_signatures": [
+      "astro-island",
+      "astro:"
+    ],
+    "package_url_signatures": [
+      "astro"
+    ],
+    "stylesheet_url_signatures": [
+      "_astro/"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "astro-island"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Attentive",
+    "category": "SMS Marketing / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "attentive"
+    ],
+    "script_url_signatures": [
+      "cdn.attn.tv",
+      "attentive.com"
+    ],
+    "js_asset_signatures": [
+      "attentive",
+      "attn.tv"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "attentive"
+    ],
+    "cookie_signatures": [
+      "__attentive_id",
+      "__attentive_cco"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Axios",
+    "category": "JavaScript Library",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "axios.min.js",
+      "cdn.jsdelivr.net/npm/axios",
+      "unpkg.com/axios",
+      "cdnjs.cloudflare.com/ajax/libs/axios"
+    ],
+    "js_asset_signatures": [
+      "axios.create",
+      "axios.interceptors",
+      "axios.defaults"
+    ],
+    "package_url_signatures": [
+      "axios"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Axum",
+    "category": "Backend Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "axum"
+      ]
+    }
+  }
+]

@@ -1,0 +1,312 @@
+[
+  {
+    "name": "D3.js",
+    "category": "JavaScript Library",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "d3.select",
+      "d3-scale",
+      "d3.js"
+    ],
+    "script_url_signatures": [
+      "d3.min.js",
+      "d3.v",
+      "cdn.jsdelivr.net/npm/d3",
+      "cdnjs.cloudflare.com/ajax/libs/d3"
+    ],
+    "js_asset_signatures": [
+      "d3.select",
+      "d3.scaleLinear",
+      "d3.axisBottom"
+    ],
+    "package_url_signatures": [
+      "d3"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Datadog RUM",
+    "category": "Monitoring",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "datadog-rum",
+      "datadoghq-browser-agent"
+    ],
+    "script_url_signatures": [
+      "datadoghq-browser-agent",
+      "datadoghq.com"
+    ],
+    "js_asset_signatures": [
+      "datadogRum",
+      "DD_RUM",
+      "datadoghq-browser-agent"
+    ],
+    "package_url_signatures": [
+      "@datadog/browser-rum",
+      "@datadog/browser-logs"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_dd_s"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Deno",
+    "category": "Backend Runtime",
+    "confidence": "medium",
+    "domain_signatures": [
+      "deno.dev",
+      "deno.land"
+    ],
+    "html_signatures": [
+      "deno.land"
+    ],
+    "script_url_signatures": [
+      "deno.land"
+    ],
+    "js_asset_signatures": [
+      "deno.land",
+      "Deno Deploy"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-deno-ray": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "DigitalOcean",
+    "category": "Cloud / Hosting",
+    "confidence": "medium",
+    "domain_signatures": [
+      "ondigitalocean.app",
+      "digitaloceanspaces.com"
+    ],
+    "html_signatures": [
+      "ondigitalocean.app",
+      "digitaloceanspaces.com"
+    ],
+    "script_url_signatures": [
+      "ondigitalocean.app",
+      "digitaloceanspaces.com"
+    ],
+    "js_asset_signatures": [
+      "ondigitalocean.app",
+      "digitaloceanspaces.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "digitaloceanspaces.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-do-app-origin": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "Divi",
+    "category": "WordPress Page Builder",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "et_pb_",
+      "Divi"
+    ],
+    "script_url_signatures": [
+      "Divi/js",
+      "et-core-unified"
+    ],
+    "js_asset_signatures": [
+      "et_pb_",
+      "ET_Builder",
+      "Divi"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "Divi/style.css",
+      "et-core-unified"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "et_pb_",
+      "et_builder",
+      "et_pb_section",
+      "et_pb_row",
+      "et_pb_module"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Django",
+    "category": "Backend Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "csrfmiddlewaretoken"
+    ],
+    "script_url_signatures": [
+      "/static/admin/js/",
+      "djangojs"
+    ],
+    "js_asset_signatures": [
+      "csrfmiddlewaretoken",
+      "django.jQuery"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "csrfmiddlewaretoken"
+    ],
+    "cookie_signatures": [
+      "csrftoken",
+      "django_language"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Drift",
+    "category": "Customer Support",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "drift",
+      "driftt"
+    ],
+    "script_url_signatures": [
+      "js.driftt.com",
+      "drift.com"
+    ],
+    "js_asset_signatures": [
+      "drift.load",
+      "driftt",
+      "js.driftt.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "drift_aid",
+      "driftt_aid"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Drip",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "_dcq.push",
+      "drip"
+    ],
+    "script_url_signatures": [
+      "tag.getdrip.com"
+    ],
+    "js_asset_signatures": [
+      "_dcq.push",
+      "getdrip",
+      "Drip"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "__drip_client"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Drupal",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "drupal-settings-json",
+      "Drupal.behaviors",
+      "drupalSettings"
+    ],
+    "script_url_signatures": [
+      "/core/misc/drupal.js",
+      "/sites/default/files/",
+      "/modules/contrib/"
+    ],
+    "js_asset_signatures": [
+      "Drupal.behaviors",
+      "drupalSettings"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "/core/themes/",
+      "/sites/default/files/css/"
+    ],
+    "meta_generator_signatures": [
+      "drupal"
+    ],
+    "dom_marker_signatures": [
+      "data-drupal-selector",
+      "data-drupal-settings"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Duda",
+    "category": "CMS / Website Builder",
+    "confidence": "high",
+    "domain_signatures": [
+      "multiscreensite.com"
+    ],
+    "html_signatures": [
+      "dmRespRow",
+      "dmBody",
+      "duda"
+    ],
+    "script_url_signatures": [
+      "static-cdn.multiscreensite.com",
+      "multiscreensite.com"
+    ],
+    "js_asset_signatures": [
+      "duda",
+      "multiscreensite",
+      "data-duda"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "static-cdn.multiscreensite.com",
+      "multiscreensite.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "dmRespRow",
+      "dmBody",
+      "data-duda",
+      "dmRespCol"
+    ],
+    "cookie_signatures": [
+      "dm_last_page_view"
+    ],
+    "header_signatures": {}
+  }
+]

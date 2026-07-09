@@ -1,0 +1,809 @@
+[
+  {
+    "name": "Salesforce Marketing Cloud",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "salesforce marketing cloud",
+      "exacttarget"
+    ],
+    "script_url_signatures": [
+      "exacttarget.com",
+      "marketingcloudapis.com"
+    ],
+    "js_asset_signatures": [
+      "_etmc",
+      "exacttarget",
+      "marketingcloudapis"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "sfmc_sub"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Sanity",
+    "category": "Headless CMS",
+    "confidence": "medium",
+    "domain_signatures": [
+      "sanity.io",
+      "apicdn.sanity.io"
+    ],
+    "html_signatures": [
+      "cdn.sanity.io",
+      "apicdn.sanity.io"
+    ],
+    "script_url_signatures": [
+      "cdn.sanity.io",
+      "apicdn.sanity.io",
+      "@sanity/client"
+    ],
+    "js_asset_signatures": [
+      "@sanity/client",
+      "apicdn.sanity.io"
+    ],
+    "package_url_signatures": [
+      "@sanity/client",
+      "next-sanity",
+      "@sanity/image-url"
+    ],
+    "stylesheet_url_signatures": [
+      "cdn.sanity.io"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Searchspring",
+    "category": "Search / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "searchspring"
+    ],
+    "script_url_signatures": [
+      "searchspring.net",
+      "searchspring.io"
+    ],
+    "js_asset_signatures": [
+      "Searchspring"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "searchspring.net",
+      "searchspring.io"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "searchspring"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Segment",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "analytics.load(",
+      "segment.io"
+    ],
+    "script_url_signatures": [
+      "cdn.segment.com/analytics.js",
+      "segment.com/analytics.js"
+    ],
+    "js_asset_signatures": [
+      "analytics.load",
+      "analytics.track",
+      "cdn.segment.com"
+    ],
+    "package_url_signatures": [
+      "@segment/analytics-next"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "ajs_anonymous_id",
+      "ajs_user_id"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Sentry",
+    "category": "Monitoring",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "sentry.io",
+      "Sentry.init"
+    ],
+    "script_url_signatures": [
+      "browser.sentry-cdn.com",
+      "sentry-cdn.com",
+      "js.sentry-cdn.com"
+    ],
+    "js_asset_signatures": [
+      "Sentry.init",
+      "Sentry.captureException",
+      "sentry.io"
+    ],
+    "package_url_signatures": [
+      "@sentry/browser",
+      "@sentry/react",
+      "@sentry/vue",
+      "@sentry/angular",
+      "@sentry/nextjs"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Sezzle",
+    "category": "Payments",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "sezzle"
+    ],
+    "script_url_signatures": [
+      "sezzle.com",
+      "widget.sezzle.com"
+    ],
+    "js_asset_signatures": [
+      "sezzle",
+      "widget.sezzle.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "sezzle.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "sezzle-widget"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Shogun",
+    "category": "Page Builder / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "shogun-root",
+      "shogun-page"
+    ],
+    "script_url_signatures": [
+      "getshogun.com",
+      "shogun"
+    ],
+    "js_asset_signatures": [
+      "Shogun",
+      "getshogun"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "getshogun.com",
+      "shogun"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "shogun-root",
+      "shogun-page"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Shop Pay",
+    "category": "Payments",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "shop-pay",
+      "Shopify.Pay"
+    ],
+    "script_url_signatures": [
+      "shop.app",
+      "shopify.com/pay"
+    ],
+    "js_asset_signatures": [
+      "ShopifyPay",
+      "shopify_pay",
+      "shop.app"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "shop-pay-button"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Shopify",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [
+      "myshopify.com"
+    ],
+    "html_signatures": [
+      "shopify.theme",
+      "shopify-features",
+      "x-shopify"
+    ],
+    "script_url_signatures": [
+      "cdn.shopify.com",
+      "shopifycdn.net"
+    ],
+    "js_asset_signatures": [
+      "Shopify.theme",
+      "ShopifyAnalytics",
+      "window.Shopify",
+      "cdn.shopify.com",
+      "shopify-section"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "cdn.shopify.com",
+      "shopifycdn.net"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_shopify",
+      "_shopify_y",
+      "_shopify_s",
+      "_shopify_sa_t",
+      "_shopify_sa_p"
+    ],
+    "header_signatures": {
+      "x-shopid": [
+        ""
+      ],
+      "x-shardid": [
+        ""
+      ],
+      "x-shopify-stage": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "Slick Carousel",
+    "category": "JavaScript Library",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "slick-carousel",
+      "slick-slider"
+    ],
+    "script_url_signatures": [
+      "slick.min.js",
+      "slick.js",
+      "cdn.jsdelivr.net/npm/slick-carousel",
+      "cdnjs.cloudflare.com/ajax/libs/slick-carousel"
+    ],
+    "js_asset_signatures": [
+      "slick-carousel",
+      ".slick(",
+      "slick.min.js"
+    ],
+    "package_url_signatures": [
+      "slick-carousel"
+    ],
+    "stylesheet_url_signatures": [
+      "slick.css",
+      "slick-theme.css",
+      "cdn.jsdelivr.net/npm/slick-carousel",
+      "cdnjs.cloudflare.com/ajax/libs/slick-carousel"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "slick-slider",
+      "slick-track",
+      "slick-slide"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Smile.io",
+    "category": "Loyalty / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "smile-ui",
+      "smile.io"
+    ],
+    "script_url_signatures": [
+      "cdn.smile.io",
+      "smile.io"
+    ],
+    "js_asset_signatures": [
+      "SmileUI",
+      "smile.io",
+      "Smile"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "cdn.smile.io",
+      "smile.io"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "smile-ui"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Snapchat Pixel",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "snaptr(",
+      "snapchat pixel"
+    ],
+    "script_url_signatures": [
+      "sc-static.net/scevent.min.js"
+    ],
+    "js_asset_signatures": [
+      "snaptr(",
+      "sc-static.net"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_scid",
+      "_scid_r"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "SolidJS",
+    "category": "JavaScript Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "solid-js",
+      "data-hk"
+    ],
+    "script_url_signatures": [
+      "solid-js"
+    ],
+    "js_asset_signatures": [
+      "solid-js",
+      "createSignal",
+      "data-hk"
+    ],
+    "package_url_signatures": [
+      "solid-js"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-hk"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Splunk RUM",
+    "category": "Monitoring",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "splunk-otel-web",
+      "SplunkRum"
+    ],
+    "script_url_signatures": [
+      "splunk-otel-web",
+      "rum-ingest"
+    ],
+    "js_asset_signatures": [
+      "splunk-otel-web",
+      "SplunkRum",
+      "splunkRum",
+      "rum-ingest"
+    ],
+    "package_url_signatures": [
+      "@splunk/otel-web"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Spring Boot",
+    "category": "Backend Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "Whitelabel Error Page",
+      "spring boot"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-application-context": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "Squarespace",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [
+      "squarespace.com"
+    ],
+    "html_signatures": [
+      "squarespace"
+    ],
+    "script_url_signatures": [
+      "static1.squarespace.com",
+      "squarespace.com/universal",
+      "assets.squarespace.com"
+    ],
+    "js_asset_signatures": [
+      "SQUARESPACE_CONTEXT",
+      "Static.SQUARESPACE_CONTEXT",
+      "Y.Squarespace"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "static1.squarespace.com",
+      "squarespace.com/universal",
+      "assets.squarespace.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-section-id",
+      "sqs-block",
+      "sqs-layout"
+    ],
+    "cookie_signatures": [
+      "ss_cid",
+      "ss_cpvisit",
+      "ss_cvisit",
+      "ss_cvr"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Stamped.io",
+    "category": "Reviews / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "stamped.io",
+      "stamped-main-widget"
+    ],
+    "script_url_signatures": [
+      "stamped.io"
+    ],
+    "js_asset_signatures": [
+      "StampedFn",
+      "stamped.io",
+      "stamped"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "stamped.io"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "stamped-main-widget",
+      "stamped-product-reviews-badge"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Stencil",
+    "category": "JavaScript Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "data-stencil"
+    ],
+    "script_url_signatures": [
+      "cdn.jsdelivr.net/npm/@stencil/core",
+      "unpkg.com/@stencil/core"
+    ],
+    "js_asset_signatures": [
+      "@stencil/core",
+      "data-stencil"
+    ],
+    "package_url_signatures": [
+      "@stencil/core"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-stencil"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Storyblok",
+    "category": "Headless CMS",
+    "confidence": "medium",
+    "domain_signatures": [
+      "storyblok.com",
+      "storyblok.io"
+    ],
+    "html_signatures": [
+      "storyblok",
+      "a.storyblok.com"
+    ],
+    "script_url_signatures": [
+      "a.storyblok.com",
+      "app.storyblok.com",
+      "@storyblok"
+    ],
+    "js_asset_signatures": [
+      "storyblok",
+      "@storyblok",
+      "a.storyblok.com"
+    ],
+    "package_url_signatures": [
+      "@storyblok/js",
+      "@storyblok/react",
+      "@storyblok/vue"
+    ],
+    "stylesheet_url_signatures": [
+      "a.storyblok.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-blok-c",
+      "data-blok-uid"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Strapi",
+    "category": "Headless CMS",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "strapi",
+      "strapi.io"
+    ],
+    "script_url_signatures": [
+      "strapi"
+    ],
+    "js_asset_signatures": [
+      "strapi",
+      "Strapi"
+    ],
+    "package_url_signatures": [
+      "@strapi/strapi"
+    ],
+    "stylesheet_url_signatures": [
+      "strapi"
+    ],
+    "meta_generator_signatures": [
+      "strapi"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Stripe",
+    "category": "Payments",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "stripe"
+    ],
+    "script_url_signatures": [
+      "js.stripe.com",
+      "checkout.stripe.com"
+    ],
+    "js_asset_signatures": [
+      "Stripe(",
+      "stripe.redirectToCheckout",
+      "js.stripe.com"
+    ],
+    "package_url_signatures": [
+      "@stripe/stripe-js"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-stripe"
+    ],
+    "cookie_signatures": [
+      "__stripe_mid",
+      "__stripe_sid"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Sucuri",
+    "category": "CDN / Security",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "sucuri"
+    ],
+    "script_url_signatures": [
+      "sucuri.net"
+    ],
+    "js_asset_signatures": [
+      "sucuri",
+      "sucuri_cloudproxy"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "sucuri_cloudproxy_uuid"
+    ],
+    "header_signatures": {
+      "server": [
+        "Sucuri"
+      ],
+      "x-sucuri-id": [
+        ""
+      ],
+      "x-sucuri-cache": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "Supabase",
+    "category": "Cloud / Backend",
+    "confidence": "medium",
+    "domain_signatures": [
+      "supabase.co"
+    ],
+    "html_signatures": [
+      "supabase"
+    ],
+    "script_url_signatures": [
+      "supabase-js",
+      "supabase.co"
+    ],
+    "js_asset_signatures": [
+      "supabase.co",
+      "supabaseUrl",
+      "supabaseKey"
+    ],
+    "package_url_signatures": [
+      "@supabase/supabase-js"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Svelte",
+    "category": "JavaScript Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "_app/immutable",
+      "svelte"
+    ],
+    "js_asset_signatures": [
+      "svelte/internal",
+      "SvelteComponent"
+    ],
+    "package_url_signatures": [
+      "svelte",
+      "@sveltejs/kit"
+    ],
+    "stylesheet_url_signatures": [
+      "_app/immutable"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-svelte"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Swiper",
+    "category": "JavaScript Library",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "swiper"
+    ],
+    "script_url_signatures": [
+      "swiper-bundle.min.js",
+      "swiper.min.js",
+      "cdn.jsdelivr.net/npm/swiper",
+      "unpkg.com/swiper"
+    ],
+    "js_asset_signatures": [
+      "new Swiper",
+      "swiper-bundle",
+      "Swiper"
+    ],
+    "package_url_signatures": [
+      "swiper"
+    ],
+    "stylesheet_url_signatures": [
+      "swiper-bundle.min.css",
+      "swiper.min.css",
+      "cdn.jsdelivr.net/npm/swiper",
+      "unpkg.com/swiper"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "swiper",
+      "swiper-wrapper",
+      "swiper-slide"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Symfony",
+    "category": "Backend Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "sf-toolbar"
+    ],
+    "script_url_signatures": [
+      "/_wdt/",
+      "/_profiler/"
+    ],
+    "js_asset_signatures": [
+      "sf-toolbar"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "/_wdt/",
+      "/_profiler/"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "sf-toolbar"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-debug-token": [
+        ""
+      ]
+    }
+  }
+]

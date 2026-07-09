@@ -1,0 +1,407 @@
+[
+  {
+    "name": "Magento",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "Magento_",
+      "mage/cookies",
+      "mage-"
+    ],
+    "script_url_signatures": [
+      "/static/version",
+      "mage/requirejs",
+      "mage/cookies"
+    ],
+    "js_asset_signatures": [
+      "Magento_",
+      "mage/",
+      "requirejs-config",
+      "customerData"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "/static/version"
+    ],
+    "meta_generator_signatures": [
+      "magento"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "mage-cache-sessid",
+      "mage-cache-storage",
+      "private_content_version",
+      "mage-messages",
+      "frontend"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Mailchimp",
+    "category": "Email Marketing",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "list-manage.com",
+      "mc-embedded-subscribe"
+    ],
+    "script_url_signatures": [
+      "chimpstatic.com"
+    ],
+    "js_asset_signatures": [
+      "chimpstatic.com",
+      "mcjs",
+      "Mailchimp"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "chimpstatic.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Mapbox GL JS",
+    "category": "Maps",
+    "confidence": "high",
+    "domain_signatures": [
+      "mapbox.com"
+    ],
+    "html_signatures": [
+      "mapboxgl",
+      "api.mapbox.com"
+    ],
+    "script_url_signatures": [
+      "api.mapbox.com/mapbox-gl-js",
+      "mapbox-gl.js"
+    ],
+    "js_asset_signatures": [
+      "mapboxgl.Map",
+      "mapboxgl.accessToken",
+      "api.mapbox.com"
+    ],
+    "package_url_signatures": [
+      "mapbox-gl",
+      "react-map-gl"
+    ],
+    "stylesheet_url_signatures": [
+      "api.mapbox.com/mapbox-gl-js",
+      "mapbox-gl.css"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "mapboxgl-map",
+      "mapboxgl-canvas"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Marketo",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "Munchkin.init",
+      "marketo"
+    ],
+    "script_url_signatures": [
+      "munchkin.marketo.net",
+      "marketo.com"
+    ],
+    "js_asset_signatures": [
+      "Munchkin.init",
+      "munchkin.marketo.net",
+      "Marketo"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "mktoForm"
+    ],
+    "cookie_signatures": [
+      "_mkto_trk"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Material UI",
+    "category": "UI Component Library",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "MuiButton",
+      "MuiTypography",
+      "MuiBox-root"
+    ],
+    "script_url_signatures": [
+      "@mui/material",
+      "material-ui"
+    ],
+    "js_asset_signatures": [
+      "MuiButton",
+      "MuiTypography",
+      "@mui/material"
+    ],
+    "package_url_signatures": [
+      "@mui/material",
+      "@mui/icons-material",
+      "@emotion/react",
+      "@emotion/styled"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "MuiButton",
+      "MuiTypography",
+      "MuiBox-root"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Matomo",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "_paq.push",
+      "matomo",
+      "piwik"
+    ],
+    "script_url_signatures": [
+      "matomo.js",
+      "piwik.js"
+    ],
+    "js_asset_signatures": [
+      "_paq.push",
+      "matomo.js",
+      "piwik.js",
+      "Matomo"
+    ],
+    "package_url_signatures": [
+      "@matomo/tracker",
+      "matomo-tracker"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_pk_id",
+      "_pk_ses"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Meta Pixel",
+    "category": "Marketing",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "fbq(",
+      "facebook pixel"
+    ],
+    "script_url_signatures": [
+      "connect.facebook.net",
+      "connect.facebook.net/en_US/fbevents.js"
+    ],
+    "js_asset_signatures": [
+      "fbq(",
+      "connect.facebook.net",
+      "Facebook Pixel",
+      "fbq('init'",
+      "fbq(\"init\""
+    ],
+    "package_url_signatures": [
+      "react-facebook-pixel"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_fbp",
+      "_fbc"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Microsoft Advertising",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "uetq",
+      "bat.bing.com"
+    ],
+    "script_url_signatures": [
+      "bat.bing.com/bat.js"
+    ],
+    "js_asset_signatures": [
+      "uetq",
+      "bat.bing.com/bat.js"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_uetvid",
+      "_uetsid"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Microsoft Azure",
+    "category": "Cloud / Hosting",
+    "confidence": "medium",
+    "domain_signatures": [
+      "azurewebsites.net",
+      "azureedge.net",
+      "trafficmanager.net",
+      "azurestaticapps.net"
+    ],
+    "html_signatures": [
+      "azureedge.net",
+      "azurewebsites.net"
+    ],
+    "script_url_signatures": [
+      "azureedge.net",
+      "azurewebsites.net"
+    ],
+    "js_asset_signatures": [
+      "azureedge.net",
+      "azurewebsites.net",
+      "microsoft.com/azure"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "azureedge.net"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-azure-ref": [
+        ""
+      ],
+      "x-ms-request-id": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "Microsoft Clarity",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "clarity(",
+      "clarity.ms/tag"
+    ],
+    "script_url_signatures": [
+      "clarity.ms",
+      "www.clarity.ms",
+      "clarity.ms/tag"
+    ],
+    "js_asset_signatures": [
+      "clarity(",
+      "clarity.ms",
+      "_clck",
+      "_clsk"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_clck",
+      "_clsk"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Mixpanel",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "mixpanel.init",
+      "mixpanel.track"
+    ],
+    "script_url_signatures": [
+      "cdn.mxpnl.com/libs/mixpanel"
+    ],
+    "js_asset_signatures": [
+      "mixpanel.track",
+      "mixpanel.init",
+      "mxpnl"
+    ],
+    "package_url_signatures": [
+      "mixpanel-browser"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "mixpanel"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Moment.js",
+    "category": "JavaScript Library",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "moment.js"
+    ],
+    "script_url_signatures": [
+      "moment.min.js",
+      "moment.js",
+      "cdn.jsdelivr.net/npm/moment",
+      "unpkg.com/moment",
+      "cdnjs.cloudflare.com/ajax/libs/moment.js"
+    ],
+    "js_asset_signatures": [
+      "moment.version",
+      "moment.locale",
+      "moment.min.js"
+    ],
+    "package_url_signatures": [
+      "moment"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Mouseflow",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "mouseflow"
+    ],
+    "script_url_signatures": [
+      "mouseflow.com/projects"
+    ],
+    "js_asset_signatures": [
+      "mouseflow",
+      "_mfq.push"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "mf_user"
+    ],
+    "header_signatures": {}
+  }
+]

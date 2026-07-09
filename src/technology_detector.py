@@ -46,9 +46,28 @@ class TechnologyRule: # A rule for detecting a specific technology.
     header_signatures: dict[str, list[str]]
 
 
-# Load technology detection rules from a JSON file.
+def load_raw_technology_rules(rules_path: Path) -> list[dict]:
+    if rules_path.is_dir():
+        return load_raw_technology_rules_from_directory(rules_path)
+
+    return json.loads(rules_path.read_text(encoding="utf-8"))
+
+
+def load_raw_technology_rules_from_directory(rules_directory: Path) -> list[dict]:
+    raw_rules: list[dict] = []
+
+    for rules_file in sorted(rules_directory.glob("*_rules.json")):
+        raw_rules_from_file = json.loads(rules_file.read_text(encoding="utf-8"))
+        raw_rules.extend(raw_rules_from_file)
+
+    raw_rules.sort(key=lambda raw_rule: raw_rule["name"].lower())
+
+    return raw_rules
+
+
+# Load technology detection rules from a JSON file or from a rules directory.
 def load_technology_rules(rules_path: Path) -> list[TechnologyRule]:
-    raw_rules = json.loads(rules_path.read_text(encoding="utf-8"))
+    raw_rules = load_raw_technology_rules(rules_path)
 
     rules: list[TechnologyRule] = []
 

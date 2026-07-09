@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Quarkus",
+    "category": "Backend Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "quarkus",
+      "q/dev-ui",
+      "q/swagger-ui"
+    ],
+    "script_url_signatures": [
+      "q/dev-ui",
+      "q/swagger-ui"
+    ],
+    "js_asset_signatures": [
+      "quarkus",
+      "q/dev-ui",
+      "q/swagger-ui"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "q/dev-ui",
+      "q/swagger-ui"
+    ],
+    "meta_generator_signatures": [
+      "Quarkus"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Qwik",
+    "category": "JavaScript Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "q:container",
+      "q:base",
+      "qwik"
+    ],
+    "script_url_signatures": [
+      "@builder.io/qwik",
+      "qwik"
+    ],
+    "js_asset_signatures": [
+      "q:container",
+      "q:base",
+      "Qwik",
+      "@builder.io/qwik"
+    ],
+    "package_url_signatures": [
+      "@builder.io/qwik",
+      "@builder.io/qwik-city"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "q:container",
+      "q:base",
+      "q:version"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  }
+]

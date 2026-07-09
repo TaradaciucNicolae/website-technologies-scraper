@@ -31,7 +31,10 @@ data/
   output/technology_summary.json
 
 rules/
-  technology_rules.json
+  technology_rules/
+    a_rules.json
+    b_rules.json
+    ...
 
 src/
   discovery_candidates.py
@@ -105,7 +108,7 @@ src/technology_detector.py
 Rules are stored in:
 
 ```text
-rules/technology_rules.json
+rules/technology_rules/
 ```
 
 The detector currently uses these evidence sources:
@@ -121,7 +124,9 @@ The detector currently uses these evidence sources:
 - JavaScript asset content
 - package-like CDN URLs
 
-The rules are split by source:
+The rule files are split alphabetically by technology name. For example, technologies starting with `A` are stored in `a_rules.json`, technologies starting with `B` are stored in `b_rules.json`, and so on. This keeps the rule set easier to browse as it grows.
+
+Inside each rule, signatures are split by evidence source:
 
 ```json
 {

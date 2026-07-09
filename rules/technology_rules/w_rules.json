@@ -1,0 +1,251 @@
+[
+  {
+    "name": "Webflow",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [
+      "webflow.io"
+    ],
+    "html_signatures": [
+      "data-wf-site",
+      "data-wf-page"
+    ],
+    "script_url_signatures": [
+      "webflow.js"
+    ],
+    "js_asset_signatures": [
+      "Webflow.push",
+      "window.Webflow",
+      "Webflow.require"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "uploads-ssl.webflow.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-wf-page"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-lambda-id": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "Webpack",
+    "category": "Build Tool",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "__webpack_require__",
+      "webpackJsonp",
+      "webpackChunk"
+    ],
+    "script_url_signatures": [
+      "webpack-runtime"
+    ],
+    "js_asset_signatures": [
+      "webpackJsonp",
+      "__webpack_require__",
+      "webpackChunk"
+    ],
+    "package_url_signatures": [
+      "webpack",
+      "webpack-cli"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Weebly",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [
+      "weebly.com",
+      "weeblysite.com",
+      "editmysite.com"
+    ],
+    "html_signatures": [
+      "weebly",
+      "editmysite"
+    ],
+    "script_url_signatures": [
+      "weebly.com",
+      "weeblycloud.com",
+      "cdn2.editmysite.com"
+    ],
+    "js_asset_signatures": [
+      "Weebly",
+      "editmysite",
+      "weebly.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "weebly.com",
+      "weeblycloud.com",
+      "cdn2.editmysite.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Wix",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [
+      "wixsite.com",
+      "editorx.io"
+    ],
+    "html_signatures": [
+      "wix-code",
+      "x-wix",
+      "wixstatic.com",
+      "wix.com"
+    ],
+    "script_url_signatures": [
+      "wixstatic.com",
+      "static.parastorage.com"
+    ],
+    "js_asset_signatures": [
+      "wixBiSession",
+      "wixEmbeds",
+      "wixCode",
+      "wixstatic.com",
+      "viewerModel"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wixstatic.com",
+      "static.parastorage.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "wixsession",
+      "wix_browser_sess"
+    ],
+    "header_signatures": {
+      "x-wix-request-id": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "WooCommerce",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "woocommerce",
+      "wc-cart-fragments"
+    ],
+    "script_url_signatures": [
+      "wp-content/plugins/woocommerce"
+    ],
+    "js_asset_signatures": [
+      "wc_cart_fragments_params",
+      "woocommerce_params",
+      "wc_add_to_cart_params",
+      "wc_checkout_params"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/plugins/woocommerce"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "woocommerce_cart_hash",
+      "woocommerce_items_in_cart",
+      "wp_woocommerce_session"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "WordPress",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "wp-json",
+      "wp-emoji-release",
+      "wp-block-library"
+    ],
+    "script_url_signatures": [
+      "wp-content",
+      "wp-includes"
+    ],
+    "js_asset_signatures": [
+      "wp.i18n",
+      "wp.element",
+      "wpApiSettings",
+      "wp_ajax",
+      "wp-content"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content",
+      "wp-includes"
+    ],
+    "meta_generator_signatures": [
+      "wordpress"
+    ],
+    "dom_marker_signatures": [
+      "class=\"wp-",
+      "id=\"wp-"
+    ],
+    "cookie_signatures": [
+      "wordpress_",
+      "wp-settings",
+      "wp_logged_in"
+    ],
+    "header_signatures": {
+      "x-pingback": [
+        ""
+      ],
+      "link": [
+        "wp-json"
+      ]
+    }
+  },
+  {
+    "name": "WPBakery",
+    "category": "WordPress Page Builder",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "wpbakery",
+      "js_composer"
+    ],
+    "script_url_signatures": [
+      "js_composer",
+      "wpbakery"
+    ],
+    "js_asset_signatures": [
+      "vc_js",
+      "wpb_js_composer",
+      "js_composer"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "js_composer",
+      "wpbakery"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "vc_row",
+      "wpb_wrapper",
+      "wpb_column",
+      "vc_column_container"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  }
+]

@@ -1,0 +1,337 @@
+[
+  {
+    "name": "PageFly",
+    "category": "Page Builder / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "pagefly",
+      "__pf"
+    ],
+    "script_url_signatures": [
+      "pagefly.io",
+      "cdn.pagefly.io"
+    ],
+    "js_asset_signatures": [
+      "PageFly"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "pagefly.io",
+      "cdn.pagefly.io"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "__pf",
+      "pagefly"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "PayPal",
+    "category": "Payments",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "paypal"
+    ],
+    "script_url_signatures": [
+      "paypal.com/sdk/js",
+      "www.paypalobjects.com"
+    ],
+    "js_asset_signatures": [
+      "paypal.Buttons",
+      "paypal.com/sdk/js",
+      "paypalobjects"
+    ],
+    "package_url_signatures": [
+      "@paypal/paypal-js"
+    ],
+    "stylesheet_url_signatures": [
+      "paypalobjects.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "paypal-button",
+      "data-paypal"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Phoenix",
+    "category": "Backend Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "phoenix_html",
+      "phoenix_live_view",
+      "live_socket"
+    ],
+    "script_url_signatures": [
+      "phoenix.js",
+      "phoenix_live_view"
+    ],
+    "js_asset_signatures": [
+      "phoenix_html",
+      "Phoenix.Socket",
+      "LiveSocket",
+      "phoenix_live_view"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-phx",
+      "phx-"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Pinterest Tag",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "pintrk",
+      "pinterest tag"
+    ],
+    "script_url_signatures": [
+      "s.pinimg.com/ct/core.js",
+      "ct.pinterest.com"
+    ],
+    "js_asset_signatures": [
+      "pintrk(",
+      "PinterestTag",
+      "ct.pinterest.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_pin_unauth"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Plausible Analytics",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [
+      "plausible.io"
+    ],
+    "html_signatures": [
+      "plausible("
+    ],
+    "script_url_signatures": [
+      "plausible.io/js/script.js",
+      "plausible.js",
+      "plausible.io/js/script",
+      "plausible.io/js/plausible"
+    ],
+    "js_asset_signatures": [
+      "plausible(",
+      "plausible.io/js/script.js",
+      "window.plausible"
+    ],
+    "package_url_signatures": [
+      "plausible-tracker"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-domain"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Popper.js",
+    "category": "JavaScript Library",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "popper.js",
+      "createPopper"
+    ],
+    "script_url_signatures": [
+      "popper.min.js",
+      "cdn.jsdelivr.net/npm/@popperjs/core",
+      "unpkg.com/@popperjs/core"
+    ],
+    "js_asset_signatures": [
+      "createPopper",
+      "@popperjs/core"
+    ],
+    "package_url_signatures": [
+      "@popperjs/core",
+      "popper.js"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "PostHog",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [
+      "posthog.com"
+    ],
+    "html_signatures": [
+      "posthog",
+      "posthog.init"
+    ],
+    "script_url_signatures": [
+      "app.posthog.com",
+      "us.i.posthog.com",
+      "eu.i.posthog.com",
+      "posthog.js"
+    ],
+    "js_asset_signatures": [
+      "posthog.init",
+      "posthog.capture",
+      "posthog-js"
+    ],
+    "package_url_signatures": [
+      "posthog-js",
+      "posthog-js-lite"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "posthog"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Preact",
+    "category": "JavaScript Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "preact",
+      "preact-render-to-string"
+    ],
+    "script_url_signatures": [
+      "cdn.jsdelivr.net/npm/preact",
+      "unpkg.com/preact",
+      "cdnjs.cloudflare.com/ajax/libs/preact"
+    ],
+    "js_asset_signatures": [
+      "preact",
+      "preact/hooks",
+      "preact/compat"
+    ],
+    "package_url_signatures": [
+      "preact",
+      "preact-render-to-string"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "PrestaShop",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "prestashop",
+      "PrestaShop"
+    ],
+    "script_url_signatures": [
+      "/modules/",
+      "/themes/"
+    ],
+    "js_asset_signatures": [
+      "prestashop",
+      "var prestashop"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "/themes/",
+      "/modules/"
+    ],
+    "meta_generator_signatures": [
+      "prestashop"
+    ],
+    "dom_marker_signatures": [
+      "prestashop"
+    ],
+    "cookie_signatures": [
+      "PrestaShop-"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Prismic",
+    "category": "Headless CMS",
+    "confidence": "medium",
+    "domain_signatures": [
+      "cdn.prismic.io",
+      "prismic.io"
+    ],
+    "html_signatures": [
+      "cdn.prismic.io",
+      "prismic"
+    ],
+    "script_url_signatures": [
+      "cdn.prismic.io",
+      "@prismicio/client"
+    ],
+    "js_asset_signatures": [
+      "@prismicio/client",
+      "prismic",
+      "cdn.prismic.io"
+    ],
+    "package_url_signatures": [
+      "@prismicio/client",
+      "@prismicio/react",
+      "@prismicio/next"
+    ],
+    "stylesheet_url_signatures": [
+      "cdn.prismic.io"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Privy",
+    "category": "Marketing / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "privy"
+    ],
+    "script_url_signatures": [
+      "privy.com",
+      "widget.privy.com"
+    ],
+    "js_asset_signatures": [
+      "Privy",
+      "privy.com",
+      "_privy"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "privy"
+    ],
+    "cookie_signatures": [
+      "privy"
+    ],
+    "header_signatures": {}
+  }
+]

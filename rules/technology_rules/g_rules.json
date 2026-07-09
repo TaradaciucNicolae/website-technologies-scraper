@@ -1,0 +1,313 @@
+[
+  {
+    "name": "Gatsby",
+    "category": "JavaScript Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "___gatsby",
+      "gatsby-focus-wrapper"
+    ],
+    "script_url_signatures": [
+      "webpack-runtime",
+      "app-"
+    ],
+    "js_asset_signatures": [
+      "___gatsby",
+      "gatsby-browser"
+    ],
+    "package_url_signatures": [
+      "gatsby"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "gatsby"
+    ],
+    "dom_marker_signatures": [
+      "___gatsby",
+      "gatsby-focus-wrapper"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GemPages",
+    "category": "Page Builder / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "gempages",
+      "gem-page"
+    ],
+    "script_url_signatures": [
+      "gempages.net",
+      "gempages"
+    ],
+    "js_asset_signatures": [
+      "GemPages"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "gempages.net",
+      "gempages"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "gem-page",
+      "gempages"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Ghost",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "ghost-content",
+      "ghost-blog",
+      "ghost-api",
+      "ghost.org"
+    ],
+    "script_url_signatures": [
+      "ghost.org",
+      "/ghost/"
+    ],
+    "js_asset_signatures": [
+      "ghost",
+      "ghost.org",
+      "ghost/api"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "ghost.org",
+      "/ghost/"
+    ],
+    "meta_generator_signatures": [
+      "ghost"
+    ],
+    "dom_marker_signatures": [
+      "ghost"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Analytics",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "gtag(",
+      "GoogleAnalyticsObject",
+      "googletagmanager.com/gtag/js"
+    ],
+    "script_url_signatures": [
+      "google-analytics.com/analytics.js",
+      "googletagmanager.com/gtag/js",
+      "www.google-analytics.com",
+      "www.googletagmanager.com/gtag/js"
+    ],
+    "js_asset_signatures": [
+      "gtag(",
+      "ga(",
+      "GoogleAnalyticsObject",
+      "google-analytics.com/analytics.js",
+      "analytics.js"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_ga",
+      "_gid",
+      "_gat",
+      "_gac_",
+      "_ga_"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Cloud",
+    "category": "Cloud / Hosting",
+    "confidence": "medium",
+    "domain_signatures": [
+      "appspot.com",
+      "web.app",
+      "storage.googleapis.com",
+      "cloudfunctions.net",
+      "run.app"
+    ],
+    "html_signatures": [
+      "storage.googleapis.com",
+      "appspot.com"
+    ],
+    "script_url_signatures": [
+      "storage.googleapis.com",
+      "appspot.com"
+    ],
+    "js_asset_signatures": [
+      "storage.googleapis.com",
+      "appspot.com",
+      "cloudfunctions.net"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "storage.googleapis.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-cloud-trace-context": [
+        ""
+      ],
+      "server": [
+        "Google Frontend"
+      ]
+    }
+  },
+  {
+    "name": "Google Fonts",
+    "category": "Font Service",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "fonts.googleapis.com",
+      "fonts.gstatic.com",
+      "Google Fonts"
+    ],
+    "script_url_signatures": [
+      "ajax.googleapis.com/ajax/libs/webfont"
+    ],
+    "js_asset_signatures": [
+      "WebFont.load",
+      "fonts.googleapis.com",
+      "google: { families"
+    ],
+    "package_url_signatures": [
+      "webfontloader"
+    ],
+    "stylesheet_url_signatures": [
+      "fonts.googleapis.com/css",
+      "fonts.googleapis.com/css2",
+      "fonts.gstatic.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Pay",
+    "category": "Payments",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "google-pay",
+      "pay.google.com"
+    ],
+    "script_url_signatures": [
+      "pay.google.com",
+      "googlepay"
+    ],
+    "js_asset_signatures": [
+      "google.payments.api",
+      "GooglePay",
+      "pay.google.com"
+    ],
+    "package_url_signatures": [
+      "@google-pay/button-react"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "google-pay-button"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Tag Manager",
+    "category": "Tag Manager",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "gtm-",
+      "googletagmanager.com/ns.html",
+      "dataLayer"
+    ],
+    "script_url_signatures": [
+      "googletagmanager.com/gtm.js"
+    ],
+    "js_asset_signatures": [
+      "GTM-",
+      "googletagmanager.com/gtm.js",
+      "dataLayer",
+      "dataLayer.push"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Gorgias",
+    "category": "Customer Support / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "gorgias"
+    ],
+    "script_url_signatures": [
+      "config.gorgias.chat",
+      "gorgias.chat"
+    ],
+    "js_asset_signatures": [
+      "GorgiasChat",
+      "gorgias",
+      "config.gorgias.chat"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "gorgias-chat"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GSAP",
+    "category": "JavaScript Library",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "gsap"
+    ],
+    "script_url_signatures": [
+      "gsap.min.js",
+      "TweenMax.min.js",
+      "cdnjs.cloudflare.com/ajax/libs/gsap",
+      "cdn.jsdelivr.net/npm/gsap",
+      "unpkg.com/gsap"
+    ],
+    "js_asset_signatures": [
+      "gsap.registerPlugin",
+      "TweenMax",
+      "TweenLite"
+    ],
+    "package_url_signatures": [
+      "gsap"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  }
+]

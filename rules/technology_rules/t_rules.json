@@ -1,0 +1,186 @@
+[
+  {
+    "name": "Tailwind CSS",
+    "category": "CSS Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.tailwindcss.com",
+      "cdn.jsdelivr.net/npm/@tailwindcss/browser"
+    ],
+    "js_asset_signatures": [
+      "tailwind",
+      "tailwindcss",
+      "--tw-"
+    ],
+    "package_url_signatures": [
+      "tailwindcss",
+      "@tailwindcss/browser"
+    ],
+    "stylesheet_url_signatures": [
+      "tailwind.css",
+      "tailwind.min.css",
+      "cdn.jsdelivr.net/npm/tailwindcss"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "class=\"flex",
+      "class=\"grid",
+      "class=\"container",
+      "class=\"mx-auto"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Three.js",
+    "category": "JavaScript Library",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "three.js",
+      "THREE.WebGLRenderer"
+    ],
+    "script_url_signatures": [
+      "three.min.js",
+      "three.module.js",
+      "cdn.jsdelivr.net/npm/three",
+      "unpkg.com/three",
+      "cdnjs.cloudflare.com/ajax/libs/three.js"
+    ],
+    "js_asset_signatures": [
+      "THREE.WebGLRenderer",
+      "THREE.Scene",
+      "THREE.Camera"
+    ],
+    "package_url_signatures": [
+      "three"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Tidio",
+    "category": "Customer Support",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "tidio"
+    ],
+    "script_url_signatures": [
+      "code.tidio.co"
+    ],
+    "js_asset_signatures": [
+      "tidioChatApi",
+      "code.tidio.co",
+      "Tidio"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "tidio_state"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "TikTok Pixel",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "ttq.track",
+      "ttq.page",
+      "tiktok pixel"
+    ],
+    "script_url_signatures": [
+      "analytics.tiktok.com/i18n/pixel",
+      "analytics.tiktok.com"
+    ],
+    "js_asset_signatures": [
+      "ttq.track",
+      "ttq.page",
+      "analytics.tiktok.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_ttp"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Typeform",
+    "category": "Forms",
+    "confidence": "high",
+    "domain_signatures": [
+      "typeform.com"
+    ],
+    "html_signatures": [
+      "typeform",
+      "data-tf-widget",
+      "data-tf-popup"
+    ],
+    "script_url_signatures": [
+      "embed.typeform.com",
+      "typeform.com/embed"
+    ],
+    "js_asset_signatures": [
+      "data-tf-widget",
+      "typeformEmbed",
+      "embed.typeform.com"
+    ],
+    "package_url_signatures": [
+      "@typeform/embed",
+      "@typeform/embed-react"
+    ],
+    "stylesheet_url_signatures": [
+      "embed.typeform.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-tf-widget",
+      "data-tf-popup",
+      "data-tf-slider"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Typekit / Adobe Fonts",
+    "category": "Font Service",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "use.typekit.net",
+      "p.typekit.net",
+      "Typekit.load",
+      "Adobe Fonts"
+    ],
+    "script_url_signatures": [
+      "use.typekit.net",
+      "p.typekit.net"
+    ],
+    "js_asset_signatures": [
+      "Typekit.load",
+      "use.typekit.net",
+      "p.typekit.net"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "use.typekit.net",
+      "p.typekit.net"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  }
+]

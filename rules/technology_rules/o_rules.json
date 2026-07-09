@@ -1,0 +1,151 @@
+[
+  {
+    "name": "Okendo",
+    "category": "Reviews / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "okendo"
+    ],
+    "script_url_signatures": [
+      "cdn-static.okendo.io",
+      "okendo.io"
+    ],
+    "js_asset_signatures": [
+      "okendo",
+      "okeReviews"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "okendo.io"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "okeReviews",
+      "okendo"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Olark",
+    "category": "Customer Support",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "olark"
+    ],
+    "script_url_signatures": [
+      "static.olark.com",
+      "olark.com"
+    ],
+    "js_asset_signatures": [
+      "olark.identify",
+      "olark",
+      "static.olark.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "hblid",
+      "olfsk"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Omnisend",
+    "category": "Email Marketing / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "omnisend"
+    ],
+    "script_url_signatures": [
+      "omnisnippet1.com",
+      "omnisend.com"
+    ],
+    "js_asset_signatures": [
+      "omnisend",
+      "omnisnippet1.com",
+      "omnisendTracker"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "omnisend"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "OneTrust",
+    "category": "Consent Management",
+    "confidence": "high",
+    "domain_signatures": [
+      "onetrust.com",
+      "cookielaw.org"
+    ],
+    "html_signatures": [
+      "OptanonWrapper",
+      "OneTrust",
+      "cookielaw.org"
+    ],
+    "script_url_signatures": [
+      "cdn.cookielaw.org",
+      "onetrust.com"
+    ],
+    "js_asset_signatures": [
+      "OptanonWrapper",
+      "OneTrust",
+      "OptanonConsent"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "cdn.cookielaw.org"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "onetrust-banner-sdk",
+      "ot-sdk-container",
+      "optanon"
+    ],
+    "cookie_signatures": [
+      "OptanonConsent",
+      "OptanonAlertBoxClosed"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "OpenCart",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "index.php?route=",
+      "catalog/view/theme"
+    ],
+    "script_url_signatures": [
+      "catalog/view/javascript",
+      "catalog/view/theme"
+    ],
+    "js_asset_signatures": [
+      "index.php?route=",
+      "catalog/view/javascript"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "catalog/view/theme"
+    ],
+    "meta_generator_signatures": [
+      "opencart"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "OCSESSID"
+    ],
+    "header_signatures": {}
+  }
+]

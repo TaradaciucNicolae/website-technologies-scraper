@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Klarna",
+    "category": "Payments",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "klarna"
+    ],
+    "script_url_signatures": [
+      "klarna.com",
+      "x.klarnacdn.net"
+    ],
+    "js_asset_signatures": [
+      "Klarna.Payments",
+      "klarna",
+      "klarnacdn"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "klarna.com",
+      "klarnacdn.net"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "klarna-placement"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Klaviyo",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "klaviyo",
+      "learnq"
+    ],
+    "script_url_signatures": [
+      "static.klaviyo.com"
+    ],
+    "js_asset_signatures": [
+      "klaviyo",
+      "_learnq",
+      "learnq"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "__kla_id"
+    ],
+    "header_signatures": {}
+  }
+]

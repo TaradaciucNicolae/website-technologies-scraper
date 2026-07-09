@@ -1,0 +1,292 @@
+[
+  {
+    "name": "Laravel",
+    "category": "Backend Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "csrf-token"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "laravel_session"
+    ],
+    "header_signatures": {
+      "x-powered-by": [
+        "Laravel"
+      ]
+    }
+  },
+  {
+    "name": "Leaflet",
+    "category": "Maps",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "leaflet",
+      "leaflet-container"
+    ],
+    "script_url_signatures": [
+      "leaflet.js",
+      "leaflet-src.js",
+      "cdn.jsdelivr.net/npm/leaflet",
+      "unpkg.com/leaflet"
+    ],
+    "js_asset_signatures": [
+      "L.map",
+      "L.tileLayer",
+      "leaflet"
+    ],
+    "package_url_signatures": [
+      "leaflet",
+      "react-leaflet"
+    ],
+    "stylesheet_url_signatures": [
+      "leaflet.css",
+      "cdn.jsdelivr.net/npm/leaflet",
+      "unpkg.com/leaflet"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "leaflet-container",
+      "leaflet-pane",
+      "leaflet-tile-pane"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Leptos",
+    "category": "JavaScript Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "leptos",
+      "data-leptos"
+    ],
+    "script_url_signatures": [
+      "leptos"
+    ],
+    "js_asset_signatures": [
+      "leptos",
+      "data-leptos"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-leptos",
+      "leptos"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LinkedIn Insight Tag",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "linkedin_data_partner_id",
+      "lintrk"
+    ],
+    "script_url_signatures": [
+      "snap.licdn.com/li.lms-analytics/insight.min.js"
+    ],
+    "js_asset_signatures": [
+      "_linkedin_partner_id",
+      "lintrk(",
+      "snap.licdn.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "li_fat_id",
+      "bcookie",
+      "lidc"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Lit",
+    "category": "JavaScript Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "lit-html",
+      "lit-element"
+    ],
+    "script_url_signatures": [
+      "cdn.jsdelivr.net/npm/lit",
+      "unpkg.com/lit"
+    ],
+    "js_asset_signatures": [
+      "lit-html",
+      "LitElement",
+      "cssResult"
+    ],
+    "package_url_signatures": [
+      "lit",
+      "lit-html",
+      "lit-element"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LiveChat",
+    "category": "Customer Support",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "__lc",
+      "livechatinc"
+    ],
+    "script_url_signatures": [
+      "cdn.livechatinc.com",
+      "livechatinc.com"
+    ],
+    "js_asset_signatures": [
+      "LiveChatWidget",
+      "livechatinc",
+      "cdn.livechatinc.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "__lc_cid",
+      "__lc_cst"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Lodash",
+    "category": "JavaScript Library",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "lodash"
+    ],
+    "script_url_signatures": [
+      "lodash.min.js",
+      "lodash.js",
+      "cdn.jsdelivr.net/npm/lodash",
+      "unpkg.com/lodash",
+      "cdnjs.cloudflare.com/ajax/libs/lodash.js"
+    ],
+    "js_asset_signatures": [
+      "_.VERSION",
+      "lodash",
+      "lodash.min.js"
+    ],
+    "package_url_signatures": [
+      "lodash",
+      "lodash-es"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LogRocket",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [
+      "logrocket.com"
+    ],
+    "html_signatures": [
+      "LogRocket.init",
+      "logrocket"
+    ],
+    "script_url_signatures": [
+      "cdn.lr-ingest.com",
+      "cdn.logrocket.io",
+      "logrocket"
+    ],
+    "js_asset_signatures": [
+      "LogRocket.init",
+      "logrocket",
+      "lr-ingest"
+    ],
+    "package_url_signatures": [
+      "logrocket",
+      "logrocket-react"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "logrocket"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Loox",
+    "category": "Reviews / Ecommerce App",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "loox"
+    ],
+    "script_url_signatures": [
+      "loox.io",
+      "cdn-loox.io"
+    ],
+    "js_asset_signatures": [
+      "loox",
+      "cdn-loox.io"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "loox.io",
+      "cdn-loox.io"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "loox-rating",
+      "loox-reviews"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Lucky Orange",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "luckyorange"
+    ],
+    "script_url_signatures": [
+      "tools.luckyorange.com/core/lo.js",
+      "luckyorange.com"
+    ],
+    "js_asset_signatures": [
+      "LuckyOrange",
+      "lo.js"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "__lotl",
+      "__lotr"
+    ],
+    "header_signatures": {}
+  }
+]

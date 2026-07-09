@@ -1,0 +1,220 @@
+[
+  {
+    "name": "Heap",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "heap.load",
+      "heap.track"
+    ],
+    "script_url_signatures": [
+      "cdn.heapanalytics.com/js/heap"
+    ],
+    "js_asset_signatures": [
+      "heap.load",
+      "heap.track",
+      "heapanalytics"
+    ],
+    "package_url_signatures": [
+      "heap-js"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_hp2_id",
+      "_hp2_ses_props"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Help Scout",
+    "category": "Customer Support",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "beacon",
+      "helpscout"
+    ],
+    "script_url_signatures": [
+      "beacon-v2.helpscout.net",
+      "helpscout.net"
+    ],
+    "js_asset_signatures": [
+      "Beacon(",
+      "helpscout",
+      "beacon-v2.helpscout.net"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Heroku",
+    "category": "Hosting",
+    "confidence": "high",
+    "domain_signatures": [
+      "herokuapp.com"
+    ],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "herokuapp.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "via": [
+        "vegur"
+      ]
+    }
+  },
+  {
+    "name": "HLS.js",
+    "category": "Video Player",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "hls.js",
+      "new Hls("
+    ],
+    "script_url_signatures": [
+      "hls.min.js",
+      "cdn.jsdelivr.net/npm/hls.js",
+      "cdnjs.cloudflare.com/ajax/libs/hls.js"
+    ],
+    "js_asset_signatures": [
+      "new Hls(",
+      "Hls.isSupported",
+      "hls.js"
+    ],
+    "package_url_signatures": [
+      "hls.js"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Hotjar",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "hjid"
+    ],
+    "script_url_signatures": [
+      "static.hotjar.com",
+      "hotjar.com"
+    ],
+    "js_asset_signatures": [
+      "hj(",
+      "_hjSettings",
+      "hotjar.com"
+    ],
+    "package_url_signatures": [
+      "@hotjar/browser"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_hjSession",
+      "_hjSessionUser",
+      "_hjIncludedInSessionSample"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "htmx",
+    "category": "JavaScript Library",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "htmx"
+    ],
+    "script_url_signatures": [
+      "htmx.org",
+      "htmx.min.js"
+    ],
+    "js_asset_signatures": [
+      "htmx.defineExtension",
+      "htmx.ajax",
+      "htmx.min.js"
+    ],
+    "package_url_signatures": [
+      "htmx.org",
+      "htmx"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "hx-get",
+      "hx-post",
+      "hx-target",
+      "hx-swap"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "HubSpot",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "hubspot"
+    ],
+    "script_url_signatures": [
+      "js.hs-scripts.com",
+      "js.hsforms.net"
+    ],
+    "js_asset_signatures": [
+      "_hsq",
+      "HubSpotConversations",
+      "js.hs-scripts.com",
+      "hbspt.forms"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "hubspotutk",
+      "__hssc",
+      "__hssrc",
+      "__hstc"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Hugo",
+    "category": "Static Site Generator",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "hugo"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "Hugo"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "hugo"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  }
+]

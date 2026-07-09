@@ -1,0 +1,136 @@
+[
+  {
+    "name": "Vercel",
+    "category": "Hosting",
+    "confidence": "high",
+    "domain_signatures": [
+      "vercel.app",
+      "now.sh"
+    ],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "_next/static"
+    ],
+    "js_asset_signatures": [
+      "__VERCEL",
+      "_vercel",
+      "vercel-insights",
+      "/_vercel/"
+    ],
+    "package_url_signatures": [
+      "@vercel/analytics",
+      "@vercel/speed-insights"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "vercel"
+      ],
+      "x-vercel-id": [
+        ""
+      ],
+      "x-vercel-cache": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "Video.js",
+    "category": "Video Player",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "video-js",
+      "vjs-default-skin"
+    ],
+    "script_url_signatures": [
+      "video.min.js",
+      "cdn.jsdelivr.net/npm/video.js",
+      "vjs.zencdn.net"
+    ],
+    "js_asset_signatures": [
+      "videojs(",
+      "video.js",
+      "videojs.registerPlugin"
+    ],
+    "package_url_signatures": [
+      "video.js"
+    ],
+    "stylesheet_url_signatures": [
+      "video-js.min.css",
+      "vjs.zencdn.net"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "video-js",
+      "vjs-default-skin",
+      "vjs-big-play-button"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Vite",
+    "category": "Build Tool",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "vite/client"
+    ],
+    "script_url_signatures": [
+      "/@vite/client",
+      "vite.svg"
+    ],
+    "js_asset_signatures": [
+      "@vite/client",
+      "import.meta.env",
+      "/vite.svg"
+    ],
+    "package_url_signatures": [
+      "vite",
+      "@vitejs/plugin-react",
+      "@vitejs/plugin-vue"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Vue.js",
+    "category": "JavaScript Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "vue.js",
+      "__vue__"
+    ],
+    "script_url_signatures": [
+      "cdn.jsdelivr.net/npm/vue",
+      "unpkg.com/vue",
+      "cdnjs.cloudflare.com/ajax/libs/vue"
+    ],
+    "js_asset_signatures": [
+      "Vue.createApp",
+      "__VUE__",
+      "vue-router",
+      "data-v-"
+    ],
+    "package_url_signatures": [
+      "vue",
+      "vue-router",
+      "pinia"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-v-"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  }
+]

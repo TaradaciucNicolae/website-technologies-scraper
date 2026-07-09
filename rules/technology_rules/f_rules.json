@@ -1,0 +1,340 @@
+[
+  {
+    "name": "FastAPI",
+    "category": "Backend Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "swagger-ui",
+      "openapi.json",
+      "fastapi"
+    ],
+    "script_url_signatures": [
+      "swagger-ui-bundle.js",
+      "swagger-ui.css",
+      "redoc.standalone.js"
+    ],
+    "js_asset_signatures": [
+      "swagger-ui",
+      "openapi.json",
+      "FastAPI"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "swagger-ui.css"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "swagger-ui"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "uvicorn"
+      ]
+    }
+  },
+  {
+    "name": "Fastify",
+    "category": "Backend Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "fastify"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "Fastify"
+      ]
+    }
+  },
+  {
+    "name": "Fastly",
+    "category": "CDN / Security",
+    "confidence": "high",
+    "domain_signatures": [
+      "fastly.net",
+      "fastlylb.net"
+    ],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "fastly",
+      "fastly-insights"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "fastly"
+      ],
+      "x-served-by": [
+        "cache-"
+      ],
+      "x-fastly-request-id": [
+        ""
+      ],
+      "fastly-debug-digest": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "Fathom Analytics",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [
+      "usefathom.com"
+    ],
+    "html_signatures": [
+      "usefathom.com",
+      "fathom"
+    ],
+    "script_url_signatures": [
+      "cdn.usefathom.com",
+      "usefathom.com/script.js"
+    ],
+    "js_asset_signatures": [
+      "fathom.trackGoal",
+      "usefathom.com"
+    ],
+    "package_url_signatures": [
+      "fathom-client"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Firebase",
+    "category": "Cloud / Backend",
+    "confidence": "high",
+    "domain_signatures": [
+      "firebaseapp.com",
+      "web.app"
+    ],
+    "html_signatures": [
+      "firebase"
+    ],
+    "script_url_signatures": [
+      "www.gstatic.com/firebasejs",
+      "firebase-app.js",
+      "firebaseio.com"
+    ],
+    "js_asset_signatures": [
+      "firebase.initializeApp",
+      "firebase-app",
+      "firebase.auth",
+      "firestore"
+    ],
+    "package_url_signatures": [
+      "firebase",
+      "@firebase/app",
+      "@firebase/auth",
+      "@firebase/firestore"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Flask",
+    "category": "Backend Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "werkzeug"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "werkzeug"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "Werkzeug"
+      ]
+    }
+  },
+  {
+    "name": "Flutter Web",
+    "category": "JavaScript Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "flutter_bootstrap.js",
+      "flutter.js",
+      "_flutter.loader"
+    ],
+    "script_url_signatures": [
+      "flutter_bootstrap.js",
+      "flutter.js",
+      "main.dart.js"
+    ],
+    "js_asset_signatures": [
+      "_flutter.loader",
+      "FlutterLoader",
+      "main.dart.js"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Flutter"
+    ],
+    "dom_marker_signatures": [
+      "flt-glass-pane",
+      "flt-scene-host",
+      "flt-semantics"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Font Awesome",
+    "category": "Icon Library",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "fontawesome",
+      "font-awesome",
+      "fa-solid",
+      "fa-brands"
+    ],
+    "script_url_signatures": [
+      "kit.fontawesome.com",
+      "use.fontawesome.com",
+      "cdnjs.cloudflare.com/ajax/libs/font-awesome"
+    ],
+    "js_asset_signatures": [
+      "FontAwesome",
+      "fontawesome",
+      "fa-solid"
+    ],
+    "package_url_signatures": [
+      "@fortawesome/fontawesome-free",
+      "@fortawesome/fontawesome-svg-core"
+    ],
+    "stylesheet_url_signatures": [
+      "font-awesome.min.css",
+      "fontawesome.min.css",
+      "use.fontawesome.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "fa-solid",
+      "fa-regular",
+      "fa-brands"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Foundation",
+    "category": "CSS Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "foundation.min.css",
+      "foundation-sites",
+      "data-foundation"
+    ],
+    "script_url_signatures": [
+      "foundation.min.js",
+      "cdn.jsdelivr.net/npm/foundation-sites"
+    ],
+    "js_asset_signatures": [
+      "Foundation",
+      "foundation-sites"
+    ],
+    "package_url_signatures": [
+      "foundation-sites"
+    ],
+    "stylesheet_url_signatures": [
+      "foundation.min.css",
+      "foundation-sites"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-foundation",
+      "top-bar",
+      "grid-x"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Freshchat",
+    "category": "Customer Support",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "freshchat",
+      "fcWidget"
+    ],
+    "script_url_signatures": [
+      "wchat.freshchat.com",
+      "freshchat.com"
+    ],
+    "js_asset_signatures": [
+      "fcWidget",
+      "freshchat",
+      "wchat.freshchat.com"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "freshchat.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "FullStory",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "FS.identify",
+      "FS.event",
+      "fullstory"
+    ],
+    "script_url_signatures": [
+      "fullstory.com/s/fs.js",
+      "edge.fullstory.com"
+    ],
+    "js_asset_signatures": [
+      "FS.identify",
+      "FS.event",
+      "fullstory.com/s/fs.js"
+    ],
+    "package_url_signatures": [
+      "@fullstory/browser"
+    ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "fs_uid"
+    ],
+    "header_signatures": {}
+  }
+]

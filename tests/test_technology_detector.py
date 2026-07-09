@@ -5,7 +5,7 @@ from src.javascript_asset_fetcher import JavaScriptAsset
 from src.technology_detector import detect_technologies, load_technology_rules
 
 
-RULES_PATH = Path("rules/technology_rules.json")
+RULES_PATH = Path("rules/technology_rules")
 
 
 class TechnologyDetectorTests(unittest.TestCase):
