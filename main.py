@@ -17,7 +17,7 @@ RESULTS_OUTPUT_PATH = Path("data/output/technology_detections.json")
 
 
 def print_fetch_result(result: WebsiteFetchResult) -> None:
-    print("=" * 80)
+    print("=" * 120)
     print(f"Domain:       {result.domain}")
     print(f"Attempted:    {', '.join(result.attempted_urls)}")
     print(f"Successful:   {result.successful_url or '-'}")
@@ -36,11 +36,13 @@ def print_detected_technologies(detections: list[TechnologyDetection]) -> None:
         return
 
     for detection in detections:
+        print("-" * 60)
         print(f"  - {detection.name} ({detection.category}, confidence: {detection.confidence})")
 
         for evidence in detection.evidence:
-            print(f"      Evidence: [{evidence.source}] {evidence.matched}")
-            print(f"      Explanation: {evidence.explanation}")
+            print(f"Evidence: [{evidence.type}] {evidence.location} -> {evidence.matched_value}")
+            print(f"Excerpt: {evidence.excerpt}")
+            print(f"Explanation: {evidence.explanation}")
 
 
 
@@ -61,8 +63,12 @@ def build_result_record(
         for evidence in detection.evidence:
             evidence_items.append(
                 {
+                    "type": evidence.type,
                     "source": evidence.source,
-                    "matched": evidence.matched,
+                    "location": evidence.location,
+                    "matched_value": evidence.matched_value,
+                    "excerpt": evidence.excerpt,
+                    "confidence": evidence.confidence,
                     "explanation": evidence.explanation,
                 }
             )
@@ -94,7 +100,7 @@ def main() -> None:
     rules = load_technology_rules(RULES_PATH)
     results: list[dict] = []
 
-    for domain in domains:
+    for domain in domains[:10]:
         domain = domain.strip()
 
         if not domain:

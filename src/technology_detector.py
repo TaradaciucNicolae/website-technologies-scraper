@@ -5,9 +5,17 @@ from pathlib import Path
 
 @dataclass
 class TechnologyEvidence: # Explanation that explains why a technology was detected.
+    type: str
     source: str
-    matched: str
+    location: str
+    matched_value: str
+    excerpt: str
+    confidence: str
     explanation: str
+
+    @property
+    def matched(self) -> str:
+        return self.matched_value
 
 
 @dataclass
@@ -50,8 +58,33 @@ def load_technology_rules(rules_path: Path) -> list[TechnologyRule]:
     return rules
 
 
+def build_excerpt(text: str, matched_value: str, characters_around_match: int = 60) -> str:
+    if not text:
+        return ""
 
-# We detect website technologies by matching known signatures. 
+    text_lower = text.lower()
+    matched_value_lower = matched_value.lower()
+    match_index = text_lower.find(matched_value_lower)
+
+    if match_index == -1:
+        return " ".join(text[:120].split())
+
+    start_index = max(match_index - characters_around_match, 0)
+    end_index = min(match_index + len(matched_value) + characters_around_match, len(text))
+
+    excerpt = text[start_index:end_index]
+    excerpt = " ".join(excerpt.split())
+
+    if start_index > 0:
+        excerpt = "..." + excerpt
+
+    if end_index < len(text):
+        excerpt = excerpt + "..."
+
+    return excerpt
+
+
+# We detect website technologies by matching known signatures.
 # We check both the HTML response and HTTP headers (each match is returned with evidence)
 def detect_technologies(
     domain: str,
@@ -60,18 +93,17 @@ def detect_technologies(
     headers: dict[str, str],
     rules: list[TechnologyRule],
 ) -> list[TechnologyDetection]:
-    
-    # Normalize the HTML and headers
-    html_lower = html.lower()
+
+    # Normalize the headers
     normalized_headers = {
-        key.lower(): value.lower()
+        key.lower(): value
         for key, value in headers.items()
     }
 
     detections: list[TechnologyDetection] = []
 
     for rule in rules:
-        evidence = collect_evidence_for_rule(rule, domain, final_url, html_lower, normalized_headers)
+        evidence = collect_evidence_for_rule(rule, domain, final_url, html, normalized_headers)
 
         if not evidence:
             continue
@@ -84,22 +116,49 @@ def detect_technologies(
                 evidence=evidence
             )
         )
+
     # Return detected technologies, each containing its evidence list.
     return detections
 
 
+# Collect all explanation items for a single technology rule.
+def collect_evidence_for_rule(
+    rule: TechnologyRule,
+    domain: str,
+    final_url: str | None,
+    html: str,
+    normalized_headers: dict[str, str],
+) -> list[TechnologyEvidence]:
+
+    evidence: list[TechnologyEvidence] = []
+
+    evidence.extend(
+        collect_domain_evidence(domain, final_url, rule.domain_signatures, rule.confidence)
+    )
+    evidence.extend(
+        collect_html_evidence(html, rule.html_signatures, rule.confidence)
+    )
+    evidence.extend(
+        collect_header_evidence(normalized_headers, rule.header_signatures, rule.confidence)
+    )
+
+    # Return all explanation items found for this rule.
+    return evidence
 
 
 def collect_domain_evidence(
     domain: str,
     final_url: str | None,
     signatures: list[str],
+    confidence: str,
 ) -> list[TechnologyEvidence]:
     evidence: list[TechnologyEvidence] = []
 
+    original_text = domain
     text_to_check = domain.lower()
 
     if final_url is not None:
+        original_text = original_text + " " + final_url
         text_to_check = text_to_check + " " + final_url.lower()
 
     for signature in signatures:
@@ -110,8 +169,12 @@ def collect_domain_evidence(
 
         evidence.append(
             TechnologyEvidence(
-                source="domain",
-                matched=signature,
+                type="domain",
+                source="url",
+                location="domain_or_final_url",
+                matched_value=signature,
+                excerpt=build_excerpt(original_text, signature),
+                confidence=confidence,
                 explanation=f"Found '{signature}' in the domain or final URL.",
             )
         )
@@ -119,34 +182,15 @@ def collect_domain_evidence(
     return evidence
 
 
-
-# Collect all explanation items for a single technology rule.
-def collect_evidence_for_rule(
-    rule: TechnologyRule,
-    domain: str,
-    final_url: str | None,
-    html_lower: str,
-    normalized_headers: dict[str, str],
-) -> list[TechnologyEvidence]:
-    
-
-    evidence: list[TechnologyEvidence] = []
-
-    evidence.extend(collect_domain_evidence(domain, final_url, rule.domain_signatures))
-    evidence.extend(collect_html_evidence(html_lower, rule.html_signatures))
-    evidence.extend(collect_header_evidence(normalized_headers, rule.header_signatures))
-
-    # Return all explanation items found for this rule.
-    return evidence
-
-
 # Find technology signatures inside the HTML response.
 def collect_html_evidence(
-    html_lower: str,
+    html: str,
     signatures: list[str],
+    confidence: str,
 ) -> list[TechnologyEvidence]:
-    
+
     evidence: list[TechnologyEvidence] = []
+    html_lower = html.lower()
 
     for signature in signatures:
         normalized_signature = signature.lower()
@@ -156,54 +200,64 @@ def collect_html_evidence(
 
         evidence.append(
             TechnologyEvidence(
+                type="html_contains",
                 source="html",
-                matched=signature,
+                location="html",
+                matched_value=signature,
+                excerpt=build_excerpt(html, signature),
+                confidence=confidence,
                 explanation=f"Found '{signature}' in the HTML response."
             )
         )
+
     # Return HTML evidence items for the matched signatures.
     return evidence
-
 
 
 # Find technology signatures inside HTTP response headers.
 def collect_header_evidence(
     normalized_headers: dict[str, str],
     header_signatures: dict[str, list[str]],
+    confidence: str,
 ) -> list[TechnologyEvidence]:
     evidence: list[TechnologyEvidence] = []
 
     for header_name, signatures in header_signatures.items():
-        
+
         # Normalize the header name
         normalized_header_name = header_name.lower()
 
         # In the headers dictionary, the header name is the key and the header content is the value.
         # Example: looking up key "server" returns value "cloudflare".
-        header_value = normalized_headers.get(normalized_header_name) 
+        header_value = normalized_headers.get(normalized_header_name)
 
         if header_value is None:
             continue
 
+        header_value_lower = header_value.lower()
+
         for signature in signatures:
             normalized_signature = signature.lower()
 
-            if not normalized_signature:
-                # Empty signature: the header only needs to exist.
-                pass
-            elif normalized_signature not in header_value:
-                # Non-empty signature: the header value must contain it.
+            if normalized_signature and normalized_signature not in header_value_lower:
                 continue
 
-            # If signature is empty, the matched value stays empty because header presence was enough.
+            if normalized_signature:
+                matched_value = signature
+                explanation = f"Found '{signature}' in HTTP header '{normalized_header_name}'."
+            else:
+                matched_value = header_value
+                explanation = f"Found HTTP header '{normalized_header_name}'."
+
             evidence.append(
                 TechnologyEvidence(
+                    type="header",
                     source="headers",
-                    matched=f"{header_name}: {signature}",
-                    explanation=(
-                        f"Found HTTP header '{header_name}' "
-                        f"with value '{header_value}'."
-                    ),
+                    location=normalized_header_name,
+                    matched_value=matched_value,
+                    excerpt=f"{normalized_header_name}: {header_value}",
+                    confidence=confidence,
+                    explanation=explanation,
                 )
             )
             break

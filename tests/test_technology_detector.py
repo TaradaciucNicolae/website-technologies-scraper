@@ -62,6 +62,34 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Cloudflare", detected_names)
 
 
+    # Test that header evidence contains detailed fields.
+    def test_header_evidence_uses_new_evidence_fields(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
+
+        detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
+            html="",
+            headers={"Server": "cloudflare"},
+            rules=rules,
+        )
+
+        cloudflare_detection = next(
+            detection
+            for detection in detections
+            if detection.name == "Cloudflare"
+        )
+
+        header_evidence = cloudflare_detection.evidence[0]
+
+        self.assertEqual(header_evidence.type, "header")
+        self.assertEqual(header_evidence.source, "headers")
+        self.assertEqual(header_evidence.location, "server")
+        self.assertEqual(header_evidence.matched_value, "cloudflare")
+        self.assertEqual(header_evidence.excerpt, "server: cloudflare")
+        self.assertEqual(header_evidence.confidence, "high")
+        self.assertIn("server", header_evidence.explanation.lower())
+
 
     # Test detection using only the presence of a header.
     def test_detects_cloudflare_from_header_presence(self) -> None:
@@ -162,8 +190,16 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertEqual(shopify_detection.category, "Ecommerce")
         self.assertEqual(shopify_detection.confidence, "high")
         self.assertGreater(len(shopify_detection.evidence), 0)
-        self.assertEqual(shopify_detection.evidence[0].source, "html")
-        self.assertEqual(shopify_detection.evidence[0].matched, "cdn.shopify.com")
+
+        shopify_evidence = shopify_detection.evidence[0]
+
+        self.assertEqual(shopify_evidence.type, "html_contains")
+        self.assertEqual(shopify_evidence.source, "html")
+        self.assertEqual(shopify_evidence.location, "html")
+        self.assertEqual(shopify_evidence.matched_value, "cdn.shopify.com")
+        self.assertIn("cdn.shopify.com", shopify_evidence.excerpt)
+        self.assertEqual(shopify_evidence.confidence, "high")
+        self.assertIn("HTML", shopify_evidence.explanation)
 
 
 
@@ -184,7 +220,34 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Weebly", detected_names)
 
 
+    # Test that domain evidence contains detailed fields.
+    def test_domain_evidence_uses_new_evidence_fields(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
 
+        detections = detect_technologies(
+            domain="1planettechnologies.weebly.com",
+            final_url="https://1planettechnologies.weebly.com",
+            html="",
+            headers={},
+            rules=rules,
+        )
+
+        weebly_detection = next(
+            detection
+            for detection in detections
+            if detection.name == "Weebly"
+        )
+
+        domain_evidence = weebly_detection.evidence[0]
+
+        self.assertEqual(domain_evidence.type, "domain")
+        self.assertEqual(domain_evidence.source, "url")
+        self.assertEqual(domain_evidence.location, "domain_or_final_url")
+        self.assertEqual(domain_evidence.matched_value, "weebly.com")
+        self.assertIn("weebly.com", domain_evidence.excerpt)
+        self.assertEqual(domain_evidence.confidence, "high")
+        self.assertIn("domain", domain_evidence.explanation.lower())
+        
 
 if __name__ == "__main__":
     unittest.main()
