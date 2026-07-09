@@ -43,13 +43,14 @@
     "html_signatures": ["webflow.js", "uploads-ssl.webflow.com", "data-wf-page"],
     "header_signatures": {}
   },
-  {
+    {
     "name": "Weebly",
     "category": "CMS",
     "confidence": "high",
+    "domain_signatures": ["weebly.com"],
     "html_signatures": ["weebly.com", "weeblycloud.com", "cdn2.editmysite.com"],
     "header_signatures": {}
-  },
+    },
   {
     "name": "Google Tag Manager",
     "category": "Tag Manager",

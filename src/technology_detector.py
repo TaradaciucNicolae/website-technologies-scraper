@@ -25,6 +25,7 @@ class TechnologyRule: # A rule for detecting a specific technology.
     confidence: str
     html_signatures: list[str]
     header_signatures: dict[str, list[str]]
+    domain_signatures: list[str]
 
 
 # Load technology detection rules from a JSON file.
@@ -40,7 +41,8 @@ def load_technology_rules(rules_path: Path) -> list[TechnologyRule]:
                 category=raw_rule["category"],
                 confidence=raw_rule["confidence"],
                 html_signatures=raw_rule.get("html_signatures", []),
-                header_signatures=raw_rule.get("header_signatures", {})
+                header_signatures=raw_rule.get("header_signatures", {}),
+                domain_signatures=raw_rule.get("domain_signatures", [])
             )
         )
 
@@ -52,6 +54,8 @@ def load_technology_rules(rules_path: Path) -> list[TechnologyRule]:
 # We detect website technologies by matching known signatures. 
 # We check both the HTML response and HTTP headers (each match is returned with evidence)
 def detect_technologies(
+    domain: str,
+    final_url: str | None,
     html: str,
     headers: dict[str, str],
     rules: list[TechnologyRule],
@@ -67,7 +71,7 @@ def detect_technologies(
     detections: list[TechnologyDetection] = []
 
     for rule in rules:
-        evidence = collect_evidence_for_rule(rule, html_lower, normalized_headers)
+        evidence = collect_evidence_for_rule(rule, domain, final_url, html_lower, normalized_headers)
 
         if not evidence:
             continue
@@ -84,15 +88,51 @@ def detect_technologies(
     return detections
 
 
+
+
+def collect_domain_evidence(
+    domain: str,
+    final_url: str | None,
+    signatures: list[str],
+) -> list[TechnologyEvidence]:
+    evidence: list[TechnologyEvidence] = []
+
+    text_to_check = domain.lower()
+
+    if final_url is not None:
+        text_to_check = text_to_check + " " + final_url.lower()
+
+    for signature in signatures:
+        normalized_signature = signature.lower()
+
+        if normalized_signature not in text_to_check:
+            continue
+
+        evidence.append(
+            TechnologyEvidence(
+                source="domain",
+                matched=signature,
+                explanation=f"Found '{signature}' in the domain or final URL.",
+            )
+        )
+
+    return evidence
+
+
+
 # Collect all explanation items for a single technology rule.
 def collect_evidence_for_rule(
     rule: TechnologyRule,
+    domain: str,
+    final_url: str | None,
     html_lower: str,
     normalized_headers: dict[str, str],
 ) -> list[TechnologyEvidence]:
     
 
     evidence: list[TechnologyEvidence] = []
+
+    evidence.extend(collect_domain_evidence(domain, final_url, rule.domain_signatures))
     evidence.extend(collect_html_evidence(html_lower, rule.html_signatures))
     evidence.extend(collect_header_evidence(normalized_headers, rule.header_signatures))
 

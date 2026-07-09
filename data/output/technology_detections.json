@@ -23,7 +23,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bbb4cb21e4b8-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825e482ca9ca28-otp'."
           },
           {
             "source": "headers",
@@ -99,12 +99,12 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bbb9dd31ca21-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825e4ce89ce43e-otp'."
           },
           {
             "source": "headers",
             "matched": "cf-cache-status: ",
-            "explanation": "Found HTTP header 'cf-cache-status' with value 'expired'."
+            "explanation": "Found HTTP header 'cf-cache-status' with value 'miss'."
           }
         ]
       },
@@ -204,7 +204,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bbc2090be43e-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825e53ac81e4a8-otp'."
           },
           {
             "source": "headers",
@@ -261,6 +261,11 @@
         "confidence": "high",
         "evidence": [
           {
+            "source": "domain",
+            "matched": "weebly.com",
+            "explanation": "Found 'weebly.com' in the domain or final URL."
+          },
+          {
             "source": "html",
             "matched": "weebly.com",
             "explanation": "Found 'weebly.com' in the HTML response."
@@ -285,7 +290,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bbcadb87f4c8-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825e62db0f48d5-otp'."
           },
           {
             "source": "headers",
@@ -362,7 +367,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bbe0de520f22-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825e689cfae3f4-otp'."
           }
         ]
       }
@@ -392,7 +397,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bbe4ab8ee3e4-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825e6de9b6e4aa-otp'."
           }
         ]
       }
@@ -423,7 +428,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bbf4a8b17607-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825e7e5805c9ed-otp'."
           }
         ]
       }
@@ -470,7 +475,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bbf88d4f3793-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825e834c4de4a9-otp'."
           },
           {
             "source": "headers",
@@ -556,7 +561,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bbfe1d5ee4a9-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825e89faf8c9f0-otp'."
           },
           {
             "source": "headers",
@@ -642,7 +647,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bc03fc49e40b-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825e8ebce5e3e4-otp'."
           },
           {
             "source": "headers",
@@ -747,7 +752,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bc0dcdbbca29-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825e991bc9e3fc-otp'."
           },
           {
             "source": "headers",
@@ -835,7 +840,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bc1cae10c9dc-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825eaa3c2ce40d-otp'."
           },
           {
             "source": "headers",
@@ -904,7 +909,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bc282c830f92-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825eb24857c9c3-otp'."
           },
           {
             "source": "headers",
@@ -1032,7 +1037,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bc359849c9ec-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825ec03c05e5ae-otp'."
           }
         ]
       }
@@ -1130,7 +1135,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bc48f9142693-vie'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825ecd29be97d4-otp'."
           },
           {
             "source": "headers",
@@ -1204,7 +1209,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bc5d7fbee4b6-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825ee34ca8c9d0-otp'."
           },
           {
             "source": "headers",
@@ -1319,7 +1324,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bc68cfd6e4aa-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825ef28d2ab694-otp'."
           },
           {
             "source": "headers",
@@ -1412,7 +1417,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bc705e8fc9f1-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825efbb830c9e9-otp'."
           },
           {
             "source": "headers",
@@ -1493,7 +1498,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bc747ffc4b1e-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825f067bd2e413-otp'."
           },
           {
             "source": "headers",
@@ -1562,7 +1567,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bc814a9270d0-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825f12fe3348d5-otp'."
           },
           {
             "source": "headers",
@@ -1677,7 +1682,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bc869e830f22-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825f1b6dc8e4a7-otp'."
           },
           {
             "source": "headers",
@@ -1722,6 +1727,11 @@
         "confidence": "high",
         "evidence": [
           {
+            "source": "domain",
+            "matched": "weebly.com",
+            "explanation": "Found 'weebly.com' in the domain or final URL."
+          },
+          {
             "source": "html",
             "matched": "weebly.com",
             "explanation": "Found 'weebly.com' in the HTML response."
@@ -1746,7 +1756,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bc8c38030535-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825f219cb50534-otp'."
           },
           {
             "source": "headers",
@@ -1815,6 +1825,11 @@
         "confidence": "high",
         "evidence": [
           {
+            "source": "domain",
+            "matched": "weebly.com",
+            "explanation": "Found 'weebly.com' in the domain or final URL."
+          },
+          {
             "source": "html",
             "matched": "cdn2.editmysite.com",
             "explanation": "Found 'cdn2.editmysite.com' in the HTML response."
@@ -1834,7 +1849,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bc9198e9c9de-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825f28be50e4b2-otp'."
           },
           {
             "source": "headers",
@@ -1898,12 +1913,12 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bc9d3b28e4b6-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825f2f5d01e4b8-otp'."
           },
           {
             "source": "headers",
             "matched": "cf-cache-status: ",
-            "explanation": "Found HTTP header 'cf-cache-status' with value 'hit'."
+            "explanation": "Found HTTP header 'cf-cache-status' with value 'expired'."
           }
         ]
       },
@@ -1979,7 +1994,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bca65e1e26f8-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825f3999c5e5a2-otp'."
           },
           {
             "source": "headers",
@@ -2121,7 +2136,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bcad7b8d8a37-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825f3f6f6dca1c-otp'."
           }
         ]
       },
@@ -2233,7 +2248,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bcb21ca94260-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825f447fdbe3d9-otp'."
           },
           {
             "source": "headers",
@@ -2286,7 +2301,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bcc2ed2c97d4-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825f553caee40d-otp'."
           }
         ]
       }
@@ -2340,7 +2355,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bccbfa04e4af-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1825f5fc8b3e44a-otp'."
           },
           {
             "source": "headers",
@@ -2472,7 +2487,7 @@
           {
             "source": "headers",
             "matched": "x-wix-request-id: ",
-            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783541533.615123551911357'."
+            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783548192.6273162979111357'."
           }
         ]
       },
@@ -2675,15 +2690,32 @@
   {
     "domain": "bas-ingenieria.cl",
     "attempted_urls": [
-      "https://bas-ingenieria.cl",
-      "http://bas-ingenieria.cl"
+      "https://bas-ingenieria.cl"
     ],
-    "successful_url": null,
-    "final_url": null,
-    "status_code": null,
-    "error": "HTTPConnectionPool(host='bas-ingenieria.cl', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='bas-ingenieria.cl', port=80): Failed to resolve 'bas-ingenieria.cl' ([Errno 11001] getaddrinfo failed)\"))",
-    "technologies_found": 0,
-    "technologies": []
+    "successful_url": "https://bas-ingenieria.cl",
+    "final_url": "https://bas-ingenieria.cl/",
+    "status_code": 200,
+    "error": null,
+    "technologies_found": 1,
+    "technologies": [
+      {
+        "name": "Bootstrap",
+        "category": "CSS Framework",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "source": "html",
+            "matched": "bootstrap.min.css",
+            "explanation": "Found 'bootstrap.min.css' in the HTML response."
+          },
+          {
+            "source": "html",
+            "matched": "class=\"container",
+            "explanation": "Found 'class=\"container' in the HTML response."
+          }
+        ]
+      }
+    ]
   },
   {
     "domain": "bata.edu.hu",
@@ -2890,7 +2922,7 @@
           {
             "source": "headers",
             "matched": "x-wix-request-id: ",
-            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783541557.755141998191359'."
+            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783548208.838317118661354'."
           }
         ]
       },
@@ -3184,7 +3216,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bf3a6f5eb69a-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1826184db7bb68b-otp'."
           },
           {
             "source": "headers",
@@ -3417,12 +3449,12 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bf5f5fdce5ae-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a18261afebaaca25-otp'."
           },
           {
             "source": "headers",
             "matched": "cf-cache-status: ",
-            "explanation": "Found HTTP header 'cf-cache-status' with value 'expired'."
+            "explanation": "Found HTTP header 'cf-cache-status' with value 'hit'."
           }
         ]
       },
@@ -3559,7 +3591,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181bf846ab125c0-vie'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a18261d9be26c22d-vie'."
           }
         ]
       }
@@ -3954,7 +3986,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181c0c37f7ceef5-ewr'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1826329ee266d50-ewr'."
           },
           {
             "source": "headers",
@@ -4031,7 +4063,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181c0dac8ff4884-vie'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a18263444938e3f1-otp'."
           },
           {
             "source": "headers",
@@ -4336,7 +4368,7 @@
           {
             "source": "headers",
             "matched": "x-wix-request-id: ",
-            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783541656.367127252121342'."
+            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783548315.526430795511348'."
           }
         ]
       },
@@ -4402,7 +4434,7 @@
           {
             "source": "headers",
             "matched": "x-vercel-id: ",
-            "explanation": "Found HTTP header 'x-vercel-id' with value 'fra1::iad1::8gk22-1783541658737-c2f5a10d6adb'."
+            "explanation": "Found HTTP header 'x-vercel-id' with value 'fra1::iad1::qm26d-1783548318504-45e7088e6b3c'."
           },
           {
             "source": "headers",
@@ -4622,10 +4654,40 @@
     ],
     "successful_url": "https://evelynanders.com",
     "final_url": "https://evelynanders.com/",
-    "status_code": 403,
+    "status_code": 200,
     "error": null,
-    "technologies_found": 0,
-    "technologies": []
+    "technologies_found": 2,
+    "technologies": [
+      {
+        "name": "Bootstrap",
+        "category": "CSS Framework",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "source": "html",
+            "matched": "class=\"container",
+            "explanation": "Found 'class=\"container' in the HTML response."
+          }
+        ]
+      },
+      {
+        "name": "reCAPTCHA",
+        "category": "Security",
+        "confidence": "high",
+        "evidence": [
+          {
+            "source": "html",
+            "matched": "google.com/recaptcha",
+            "explanation": "Found 'google.com/recaptcha' in the HTML response."
+          },
+          {
+            "source": "html",
+            "matched": "recaptcha/api.js",
+            "explanation": "Found 'recaptcha/api.js' in the HTML response."
+          }
+        ]
+      }
+    ]
   },
   {
     "domain": "everhartsoutdoor.com",
@@ -4712,7 +4774,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181c1c41c415b8d-vie'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a182646a4cd3e3ec-otp'."
           },
           {
             "source": "headers",
@@ -4994,7 +5056,7 @@
           {
             "source": "headers",
             "matched": "x-wix-request-id: ",
-            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783541719.1482399452121340'."
+            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783548379.260413865341353'."
           }
         ]
       },
@@ -5083,7 +5145,7 @@
           {
             "source": "headers",
             "matched": "x-wix-request-id: ",
-            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783541722.035221505321356'."
+            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783548382.497413962211352'."
           }
         ]
       },
@@ -5137,7 +5199,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181c2bacfef83f0-vie'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a18265544a10e59e-otp'."
           }
         ]
       }
@@ -5528,7 +5590,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181c3292cd2b685-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a18265c72fc2e4a9-otp'."
           },
           {
             "source": "headers",
@@ -5668,7 +5730,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181c343e83c4baf-vie'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a18265dfd866e0c5-otp'."
           },
           {
             "source": "headers",
@@ -6007,7 +6069,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181c397fe8ae4b2-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a18266436c9b7607-otp'."
           },
           {
             "source": "headers",
@@ -6113,7 +6175,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181c3be6df25b7e-vie'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1826668f8ace59a-otp'."
           },
           {
             "source": "headers",
@@ -6327,10 +6389,106 @@
     ],
     "successful_url": "https://jobresourcecentre.com",
     "final_url": "https://jobresourcecentre.com/",
-    "status_code": 500,
+    "status_code": 200,
     "error": null,
-    "technologies_found": 0,
-    "technologies": []
+    "technologies_found": 5,
+    "technologies": [
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "confidence": "high",
+        "evidence": [
+          {
+            "source": "html",
+            "matched": "wp-content",
+            "explanation": "Found 'wp-content' in the HTML response."
+          },
+          {
+            "source": "html",
+            "matched": "wp-includes",
+            "explanation": "Found 'wp-includes' in the HTML response."
+          },
+          {
+            "source": "html",
+            "matched": "content=\"wordpress",
+            "explanation": "Found 'content=\"wordpress' in the HTML response."
+          }
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics",
+        "confidence": "high",
+        "evidence": [
+          {
+            "source": "html",
+            "matched": "googletagmanager.com/gtag/js",
+            "explanation": "Found 'googletagmanager.com/gtag/js' in the HTML response."
+          },
+          {
+            "source": "html",
+            "matched": "gtag(",
+            "explanation": "Found 'gtag(' in the HTML response."
+          }
+        ]
+      },
+      {
+        "name": "Bootstrap",
+        "category": "CSS Framework",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "source": "html",
+            "matched": "bootstrap.min.js",
+            "explanation": "Found 'bootstrap.min.js' in the HTML response."
+          },
+          {
+            "source": "html",
+            "matched": "class=\"container",
+            "explanation": "Found 'class=\"container' in the HTML response."
+          }
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JavaScript Library",
+        "confidence": "high",
+        "evidence": [
+          {
+            "source": "html",
+            "matched": "jquery.min.js",
+            "explanation": "Found 'jquery.min.js' in the HTML response."
+          },
+          {
+            "source": "html",
+            "matched": "jquery.js",
+            "explanation": "Found 'jquery.js' in the HTML response."
+          },
+          {
+            "source": "html",
+            "matched": "jquery-migrate",
+            "explanation": "Found 'jquery-migrate' in the HTML response."
+          }
+        ]
+      },
+      {
+        "name": "reCAPTCHA",
+        "category": "Security",
+        "confidence": "high",
+        "evidence": [
+          {
+            "source": "html",
+            "matched": "google.com/recaptcha",
+            "explanation": "Found 'google.com/recaptcha' in the HTML response."
+          },
+          {
+            "source": "html",
+            "matched": "recaptcha/api.js",
+            "explanation": "Found 'recaptcha/api.js' in the HTML response."
+          }
+        ]
+      }
+    ]
   },
   {
     "domain": "joburgheritage.org.za",
@@ -6442,7 +6600,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181c4ab48e9c31e-vie'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a182675bcfb8e4ac-otp'."
           },
           {
             "source": "headers",
@@ -6786,7 +6944,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181c4f5493ae3d9-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a18267aed95de4ae-otp'."
           },
           {
             "source": "headers",
@@ -6964,7 +7122,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181c5217a475b87-vie'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a18267df4e3ed403-otp'."
           },
           {
             "source": "headers",
@@ -7540,7 +7698,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181c5d329dddcf8-vie'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a18268a93f7c0531-otp'."
           },
           {
             "source": "headers",
@@ -7724,7 +7882,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181c5e70a3323c9-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a18268bd9d5de4b7-otp'."
           },
           {
             "source": "headers",
@@ -7878,7 +8036,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181c5f44e2fa051-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a18268cd8ce0e3f0-otp'."
           },
           {
             "source": "headers",
@@ -7952,7 +8110,7 @@
           {
             "source": "headers",
             "matched": "x-wix-request-id: ",
-            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783541858.949188483721348'."
+            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783548528.759361771311352'."
           }
         ]
       },
@@ -8262,7 +8420,7 @@
           {
             "source": "headers",
             "matched": "x-wix-request-id: ",
-            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783541870.388244437711355'."
+            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783548541.457343687651348'."
           }
         ]
       },
@@ -8464,7 +8622,7 @@
     "final_url": "https://passwordstore.it/",
     "status_code": 200,
     "error": null,
-    "technologies_found": 4,
+    "technologies_found": 5,
     "technologies": [
       {
         "name": "WooCommerce",
@@ -8487,6 +8645,11 @@
             "source": "html",
             "matched": "wp-content",
             "explanation": "Found 'wp-content' in the HTML response."
+          },
+          {
+            "source": "html",
+            "matched": "wp-includes",
+            "explanation": "Found 'wp-includes' in the HTML response."
           },
           {
             "source": "html",
@@ -8528,6 +8691,23 @@
             "explanation": "Found 'gtag(' in the HTML response."
           }
         ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JavaScript Library",
+        "confidence": "high",
+        "evidence": [
+          {
+            "source": "html",
+            "matched": "jquery.min.js",
+            "explanation": "Found 'jquery.min.js' in the HTML response."
+          },
+          {
+            "source": "html",
+            "matched": "jquery-migrate",
+            "explanation": "Found 'jquery-migrate' in the HTML response."
+          }
+        ]
       }
     ]
   },
@@ -8565,7 +8745,7 @@
           {
             "source": "headers",
             "matched": "x-wix-request-id: ",
-            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783541879.236169909811344'."
+            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783548550.249418415831353'."
           }
         ]
       },
@@ -8790,7 +8970,7 @@
           {
             "source": "headers",
             "matched": "x-nextjs-cache: ",
-            "explanation": "Found HTTP header 'x-nextjs-cache' with value 'stale'."
+            "explanation": "Found HTTP header 'x-nextjs-cache' with value 'hit'."
           }
         ]
       },
@@ -8914,7 +9094,7 @@
           {
             "source": "headers",
             "matched": "x-wix-request-id: ",
-            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783541887.091170123321357'."
+            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783548559.335437405751345'."
           }
         ]
       },
@@ -9820,7 +10000,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181c84ddcf8e4a8-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1826b5a2d4cc9f1-otp'."
           }
         ]
       }
@@ -10054,7 +10234,7 @@
           {
             "source": "headers",
             "matched": "x-wix-request-id: ",
-            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783541958.484154204081351'."
+            "explanation": "Found HTTP header 'x-wix-request-id' with value '1783548636.883383446421354'."
           }
         ]
       },
@@ -10194,7 +10374,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181c897c95bca1c-otp'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1826ba5fa53e4b6-otp'."
           },
           {
             "source": "headers",
@@ -10455,7 +10635,7 @@
           {
             "source": "headers",
             "matched": "cf-ray: ",
-            "explanation": "Found HTTP header 'cf-ray' with value 'a181c8ba88ea5b21-vie'."
+            "explanation": "Found HTTP header 'cf-ray' with value 'a1826bd3fed997d4-otp'."
           },
           {
             "source": "headers",

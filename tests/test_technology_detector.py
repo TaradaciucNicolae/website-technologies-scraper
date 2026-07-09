@@ -14,6 +14,8 @@ class TechnologyDetectorTests(unittest.TestCase):
         rules = load_technology_rules(RULES_PATH)
 
         detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
             html='<script src="https://cdn.shopify.com/app.js"></script>',
             headers={},
             rules=rules,
@@ -30,6 +32,8 @@ class TechnologyDetectorTests(unittest.TestCase):
         rules = load_technology_rules(RULES_PATH)
 
         detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
             html='<link href="/wp-content/themes/theme/style.css">',
             headers={},
             rules=rules,
@@ -46,6 +50,8 @@ class TechnologyDetectorTests(unittest.TestCase):
         rules = load_technology_rules(RULES_PATH)
 
         detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
             html="",
             headers={"Server": "cloudflare"},
             rules=rules,
@@ -62,6 +68,8 @@ class TechnologyDetectorTests(unittest.TestCase):
         rules = load_technology_rules(RULES_PATH)
 
         detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
             html="",
             headers={"CF-Ray": "abc123"},
             rules=rules,
@@ -78,6 +86,8 @@ class TechnologyDetectorTests(unittest.TestCase):
         rules = load_technology_rules(RULES_PATH)
 
         detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
             html="<html><body>Hello</body></html>",
             headers={"Server": "nginx"},
             rules=rules,
@@ -91,6 +101,8 @@ class TechnologyDetectorTests(unittest.TestCase):
         rules = load_technology_rules(RULES_PATH)
 
         detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
             html=(
                 '<script src="https://cdn.shopify.com/app.js"></script>'
                 '<script src="https://www.googletagmanager.com/gtm.js?id=GTM-ABC"></script>'
@@ -116,6 +128,8 @@ class TechnologyDetectorTests(unittest.TestCase):
         rules = load_technology_rules(RULES_PATH)
 
         detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
             html='<script src="https://CDN.SHOPIFY.COM/app.js"></script>',
             headers={"Server": "CLOUDFLARE"},
             rules=rules,
@@ -132,6 +146,8 @@ class TechnologyDetectorTests(unittest.TestCase):
         rules = load_technology_rules(RULES_PATH)
 
         detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
             html='<script src="https://cdn.shopify.com/app.js"></script>',
             headers={},
             rules=rules,
@@ -148,6 +164,27 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertGreater(len(shopify_detection.evidence), 0)
         self.assertEqual(shopify_detection.evidence[0].source, "html")
         self.assertEqual(shopify_detection.evidence[0].matched, "cdn.shopify.com")
+
+
+
+    # Test detection using only the domain name.
+    def test_detects_weebly_from_domain(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
+
+        detections = detect_technologies(
+            domain="1planettechnologies.weebly.com",
+            final_url="https://1planettechnologies.weebly.com",
+            html="",
+            headers={},
+            rules=rules,
+        )
+
+        detected_names = [detection.name for detection in detections]
+
+        self.assertIn("Weebly", detected_names)
+
+
+
 
 if __name__ == "__main__":
     unittest.main()

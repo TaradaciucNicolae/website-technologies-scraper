@@ -13,7 +13,7 @@ from src.technology_detector import (
 RULES_PATH = Path("rules/technology_rules.json")
 RAW_INPUT_PATH = Path("data/raw/domains.snappy.parquet")
 DOMAINS_OUTPUT_PATH = Path("data/domains.txt")
-RESULTS_OUTPUT_PATH = Path("data/output/technology_detections_sample.json")
+RESULTS_OUTPUT_PATH = Path("data/output/technology_detections.json")
 
 
 def print_fetch_result(result: WebsiteFetchResult) -> None:
@@ -102,6 +102,8 @@ def main() -> None:
 
         result = fetch_website(domain)
         detections = detect_technologies(
+            domain=result.domain,
+            final_url=result.final_url,
             html=result.html,
             headers=result.headers,
             rules=rules
