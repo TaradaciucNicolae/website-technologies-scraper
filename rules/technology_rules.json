@@ -8,6 +8,7 @@
     "script_url_signatures": ["cdn.shopify.com"],
     "stylesheet_url_signatures": ["cdn.shopify.com"],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": ["_shopify", "_shopify_y", "_shopify_s", "_shopify_sa_t", "_shopify_sa_p"],
     "header_signatures": {}
   },
@@ -20,6 +21,7 @@
     "script_url_signatures": ["wp-content/plugins/woocommerce"],
     "stylesheet_url_signatures": ["wp-content/plugins/woocommerce"],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": ["woocommerce_cart_hash", "woocommerce_items_in_cart", "wp_woocommerce_session"],
     "header_signatures": {}
   },
@@ -32,6 +34,7 @@
     "script_url_signatures": ["wp-content", "wp-includes"],
     "stylesheet_url_signatures": ["wp-content", "wp-includes"],
     "meta_generator_signatures": ["wordpress"],
+    "dom_marker_signatures": [],
     "cookie_signatures": ["wordpress_", "wp-settings", "wp_logged_in"],
     "header_signatures": {}
   },
@@ -44,6 +47,7 @@
     "script_url_signatures": ["wixstatic.com"],
     "stylesheet_url_signatures": ["wixstatic.com"],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": ["wixsession", "wix_browser_sess"],
     "header_signatures": {
       "x-wix-request-id": [""]
@@ -58,6 +62,7 @@
     "script_url_signatures": ["static1.squarespace.com", "squarespace.com/universal"],
     "stylesheet_url_signatures": ["static1.squarespace.com", "squarespace.com/universal"],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": ["ss_cid", "ss_cpvisit", "ss_cvisit", "ss_cvr"],
     "header_signatures": {}
   },
@@ -66,10 +71,11 @@
     "category": "CMS",
     "confidence": "high",
     "domain_signatures": [],
-    "html_signatures": ["data-wf-page"],
+    "html_signatures": [],
     "script_url_signatures": ["webflow.js"],
     "stylesheet_url_signatures": ["uploads-ssl.webflow.com"],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": ["data-wf-page"],
     "cookie_signatures": [],
     "header_signatures": {}
   },
@@ -82,6 +88,7 @@
     "script_url_signatures": ["weebly.com", "weeblycloud.com", "cdn2.editmysite.com"],
     "stylesheet_url_signatures": ["weebly.com", "weeblycloud.com", "cdn2.editmysite.com"],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
   },
@@ -94,6 +101,7 @@
     "script_url_signatures": ["googletagmanager.com/gtm.js"],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
   },
@@ -106,6 +114,7 @@
     "script_url_signatures": ["google-analytics.com/analytics.js", "googletagmanager.com/gtag/js"],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": ["_ga", "_gid", "_gat", "_gac_", "_ga_"],
     "header_signatures": {}
   },
@@ -118,6 +127,7 @@
     "script_url_signatures": ["connect.facebook.net"],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": ["_fbp", "_fbc"],
     "header_signatures": {}
   },
@@ -130,6 +140,7 @@
     "script_url_signatures": ["static.hotjar.com", "hotjar.com"],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": ["_hjSession", "_hjSessionUser", "_hjIncludedInSessionSample"],
     "header_signatures": {}
   },
@@ -142,6 +153,7 @@
     "script_url_signatures": ["static.klaviyo.com"],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": ["__kla_id"],
     "header_signatures": {}
   },
@@ -154,6 +166,7 @@
     "script_url_signatures": ["js.hs-scripts.com", "js.hsforms.net"],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": ["hubspotutk", "__hssc", "__hssrc", "__hstc"],
     "header_signatures": {}
   },
@@ -166,6 +179,7 @@
     "script_url_signatures": ["chimpstatic.com"],
     "stylesheet_url_signatures": ["chimpstatic.com"],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
   },
@@ -178,6 +192,7 @@
     "script_url_signatures": ["widget.intercom.io"],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": ["intercom-id", "intercom-session", "intercom-device-id"],
     "header_signatures": {}
   },
@@ -190,6 +205,7 @@
     "script_url_signatures": ["static.zdassets.com", "zopim.com"],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": ["__zlcmid"],
     "header_signatures": {}
   },
@@ -202,6 +218,7 @@
     "script_url_signatures": [],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": ["__cf_bm", "cf_clearance", "__cflb"],
     "header_signatures": {
       "server": ["cloudflare"],
@@ -218,6 +235,7 @@
     "script_url_signatures": ["_next/static"],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {
       "server": ["vercel"],
@@ -234,6 +252,7 @@
     "script_url_signatures": [],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {
       "server": ["netlify"],
@@ -245,10 +264,11 @@
     "category": "JavaScript Framework",
     "confidence": "medium",
     "domain_signatures": [],
-    "html_signatures": ["data-reactroot", "react-dom", "__react"],
+    "html_signatures": ["react-dom", "__react"],
     "script_url_signatures": [],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": ["data-reactroot"],
     "cookie_signatures": [],
     "header_signatures": {}
   },
@@ -257,10 +277,11 @@
     "category": "JavaScript Framework",
     "confidence": "high",
     "domain_signatures": [],
-    "html_signatures": ["__next_data__", "next-head-count"],
+    "html_signatures": [],
     "script_url_signatures": ["_next/static"],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": ["__next_data__", "next-head-count"],
     "cookie_signatures": [],
     "header_signatures": {
       "x-nextjs-cache": [""]
@@ -271,10 +292,11 @@
     "category": "JavaScript Framework",
     "confidence": "medium",
     "domain_signatures": [],
-    "html_signatures": ["vue.js", "__vue__", "data-v-"],
+    "html_signatures": ["vue.js", "__vue__"],
     "script_url_signatures": [],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": ["data-v-"],
     "cookie_signatures": [],
     "header_signatures": {}
   },
@@ -283,10 +305,11 @@
     "category": "CSS Framework",
     "confidence": "medium",
     "domain_signatures": [],
-    "html_signatures": ["class=\"container"],
+    "html_signatures": [],
     "script_url_signatures": ["bootstrap.min.js"],
     "stylesheet_url_signatures": ["bootstrap.min.css"],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": ["class=\"container"],
     "cookie_signatures": [],
     "header_signatures": {}
   },
@@ -299,6 +322,7 @@
     "script_url_signatures": ["jquery.min.js", "jquery.js", "jquery-migrate"],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
   },
@@ -307,10 +331,11 @@
     "category": "Security",
     "confidence": "high",
     "domain_signatures": [],
-    "html_signatures": ["g-recaptcha"],
+    "html_signatures": [],
     "script_url_signatures": ["google.com/recaptcha", "recaptcha/api.js"],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": ["g-recaptcha"],
     "cookie_signatures": ["_GRECAPTCHA"],
     "header_signatures": {}
   }

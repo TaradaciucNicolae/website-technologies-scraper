@@ -36,6 +36,7 @@ class TechnologyRule: # A rule for detecting a specific technology.
     script_url_signatures: list[str]
     stylesheet_url_signatures: list[str]
     meta_generator_signatures: list[str]
+    dom_marker_signatures: list[str]
     cookie_signatures: list[str]
     header_signatures: dict[str, list[str]]
 
@@ -57,6 +58,7 @@ def load_technology_rules(rules_path: Path) -> list[TechnologyRule]:
                 script_url_signatures=raw_rule.get("script_url_signatures", []),
                 stylesheet_url_signatures=raw_rule.get("stylesheet_url_signatures", []),
                 meta_generator_signatures=raw_rule.get("meta_generator_signatures", []),
+                dom_marker_signatures=raw_rule.get("dom_marker_signatures", []),
                 cookie_signatures=raw_rule.get("cookie_signatures", []),
                 header_signatures=raw_rule.get("header_signatures", {})
             )
@@ -155,6 +157,7 @@ def collect_evidence_for_rule(
             script_url_signatures=rule.script_url_signatures,
             stylesheet_url_signatures=rule.stylesheet_url_signatures,
             meta_generator_signatures=rule.meta_generator_signatures,
+            dom_marker_signatures=rule.dom_marker_signatures,
             confidence=rule.confidence,
         )
     )
@@ -211,6 +214,7 @@ def collect_html_evidence(
     script_url_signatures: list[str],
     stylesheet_url_signatures: list[str],
     meta_generator_signatures: list[str],
+    dom_marker_signatures: list[str],
     confidence: str,
 ) -> list[TechnologyEvidence]:
 
@@ -220,6 +224,7 @@ def collect_html_evidence(
     evidence.extend(collect_script_url_evidence(soup, script_url_signatures, confidence))
     evidence.extend(collect_stylesheet_url_evidence(soup, stylesheet_url_signatures, confidence))
     evidence.extend(collect_meta_generator_evidence(soup, meta_generator_signatures, confidence))
+    evidence.extend(collect_dom_marker_evidence(soup, dom_marker_signatures, confidence))
     evidence.extend(collect_raw_html_evidence(html, html_signatures, confidence))
 
     # Return HTML evidence items for the matched signatures.
@@ -348,6 +353,48 @@ def collect_meta_generator_evidence(
 
     return evidence
 
+
+
+def collect_dom_marker_evidence(
+    soup: BeautifulSoup,
+    signatures: list[str],
+    confidence: str,
+) -> list[TechnologyEvidence]:
+    evidence: list[TechnologyEvidence] = []
+
+    for html_tag in soup.find_all(True):
+        for attribute_name, attribute_value in html_tag.attrs.items():
+            if isinstance(attribute_value, list):
+                attribute_value_text = " ".join(str(value) for value in attribute_value)
+            else:
+                attribute_value_text = str(attribute_value)
+
+            attribute_text = f'{attribute_name}="{attribute_value_text}"'
+            attribute_text_lower = attribute_text.lower()
+
+            for signature in signatures:
+                normalized_signature = signature.lower()
+
+                if not normalized_signature:
+                    continue
+
+                if normalized_signature not in attribute_text_lower:
+                    continue
+
+                evidence.append(
+                    TechnologyEvidence(
+                        type="dom_marker",
+                        source="html",
+                        location=f"{html_tag.name}[{attribute_name}]",
+                        matched_value=signature,
+                        excerpt=attribute_text,
+                        confidence=confidence,
+                        explanation=f"Found '{signature}' in an HTML attribute.",
+                    )
+                )
+                break
+
+    return evidence
 
 def collect_raw_html_evidence(
     html: str,

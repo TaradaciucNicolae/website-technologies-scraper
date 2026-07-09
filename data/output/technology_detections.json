@@ -15,7 +15,7 @@
             "source": "cookies",
             "location": "cookie_name",
             "matched_value": "__cf_bm",
-            "excerpt": "__cf_bm=N6fk7YUn3eHi9SswoId_nwXvZu_JASFmyXrYDjvkVmM-1783597716.9915435-1.0.1.1-uUbTLbC_MHz4OVN_pOQrFc2BlDsqT5_tjHdTAHcdZ...",
+            "excerpt": "__cf_bm=IdDdAIB5aa6_y3VXJeYAudBQ4gGJH0N3IR9w4KOV5.8-1783598304.656247-1.0.1.1-VIc76oPb0Lyt5pFwkncOqiYxYvA_QAjuaC9dCxaq5D...",
             "confidence": "high",
             "explanation": "Found cookie name '__cf_bm' matching signature '__cf_bm'."
           },
@@ -32,8 +32,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a18719c33a43ca20-OTP",
-            "excerpt": "cf-ray: a18719c33a43ca20-OTP",
+            "matched_value": "a187281c1c3ce4b5-OTP",
+            "excerpt": "cf-ray: a187281c1c3ce4b5-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -55,11 +55,11 @@
         "https://100wwcstlw.org"
       ],
       "successful_url": "https://100wwcstlw.org",
-      "elapsed_ms": 643,
+      "elapsed_ms": 670,
       "content_type": "text/html",
       "redirect_count": 0,
       "cookies": {
-        "__cf_bm": "N6fk7YUn3eHi9SswoId_nwXvZu_JASFmyXrYDjvkVmM-1783597716.9915435-1.0.1.1-uUbTLbC_MHz4OVN_pOQrFc2BlDsqT5_tjHdTAHcdZ0Dast3gukbfP5F7v9wcL._RFKPlJN7oqsrkkQ6KXlXJLCNYGbDdpml4KD4kX5TUJc72_vwTVDkbVaj1D2WiMSqo"
+        "__cf_bm": "IdDdAIB5aa6_y3VXJeYAudBQ4gGJH0N3IR9w4KOV5.8-1783598304.656247-1.0.1.1-VIc76oPb0Lyt5pFwkncOqiYxYvA_QAjuaC9dCxaq5DlvmWeZGnFsQwYI7mu91lLd2BNqY2fnQ8lwQcV24RXxcyNi9Jlly6GnzUrUIPEjVEW1BuSBxs.I3XFsoXJz4TB8"
       }
     }
   },
@@ -127,7 +127,7 @@
             "source": "cookies",
             "location": "cookie_name",
             "matched_value": "__cf_bm",
-            "excerpt": "__cf_bm=r2gqld9nr613SWzJxoKnERLtOv3JuWygP4F9ZAoCacU-1783597717.6415002-1.0.1.1-D8E53ur0vWSn2CzfbRCCl15O0m.jfaHQyYijOPO9M...",
+            "excerpt": "__cf_bm=AyYEcGI4tnUpbcVHzUvibptqCb.cooAPJo_kfGNQZqM-1783598305.3320947-1.0.1.1-JImErxSkgVoNDVf0z1aeu8SS91ZGmPHV_sCyjmH76...",
             "confidence": "high",
             "explanation": "Found cookie name '__cf_bm' matching signature '__cf_bm'."
           },
@@ -144,8 +144,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a18719c74c1db9e9-OTP",
-            "excerpt": "cf-ray: a18719c74c1db9e9-OTP",
+            "matched_value": "a187282058f8e4b5-OTP",
+            "excerpt": "cf-ray: a187282058f8e4b5-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -166,13 +166,13 @@
         "confidence": "medium",
         "evidence": [
           {
-            "type": "html_contains",
+            "type": "dom_marker",
             "source": "html",
-            "location": "html",
+            "location": "div[class]",
             "matched_value": "class=\"container",
-            "excerpt": "...9cb7-10d288eb2af1\"> <div class=\"header\"> <div class=\"container lp-container\"> <div class=\"logo\"> <a href=\"/\">...",
+            "excerpt": "class=\"container lp-container\"",
             "confidence": "medium",
-            "explanation": "Found 'class=\"container' in the HTML response."
+            "explanation": "Found 'class=\"container' in an HTML attribute."
           }
         ]
       },
@@ -199,11 +199,11 @@
         "https://11853prospecthill.com"
       ],
       "successful_url": "https://11853prospecthill.com",
-      "elapsed_ms": 649,
+      "elapsed_ms": 656,
       "content_type": "text/html",
       "redirect_count": 0,
       "cookies": {
-        "__cf_bm": "r2gqld9nr613SWzJxoKnERLtOv3JuWygP4F9ZAoCacU-1783597717.6415002-1.0.1.1-D8E53ur0vWSn2CzfbRCCl15O0m.jfaHQyYijOPO9M.ZDPY0hKCG2pgaXlw.A2YVsow3PySjba32WnjOvji74u4RXfGtYB8MTwaJccFfO8GpHTXgiZlpfjof5S8ZJS16T"
+        "__cf_bm": "AyYEcGI4tnUpbcVHzUvibptqCb.cooAPJo_kfGNQZqM-1783598305.3320947-1.0.1.1-JImErxSkgVoNDVf0z1aeu8SS91ZGmPHV_sCyjmH76smFzqENyZv4iHxYL41fk1n_6h301nFFDtly.bVapuW2cve03ug6eikSYM5AkcUOVz2_DBPF7qhaT6cMcLDmWkqE"
       }
     }
   },
@@ -397,7 +397,7 @@
             "source": "cookies",
             "location": "cookie_name",
             "matched_value": "__cf_bm",
-            "excerpt": "__cf_bm=mV3N4ogh27fmWowP7oyOsSGm3.kV1TRurukIUn_x0pk-1783597719.2651327-1.0.1.1-2ZK0zCyQU1u_yhxv_P63nQOV7w4J1VlGmKZLP8JJE...",
+            "excerpt": "__cf_bm=zApPSLUAd55hAqXnws4szDLBSfTJ3zbHEiZoVx_0Lkc-1783598307.0449817-1.0.1.1-Z1oPCi58n_wlLqSd8lP.01XD9LSPdUm8YTzocqz7_...",
             "confidence": "high",
             "explanation": "Found cookie name '__cf_bm' matching signature '__cf_bm'."
           },
@@ -414,8 +414,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a18719d16a7ce4b9-OTP",
-            "excerpt": "cf-ray: a18719d16a7ce4b9-OTP",
+            "matched_value": "a187282b0d5bc9cb-OTP",
+            "excerpt": "cf-ray: a187282b0d5bc9cb-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -436,13 +436,49 @@
         "confidence": "medium",
         "evidence": [
           {
-            "type": "html_contains",
+            "type": "dom_marker",
             "source": "html",
-            "location": "html",
+            "location": "div[class]",
             "matched_value": "class=\"container",
-            "excerpt": "...ction-3 section-work-cards js-work-cards --flush \"> <div class=\"container section-work-cards__grid\"> <div class=\"...",
+            "excerpt": "class=\"container\"",
             "confidence": "medium",
-            "explanation": "Found 'class=\"container' in the HTML response."
+            "explanation": "Found 'class=\"container' in an HTML attribute."
+          },
+          {
+            "type": "dom_marker",
+            "source": "html",
+            "location": "div[class]",
+            "matched_value": "class=\"container",
+            "excerpt": "class=\"container section-work-cards__grid\"",
+            "confidence": "medium",
+            "explanation": "Found 'class=\"container' in an HTML attribute."
+          },
+          {
+            "type": "dom_marker",
+            "source": "html",
+            "location": "div[class]",
+            "matched_value": "class=\"container",
+            "excerpt": "class=\"container\"",
+            "confidence": "medium",
+            "explanation": "Found 'class=\"container' in an HTML attribute."
+          },
+          {
+            "type": "dom_marker",
+            "source": "html",
+            "location": "div[class]",
+            "matched_value": "class=\"container",
+            "excerpt": "class=\"container\"",
+            "confidence": "medium",
+            "explanation": "Found 'class=\"container' in an HTML attribute."
+          },
+          {
+            "type": "dom_marker",
+            "source": "html",
+            "location": "div[class]",
+            "matched_value": "class=\"container",
+            "excerpt": "class=\"container\"",
+            "confidence": "medium",
+            "explanation": "Found 'class=\"container' in an HTML attribute."
           }
         ]
       },
@@ -478,11 +514,11 @@
         "https://11thhourracing.org"
       ],
       "successful_url": "https://11thhourracing.org",
-      "elapsed_ms": 1344,
+      "elapsed_ms": 1361,
       "content_type": "text/html; charset=UTF-8",
       "redirect_count": 0,
       "cookies": {
-        "__cf_bm": "mV3N4ogh27fmWowP7oyOsSGm3.kV1TRurukIUn_x0pk-1783597719.2651327-1.0.1.1-2ZK0zCyQU1u_yhxv_P63nQOV7w4J1VlGmKZLP8JJE7eqNsdj5bLzwz0FHrlb0lwXdkUh6Hwq7qZGFab2fSJ4SpnXwzaOAmM.7sXmT9TZZNv6ULvFYKE0r5j8prI6iVrG"
+        "__cf_bm": "zApPSLUAd55hAqXnws4szDLBSfTJ3zbHEiZoVx_0Lkc-1783598307.0449817-1.0.1.1-Z1oPCi58n_wlLqSd8lP.01XD9LSPdUm8YTzocqz7_vSjti436OPEBDlmBFXWkR41LcIgs5ahflzz9GkvNOSN0AChkve96dwpnsOOqTCWo3nz62pLDGdf5c1zLKn0xZf9"
       }
     }
   },
@@ -653,7 +689,7 @@
             "source": "cookies",
             "location": "cookie_name",
             "matched_value": "__cf_bm",
-            "excerpt": "__cf_bm=pSRTXoL5PTiZV578hOsBJI6y9vimvu1oy7J_INPplxY-1783597721.3480334-1.0.1.1-ZmaMl968gWdys5FhMTcRXz7uL4tAATxKtCFm0wlYl...",
+            "excerpt": "__cf_bm=sV34d4ZqX6ROXSooYtA8tbyDMGOAlI66tAKvCftcSGQ-1783598309.3547933-1.0.1.1-a03sVd8EQeYnDrN7SZ1uIJAgQ0C_ivyZQbXmrGnuD...",
             "confidence": "high",
             "explanation": "Found cookie name '__cf_bm' matching signature '__cf_bm'."
           },
@@ -670,8 +706,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a18719de6979f3a9-OTP",
-            "excerpt": "cf-ray: a18719de6979f3a9-OTP",
+            "matched_value": "a18728397898c9d9-OTP",
+            "excerpt": "cf-ray: a18728397898c9d9-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -692,13 +728,31 @@
         "confidence": "medium",
         "evidence": [
           {
-            "type": "html_contains",
+            "type": "dom_marker",
             "source": "html",
-            "location": "html",
+            "location": "div[class]",
             "matched_value": "class=\"container",
-            "excerpt": "...s=\"unite-header\"> <div class=\"nav-wrap\"> <div class=\"container\"> <a class=\"hamburger\" aria-label=\"Menu\" href=\"#\"...",
+            "excerpt": "class=\"container\"",
             "confidence": "medium",
-            "explanation": "Found 'class=\"container' in the HTML response."
+            "explanation": "Found 'class=\"container' in an HTML attribute."
+          },
+          {
+            "type": "dom_marker",
+            "source": "html",
+            "location": "div[class]",
+            "matched_value": "class=\"container",
+            "excerpt": "class=\"container\"",
+            "confidence": "medium",
+            "explanation": "Found 'class=\"container' in an HTML attribute."
+          },
+          {
+            "type": "dom_marker",
+            "source": "html",
+            "location": "div[class]",
+            "matched_value": "class=\"container",
+            "excerpt": "class=\"container\"",
+            "confidence": "medium",
+            "explanation": "Found 'class=\"container' in an HTML attribute."
           }
         ]
       },
@@ -725,11 +779,11 @@
         "https://1planettechnologies.weebly.com"
       ],
       "successful_url": "https://1planettechnologies.weebly.com",
-      "elapsed_ms": 855,
+      "elapsed_ms": 881,
       "content_type": "text/html; charset=UTF-8",
       "redirect_count": 0,
       "cookies": {
-        "__cf_bm": "pSRTXoL5PTiZV578hOsBJI6y9vimvu1oy7J_INPplxY-1783597721.3480334-1.0.1.1-ZmaMl968gWdys5FhMTcRXz7uL4tAATxKtCFm0wlYlRm9xhQfDp9GiD7kNCtygzk4toWAlagG7w4gTclWg6NuvLStXzYfPfHwG5f4mzvUA0XF3C79fmqXlESAmXXvFRmI"
+        "__cf_bm": "sV34d4ZqX6ROXSooYtA8tbyDMGOAlI66tAKvCftcSGQ-1783598309.3547933-1.0.1.1-a03sVd8EQeYnDrN7SZ1uIJAgQ0C_ivyZQbXmrGnuDGiiDHqinN1m0dTJNm02SEqBq9zM14IQ4bBSvY00G4WI.spux2lUrnZDsSxN34XwoAj16JkMf0ivKH.kTkerDcYO"
       }
     }
   },
@@ -757,8 +811,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a18719e5190de44e-OTP",
-            "excerpt": "cf-ray: a18719e5190de44e-OTP",
+            "matched_value": "a18728405fefe4b8-OTP",
+            "excerpt": "cf-ray: a18728405fefe4b8-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           }
@@ -772,7 +826,7 @@
         "http://1stclairavewest.com"
       ],
       "successful_url": "http://1stclairavewest.com",
-      "elapsed_ms": 656,
+      "elapsed_ms": 671,
       "content_type": "text/html; charset=UTF-8",
       "redirect_count": 0,
       "cookies": {}

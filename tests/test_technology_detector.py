@@ -350,7 +350,35 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("wp-content", stylesheet_evidence.excerpt)
         self.assertEqual(stylesheet_evidence.confidence, "high")
 
+    # Test detection using a structured DOM marker.
+    def test_detects_react_from_dom_marker(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
 
-        
+        detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
+            html='<div data-reactroot=""></div>',
+            headers={},
+            rules=rules,
+        )
+
+        react_detection = next(
+            detection
+            for detection in detections
+            if detection.name == "React"
+        )
+
+        dom_evidence = next(
+            evidence
+            for evidence in react_detection.evidence
+            if evidence.type == "dom_marker"
+        )
+
+        self.assertEqual(dom_evidence.source, "html")
+        self.assertEqual(dom_evidence.location, "div[data-reactroot]")
+        self.assertEqual(dom_evidence.matched_value, "data-reactroot")
+        self.assertIn("data-reactroot", dom_evidence.excerpt)
+        self.assertEqual(dom_evidence.confidence, "medium")
+
 if __name__ == "__main__":
     unittest.main()
