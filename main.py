@@ -55,8 +55,6 @@ def build_result_record(
     fetch_result: WebsiteFetchResult,
     detections: list[TechnologyDetection],
 ) -> dict:
-    
-
 
     technologies: list[dict] = []
 
@@ -85,18 +83,25 @@ def build_result_record(
             }
         )
 
+    errors: list[str] = []
+
+    if fetch_result.error is not None:
+        errors.append(fetch_result.error)
+
     return {
         "domain": fetch_result.domain,
-        "attempted_urls": fetch_result.attempted_urls,
-        "successful_url": fetch_result.successful_url,
+        "normalized_url": fetch_result.successful_url,
         "final_url": fetch_result.final_url,
-        "status_code": fetch_result.status_code,
-        "elapsed_ms": fetch_result.elapsed_ms,
-        "content_type": fetch_result.content_type,
-        "redirect_count": fetch_result.redirect_count,
-        "error": fetch_result.error,
-        "technologies_found": len(technologies),
+        "status": fetch_result.status_code,
         "technologies": technologies,
+        "errors": errors,
+        "fetch_metadata": {
+            "attempted_urls": fetch_result.attempted_urls,
+            "successful_url": fetch_result.successful_url,
+            "elapsed_ms": fetch_result.elapsed_ms,
+            "content_type": fetch_result.content_type,
+            "redirect_count": fetch_result.redirect_count,
+        },
     }
 
 
