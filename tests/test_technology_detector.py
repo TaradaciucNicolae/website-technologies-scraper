@@ -507,6 +507,37 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertEqual(cookie_evidence.confidence, "high")
 
 
+    # Test generic package detection from a known CDN package URL.
+    def test_detects_react_from_cdn_package_url(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
+
+        detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
+            html='<script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js"></script>',
+            headers={},
+            rules=rules,
+        )
+
+        react_detection = next(
+            detection
+            for detection in detections
+            if detection.name == "React"
+        )
+
+        package_evidence = next(
+            evidence
+            for evidence in react_detection.evidence
+            if evidence.type == "package_url"
+        )
+
+        self.assertEqual(package_evidence.source, "html")
+        self.assertEqual(package_evidence.location, "script[src]")
+        self.assertEqual(package_evidence.matched_value, "react")
+        self.assertIn("cdn.jsdelivr.net/npm/react", package_evidence.excerpt)
+        self.assertEqual(package_evidence.confidence, "medium")
+
+
     # Test detection from the content of a fetched JavaScript asset.
     def test_detects_segment_from_javascript_asset(self) -> None:
         rules = load_technology_rules(RULES_PATH)

@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 import json
 from pathlib import Path
+from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 from src.javascript_asset_fetcher import JavaScriptAsset
 
@@ -37,6 +38,7 @@ class TechnologyRule: # A rule for detecting a specific technology.
     html_signatures: list[str]
     script_url_signatures: list[str]
     js_asset_signatures: list[str]
+    package_url_signatures: list[str]
     stylesheet_url_signatures: list[str]
     meta_generator_signatures: list[str]
     dom_marker_signatures: list[str]
@@ -60,6 +62,7 @@ def load_technology_rules(rules_path: Path) -> list[TechnologyRule]:
                 html_signatures=raw_rule.get("html_signatures", []),
                 script_url_signatures=raw_rule.get("script_url_signatures", []),
                 js_asset_signatures=raw_rule.get("js_asset_signatures", []),
+                package_url_signatures=raw_rule.get("package_url_signatures", []),
                 stylesheet_url_signatures=raw_rule.get("stylesheet_url_signatures", []),
                 meta_generator_signatures=raw_rule.get("meta_generator_signatures", []),
                 dom_marker_signatures=raw_rule.get("dom_marker_signatures", []),
@@ -164,6 +167,7 @@ def collect_evidence_for_rule(
             html=html,
             html_signatures=rule.html_signatures,
             script_url_signatures=rule.script_url_signatures,
+            package_url_signatures=rule.package_url_signatures,
             stylesheet_url_signatures=rule.stylesheet_url_signatures,
             meta_generator_signatures=rule.meta_generator_signatures,
             dom_marker_signatures=rule.dom_marker_signatures,
@@ -230,6 +234,7 @@ def collect_html_evidence(
     html: str,
     html_signatures: list[str],
     script_url_signatures: list[str],
+    package_url_signatures: list[str],
     stylesheet_url_signatures: list[str],
     meta_generator_signatures: list[str],
     dom_marker_signatures: list[str],
@@ -240,6 +245,7 @@ def collect_html_evidence(
     soup = BeautifulSoup(html, "html.parser")
 
     evidence.extend(collect_script_url_evidence(soup, script_url_signatures, confidence))
+    evidence.extend(collect_package_url_evidence(soup, package_url_signatures, confidence))
     evidence.extend(collect_stylesheet_url_evidence(soup, stylesheet_url_signatures, confidence))
     evidence.extend(collect_meta_generator_evidence(soup, meta_generator_signatures, confidence))
     evidence.extend(collect_dom_marker_evidence(soup, dom_marker_signatures, confidence))
@@ -288,6 +294,130 @@ def collect_script_url_evidence(
             break
 
     return evidence
+
+
+def remove_package_version(package_part: str) -> str:
+    if package_part.startswith("@"):
+        return package_part
+
+    return package_part.split("@")[0]
+
+
+def read_package_name_from_url_parts(path_parts: list[str]) -> str | None:
+    if not path_parts:
+        return None
+
+    first_part = remove_package_version(path_parts[0])
+
+    if first_part.startswith("@"):
+        if len(path_parts) < 2:
+            return None
+
+        second_part = remove_package_version(path_parts[1])
+        return f"{first_part}/{second_part}".lower()
+
+    return first_part.lower()
+
+
+def extract_package_name_from_cdn_url(asset_url: str) -> str | None:
+    parsed_url = urlparse(asset_url)
+    hostname = parsed_url.netloc.lower()
+    path_parts = [
+        part
+        for part in parsed_url.path.split("/")
+        if part
+    ]
+
+    if hostname == "cdn.jsdelivr.net":
+        if len(path_parts) >= 2 and path_parts[0] == "npm":
+            return read_package_name_from_url_parts(path_parts[1:])
+
+    if hostname in ["unpkg.com", "esm.unpkg.com"]:
+        return read_package_name_from_url_parts(path_parts)
+
+    if hostname == "cdnjs.cloudflare.com":
+        if len(path_parts) >= 3 and path_parts[0] == "ajax" and path_parts[1] == "libs":
+            return path_parts[2].lower()
+
+    if hostname in ["esm.sh", "cdn.skypack.dev"]:
+        return read_package_name_from_url_parts(path_parts)
+
+    return None
+
+
+def collect_package_url_evidence(
+    soup: BeautifulSoup,
+    signatures: list[str],
+    confidence: str,
+) -> list[TechnologyEvidence]:
+    evidence: list[TechnologyEvidence] = []
+    normalized_signatures = {
+        signature.lower()
+        for signature in signatures
+        if signature
+    }
+
+    if not normalized_signatures:
+        return evidence
+
+    for script_tag in soup.find_all("script"):
+        script_url = script_tag.get("src")
+
+        if not script_url:
+            continue
+
+        evidence_item = build_package_url_evidence(
+            asset_url=str(script_url),
+            location="script[src]",
+            normalized_signatures=normalized_signatures,
+            confidence=confidence,
+        )
+
+        if evidence_item is not None:
+            evidence.append(evidence_item)
+
+    for link_tag in soup.find_all("link"):
+        stylesheet_url = link_tag.get("href")
+
+        if not stylesheet_url:
+            continue
+
+        evidence_item = build_package_url_evidence(
+            asset_url=str(stylesheet_url),
+            location="link[href]",
+            normalized_signatures=normalized_signatures,
+            confidence=confidence,
+        )
+
+        if evidence_item is not None:
+            evidence.append(evidence_item)
+
+    return evidence
+
+
+def build_package_url_evidence(
+    asset_url: str,
+    location: str,
+    normalized_signatures: set[str],
+    confidence: str,
+) -> TechnologyEvidence | None:
+    package_name = extract_package_name_from_cdn_url(asset_url)
+
+    if package_name is None:
+        return None
+
+    if package_name not in normalized_signatures:
+        return None
+
+    return TechnologyEvidence(
+        type="package_url",
+        source="html",
+        location=location,
+        matched_value=package_name,
+        excerpt=asset_url,
+        confidence=confidence,
+        explanation="Detected package name from a known CDN package URL.",
+    )
 
 
 def collect_stylesheet_url_evidence(
