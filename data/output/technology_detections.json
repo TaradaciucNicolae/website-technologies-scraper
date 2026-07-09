@@ -15,7 +15,7 @@
             "source": "cookies",
             "location": "cookie_name",
             "matched_value": "__cf_bm",
-            "excerpt": "__cf_bm=4DDr98YH4WQSb_yOgNatwyh1yteg76ZqA7OA9aa7M6A-1783596327.4293382-1.0.1.1-cXgrvhHI0myQ.zbkrl1utd5dFG5xU5f01Naf_S2Ly...",
+            "excerpt": "__cf_bm=N6fk7YUn3eHi9SswoId_nwXvZu_JASFmyXrYDjvkVmM-1783597716.9915435-1.0.1.1-uUbTLbC_MHz4OVN_pOQrFc2BlDsqT5_tjHdTAHcdZ...",
             "confidence": "high",
             "explanation": "Found cookie name '__cf_bm' matching signature '__cf_bm'."
           },
@@ -32,8 +32,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186f7d668449916-OTP",
-            "excerpt": "cf-ray: a186f7d668449916-OTP",
+            "matched_value": "a18719c33a43ca20-OTP",
+            "excerpt": "cf-ray: a18719c33a43ca20-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -41,8 +41,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-cache-status",
-            "matched_value": "DYNAMIC",
-            "excerpt": "cf-cache-status: DYNAMIC",
+            "matched_value": "HIT",
+            "excerpt": "cf-cache-status: HIT",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-cache-status'."
           }
@@ -55,11 +55,11 @@
         "https://100wwcstlw.org"
       ],
       "successful_url": "https://100wwcstlw.org",
-      "elapsed_ms": 848,
+      "elapsed_ms": 643,
       "content_type": "text/html",
       "redirect_count": 0,
       "cookies": {
-        "__cf_bm": "4DDr98YH4WQSb_yOgNatwyh1yteg76ZqA7OA9aa7M6A-1783596327.4293382-1.0.1.1-cXgrvhHI0myQ.zbkrl1utd5dFG5xU5f01Naf_S2LyESVfdHKhHypFHX3jW7jYvEC6.SH9yEZNfN1u1xmoiyET2MNk56v82ICA2HwRR5DOMOTUaeUOobzh7ak1qYennCM"
+        "__cf_bm": "N6fk7YUn3eHi9SswoId_nwXvZu_JASFmyXrYDjvkVmM-1783597716.9915435-1.0.1.1-uUbTLbC_MHz4OVN_pOQrFc2BlDsqT5_tjHdTAHcdZ0Dast3gukbfP5F7v9wcL._RFKPlJN7oqsrkkQ6KXlXJLCNYGbDdpml4KD4kX5TUJc72_vwTVDkbVaj1D2WiMSqo"
       }
     }
   },
@@ -74,15 +74,6 @@
         "category": "Tag Manager",
         "confidence": "high",
         "evidence": [
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "googletagmanager.com/gtm.js",
-            "excerpt": "...efer=true;j.async=false;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(wi...",
-            "confidence": "high",
-            "explanation": "Found 'googletagmanager.com/gtm.js' in the HTML response."
-          },
           {
             "type": "html_contains",
             "source": "html",
@@ -107,15 +98,6 @@
             "excerpt": "https://www.googletagmanager.com/gtag/js",
             "confidence": "high",
             "explanation": "Found 'googletagmanager.com/gtag/js' in a script URL."
-          },
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "googletagmanager.com/gtag/js",
-            "excerpt": "...Google Analytics --> <script defer src=\"https://www.googletagmanager.com/gtag/js\"></script> <!-- Google Tag Manager -->...",
-            "confidence": "high",
-            "explanation": "Found 'googletagmanager.com/gtag/js' in the HTML response."
           }
         ]
       },
@@ -145,7 +127,7 @@
             "source": "cookies",
             "location": "cookie_name",
             "matched_value": "__cf_bm",
-            "excerpt": "__cf_bm=HPj4aptpCOR3t3mWO.RrBSDtsoL31YNXMz4WySEBkMU-1783596328.4022636-1.0.1.1-7ObuoYatRetc1YS67Ej84Rpkp1stxjGGo8KLg1YYe...",
+            "excerpt": "__cf_bm=r2gqld9nr613SWzJxoKnERLtOv3JuWygP4F9ZAoCacU-1783597717.6415002-1.0.1.1-D8E53ur0vWSn2CzfbRCCl15O0m.jfaHQyYijOPO9M...",
             "confidence": "high",
             "explanation": "Found cookie name '__cf_bm' matching signature '__cf_bm'."
           },
@@ -162,8 +144,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186f7dc8f880b2b-OTP",
-            "excerpt": "cf-ray: a186f7dc8f880b2b-OTP",
+            "matched_value": "a18719c74c1db9e9-OTP",
+            "excerpt": "cf-ray: a18719c74c1db9e9-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -171,8 +153,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-cache-status",
-            "matched_value": "UPDATING",
-            "excerpt": "cf-cache-status: UPDATING",
+            "matched_value": "HIT",
+            "excerpt": "cf-cache-status: HIT",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-cache-status'."
           }
@@ -207,15 +189,6 @@
             "excerpt": "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js",
             "confidence": "high",
             "explanation": "Found 'jquery.min.js' in a script URL."
-          },
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "jquery.min.js",
-            "excerpt": "...jsSrc: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js', isLoaded: false, },...",
-            "confidence": "high",
-            "explanation": "Found 'jquery.min.js' in the HTML response."
           }
         ]
       }
@@ -226,11 +199,11 @@
         "https://11853prospecthill.com"
       ],
       "successful_url": "https://11853prospecthill.com",
-      "elapsed_ms": 747,
+      "elapsed_ms": 649,
       "content_type": "text/html",
       "redirect_count": 0,
       "cookies": {
-        "__cf_bm": "HPj4aptpCOR3t3mWO.RrBSDtsoL31YNXMz4WySEBkMU-1783596328.4022636-1.0.1.1-7ObuoYatRetc1YS67Ej84Rpkp1stxjGGo8KLg1YYehVIz.9RCtUSRe.4xfSg27boZGcfOGEl26vAUP_YHsQsR4c1nz7MEuiXM1hyUGgjjEmnRfEf6GgDII6aCLn81AFU"
+        "__cf_bm": "r2gqld9nr613SWzJxoKnERLtOv3JuWygP4F9ZAoCacU-1783597717.6415002-1.0.1.1-D8E53ur0vWSn2CzfbRCCl15O0m.jfaHQyYijOPO9M.ZDPY0hKCG2pgaXlw.A2YVsow3PySjba32WnjOvji74u4RXfGtYB8MTwaJccFfO8GpHTXgiZlpfjof5S8ZJS16T"
       }
     }
   },
@@ -336,49 +309,40 @@
             "explanation": "Found 'wp-includes' in a script URL."
           },
           {
-            "type": "link_url",
+            "type": "stylesheet_url",
             "source": "html",
             "location": "link[href]",
             "matched_value": "wp-includes",
             "excerpt": "https://11thhourracing.org/wp/wp-includes/css/dashicons.min.css?ver=6.9",
             "confidence": "high",
-            "explanation": "Found 'wp-includes' in a link URL."
+            "explanation": "Found 'wp-includes' in a stylesheet URL."
           },
           {
-            "type": "link_url",
+            "type": "stylesheet_url",
             "source": "html",
             "location": "link[href]",
             "matched_value": "wp-includes",
             "excerpt": "https://11thhourracing.org/wp/wp-includes/css/dist/components/style.min.css?ver=6.9",
             "confidence": "high",
-            "explanation": "Found 'wp-includes' in a link URL."
+            "explanation": "Found 'wp-includes' in a stylesheet URL."
           },
           {
-            "type": "link_url",
+            "type": "stylesheet_url",
             "source": "html",
             "location": "link[href]",
             "matched_value": "wp-includes",
             "excerpt": "https://11thhourracing.org/wp/wp-includes/css/dist/preferences/style.min.css?ver=6.9",
             "confidence": "high",
-            "explanation": "Found 'wp-includes' in a link URL."
+            "explanation": "Found 'wp-includes' in a stylesheet URL."
           },
           {
-            "type": "link_url",
+            "type": "stylesheet_url",
             "source": "html",
             "location": "link[href]",
             "matched_value": "wp-includes",
             "excerpt": "https://11thhourracing.org/wp/wp-includes/css/dist/block-editor/style.min.css?ver=6.9",
             "confidence": "high",
-            "explanation": "Found 'wp-includes' in a link URL."
-          },
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "wp-includes",
-            "excerpt": "...eet' id='dashicons-css' href='https://11thhourracing.org/wp/wp-includes/css/dashicons.min.css?ver=6.9' media='all' /> <link rel='st...",
-            "confidence": "high",
-            "explanation": "Found 'wp-includes' in the HTML response."
+            "explanation": "Found 'wp-includes' in a stylesheet URL."
           }
         ]
       },
@@ -387,15 +351,6 @@
         "category": "Tag Manager",
         "confidence": "high",
         "evidence": [
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "googletagmanager.com/gtm.js",
-            "excerpt": "...aLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,d...",
-            "confidence": "high",
-            "explanation": "Found 'googletagmanager.com/gtm.js' in the HTML response."
-          },
           {
             "type": "html_contains",
             "source": "html",
@@ -442,7 +397,7 @@
             "source": "cookies",
             "location": "cookie_name",
             "matched_value": "__cf_bm",
-            "excerpt": "__cf_bm=fqtOrosUc0UoZJdGK7J9rxM8PJZZy7loc_FXZbBW920-1783596330.1540694-1.0.1.1-hG67naQZSOGNV8VjjNmgd.DPqcEIrLsDwfKaoHwUu...",
+            "excerpt": "__cf_bm=mV3N4ogh27fmWowP7oyOsSGm3.kV1TRurukIUn_x0pk-1783597719.2651327-1.0.1.1-2ZK0zCyQU1u_yhxv_P63nQOV7w4J1VlGmKZLP8JJE...",
             "confidence": "high",
             "explanation": "Found cookie name '__cf_bm' matching signature '__cf_bm'."
           },
@@ -459,8 +414,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186f7e77eba6271-OTP",
-            "excerpt": "cf-ray: a186f7e77eba6271-OTP",
+            "matched_value": "a18719d16a7ce4b9-OTP",
+            "excerpt": "cf-ray: a18719d16a7ce4b9-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -513,24 +468,6 @@
             "excerpt": "https://11thhourracing.org/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
             "confidence": "high",
             "explanation": "Found 'jquery-migrate' in a script URL."
-          },
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "jquery.min.js",
-            "excerpt": "...pt src=\"https://11thhourracing.org/wp/wp-includes/js/jquery/jquery.min.js?ver=3.7.1\" id=\"jquery-core-js\"></script> <script src=\"https...",
-            "confidence": "high",
-            "explanation": "Found 'jquery.min.js' in the HTML response."
-          },
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "jquery-migrate",
-            "excerpt": "...pt src=\"https://11thhourracing.org/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1\" id=\"jquery-migrate-js\"></script> <script...",
-            "confidence": "high",
-            "explanation": "Found 'jquery-migrate' in the HTML response."
           }
         ]
       }
@@ -541,11 +478,11 @@
         "https://11thhourracing.org"
       ],
       "successful_url": "https://11thhourracing.org",
-      "elapsed_ms": 1440,
+      "elapsed_ms": 1344,
       "content_type": "text/html; charset=UTF-8",
       "redirect_count": 0,
       "cookies": {
-        "__cf_bm": "fqtOrosUc0UoZJdGK7J9rxM8PJZZy7loc_FXZbBW920-1783596330.1540694-1.0.1.1-hG67naQZSOGNV8VjjNmgd.DPqcEIrLsDwfKaoHwUu86qUoWGOOiZQLJsj_mP1xxxyrGAsFt.MOu78y2QOTXr4OQVD08ZmbN4Ukb9mTntxnSi1EbhOHw5pFCGcuLTTlO_"
+        "__cf_bm": "mV3N4ogh27fmWowP7oyOsSGm3.kV1TRurukIUn_x0pk-1783597719.2651327-1.0.1.1-2ZK0zCyQU1u_yhxv_P63nQOV7w4J1VlGmKZLP8JJE7eqNsdj5bLzwz0FHrlb0lwXdkUh6Hwq7qZGFab2fSJ4SpnXwzaOAmM.7sXmT9TZZNv6ULvFYKE0r5j8prI6iVrG"
       }
     }
   },
@@ -606,121 +543,103 @@
             "explanation": "Found 'cdn2.editmysite.com' in a script URL."
           },
           {
-            "type": "link_url",
+            "type": "stylesheet_url",
             "source": "html",
             "location": "link[href]",
             "matched_value": "cdn2.editmysite.com",
             "excerpt": "//cdn2.editmysite.com/css/sites.css?buildTime=1663851886",
             "confidence": "high",
-            "explanation": "Found 'cdn2.editmysite.com' in a link URL."
+            "explanation": "Found 'cdn2.editmysite.com' in a stylesheet URL."
           },
           {
-            "type": "link_url",
+            "type": "stylesheet_url",
             "source": "html",
             "location": "link[href]",
             "matched_value": "cdn2.editmysite.com",
             "excerpt": "//cdn2.editmysite.com/css/old/fancybox.css?1663714980",
             "confidence": "high",
-            "explanation": "Found 'cdn2.editmysite.com' in a link URL."
+            "explanation": "Found 'cdn2.editmysite.com' in a stylesheet URL."
           },
           {
-            "type": "link_url",
+            "type": "stylesheet_url",
             "source": "html",
             "location": "link[href]",
             "matched_value": "cdn2.editmysite.com",
             "excerpt": "//cdn2.editmysite.com/css/social-icons.css?buildtime=1663714980",
             "confidence": "high",
-            "explanation": "Found 'cdn2.editmysite.com' in a link URL."
+            "explanation": "Found 'cdn2.editmysite.com' in a stylesheet URL."
           },
           {
-            "type": "link_url",
+            "type": "stylesheet_url",
             "source": "html",
             "location": "link[href]",
             "matched_value": "cdn2.editmysite.com",
             "excerpt": "//cdn2.editmysite.com/fonts/Montserrat/font.css?2",
             "confidence": "high",
-            "explanation": "Found 'cdn2.editmysite.com' in a link URL."
+            "explanation": "Found 'cdn2.editmysite.com' in a stylesheet URL."
           },
           {
-            "type": "link_url",
+            "type": "stylesheet_url",
             "source": "html",
             "location": "link[href]",
             "matched_value": "cdn2.editmysite.com",
             "excerpt": "//cdn2.editmysite.com/fonts/Montserrat/font.css?2",
             "confidence": "high",
-            "explanation": "Found 'cdn2.editmysite.com' in a link URL."
+            "explanation": "Found 'cdn2.editmysite.com' in a stylesheet URL."
           },
           {
-            "type": "link_url",
+            "type": "stylesheet_url",
             "source": "html",
             "location": "link[href]",
             "matched_value": "cdn2.editmysite.com",
             "excerpt": "//cdn2.editmysite.com/fonts/Montserrat/font.css?2",
             "confidence": "high",
-            "explanation": "Found 'cdn2.editmysite.com' in a link URL."
+            "explanation": "Found 'cdn2.editmysite.com' in a stylesheet URL."
           },
           {
-            "type": "link_url",
+            "type": "stylesheet_url",
             "source": "html",
             "location": "link[href]",
             "matched_value": "cdn2.editmysite.com",
             "excerpt": "//cdn2.editmysite.com/fonts/Montserrat/font.css?2",
             "confidence": "high",
-            "explanation": "Found 'cdn2.editmysite.com' in a link URL."
+            "explanation": "Found 'cdn2.editmysite.com' in a stylesheet URL."
           },
           {
-            "type": "link_url",
+            "type": "stylesheet_url",
             "source": "html",
             "location": "link[href]",
             "matched_value": "cdn2.editmysite.com",
             "excerpt": "//cdn2.editmysite.com/fonts/Montserrat/font.css?2",
             "confidence": "high",
-            "explanation": "Found 'cdn2.editmysite.com' in a link URL."
+            "explanation": "Found 'cdn2.editmysite.com' in a stylesheet URL."
           },
           {
-            "type": "link_url",
+            "type": "stylesheet_url",
             "source": "html",
             "location": "link[href]",
             "matched_value": "cdn2.editmysite.com",
             "excerpt": "//cdn2.editmysite.com/fonts/Montserrat/font.css?2",
             "confidence": "high",
-            "explanation": "Found 'cdn2.editmysite.com' in a link URL."
+            "explanation": "Found 'cdn2.editmysite.com' in a stylesheet URL."
           },
           {
-            "type": "link_url",
+            "type": "stylesheet_url",
             "source": "html",
             "location": "link[href]",
             "matched_value": "cdn2.editmysite.com",
             "excerpt": "//cdn2.editmysite.com/fonts/Lora/font.css?2",
             "confidence": "high",
-            "explanation": "Found 'cdn2.editmysite.com' in a link URL."
+            "explanation": "Found 'cdn2.editmysite.com' in a stylesheet URL."
           },
           {
-            "type": "link_url",
+            "type": "stylesheet_url",
             "source": "html",
             "location": "link[href]",
             "matched_value": "cdn2.editmysite.com",
             "excerpt": "//cdn2.editmysite.com/fonts/Lora/font.css?2",
             "confidence": "high",
-            "explanation": "Found 'cdn2.editmysite.com' in a link URL."
-          },
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "weebly.com",
-            "excerpt": "...ta property=\"og:image\" content=\"https://1planettechnologies.weebly.com/uploads/1/7/1/3/1713369/64-640522-hik-certified-hikvision-l...",
-            "confidence": "high",
-            "explanation": "Found 'weebly.com' in the HTML response."
-          },
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "cdn2.editmysite.com",
-            "excerpt": "...\"wsite-base-style\" rel=\"stylesheet\" type=\"text/css\" href=\"//cdn2.editmysite.com/css/sites.css?buildTime=1663851886\" /> <link rel=\"styleshee...",
-            "confidence": "high",
-            "explanation": "Found 'cdn2.editmysite.com' in the HTML response."
+            "explanation": "Found 'cdn2.editmysite.com' in a stylesheet URL."
           }
         ]
       },
@@ -734,7 +653,7 @@
             "source": "cookies",
             "location": "cookie_name",
             "matched_value": "__cf_bm",
-            "excerpt": "__cf_bm=d87o9kOwHRdw4Nd4Suoi4LrCc5z7ffOUsdZXIQB_lfo-1783596332.3464437-1.0.1.1-FBVnQ6hmXRNjnlokNCdllWLuJuHX3jt477ch0wBmW...",
+            "excerpt": "__cf_bm=pSRTXoL5PTiZV578hOsBJI6y9vimvu1oy7J_INPplxY-1783597721.3480334-1.0.1.1-ZmaMl968gWdys5FhMTcRXz7uL4tAATxKtCFm0wlYl...",
             "confidence": "high",
             "explanation": "Found cookie name '__cf_bm' matching signature '__cf_bm'."
           },
@@ -751,8 +670,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186f7f52afee3f3-OTP",
-            "excerpt": "cf-ray: a186f7f52afee3f3-OTP",
+            "matched_value": "a18719de6979f3a9-OTP",
+            "excerpt": "cf-ray: a18719de6979f3a9-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -796,40 +715,6 @@
             "excerpt": "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js",
             "confidence": "high",
             "explanation": "Found 'jquery.min.js' in a script URL."
-          },
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "jquery.min.js",
-            "excerpt": "...ipt src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script> <script type=\"text/javascript\" src=\"//cdn2.edit...",
-            "confidence": "high",
-            "explanation": "Found 'jquery.min.js' in the HTML response."
-          }
-        ]
-      },
-      {
-        "name": "reCAPTCHA",
-        "category": "Security",
-        "confidence": "high",
-        "evidence": [
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "google.com/recaptcha",
-            "excerpt": "...ript type=\"text/javascript\"> _W.recaptchaUrl = \"https://www.google.com/recaptcha/api.js\"; </script><script type=\"text/javascript\"><!--...",
-            "confidence": "high",
-            "explanation": "Found 'google.com/recaptcha' in the HTML response."
-          },
-          {
-            "type": "html_contains",
-            "source": "html",
-            "location": "html",
-            "matched_value": "recaptcha/api.js",
-            "excerpt": "...text/javascript\"> _W.recaptchaUrl = \"https://www.google.com/recaptcha/api.js\"; </script><script type=\"text/javascript\"><!-- functio...",
-            "confidence": "high",
-            "explanation": "Found 'recaptcha/api.js' in the HTML response."
           }
         ]
       }
@@ -840,11 +725,11 @@
         "https://1planettechnologies.weebly.com"
       ],
       "successful_url": "https://1planettechnologies.weebly.com",
-      "elapsed_ms": 943,
+      "elapsed_ms": 855,
       "content_type": "text/html; charset=UTF-8",
       "redirect_count": 0,
       "cookies": {
-        "__cf_bm": "d87o9kOwHRdw4Nd4Suoi4LrCc5z7ffOUsdZXIQB_lfo-1783596332.3464437-1.0.1.1-FBVnQ6hmXRNjnlokNCdllWLuJuHX3jt477ch0wBmW8glZTnRH0U8b6fZBl.XZL11Oq3xp2yoNHYCz_e3jlDxnk3KayhDkcauy2F6Hwxkfa0xbv_mDhxzf.0V_PXu5diP"
+        "__cf_bm": "pSRTXoL5PTiZV578hOsBJI6y9vimvu1oy7J_INPplxY-1783597721.3480334-1.0.1.1-ZmaMl968gWdys5FhMTcRXz7uL4tAATxKtCFm0wlYlRm9xhQfDp9GiD7kNCtygzk4toWAlagG7w4gTclWg6NuvLStXzYfPfHwG5f4mzvUA0XF3C79fmqXlESAmXXvFRmI"
       }
     }
   },
@@ -872,8 +757,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186f7fbedf6e445-OTP",
-            "excerpt": "cf-ray: a186f7fbedf6e445-OTP",
+            "matched_value": "a18719e5190de44e-OTP",
+            "excerpt": "cf-ray: a18719e5190de44e-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           }
@@ -887,7 +772,7 @@
         "http://1stclairavewest.com"
       ],
       "successful_url": "http://1stclairavewest.com",
-      "elapsed_ms": 813,
+      "elapsed_ms": 656,
       "content_type": "text/html; charset=UTF-8",
       "redirect_count": 0,
       "cookies": {}
