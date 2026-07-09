@@ -380,5 +380,130 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("data-reactroot", dom_evidence.excerpt)
         self.assertEqual(dom_evidence.confidence, "medium")
 
+
+    # Test a new CMS rule using the meta generator tag.
+    def test_detects_drupal_from_meta_generator(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
+
+        detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
+            html='<meta name="generator" content="Drupal 10">',
+            headers={},
+            rules=rules,
+        )
+
+        drupal_detection = next(
+            detection
+            for detection in detections
+            if detection.name == "Drupal"
+        )
+
+        meta_evidence = next(
+            evidence
+            for evidence in drupal_detection.evidence
+            if evidence.type == "meta_generator"
+        )
+
+        self.assertEqual(meta_evidence.source, "html")
+        self.assertEqual(meta_evidence.location, 'meta[name="generator"]')
+        self.assertEqual(meta_evidence.matched_value, "drupal")
+        self.assertIn("Drupal 10", meta_evidence.excerpt)
+        self.assertEqual(meta_evidence.confidence, "high")
+
+
+    # Test a new JavaScript framework rule using a DOM marker.
+    def test_detects_angular_from_dom_marker(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
+
+        detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
+            html='<app-root ng-version="17.0.0"></app-root>',
+            headers={},
+            rules=rules,
+        )
+
+        angular_detection = next(
+            detection
+            for detection in detections
+            if detection.name == "Angular"
+        )
+
+        dom_evidence = next(
+            evidence
+            for evidence in angular_detection.evidence
+            if evidence.type == "dom_marker"
+        )
+
+        self.assertEqual(dom_evidence.source, "html")
+        self.assertEqual(dom_evidence.location, "app-root[ng-version]")
+        self.assertEqual(dom_evidence.matched_value, "ng-version")
+        self.assertIn("ng-version", dom_evidence.excerpt)
+        self.assertEqual(dom_evidence.confidence, "high")
+
+
+    # Test a new CDN rule using HTTP headers.
+    def test_detects_cloudfront_from_header(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
+
+        detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
+            html="",
+            headers={"Server": "CloudFront"},
+            rules=rules,
+        )
+
+        cloudfront_detection = next(
+            detection
+            for detection in detections
+            if detection.name == "Amazon CloudFront"
+        )
+
+        header_evidence = next(
+            evidence
+            for evidence in cloudfront_detection.evidence
+            if evidence.type == "header"
+        )
+
+        self.assertEqual(header_evidence.source, "headers")
+        self.assertEqual(header_evidence.location, "server")
+        self.assertEqual(header_evidence.matched_value, "CloudFront")
+        self.assertEqual(header_evidence.excerpt, "server: CloudFront")
+        self.assertEqual(header_evidence.confidence, "high")
+
+
+    # Test a new analytics rule using a cookie name.
+    def test_detects_microsoft_clarity_from_cookie(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
+
+        detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
+            html="",
+            headers={},
+            rules=rules,
+            cookies={"_clck": "example-cookie-value"},
+        )
+
+        clarity_detection = next(
+            detection
+            for detection in detections
+            if detection.name == "Microsoft Clarity"
+        )
+
+        cookie_evidence = next(
+            evidence
+            for evidence in clarity_detection.evidence
+            if evidence.type == "cookie"
+        )
+
+        self.assertEqual(cookie_evidence.source, "cookies")
+        self.assertEqual(cookie_evidence.location, "cookie_name")
+        self.assertEqual(cookie_evidence.matched_value, "_clck")
+        self.assertIn("_clck", cookie_evidence.excerpt)
+        self.assertEqual(cookie_evidence.confidence, "high")
+
 if __name__ == "__main__":
     unittest.main()
