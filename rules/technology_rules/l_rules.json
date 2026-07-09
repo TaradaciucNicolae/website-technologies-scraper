@@ -1,11 +1,213 @@
 [
   {
-    "name": "Laravel",
-    "category": "Backend Framework",
+    "name": "Landbot",
+    "category": "Page Builder",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "landbot.io"
+    ],
+    "js_asset_signatures": [
+      "initLandbot",
+      "LandbotLivechat"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "langify",
+    "category": "Cart Abandonment",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "langify.settings.switcher.version"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LangShop",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "langshop.app"
+    ],
+    "js_asset_signatures": [
+      "LangShop",
+      "LangShopConfig",
+      "LangShopSDK"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Laravel Echo",
+    "category": "User Onboarding",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "Echo.connector"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Laterpay",
+    "category": "Payment Processor",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "deobfuscateText",
+      "laterpay:connector:callbacks:on_user_has_access"
+    ],
+    "script_url_signatures": [
+      "connectormwi.laterpay.net"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LatitudePay",
+    "category": "Recruitment",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "latitudepay.com",
+      "latitudepayapps.com"
+    ],
+    "script_url_signatures": [
+      "latitudepayapps.com"
+    ],
+    "js_asset_signatures": [
+      "checkout.enabledpayments.latitudepay",
+      "wc_ga_pro.available_gateways.latitudepay"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Launchrock",
+    "category": "Document Management System",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "builder.launchrock.com"
+    ],
+    "js_asset_signatures": [
+      "lrIgnition",
+      "lrLoadedJs",
+      "lrSiteRenderingData.apiEndpoint",
+      "lrSiteSettingAsBoolean"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LayBuy",
+    "category": "Recruitment",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "laybuy.com",
+      "laybuy.com/what-is-laybuy"
+    ],
+    "script_url_signatures": [
+      "laybuy.com",
+      "wp-content/plugins/woo-laybuy"
+    ],
+    "js_asset_signatures": [
+      "checkout.enabledpayments.laybuy",
+      "laybuyEnableCart",
+      "LaybuyHelper",
+      "laybuyMoneyOverides",
+      "wc_ga_pro.available_gateways.laybuy"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LayoutHub",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "app.layouthub.com/shopify/layouthub.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Layui",
+    "category": "UI Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "layui.v"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Lazada",
+    "category": "Ecommerce",
     "confidence": "medium",
     "domain_signatures": [],
     "html_signatures": [
-      "csrf-token"
+      "aplus-auto-exp",
+      "lzdhome.desktop"
     ],
     "script_url_signatures": [],
     "js_asset_signatures": [],
@@ -13,14 +215,123 @@
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
-    "cookie_signatures": [
-      "laravel_session"
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LazySizes",
+    "category": "User Onboarding",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "lazySizes",
+      "lazySizesConfig"
     ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LazySizes unveilhooks plugin",
+    "category": "User Onboarding",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "ls.unveilhooks"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LeadChat",
+    "category": "Live Chat",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "chatsystem.io"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Leadfeeder",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "leadfeeder.com"
+    ],
+    "js_asset_signatures": [
+      "ldfdr.getTracker"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
     "header_signatures": {
-      "x-powered-by": [
-        "Laravel"
+      "content-security-policy": [
+        "leadfeeder",
+        "lfeeder"
       ]
     }
+  },
+  {
+    "name": "Leadinfo",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.leadinfo.net"
+    ],
+    "js_asset_signatures": [
+      "GlobalLeadinfoNamespace",
+      "leadinfo"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Leadster",
+    "category": "Page Builder",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "neurolead.convoScript",
+      "neurolead.elChatbot",
+      "neuroleadLanguage"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
   },
   {
     "name": "Leaflet",
@@ -28,27 +339,26 @@
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [
-      "leaflet",
       "leaflet-container"
     ],
     "script_url_signatures": [
-      "leaflet.js",
-      "leaflet-src.js",
       "cdn.jsdelivr.net/npm/leaflet",
+      "leaflet-src.js",
+      "leaflet.js",
       "unpkg.com/leaflet"
     ],
     "js_asset_signatures": [
-      "L.map",
-      "L.tileLayer",
-      "leaflet"
+      "L.DistanceGrid",
+      "L.PosAnimation",
+      "L.tileLayer"
     ],
     "package_url_signatures": [
       "leaflet",
       "react-leaflet"
     ],
     "stylesheet_url_signatures": [
-      "leaflet.css",
       "cdn.jsdelivr.net/npm/leaflet",
+      "leaflet.css",
       "unpkg.com/leaflet"
     ],
     "meta_generator_signatures": [],
@@ -61,30 +371,494 @@
     "header_signatures": {}
   },
   {
+    "name": "Leaflet platform",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "scripts.leaflet.co"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Leanplum",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "npm/leanplum-sdk@"
+    ],
+    "js_asset_signatures": [
+      "Leanplum"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LearnDash",
+    "category": "Learning Management System",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/plugins/sfwd-lms"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Legal Monster",
+    "category": "Cookie Compliance",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "legalmonster.com"
+    ],
+    "js_asset_signatures": [
+      "legal.__VERSION__"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Lemon Squeezy",
+    "category": "Payment Processor",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "LemonSqueezy",
+      "lemonSqueezyAffiliateConfig"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Lenis",
+    "category": "User Onboarding",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "lenisVersion"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LEPTON",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "LEPTON"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Leptos",
     "category": "JavaScript Framework",
     "confidence": "medium",
     "domain_signatures": [],
     "html_signatures": [
-      "leptos",
       "data-leptos"
     ],
-    "script_url_signatures": [
-      "leptos"
-    ],
+    "script_url_signatures": [],
     "js_asset_signatures": [
-      "leptos",
+      "__LEPTOS_PENDING_RESOURCES",
+      "__LEPTOS_RESOLVED_RESOURCES",
+      "__LEPTOS_RESOURCE_RESOLVERS",
       "data-leptos"
     ],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [
-      "data-leptos",
-      "leptos"
+      "data-leptos"
     ],
     "cookie_signatures": [],
     "header_signatures": {}
+  },
+  {
+    "name": "Letro",
+    "category": "Shipping",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "letro.jp/tags"
+    ],
+    "js_asset_signatures": [
+      "__letroUgcGadget",
+      "letroUgcSet"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Levar",
+    "category": "Other",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "levar.session_info",
+      "levar_onload_variant_id",
+      "levARActivationHelper"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Level 5",
+    "category": "Document Management System",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "l5_inventory_url"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Lexity",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "lexity.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LGC",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "LGC"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Liberapay",
+    "category": "Payment Processor",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "liberapay.com"
+    ],
+    "script_url_signatures": [
+      "liberapay.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "libphonenumber",
+    "category": "User Onboarding",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "libphonenumber.AsYouType",
+      "libphonenumber.DIGITS"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "libwww-perl-daemon",
+    "category": "Web Server",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "libwww-perl-daemon"
+      ]
+    }
+  },
+  {
+    "name": "Lieferando",
+    "category": "CMS",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "Tealium.pagedata.country"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Lightbox",
+    "category": "User Onboarding",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "Lightbox.activeImage",
+      "lightbox.lightbox"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LightMon Engine",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "LightMon"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "lm_online"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Lightspeed eCom",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [
+      "seoshop.webshopapp.com"
+    ],
+    "html_signatures": [
+      "blocks/head.rain"
+    ],
+    "script_url_signatures": [
+      "assets.webshopapp.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "lighttpd",
+    "category": "Web Server",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "ight",
+        "tpd"
+      ]
+    }
+  },
+  {
+    "name": "LimeChat",
+    "category": "Page Builder",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "limechat.ai"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Limepay",
+    "category": "Recruitment",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "limepay-installment-show.js",
+      "wp-content/plugins/Limepay-v"
+    ],
+    "js_asset_signatures": [
+      "LimepayIdentity",
+      "wc_ga_pro.available_gateways.limepay"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LimeSpot",
+    "category": "Personalisation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "personalizer.io"
+    ],
+    "js_asset_signatures": [
+      "LimeSpot.CartItems",
+      "LimeSpot.Recommendations"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LINE Login",
+    "category": "Security",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "access.line.me"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "Constants.authorization_request_url"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Linkedin Ads",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "dc.ads.linkedin.com",
+      "px.ads.linkedin.com"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "px.ads.linkedin.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "content-security-policy": [
+        "px.ads.linkedin.com"
+      ]
+    }
   },
   {
     "name": "LinkedIn Insight Tag",
@@ -92,13 +866,14 @@
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [
-      "linkedin_data_partner_id",
-      "lintrk"
+      "linkedin_data_partner_id"
     ],
     "script_url_signatures": [
+      "cdn.oribi.io",
       "snap.licdn.com/li.lms-analytics/insight.min.js"
     ],
     "js_asset_signatures": [
+      "_linkedin_data_partner_id",
       "_linkedin_partner_id",
       "lintrk(",
       "snap.licdn.com"
@@ -108,10 +883,127 @@
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [
-      "li_fat_id",
       "bcookie",
+      "li_fat_id",
       "lidc"
     ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Linkedin Sign-in",
+    "category": "Security",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "platform.linkedin.com"
+    ],
+    "js_asset_signatures": [
+      "OnLinkedInAuth",
+      "onLinkedInLoad"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LinkMink",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.linkmink.com/lm-js"
+    ],
+    "js_asset_signatures": [
+      "LinkMink"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Linx Commerce",
+    "category": "Ecommerce",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "EzGaCfg.Config.Store",
+      "EzGaCfg.Shopper",
+      "linxImpulse.config.integrationFlags.platformProvider"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Linx Impulse",
+    "category": "Loyalty",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "linx.banner",
+      "linxImpulse.config",
+      "linxImpulseInitialized"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "linximpulse.net"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "List.js",
+    "category": "User Onboarding",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "list.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Listrak",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "listrakbi.com",
+      "services.listrak.com"
+    ],
+    "js_asset_signatures": [
+      "_LTKSignup",
+      "_LTKSubscriber"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
     "header_signatures": {}
   },
   {
@@ -120,23 +1012,182 @@
     "confidence": "medium",
     "domain_signatures": [],
     "html_signatures": [
-      "lit-html",
-      "lit-element"
+      "lit-element",
+      "lit-html"
     ],
     "script_url_signatures": [
       "cdn.jsdelivr.net/npm/lit",
       "unpkg.com/lit"
     ],
     "js_asset_signatures": [
+      "cssResult",
       "lit-html",
-      "LitElement",
-      "cssResult"
+      "LitElement"
     ],
     "package_url_signatures": [
       "lit",
-      "lit-html",
-      "lit-element"
+      "lit-element",
+      "lit-html"
     ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "lit-element",
+    "category": "User Onboarding",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "litElementVersions.0"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "lit-html",
+    "category": "User Onboarding",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "litHtmlVersions.0"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LiteSpeed",
+    "category": "Web Server",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "LiteSpeed"
+      ]
+    }
+  },
+  {
+    "name": "Litespeed Cache",
+    "category": "Caching",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-turbo-charged-by": [
+        "LiteSpeed"
+      ]
+    }
+  },
+  {
+    "name": "Lithium",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "LithiumVisitor"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Littledata",
+    "category": "Other",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "LittledataLayer",
+      "LittledataLayer.version"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Live Story",
+    "category": "CMS",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "LiveStory",
+      "LSHelpers"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LiveAgent",
+    "category": "Page Builder",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "LiveAgent"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LiveCanvas",
+    "category": "Geolocation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/livecanvas"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
@@ -149,7 +1200,6 @@
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [
-      "__lc",
       "livechatinc"
     ],
     "script_url_signatures": [
@@ -157,9 +1207,9 @@
       "livechatinc.com"
     ],
     "js_asset_signatures": [
-      "LiveChatWidget",
+      "cdn.livechatinc.com",
       "livechatinc",
-      "cdn.livechatinc.com"
+      "LiveChatWidget"
     ],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [],
@@ -172,29 +1222,422 @@
     "header_signatures": {}
   },
   {
+    "name": "LiveIntent",
+    "category": "Email",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "liadm.com"
+    ],
+    "js_asset_signatures": [
+      "LI.advertiserId"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LiveJournal",
+    "category": "Blog",
+    "confidence": "high",
+    "domain_signatures": [
+      "livejournal.com"
+    ],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LiveRamp DPM",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "c.tvpixel.com/js/current/dpm_pixel_min.js"
+    ],
+    "js_asset_signatures": [
+      "dpmComscoreVars"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LiveRamp PCM",
+    "category": "Cookie Compliance",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "gdpr-consent-tool.privacymanager.io"
+    ],
+    "script_url_signatures": [
+      "gdpr.privacymanager.io"
+    ],
+    "js_asset_signatures": [
+      "wpJsonpLiverampGdprCmp"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Livescale",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "livescale.tv"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LiveSession",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.livesession.io"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LiveStreet CMS",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "LIVESTREET_SECURITY_KEY"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "LiveStreet"
+      ]
+    }
+  },
+  {
+    "name": "Livewire",
+    "category": "Web Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "livewire"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LiveZilla",
+    "category": "Page Builder",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "lz_chat_execute",
+      "lz_code_id",
+      "lz_tracking_set_widget_visibility"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LKQD",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "lkqd.net"
+    ],
+    "script_url_signatures": [
+      "lkqd.net"
+    ],
+    "js_asset_signatures": [
+      "lkqd_http_response",
+      "lkqdCall",
+      "lkqdErrorCount",
+      "lkqdSettings"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LlamaLink Cloud Server",
+    "category": "Web Server",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "LlamaLink"
+      ]
+    }
+  },
+  {
+    "name": "Loadable-Components",
+    "category": "User Onboarding",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "__LOADABLE_LOADED_CHUNKS__"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Loadify",
+    "category": "Returns",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "loadifyapp.ninety9.dev"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LocalFocus",
+    "category": "JavaScript Graphics",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "blocalfocus"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Localised",
+    "category": "Other",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "localised.com"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Locksmith",
+    "category": "Other",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "Locksmith"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LocomotiveCMS",
+    "category": "CMS",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "theme/stylesheets"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Lodash",
     "category": "JavaScript Library",
     "confidence": "high",
     "domain_signatures": [],
-    "html_signatures": [
-      "lodash"
-    ],
+    "html_signatures": [],
     "script_url_signatures": [
-      "lodash.min.js",
-      "lodash.js",
       "cdn.jsdelivr.net/npm/lodash",
-      "unpkg.com/lodash",
-      "cdnjs.cloudflare.com/ajax/libs/lodash.js"
+      "cdnjs.cloudflare.com/ajax/libs/lodash.js",
+      "lodash.js",
+      "lodash.min.js",
+      "unpkg.com/lodash"
     ],
     "js_asset_signatures": [
+      "_.differenceBy",
+      "_.templateSettings.imports._.templateSettings.imports._.VERSION",
       "_.VERSION",
-      "lodash",
       "lodash.min.js"
     ],
     "package_url_signatures": [
       "lodash",
       "lodash-es"
     ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Loggly",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "loggly.com"
+    ],
+    "js_asset_signatures": [
+      "LogglyTracker"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "loggly.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LogiCommerce",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "logicommerce"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "logicommerceGlobal"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "LogiCommerce"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Login with Amazon",
+    "category": "Security",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "onAmazonLoginReady"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LoginRadius",
+    "category": "Security",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "loginradius.com",
+      "lrcontent.com"
+    ],
+    "js_asset_signatures": [
+      "LoginRadius",
+      "LoginRadiusDefaults",
+      "LoginRadiusSDK",
+      "LoginRadiusUtility"
+    ],
+    "package_url_signatures": [],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
@@ -209,17 +1652,17 @@
       "logrocket.com"
     ],
     "html_signatures": [
-      "LogRocket.init",
-      "logrocket"
+      "LogRocket.init"
     ],
     "script_url_signatures": [
-      "cdn.lr-ingest.com",
       "cdn.logrocket.io",
-      "logrocket"
+      "cdn.lr-ingest.com",
+      "lr-ingest"
     ],
     "js_asset_signatures": [
-      "LogRocket.init",
       "logrocket",
+      "LogRocket._buffer",
+      "LogRocket.init",
       "lr-ingest"
     ],
     "package_url_signatures": [
@@ -235,31 +1678,260 @@
     "header_signatures": {}
   },
   {
+    "name": "Loja Integrada",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "LOJA_ID"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "vtex-integrated-store"
+      ]
+    }
+  },
+  {
+    "name": "Loja Mestre",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "www.lojamestre"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Loja Virtual",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn1.solojavirtual.com",
+      "js/ljvt_v"
+    ],
+    "js_asset_signatures": [
+      "id_loja_virtual",
+      "link_loja_virtual",
+      "loja_sem_dominio"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Loja2",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "loja2.com.br"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Loop Returns",
+    "category": "Other",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "loopreturns.com"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "Loop.config.variantParam",
+      "LoopOnstore"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Loop54",
+    "category": "Search Engine",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "Loop54.config.libVersion"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "Loop54User"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Lootly",
+    "category": "Reservation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "lootly.io"
+    ],
+    "script_url_signatures": [
+      "lootly.io"
+    ],
+    "js_asset_signatures": [
+      "Lootly.config",
+      "lootlyWidgetInit"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Loox",
     "category": "Reviews / Ecommerce App",
     "confidence": "high",
     "domain_signatures": [],
-    "html_signatures": [
-      "loox"
-    ],
+    "html_signatures": [],
     "script_url_signatures": [
+      "cdn-loox.io",
       "loox.io",
-      "cdn-loox.io"
+      "loox.io/widget"
     ],
     "js_asset_signatures": [
-      "loox",
-      "cdn-loox.io"
+      "cdn-loox.io",
+      "loox_global_hash"
     ],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [
-      "loox.io",
-      "cdn-loox.io"
+      "cdn-loox.io",
+      "loox.io"
     ],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [
       "loox-rating",
       "loox-reviews"
     ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LOU",
+    "category": "Static Site Generator",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.louassist.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Lovable",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "lovable-uploads"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "LoyaltyLion",
+    "category": "Reservation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "sdk.loyaltylion.net"
+    ],
+    "js_asset_signatures": [
+      "loyaltylion.version"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Lua",
+    "category": "Programming Language",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "bLua"
+      ]
+    }
+  },
+  {
+    "name": "Luana",
+    "category": "Web Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "luanaframework"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Luana",
+      "sFramework"
+    ],
+    "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
   },
@@ -272,21 +1944,87 @@
       "luckyorange"
     ],
     "script_url_signatures": [
-      "tools.luckyorange.com/core/lo.js",
-      "luckyorange.com"
+      "luckyorange.com",
+      "tools.luckyorange.com/core/lo.js"
     ],
     "js_asset_signatures": [
-      "LuckyOrange",
-      "lo.js"
+      "__wtw_lucky_site_id",
+      "lo.js",
+      "LuckyOrange"
     ],
     "package_url_signatures": [],
-    "stylesheet_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "luckyorange.com"
+    ],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [
       "__lotl",
       "__lotr"
     ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Lume",
+    "category": "Cryptominer",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Lume"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Luna",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "Ditto.__esModule",
+      "dittoIdLifetime",
+      "globalDittoKey",
+      "globalDittoServer",
+      "jstextmap.DittoSdkUrl"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "bsdk.api.ditto.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "content-security-policy": [
+        "bsdk.api.ditto.com"
+      ]
+    }
+  },
+  {
+    "name": "Lytics",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "lytics.io"
+    ],
+    "js_asset_signatures": [
+      "__lytics__jstag__.version"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
     "header_signatures": {}
   }
 ]

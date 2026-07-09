@@ -1,12 +1,373 @@
 [
   {
+    "name": "Nacelle",
+    "category": "Ecommerce",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "__NEXT_DATA__.props.pageProps.page.nacelleEntryId",
+      "nacelleEventData"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "NagaCommerce",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "NagaCommerce"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Nagich",
+    "category": "Accessibility",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "accessibility.js",
+      "nagich.co"
+    ],
+    "js_asset_signatures": [
+      "interdeal.version"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "NagishLi",
+    "category": "Accessibility",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "initNagishLi",
+      "NagishLi",
+      "nagishli_commons.version"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Najva",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "app.najva.com"
+    ],
+    "js_asset_signatures": [
+      "Najva.identifyEmailSubscriber"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Narrativ",
+    "category": "Affiliate Program",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "static.narrativ.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Narvar",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "narvar.com"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "NARVARJS_URL"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "content-security-policy": [
+        "narvar.com"
+      ]
+    }
+  },
+  {
+    "name": "NationBuilder",
+    "category": "CMS",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "NB.FBAppId",
+      "NB.Liquid"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Nativo",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "postrelease.com"
+    ],
+    "script_url_signatures": [
+      "ntv.io",
+      "postrelease.com"
+    ],
+    "js_asset_signatures": [
+      "ntvConfig"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "postrelease.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Navegg",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "tag.navdmp.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Naver Analytics",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "naver-site-verification"
+    ],
+    "script_url_signatures": [
+      "wcs.naver.net/wcslog.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Naver Maps",
+    "category": "Maps",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "openapi.map.naver.com/openapi/v"
+    ],
+    "js_asset_signatures": [
+      "naver.maps"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Naver RUA",
+    "category": "Returns",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "rua-api.ncloud.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Neat A/B testing",
+    "category": "A/B Testing",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.neatab.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "NEO - Omnichannel Commerce Platform",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [
+      "plataformaneo.com"
+    ],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "powered": [
+        "jet-neo"
+      ]
+    }
+  },
+  {
+    "name": "Neon CRM",
+    "category": "Live Chat",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "app.neoncrm.com"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "_neoncrm_ga",
+      "neoncrm_email_ajax_object",
+      "neonPayCard"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Neos CMS",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-flow-powered": [
+        "Neos/?"
+      ]
+    }
+  },
+  {
+    "name": "Neos Flow",
+    "category": "Web Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-flow-powered": [
+        "Flow/?"
+      ]
+    }
+  },
+  {
+    "name": "Nepso",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-cms": [
+        "Nepso"
+      ]
+    }
+  },
+  {
     "name": "NestJS",
     "category": "Backend Framework",
     "confidence": "medium",
     "domain_signatures": [],
-    "html_signatures": [
-      "nestjs"
-    ],
+    "html_signatures": [],
     "script_url_signatures": [],
     "js_asset_signatures": [],
     "package_url_signatures": [],
@@ -21,6 +382,42 @@
     }
   },
   {
+    "name": "Netcore Cloud",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "netcoresmartech.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Netdeal",
+    "category": "Marketing Automation",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "NetdealBuildNumber",
+      "NetdealJs.paywall",
+      "netdealStartSession"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Netlify",
     "category": "Hosting",
     "confidence": "high",
@@ -28,7 +425,6 @@
       "netlify.app"
     ],
     "html_signatures": [
-      "netlify",
       "netlify-identity-widget"
     ],
     "script_url_signatures": [
@@ -36,9 +432,8 @@
       "netlify-identity-widget"
     ],
     "js_asset_signatures": [
-      "netlifyIdentity",
-      "netlify",
-      "/.netlify/"
+      "/.netlify/",
+      "netlifyIdentity"
     ],
     "package_url_signatures": [
       "netlify-identity-widget"
@@ -50,32 +445,154 @@
     "header_signatures": {
       "server": [
         "netlify"
-      ],
-      "x-nf-request-id": [
-        ""
       ]
     }
+  },
+  {
+    "name": "Netlify Forms",
+    "category": "Other",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-netlify"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Neto",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "jquery.neto"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "NetSuite",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "NS_VER"
+    ],
+    "header_signatures": {}
   },
   {
     "name": "New Relic",
     "category": "Monitoring",
     "confidence": "high",
     "domain_signatures": [],
-    "html_signatures": [
-      "NREUM",
-      "newrelic"
-    ],
+    "html_signatures": [],
     "script_url_signatures": [
       "js-agent.newrelic.com"
     ],
     "js_asset_signatures": [
-      "NREUM",
-      "newrelic",
-      "js-agent.newrelic.com"
+      "js-agent.newrelic.com",
+      "newrelic"
     ],
     "package_url_signatures": [
       "@newrelic/browser-agent"
     ],
+    "stylesheet_url_signatures": [
+      "newrelic.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Newspack",
+    "category": "Geolocation",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "newspack.pub"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Newspack by Automattic",
+    "category": "WordPress Hosting",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "host-header": [
+        "Newspack"
+      ]
+    }
+  },
+  {
+    "name": "Nexcess",
+    "category": "PaaS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-hostname": [
+        "nxcli.net"
+      ]
+    }
+  },
+  {
+    "name": "Next Total",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "nextdirect.com"
+    ],
+    "js_asset_signatures": [
+      "NextBasket.NextUnlimited",
+      "NextFavourites.Busy",
+      "NextFavourites.Data.ShoppingLists"
+    ],
+    "package_url_signatures": [],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
@@ -95,9 +612,10 @@
     ],
     "js_asset_signatures": [
       "__NEXT_DATA__",
-      "next/router",
+      "_next/static",
+      "next.version",
       "next/dist",
-      "_next/static"
+      "next/router"
     ],
     "package_url_signatures": [
       "next"
@@ -110,16 +628,324 @@
     ],
     "cookie_signatures": [],
     "header_signatures": {
-      "x-nextjs-cache": [
-        ""
-      ],
-      "x-matched-path": [
-        ""
-      ],
-      "x-nextjs-matched-path": [
-        ""
+      "x-powered-by": [
+        "Next.js"
       ]
     }
+  },
+  {
+    "name": "Next.js App Router",
+    "category": "JavaScript Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "next.appDir"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "NextAuth.js",
+    "category": "Security",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "__Host-next-auth.csrf-token",
+      "__Secure-next-auth.callback-url"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Nextcloud",
+    "category": "Augmented Reality",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "oc_config.version"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "__Host-nc_sameSiteCookielax",
+      "__Host-nc_sameSiteCookiestrict"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Nextdoor Ads",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "ads.nextdoor.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "NextGEN Gallery",
+    "category": "Photo Gallery",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "nextgen-gallery/js"
+    ],
+    "js_asset_signatures": [
+      "nextgen_lightbox_settings.static_path"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Nextra",
+    "category": "Cryptominer",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "__nextra_internal__",
+      "__nextra_pageContext__"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Nextsale",
+    "category": "Widget",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "nextsale.io"
+    ],
+    "js_asset_signatures": [
+      "NextsaleObject"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "NexusPHP",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "NexusPHP"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "NexusPIPE",
+    "category": "Captcha",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "Nexuspipe.com"
+      ]
+    }
+  },
+  {
+    "name": "nghttpx - HTTP/2 proxy",
+    "category": "Web Server",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "nghttp2/?",
+        "nghttpx"
+      ]
+    }
+  },
+  {
+    "name": "Nginx",
+    "category": "Web Server",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "nginx"
+      ]
+    }
+  },
+  {
+    "name": "Niagahoster",
+    "category": "WordPress Hosting",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "Niagahoster"
+      ]
+    }
+  },
+  {
+    "name": "Nicepage",
+    "category": "Document Management System",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "_npAccordionInit",
+      "_npDialogsInit"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "nicepage.css"
+    ],
+    "meta_generator_signatures": [
+      "Nicepage"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Nift",
+    "category": "Reservation",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "NiftAnalytics"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Ninja Forms",
+    "category": "Geolocation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/ninja-forms"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/plugins/ninja-forms"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "NitroPack",
+    "category": "Caching",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "NitroPack"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Noddus",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "noddus.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
   },
   {
     "name": "Node.js",
@@ -141,33 +967,238 @@
     }
   },
   {
+    "name": "NoFraud",
+    "category": "Captcha",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "services.nofraud.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Norton Shopping Guarantee",
+    "category": "Captcha",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "nsg.symantec.com"
+    ],
+    "js_asset_signatures": [
+      "DO_NORTON_SHOPPING"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Nosto",
     "category": "Personalization / Ecommerce App",
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [
-      "nostojs",
-      "nosto"
+      "nosto-version"
     ],
     "script_url_signatures": [
+      "connect.nosto",
       "connect.nosto.com",
       "nosto.com"
     ],
     "js_asset_signatures": [
-      "nostojs",
-      "nosto",
       "connect.nosto.com"
     ],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [
-      "nosto_element",
-      "nosto"
+      "nosto_element"
     ],
     "cookie_signatures": [
       "nosto"
     ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Nosto Visual UGC",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "stackla.com"
+    ],
+    "js_asset_signatures": [
+      "stacklaWidgetJsonp"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Nostra",
+    "category": "Returns",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "NostraEventManager"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "novomind iSHOP",
+    "category": "Ecommerce",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "_ishopevents",
+      "_ishopevents_url",
+      "iShop.config.baseUrl"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "NSW Design System",
+    "category": "UI Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "nsw-design-system"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "NSW.initSite"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "NTLM",
+    "category": "Captcha",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "www-authenticate": [
+        "NTLM"
+      ]
+    }
+  },
+  {
+    "name": "Nudgify",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.convertize.com/nudgify-shopify.js",
+      "nudgify.com"
+    ],
+    "js_asset_signatures": [
+      "nudgify.cart"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Nukeviet CMS",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "nv_DigitalClock",
+      "nv_is_change_act_confirm"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "NukeViet"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Nuqlium",
+    "category": "Personalisation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "nuqlium.com/api"
+    ],
+    "js_asset_signatures": [
+      "nuqliumObject"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Nuvemshop",
+    "category": "Ecommerce",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "www.nuvemshop.com.br"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "LS.store.url",
+      "nuvemShopIdProduct"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
     "header_signatures": {}
   },
   {
@@ -176,27 +1207,43 @@
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [
-      "__NUXT__"
+      "__nuxt",
+      "__NUXT__",
+      "window.__NUXT__"
     ],
-    "script_url_signatures": [
-      "_nuxt/"
-    ],
+    "script_url_signatures": [],
     "js_asset_signatures": [
       "__NUXT__",
       "_nuxt/",
-      "nuxtApp"
+      "useNuxtApp"
     ],
     "package_url_signatures": [
-      "nuxt",
-      "@nuxt/kit"
+      "@nuxt/kit",
+      "nuxt"
     ],
-    "stylesheet_url_signatures": [
-      "_nuxt/"
-    ],
+    "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [
       "data-n-head"
     ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "NVD3",
+    "category": "JavaScript Graphics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "nv.addGraph",
+      "nv.version"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
   }

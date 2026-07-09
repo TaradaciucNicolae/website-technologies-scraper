@@ -1,5 +1,136 @@
 [
   {
+    "name": "CacheFly",
+    "category": "CDN",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "CFS"
+      ]
+    }
+  },
+  {
+    "name": "CactiveCloud",
+    "category": "Web Server",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "Cactive"
+      ]
+    }
+  },
+  {
+    "name": "Caddy",
+    "category": "Web Server",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "Caddy"
+      ]
+    }
+  },
+  {
+    "name": "Cafe24",
+    "category": "Ecommerce",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "EC_GLOBAL_DATETIME",
+      "EC_GLOBAL_INFO",
+      "EC_ROOT_DOMAIN"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Caisy",
+    "category": "CMS",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "assets.caisy.io"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CakePHP",
+    "category": "Web Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "cakephp"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Caldera Forms",
+    "category": "Forms",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/caldera-forms"
+    ],
+    "js_asset_signatures": [
+      "calderaForms"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/plugins/caldera-forms"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Calendly",
     "category": "Scheduling",
     "confidence": "high",
@@ -7,15 +138,17 @@
       "calendly.com"
     ],
     "html_signatures": [
-      "calendly",
-      "calendly-inline-widget"
+      "calendly-inline-widget",
+      "calendly.com"
     ],
     "script_url_signatures": [
+      "assets.calendly.com",
       "assets.calendly.com/assets/external/widget.js"
     ],
     "js_asset_signatures": [
-      "Calendly.initInlineWidget",
-      "calendly-inline-widget"
+      "Calendly",
+      "calendly-inline-widget",
+      "Calendly.initInlineWidget"
     ],
     "package_url_signatures": [
       "react-calendly"
@@ -31,17 +164,568 @@
     "header_signatures": {}
   },
   {
+    "name": "Callbell",
+    "category": "Page Builder",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "callbell.eu"
+    ],
+    "js_asset_signatures": [
+      "Callbell",
+      "callbellSettings"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CallRail",
+    "category": "Analytics",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "CallTrkSwap"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CallTrackingMetrics",
+    "category": "Analytics",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "__ctm.numbers",
+      "__ctm_tracked_numbers"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Canto",
+    "category": "Augmented Reality",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "canto.com"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "canto.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Canva",
+    "category": "Document Management System",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "canva_debounceResize",
+      "canva_scriptExecutor"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CanvasJS",
+    "category": "JavaScript Graphics",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "CanvasJS.Chart",
+      "CanvasJS.Chart.version"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Captch Me",
+    "category": "Captcha",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "api.captchme.net"
+    ],
+    "js_asset_signatures": [
+      "Captchme"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Carbon Ads",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "carbonads.com"
+    ],
+    "js_asset_signatures": [
+      "_carbonads",
+      "_carbonads_go"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CareCart",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "app.carecart.io/api/abandoned-cart"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CareCart Sales Pop Up",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "sales-pop.carecart.io"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cargo",
+    "category": "Document Management System",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "cargo_title"
+    ],
+    "script_url_signatures": [
+      "elo.io"
+    ],
+    "js_asset_signatures": [
+      "__cargo_js_ver__",
+      "Cargo.Config"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Carro",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "carro.min.js",
+      "getcarro.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Carrot quest",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "carrotquest"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "content-security-policy": [
+        "carrotquest.app"
+      ]
+    }
+  },
+  {
+    "name": "Cart.com",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "americommerce.com"
+    ],
+    "script_url_signatures": [
+      "americommerce.com"
+    ],
+    "js_asset_signatures": [
+      "AC.storeDomain"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cart.js",
+    "category": "User Onboarding",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "rivets-cart.min.js",
+      "shopify-cartjs"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CartKit",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cartkitcdn.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Carts Guru",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.cartsguru.io"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CartStack",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "api.cartstack"
+    ],
+    "js_asset_signatures": [
+      "_cartstack"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "cashew",
+    "category": "Recruitment",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cashewpayments.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "content-security-policy": [
+        "cashewpayments.com"
+      ]
+    }
+  },
+  {
+    "name": "Catberry.js",
+    "category": "JavaScript Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "catberry",
+      "catberry.version"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "Catberry"
+      ]
+    }
+  },
+  {
+    "name": "CCV Shop",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "website/JavaScript/Vertoshop.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CDN77",
+    "category": "CDN",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "CDN77-Turbo"
+      ]
+    }
+  },
+  {
+    "name": "cdnjs",
+    "category": "CDN",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdnjs.cloudflare.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "cdnjs.cloudflare.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cecil",
+    "category": "Cryptominer",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Cecil"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Celum",
+    "category": "Augmented Reality",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "celum_assets"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cendyn",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "NextGuest"
+      ]
+    }
+  },
+  {
+    "name": "Centminmod",
+    "category": "Web Server",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "centminmod"
+      ]
+    }
+  },
+  {
+    "name": "Centra",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "centracdn.net"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "CENTRA_IMAGE_SIZES"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "content-security-policy": [
+        "centra"
+      ]
+    }
+  },
+  {
+    "name": "Chabokan",
+    "category": "PaaS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "ch-powered-by": [
+        "Chabokan",
+        "chabokan.net"
+      ]
+    }
+  },
+  {
     "name": "Chakra UI",
     "category": "UI Component Library",
     "confidence": "medium",
     "domain_signatures": [],
     "html_signatures": [
-      "chakra-ui",
       "chakra-button",
-      "chakra-stack"
+      "chakra-stack",
+      "chakra-ui",
+      "chakra-ui-color-mode"
     ],
     "script_url_signatures": [
-      "@chakra-ui/react"
+      "@chakra-ui/react",
+      "chakra-ui"
     ],
     "js_asset_signatures": [
       "@chakra-ui/react",
@@ -49,8 +733,8 @@
       "ChakraProvider"
     ],
     "package_url_signatures": [
-      "@chakra-ui/react",
-      "@chakra-ui/icons"
+      "@chakra-ui/icons",
+      "@chakra-ui/react"
     ],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
@@ -59,6 +743,139 @@
       "chakra-stack",
       "chakra-ui"
     ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Chameleon",
+    "category": "Static Site Generator",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "trychameleon.com"
+    ],
+    "js_asset_signatures": [
+      "chmln.Snippet.urls.fast",
+      "chmlnData.organizationAttributes"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Chameleon system",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Chameleon",
+      "CMS/Shop",
+      "System"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Channel.io",
+    "category": "Page Builder",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "ChannelIO"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ChannelAdvisor",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "channeladvisor.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "channeladvisor.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Chaport",
+    "category": "Page Builder",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "chaport.com"
+    ],
+    "js_asset_signatures": [
+      "chaportConfig"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ChargeAfter",
+    "category": "Payment Processor",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.chargeafter.com"
+    ],
+    "js_asset_signatures": [
+      "ChargeAfter"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Chargebee",
+    "category": "Payment Processor",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "js.chargebee.com/v"
+    ],
+    "js_asset_signatures": [
+      "Chargebee",
+      "chargebeeTrackFunc"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
   },
@@ -72,19 +889,766 @@
       "new Chart("
     ],
     "script_url_signatures": [
+      "cdn.jsdelivr.net/npm/chart.js",
+      "cdnjs.cloudflare.com/ajax/libs/Chart.js",
+      "chart.js@",
       "chart.min.js",
       "chart.umd.js",
-      "cdn.jsdelivr.net/npm/chart.js",
-      "cdnjs.cloudflare.com/ajax/libs/Chart.js"
+      "chartjs.org/dist",
+      "dist/Chart",
+      "gh/chartjs"
     ],
     "js_asset_signatures": [
-      "new Chart(",
+      "chart.ctx.bezierCurveTo",
+      "Chart.defaults",
+      "Chart.defaults.doughnut",
       "Chart.register",
-      "Chart.defaults"
+      "new Chart("
     ],
     "package_url_signatures": [
       "chart.js"
     ],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Chartbeat",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "chartbeat.js"
+    ],
+    "js_asset_signatures": [
+      "_sf_async_config",
+      "_sf_endpt"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Chatra",
+    "category": "Page Builder",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "call.chatra.io/chatra.js"
+    ],
+    "js_asset_signatures": [
+      "ChatraID",
+      "ChatraSetup"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ChatStack",
+    "category": "Page Builder",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "Chatstack.chatState",
+      "Chatstack.server"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Chatwoot",
+    "category": "Page Builder",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "chatwoot",
+      "chatwootSDK"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Checkout.com",
+    "category": "Payment Processor",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.checkout.com/js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Chekkit",
+    "category": "Page Builder",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "chekkitSettings.toggleChat"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cherokee",
+    "category": "Web Server",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "Cherokee"
+      ]
+    }
+  },
+  {
+    "name": "CherryPy",
+    "category": "Web Server",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "CherryPy"
+      ]
+    }
+  },
+  {
+    "name": "Chicago Boss",
+    "category": "Web Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_boss_session"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Chinese Menu Online",
+    "category": "Document Management System",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "chinesemenuonline.com"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Chitika",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "scripts.chitika.net"
+    ],
+    "js_asset_signatures": [
+      "ch_client",
+      "ch_color_site_link"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Choices",
+    "category": "User Onboarding",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "choices.js",
+      "choices.min.js",
+      "modules/choices/js/choices.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Chorus",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "Chorus.AddScript",
+      "ChorusAds.beforeAdsRequested",
+      "ChorusCampaigns.recordClickUrl"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_chorus_geoip_continent",
+      "chorus_preferences"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "ChurnZero",
+    "category": "Other",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "ChurnZero",
+      "ChurnZero.version"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CitrusPay",
+    "category": "Payment Processor",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "checkout-static.citruspay.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "City Hive",
+    "category": "Ecommerce",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "cityHiveSites",
+      "cityHiveWebsiteName"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CIVIC",
+    "category": "Cookie Compliance",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cc.cdn.civiccomputing.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CiviCRM",
+    "category": "Live Chat",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "civicrm/contribute/transact",
+      "com_civicrm/civicrm"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CJDropshipping app",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "app.cjdropshipping.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Ckan",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "ckan"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "access-control-allow-headers": [
+        "X-CKAN-API-KEY"
+      ],
+      "link": [
+        "http://ckan.org"
+      ]
+    }
+  },
+  {
+    "name": "Clarip",
+    "category": "Cookie Compliance",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.clarip.com"
+    ],
+    "js_asset_signatures": [
+      "claripCdnHost",
+      "claripHost",
+      "pageData.claripConsentJSUrl"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Clarity",
+    "category": "UI Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "clr-angular"
+    ],
+    "js_asset_signatures": [
+      "ClarityIcons"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Clearbit Reveal",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "reveal.clearbit.com/v"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ClearSale",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "device.clearsale.com.br"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Clerk",
+    "category": "Security",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "Clerk.authenticateWithMetamask",
+      "Clerk.openSignIn",
+      "Clerk.version"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Clerk.io",
+    "category": "Personalisation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "clerk.io"
+    ],
+    "js_asset_signatures": [
+      "__clerk_cb_0",
+      "__clerk_q"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cleverbridge",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "static-cf.cleverbridge"
+    ],
+    "js_asset_signatures": [
+      "cbCartProductSelection"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CleverTap",
+    "category": "Marketing Automation",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "clevertap"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Clickbank",
+    "category": "Affiliate Program",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "hop.clickbank.net?affiliate",
+      "pay.clickbank.net?cbfid"
+    ],
+    "script_url_signatures": [
+      "r.wdfl.co"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ClickCease",
+    "category": "Captcha",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "clickcease.com/monitor"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ClickDimensions",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "analytics.clickdimensions.com"
+    ],
+    "js_asset_signatures": [
+      "clickdimensions"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ClickFunnels",
+    "category": "Marketing Automation",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "app.clickfunnels.com",
+      "cf:app_domain:"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "cfAddPolyfill",
+      "CFAppDomain",
+      "CFSurveyParticipantID",
+      "ClickFunnels"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ClickHeat",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "clickHeatServer"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "clickio",
+    "category": "Cookie Compliance",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "clickio.mgr.consensu.org/t/consent_"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ClickTale",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "clicktale.net"
+    ],
+    "js_asset_signatures": [
+      "ClickTale",
+      "ClickTaleEvent",
+      "ClickTaleGlobal",
+      "clickTaleStartEventSignal"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Clicky",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "static.getclicky.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ClientJS",
+    "category": "User Onboarding",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "ClientJS"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ClientXCMS",
+    "category": "CMS",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "CLIENTXCMSCurrency"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Clinch",
+    "category": "Personalisation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.clinch.co"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CloudCart",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cloudcart-"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
@@ -99,55 +1663,146 @@
       "pages.dev",
       "workers.dev"
     ],
-    "html_signatures": [],
+    "html_signatures": [
+      "cdn.cloudflare"
+    ],
     "script_url_signatures": [
-      "static.cloudflareinsights.com",
-      "/cdn-cgi/"
+      "static.cloudflareinsights.com"
     ],
     "js_asset_signatures": [
+      "/cdn-cgi/",
       "__cfBeacon",
-      "CloudflareApps",
-      "/cdn-cgi/"
+      "CloudflareApps"
     ],
     "package_url_signatures": [],
-    "stylesheet_url_signatures": [
-      "/cdn-cgi/"
-    ],
+    "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [
       "__cf_bm",
-      "cf_clearance",
-      "__cflb"
+      "__cfduid",
+      "__cflb",
+      "cf_clearance"
     ],
     "header_signatures": {
-      "server": [
-        "cloudflare"
+      "cf-cache-status": [
+        ""
       ],
       "cf-ray": [
         ""
       ],
-      "cf-cache-status": [
-        ""
+      "server": [
+        "cloudflare"
       ]
     }
+  },
+  {
+    "name": "Cloudflare Bot Management",
+    "category": "Security / Bot Management",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "__cf_bm"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cloudflare Browser Insights",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "static.cloudflareinsights.com/beacon"
+    ],
+    "js_asset_signatures": [
+      "__cfBeaconCustomTag"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cloudflare Rocket Loader",
+    "category": "Returns",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "/cdn-cgi/scripts/"
+    ],
+    "js_asset_signatures": [
+      "__cfQR.done",
+      "__cfRLUnblockHandlers"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-cfasync"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cloudflare Stream",
+    "category": "Video Player",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "cloudflarestream.com",
+      "iframe.videodelivery.net"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cloudflare Turnstile",
+    "category": "Captcha",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "challenges.cloudflare.com/turnstile"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
   },
   {
     "name": "Cloudflare Zaraz",
     "category": "Tag Manager / CDN",
     "confidence": "high",
     "domain_signatures": [],
-    "html_signatures": [
-      "zaraz"
-    ],
+    "html_signatures": [],
     "script_url_signatures": [
-      "static.cloudflareinsights.com/zaraz",
-      "/cdn-cgi/zaraz/"
+      "cdn-cgi/zaraz",
+      "static.cloudflareinsights.com/zaraz"
     ],
     "js_asset_signatures": [
+      "/cdn-cgi/zaraz/",
       "zaraz.track",
-      "zarazData",
-      "/cdn-cgi/zaraz/"
+      "zarazData"
     ],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [],
@@ -159,39 +1814,648 @@
     "header_signatures": {}
   },
   {
-    "name": "Cloudinary",
-    "category": "Media CDN",
+    "name": "Cloudify.store",
+    "category": "Ecommerce",
     "confidence": "high",
-    "domain_signatures": [
-      "res.cloudinary.com"
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "cloudify_session"
     ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cloudimage",
+    "category": "CDN",
+    "confidence": "medium",
+    "domain_signatures": [],
     "html_signatures": [
-      "res.cloudinary.com",
-      "cloudinary.com"
+      "cloudimg.io"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "ciResponsive.config.domain"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cloudrexx",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "cloudrexx"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CloudSuite",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "cs_secure_session"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cloudways",
+    "category": "PaaS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "cache-provider": [
+        "CLOUDWAYS-CACHE-DE"
+      ]
+    }
+  },
+  {
+    "name": "Cluep",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cas.cluep.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ClustrMaps Widget",
+    "category": "Maps",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "clustrmaps.com"
     ],
     "script_url_signatures": [
-      "widget.cloudinary.com",
-      "upload-widget.cloudinary.com",
-      "cloudinary-core"
+      "clustrmaps.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Clutch",
+    "category": "Shipping",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "widget.clutch.co"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CMS Made Simple",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Made",
+      "Simple"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "CMSSESSID"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "CMSimple",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "CMSimple"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CNZZ",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cnzz.com",
+      "z_stat.php"
     ],
     "js_asset_signatures": [
-      "cloudinary",
-      "cloudinary-core",
-      "res.cloudinary.com"
+      "cnzz_protocol"
     ],
-    "package_url_signatures": [
-      "cloudinary-core",
-      "@cloudinary/url-gen",
-      "@cloudinary/react"
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Coaster CMS",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Coaster"
     ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CodeIgniter",
+    "category": "Web Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "ci_csrf_token"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "ci_csrf_token",
+      "ci_session",
+      "exp_last_activity",
+      "exp_tracker"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Coin Currency Converter",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "apps/coin/coin.js",
+      "myshopify.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Coinbase Commerce",
+    "category": "Payment Processor",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "commerce.coinbase.com/checkout"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CoinHive Captcha",
+    "category": "Captcha",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "authedmine.com",
+      "lib/captcha"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Colibri WP",
+    "category": "Translation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/colibri-page-builder"
+    ],
+    "js_asset_signatures": [
+      "colibriData",
+      "colibriFrontendData"
+    ],
+    "package_url_signatures": [],
     "stylesheet_url_signatures": [
-      "cloudinary.com"
+      "wp-content/plugins/colibri-page-builder"
     ],
     "meta_generator_signatures": [],
-    "dom_marker_signatures": [
-      "data-cloudinary",
-      "cld-responsive"
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Combahton FlowShield",
+    "category": "Captcha",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "FLOWPROXY-ORIGIN"
     ],
+    "header_signatures": {
+      "server": [
+        "antiddos/flowproxy"
+      ]
+    }
+  },
+  {
+    "name": "Combeenation",
+    "category": "Personalisation",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "portal.combeenation.com"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Comm100",
+    "category": "Page Builder",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "comm100_chatButton",
+      "comm100_livechat_open_link",
+      "Comm100API"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Commanders Act TagCommander",
+    "category": "Tag Manager",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "tagcommander.com"
+    ],
+    "js_asset_signatures": [
+      "tc_vars"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Commanders Act TrustCommander",
+    "category": "Cookie Compliance",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "trustcommander.net/privacy"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Commerce.js",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [
+      "spaces.chec.io"
+    ],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.chec.io/v",
+      "chec/commerce.js",
+      "commerce.js"
+    ],
+    "js_asset_signatures": [
+      "CommercejsSpace"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "Commerce.js"
+      ]
+    }
+  },
+  {
+    "name": "Commerce7",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.commerce7.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "commercetools",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "__NEXT_DATA__.props.pageProps.commercetoolsEntity",
+      "COMMERCE_TOOLS_HOST_ATT",
+      "COMMERCE_TOOLS_PROJECT_KEY_ATT"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "commercetools.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Complianz",
+    "category": "A/B Testing",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/complianz-gdpr"
+    ],
+    "js_asset_signatures": [
+      "complianz.version"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "comScore",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "COMSCORE.beacon",
+      "scorecardresearch.com/beacon"
+    ],
+    "script_url_signatures": [
+      "COMSCORE.beacon",
+      "scorecardresearch.com/beacon.js"
+    ],
+    "js_asset_signatures": [
+      "_COMSCORE",
+      "COMSCORE"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Concrete CMS",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "concrete/js"
+    ],
+    "js_asset_signatures": [
+      "CCM_IMAGE_PATH"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "concrete5"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "CONCRETE5"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Conekta",
+    "category": "Payment Processor",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.conekta",
+      "conektaapi/v"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Confer With",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "conferwith.io"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Confiant",
+    "category": "Captcha",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "confiant"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Congressus",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Congressus"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_gat_congressus_analytics",
+      "congressus_session"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Conjured",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "app.conjured.co"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Connectif",
+    "category": "Personalisation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.connectif.cloud"
+    ],
+    "js_asset_signatures": [
+      "connectif.version",
+      "connectifInfo.store"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
   },
@@ -201,15 +2465,18 @@
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [
-      "constantcontact"
-    ],
-    "script_url_signatures": [
-      "static.ctctcdn.com",
+      "constantcontact",
       "constantcontact.com"
     ],
+    "script_url_signatures": [
+      "constantcontact.com",
+      "ctctcdn.com",
+      "static.ctctcdn.com"
+    ],
     "js_asset_signatures": [
-      "ctct",
+      "_ctct_m",
       "constantcontact",
+      "ctctOnLoadCallback",
       "static.ctctcdn.com"
     ],
     "package_url_signatures": [],
@@ -222,32 +2489,309 @@
     "header_signatures": {}
   },
   {
-    "name": "Contentful",
-    "category": "Headless CMS",
-    "confidence": "medium",
-    "domain_signatures": [
-      "ctfassets.net",
-      "contentful.com"
-    ],
-    "html_signatures": [
-      "ctfassets.net",
-      "contentful"
-    ],
+    "name": "Constructor.io",
+    "category": "Search Engine",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
     "script_url_signatures": [
-      "ctfassets.net",
-      "contentful"
+      "cnstrc.com"
     ],
     "js_asset_signatures": [
-      "contentful",
-      "ctfassets.net"
+      "constructorio",
+      "ConstructorioClient"
     ],
-    "package_url_signatures": [
-      "contentful",
-      "@contentful/rich-text-react-renderer"
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Contact Form 7",
+    "category": "Forms",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/contact-form-7"
     ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
     "stylesheet_url_signatures": [
-      "ctfassets.net"
+      "wp-content/plugins/contact-form-7"
     ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Container Media Group",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "containermedia.net"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Contenido",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Contenido"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Contensis",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Contensis"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ContentBox",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "ColdBox",
+      "ContentBox"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Contently",
+    "category": "Other",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "_contently.siteId"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Contentsquare",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "contentsquare.net"
+    ],
+    "js_asset_signatures": [
+      "CS_CONF.trackerDomain"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Contentstack",
+    "category": "CMS",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "contentstack"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ContentStudio",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/plugins/contentstudio"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Contlo",
+    "category": "Shipping",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "contlo.com"
+    ],
+    "js_asset_signatures": [
+      "CONTLO_ENV"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Conversant Consent Tool",
+    "category": "Cookie Compliance",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.conversant.mgr.consensu.org"
+    ],
+    "js_asset_signatures": [
+      "conversant"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Conversio",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "conversio.com"
+    ],
+    "js_asset_signatures": [
+      "Conversio.settings"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Conversio App",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "conversio.com",
+      "myshopify.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Convert",
+    "category": "A/B Testing",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "convertexperiments.com/js"
+    ],
+    "js_asset_signatures": [
+      "convert_temp",
+      "convertData"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Convertcart",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.convertcart.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ConvertFlow",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "convertflow.co"
+    ],
+    "js_asset_signatures": [
+      "convertflow"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [],
@@ -259,12 +2803,13 @@
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [
+      "ck_form",
       "convertkit",
-      "ck_form"
+      "convertkit.com"
     ],
     "script_url_signatures": [
-      "f.convertkit.com",
-      "convertkit.com"
+      "convertkit.com",
+      "f.convertkit.com"
     ],
     "js_asset_signatures": [
       "convertkit",
@@ -282,24 +2827,149 @@
     "header_signatures": {}
   },
   {
+    "name": "Convertri",
+    "category": "Document Management System",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.convertri.com"
+    ],
+    "js_asset_signatures": [
+      "CONVERTRI_CONSTANTS",
+      "ConvertriAnalytics",
+      "convertriParameters"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ConveyThis",
+    "category": "Cart Abandonment",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.conveythis.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Conviva",
+    "category": "Video Player",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "Conviva.Client",
+      "Conviva.Client.version"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cookie Information",
+    "category": "Cookie Compliance",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "CookieInformation.config.cdnUrl"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cookie Information plugin",
+    "category": "Geolocation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/wp-gdpr-compliance"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cookie Notice",
+    "category": "Cookie Compliance",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/cookie-notice"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cookie Script",
+    "category": "Cookie Compliance",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cookie-script.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Cookiebot",
     "category": "Consent Management",
     "confidence": "high",
     "domain_signatures": [
-      "cookiebot.com",
-      "consent.cookiebot.com"
+      "consent.cookiebot.com",
+      "cookiebot.com"
     ],
     "html_signatures": [
-      "Cookiebot",
-      "data-cbid",
-      "consent.cookiebot.com"
+      "consent.cookiebot.com",
+      "data-cbid"
     ],
     "script_url_signatures": [
+      "consent.cookiebot.com",
       "consent.cookiebot.com/uc.js",
       "cookiebot.com/uc.js"
     ],
     "js_asset_signatures": [
       "Cookiebot",
+      "Cookiebot.version",
       "CookieConsent",
       "data-cbid"
     ],
@@ -309,8 +2979,7 @@
     ],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [
-      "data-cbid",
-      "CookieDeclaration"
+      "data-cbid"
     ],
     "cookie_signatures": [
       "CookieConsent",
@@ -319,13 +2988,443 @@
     "header_signatures": {}
   },
   {
+    "name": "CookieFirst",
+    "category": "Cookie Compliance",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "consent.cookiefirst.com"
+    ],
+    "js_asset_signatures": [
+      "cookiefirst_show_settings"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CookieHub",
+    "category": "Cookie Compliance",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cookiehub.net"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CookieYes",
+    "category": "Cookie Compliance",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "app.cookieyes.com/client_data",
+      "cdn-cookieyes.com/client_data",
+      "wp-content/plugins/cookie-law-info"
+    ],
+    "js_asset_signatures": [
+      "cookieYes"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/plugins/cookie-law-info"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cooladata",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.cooladata.com"
+    ],
+    "js_asset_signatures": [
+      "cooladata"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "core-js",
+    "category": "JavaScript Library",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "__core-js_shared__",
+      "__core-js_shared__.versions.0.version",
+      "_babelPolyfill",
+      "core.version"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Corebine",
+    "category": "CMS",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "corebine"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CoRover",
+    "category": "Page Builder",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "corover.mobi"
+    ],
+    "js_asset_signatures": [
+      "CoRover_tag"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Correos Ecommerce",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "mycorreosecommerce.com"
+    ],
+    "js_asset_signatures": [
+      "Comandia"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cosmic",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "cosmicjs.com"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "cosmicjs.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cosmoshop",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cosmoshop_functions.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cotonti",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Cotonti"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CouchDB",
+    "category": "Web Server",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "CouchDB"
+      ]
+    }
+  },
+  {
+    "name": "Coveo",
+    "category": "Search Engine",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "static.cloud.coveo.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Covet.pics",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "covet.pics"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cowboy",
+    "category": "Web Server",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "Cowboy"
+      ]
+    }
+  },
+  {
+    "name": "Cozy AntiTheft",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdncozyantitheft.addons.business"
+    ],
+    "js_asset_signatures": [
+      "cozyEcoAdnsUa"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CPABuild",
+    "category": "Affiliate Program",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "CPABuildLock"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CPG Dragonfly",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "CPG",
+      "Dragonfly"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "Dragonfly"
+      ]
+    }
+  },
+  {
+    "name": "CppCMS",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "CppCMS"
+      ]
+    }
+  },
+  {
+    "name": "Craft CMS",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "CraftSessionId"
+    ],
+    "header_signatures": {
+      "x-powered-by": [
+        "bCraft"
+      ]
+    }
+  },
+  {
+    "name": "Craft Commerce",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "bCraft"
+      ]
+    }
+  },
+  {
+    "name": "Craftum",
+    "category": "Document Management System",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Craftum"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cratejoy",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "statjoyServer"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "cratejoy_muffin42",
+      "statjoy_metrics"
+    ],
+    "header_signatures": {}
+  },
+  {
     "name": "Crazy Egg",
     "category": "Analytics",
     "confidence": "high",
     "domain_signatures": [],
-    "html_signatures": [
-      "crazyegg"
-    ],
+    "html_signatures": [],
     "script_url_signatures": [
       "script.crazyegg.com/pages/scripts"
     ],
@@ -339,9 +3438,78 @@
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [
-      "_ceir",
-      "_ceg.s"
+      "_ceg.s",
+      "_ceir"
     ],
+    "header_signatures": {}
+  },
+  {
+    "name": "CreateJS",
+    "category": "CDN",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "code.createjs.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Creatium",
+    "category": "Document Management System",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Creatium"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Creativ.eMail",
+    "category": "Geolocation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/creative-mail-by-constant-contact"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Crikle",
+    "category": "Page Builder",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "crikle.contactId",
+      "crikle.openConvertWidget"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
     "header_signatures": {}
   },
   {
@@ -350,16 +3518,15 @@
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [
-      "CRISP_WEBSITE_ID",
-      "crisp.chat"
+      "crisp.chat",
+      "CRISP_WEBSITE_ID"
     ],
     "script_url_signatures": [
       "client.crisp.chat"
     ],
     "js_asset_signatures": [
-      "$crisp",
-      "CRISP_WEBSITE_ID",
-      "client.crisp.chat"
+      "client.crisp.chat",
+      "CRISP_WEBSITE_ID"
     ],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [],
@@ -368,6 +3535,333 @@
     "cookie_signatures": [
       "crisp-client"
     ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Crisp Live Chat",
+    "category": "Page Builder",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "client.crisp.chat"
+    ],
+    "js_asset_signatures": [
+      "__CRISP_INCLUDED",
+      "CRISP_WEBSITE_ID"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Criteo",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cas.criteo.com",
+      "static.criteo.net/js/ld/ld.js"
+    ],
+    "js_asset_signatures": [
+      "criteo_pubtag",
+      "criteo_q"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "criteo.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Crocoblock JetElements",
+    "category": "Geolocation",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "jetElements"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cross Pixel",
+    "category": "Loyalty",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "tag.crsspxl.com"
+    ],
+    "js_asset_signatures": [
+      "cp_C4w1ldN2d9PmVrkN"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cross Sell",
+    "category": "Personalisation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "load.csell.co"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CrownPeak",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "js/crownpeak"
+    ],
+    "js_asset_signatures": [
+      "CrownPeakAutocomplete",
+      "CrownPeakSearch"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "crypto-js",
+    "category": "User Onboarding",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "crypto-js"
+    ],
+    "js_asset_signatures": [
+      "CryptoJS.algo",
+      "CryptoJS.Rabbit"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Crystallize",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "__crystallizeConfig.API_URL"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "crystallize.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CS Cart",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "cs-cart.com"
+    ],
+    "script_url_signatures": [
+      "var/cache/misc/assets/js/tygh/scripts-"
+    ],
+    "js_asset_signatures": [
+      "fn_buy_together_apply_discount",
+      "fn_calculate_total_shipping",
+      "fn_compare_strings"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CubeCart",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "cubecart.com"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "cubecart"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cufon",
+    "category": "Font Script",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cufon-yui.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Custom Fonts",
+    "category": "Geolocation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/custom-fonts"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Customer.io",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "assets.customer.io"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Customily",
+    "category": "Personalisation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "customily.com"
+    ],
+    "js_asset_signatures": [
+      "customily.sticky"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cwicly",
+    "category": "Geolocation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/cwicly"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/uploads/cwicly"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cxense",
+    "category": "Personalisation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "cXenseParse:itm-meta-keywords",
+      "cXenseParse:pageclass",
+      "cXenseParse:publishtime",
+      "cXenseParse:url"
+    ],
+    "script_url_signatures": [
+      "cxense.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Czater",
+    "category": "Page Builder",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "czater.pl"
+    ],
+    "js_asset_signatures": [
+      "czaterMethods"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
     "header_signatures": {}
   }
 ]

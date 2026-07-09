@@ -1,132 +1,132 @@
 {
-  "total_domains": 5,
-  "reachable_domains": 5,
-  "total_findings": 77,
-  "unique_technologies": 43,
+  "total_domains": 200,
+  "reachable_domains": 189,
+  "total_findings": 1093,
+  "unique_technologies": 204,
   "confidence_distribution": {
-    "high": 55,
-    "medium": 22
+    "high": 962,
+    "medium": 131
   },
   "top_technologies": [
     {
-      "name": "Cloudflare",
-      "domains": 5
-    },
-    {
-      "name": "Google Analytics",
-      "domains": 4
-    },
-    {
-      "name": "Zendesk",
-      "domains": 4
+      "name": "WordPress",
+      "domains": 69
     },
     {
       "name": "jQuery",
-      "domains": 4
+      "domains": 62
     },
     {
-      "name": "Tailwind CSS",
-      "domains": 4
-    },
-    {
-      "name": "Divi",
-      "domains": 3
-    },
-    {
-      "name": "Swiper",
-      "domains": 3
-    },
-    {
-      "name": "Magento",
-      "domains": 3
-    },
-    {
-      "name": "Iterable",
-      "domains": 3
-    },
-    {
-      "name": "Bold Commerce",
-      "domains": 2
-    },
-    {
-      "name": "Amazon Web Services",
-      "domains": 2
-    },
-    {
-      "name": "Foundation",
-      "domains": 2
-    },
-    {
-      "name": "Google Tag Manager",
-      "domains": 2
-    },
-    {
-      "name": "Leaflet",
-      "domains": 2
+      "name": "Cloudflare",
+      "domains": 51
     },
     {
       "name": "Google Fonts",
-      "domains": 2
+      "domains": 50
     },
     {
-      "name": "Bootstrap",
-      "domains": 2
+      "name": "Google Analytics",
+      "domains": 43
+    },
+    {
+      "name": "Apache HTTP Server",
+      "domains": 43
+    },
+    {
+      "name": "Font Awesome",
+      "domains": 37
+    },
+    {
+      "name": "reCAPTCHA",
+      "domains": 34
+    },
+    {
+      "name": "Nginx",
+      "domains": 28
+    },
+    {
+      "name": "Google Tag Manager",
+      "domains": 27
     },
     {
       "name": "Webpack",
-      "domains": 2
+      "domains": 24
     },
     {
-      "name": "Help Scout",
-      "domains": 2
+      "name": "core-js",
+      "domains": 22
     },
     {
-      "name": "Backbone.js",
-      "domains": 2
+      "name": "Squarespace",
+      "domains": 22
     },
     {
-      "name": "Smile.io",
-      "domains": 1
+      "name": "Swiper",
+      "domains": 22
     },
     {
-      "name": "Ghost",
-      "domains": 1
+      "name": "Cloudflare Bot Management",
+      "domains": 21
     },
     {
-      "name": "Microsoft Azure",
-      "domains": 1
+      "name": "Akamai",
+      "domains": 15
     },
     {
-      "name": "Google Cloud",
-      "domains": 1
+      "name": "Bootstrap",
+      "domains": 14
     },
     {
-      "name": "Meta Pixel",
-      "domains": 1
+      "name": "Elementor",
+      "domains": 14
+    },
+    {
+      "name": "WooCommerce",
+      "domains": 14
+    },
+    {
+      "name": "LiteSpeed",
+      "domains": 13
+    },
+    {
+      "name": "Moment.js",
+      "domains": 12
+    },
+    {
+      "name": "Hotjar",
+      "domains": 12
+    },
+    {
+      "name": "Contact Form 7",
+      "domains": 12
     },
     {
       "name": "Slick Carousel",
-      "domains": 1
+      "domains": 11
     },
     {
-      "name": "Cloudinary",
-      "domains": 1
+      "name": "Afterpay",
+      "domains": 10
     },
     {
-      "name": "PostHog",
-      "domains": 1
+      "name": "Meta Pixel",
+      "domains": 10
     },
     {
-      "name": "WordPress",
-      "domains": 1
+      "name": "Typekit / Adobe Fonts",
+      "domains": 9
     },
     {
-      "name": "Mailchimp",
-      "domains": 1
+      "name": "Lodash",
+      "domains": 9
     },
     {
-      "name": "PrestaShop",
-      "domains": 1
+      "name": "Google Hosted Libraries",
+      "domains": 8
+    },
+    {
+      "name": "PHP",
+      "domains": 8
     }
   ]
 }

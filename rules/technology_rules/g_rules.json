@@ -1,5 +1,45 @@
 [
   {
+    "name": "Gambio",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "content.php?coID=",
+      "templates/gambio"
+    ],
+    "script_url_signatures": [
+      "gm_javascript.js.php"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Gameball",
+    "category": "Reservation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "assets.gameball.co"
+    ],
+    "js_asset_signatures": [
+      "gbReferralCodeInput",
+      "GbSdk.settings.shop"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Gatsby",
     "category": "JavaScript Framework",
     "confidence": "high",
@@ -9,8 +49,7 @@
       "gatsby-focus-wrapper"
     ],
     "script_url_signatures": [
-      "webpack-runtime",
-      "app-"
+      "webpack-runtime"
     ],
     "js_asset_signatures": [
       "___gatsby",
@@ -31,31 +70,338 @@
     "header_signatures": {}
   },
   {
+    "name": "Gatsby Cloud Image CDN",
+    "category": "CDN",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "_gatsby/image"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Gauges",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "_gauges"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_gauges_"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "GeeTest",
+    "category": "Captcha",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "geetest.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "content-security-policy": [
+        "geetest.com"
+      ]
+    }
+  },
+  {
+    "name": "Gemius",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "gemius_hit"
+    ],
+    "script_url_signatures": [
+      "hit.gemius.pl",
+      "hit.gemius.pl/xgemius.js",
+      "xgemius.js"
+    ],
+    "js_asset_signatures": [
+      "gemius_hit",
+      "gemius_init",
+      "gemius_pending",
+      "pp_gemius_hit"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "GemPages",
     "category": "Page Builder / Ecommerce App",
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [
-      "gempages",
       "gem-page"
     ],
     "script_url_signatures": [
-      "gempages.net",
-      "gempages"
+      "files/gempagev",
+      "gempages.net"
     ],
     "js_asset_signatures": [
-      "GemPages"
+      "GemPages",
+      "GEMSTORE",
+      "GEMVENDOR"
     ],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [
-      "gempages.net",
-      "gempages"
+      "gempages.net"
     ],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [
-      "gem-page",
-      "gempages"
+      "gem-page"
     ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GeneratePress GP Premium",
+    "category": "Geolocation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/gp-premium"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Genesis blocks",
+    "category": "Geolocation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "wp-block-atomic-blocks-"
+    ],
+    "script_url_signatures": [
+      "wp-content/themes/genesis-blocks/lib/js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/plugins/atomic-blocks",
+      "wp-content/plugins/genesis-blocks"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Genesys Cloud",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "apps.mypurecloud"
+    ],
+    "js_asset_signatures": [
+      "PURECLOUD_WEBCHAT_FRAME_CONFIG"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GeneXus",
+    "category": "Programming Language",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "gxtheme_css_reference"
+    ],
+    "script_url_signatures": [
+      "static/gxgral.js",
+      "static/gxtimezone.js"
+    ],
+    "js_asset_signatures": [
+      "gx.gxVersion"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Geniee",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "gssprt.jp"
+    ],
+    "script_url_signatures": [
+      "gsspcln.jp"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GEOvendas",
+    "category": "Ecommerce",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "geovendas.com.br"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GetButton",
+    "category": "Widget",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "getbutton.io"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GetMeAShop",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "gmas_base_url",
+      "search_api_base_uri"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "getmeashop.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GetResponse",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "getresponse.com"
+    ],
+    "script_url_signatures": [
+      "getresponse.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GetSimple CMS",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "GetSimple"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Getsitecontrol",
+    "category": "Widget",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "getsitecontrol.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GetSocial",
+    "category": "Security",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "api.at.getsocial.io"
+    ],
+    "js_asset_signatures": [
+      "GETSOCIAL_VERSION"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
   },
@@ -65,31 +411,664 @@
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [
-      "ghost-content",
-      "ghost-blog",
       "ghost-api",
+      "ghost-blog",
+      "ghost-content",
       "ghost.org"
     ],
     "script_url_signatures": [
-      "ghost.org",
-      "/ghost/"
+      "ghost.org"
     ],
     "js_asset_signatures": [
-      "ghost",
       "ghost.org",
       "ghost/api"
     ],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [
-      "ghost.org",
-      "/ghost/"
+      "ghost.org"
     ],
     "meta_generator_signatures": [
       "ghost"
     ],
-    "dom_marker_signatures": [
-      "ghost"
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Gigalixir",
+    "category": "PaaS",
+    "confidence": "high",
+    "domain_signatures": [
+      "gigalixirapp.com"
     ],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Gist",
+    "category": "Page Builder",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "gist.setAppId"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Gist Giftship",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "assets/js/giftship"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GitHub Pages",
+    "category": "PaaS",
+    "confidence": "high",
+    "domain_signatures": [
+      "github.io"
+    ],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "GitHub.com"
+      ]
+    }
+  },
+  {
+    "name": "GiveWP",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "give.js",
+      "wp-content/plugins/give"
+    ],
+    "js_asset_signatures": [
+      "Give.donor",
+      "giveApiSettings"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Gladly",
+    "category": "Page Builder",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.gladly.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Glassbox",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.glassboxcdn.com"
+    ],
+    "js_asset_signatures": [
+      "sessioncamConfiguration",
+      "SessionCamRecorder"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GlassFish",
+    "category": "Web Server",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "Edition",
+        "GlassFish"
+      ]
+    }
+  },
+  {
+    "name": "Glassix",
+    "category": "Page Builder",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "GlassixWidgetClient"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Glide.js",
+    "category": "User Onboarding",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "@glidejs/glide"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "data-glide-el"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Glider.js",
+    "category": "User Onboarding",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "glider.min.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Glitch",
+    "category": "PaaS",
+    "confidence": "high",
+    "domain_signatures": [
+      "glitch.me"
+    ],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Global-e",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "global-e.com"
+    ],
+    "js_asset_signatures": [
+      "GLBE_PARAMS",
+      "GLOBALE_ENGINE_CONFIG"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "GLBE_SESS_ID",
+      "GlobalE_Consent",
+      "GlobalE_CT_Data",
+      "GlobalE_Data",
+      "GlobalE_SupportThirdPartCookies"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "GlobalShopex",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "globalshopex.com"
+    ],
+    "js_asset_signatures": [
+      "GSXMiniCheckout",
+      "GSXPreviewCheckout"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Globo Also Bought",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "assets/globo.alsobought.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Globo Color Swatch",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "assets/globo.swatch.data.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Globo Form Builder",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "assets/globo.formbuilder.init.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Globo Pre-Order",
+    "category": "Other",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "GloboPreorderParams"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Glopal",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "glopal.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Gnuboard",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "board.php"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "g4_bbs_img",
+      "g4_is_admin",
+      "g5_is_admin",
+      "g5_js_ver"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "gnuboard/style.css"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Go Instore",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "gis.goinstore.com"
+    ],
+    "js_asset_signatures": [
+      "GISAPP.videoJsCtrl",
+      "gisAppLib.postRobot"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "content-security-policy": [
+        "goinstore.com"
+      ]
+    }
+  },
+  {
+    "name": "GoAffPro",
+    "category": "Affiliate Program",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "api.goaffpro.com/loader.js"
+    ],
+    "js_asset_signatures": [
+      "gfp_api_server"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GoAhead",
+    "category": "Web Server",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "GoAhead"
+      ]
+    }
+  },
+  {
+    "name": "GoatCounter",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "gc.zgo.at/count.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GoCache",
+    "category": "CDN",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "gocache"
+      ]
+    }
+  },
+  {
+    "name": "GoDaddy CoBlocks",
+    "category": "Geolocation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/coblocks"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/plugins/coblocks"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GoDaddy Online Store",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "via": [
+        "mysimplestore.com"
+      ]
+    }
+  },
+  {
+    "name": "Goftino",
+    "category": "Page Builder",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "goftino.com"
+    ],
+    "js_asset_signatures": [
+      "Goftino.setWidget",
+      "goftino_1",
+      "goftino_getUrl",
+      "goftinoRemoveLoad"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GoJS",
+    "category": "JavaScript Graphics",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "go.GraphObject",
+      "go.version"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Gomag",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "GomagConfig",
+      "GomagForm"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "author": [
+        "Gomag"
+      ]
+    }
+  },
+  {
+    "name": "GoMage",
+    "category": "Other",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "gomage_navigation_loadinfo_text",
+      "gomage_navigation_urlhash",
+      "GomageNavigation",
+      "GomageNavigationClass",
+      "gomageSpinnerModal"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Ads Conversion Tracking",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "googleadservices.com/pagead/conversion_async.js"
+    ],
+    "js_asset_signatures": [
+      "google_trackConversion"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google AdSense",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "2mdn.net",
+      "ad.ca.doubleclick.net",
+      "googlesyndication.com"
+    ],
+    "js_asset_signatures": [
+      "__google_ad_urls",
+      "adsbygoogle",
+      "Goog_AdSense_",
+      "Goog_AdSense_OsdAdapter",
+      "google_ad_"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
   },
@@ -99,34 +1078,91 @@
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [
-      "gtag(",
       "GoogleAnalyticsObject",
-      "googletagmanager.com/gtag/js"
+      "googletagmanager.com/gtag/js",
+      "gtag("
     ],
     "script_url_signatures": [
+      "google-analytics.com",
       "google-analytics.com/analytics.js",
       "googletagmanager.com/gtag/js",
       "www.google-analytics.com",
       "www.googletagmanager.com/gtag/js"
     ],
     "js_asset_signatures": [
-      "gtag(",
+      "analytics.js",
       "ga(",
-      "GoogleAnalyticsObject",
+      "gaGlobal",
       "google-analytics.com/analytics.js",
-      "analytics.js"
+      "GoogleAnalyticsObject",
+      "gtag("
     ],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [
+      "__utma",
       "_ga",
-      "_gid",
-      "_gat",
+      "_ga_",
       "_gac_",
-      "_ga_"
+      "_gat",
+      "_gid"
     ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Analytics Enhanced eCommerce",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "google-analytics.com/plugins/ua"
+    ],
+    "js_asset_signatures": [
+      "gaplugins.EC"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Analytics for WooCommerce",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/woocommerce-google-analytics-integration"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Charts",
+    "category": "JavaScript Graphics",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "__googleVisualizationAbstractRendererElementsCount__",
+      "__gvizguard__"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
     "header_signatures": {}
   },
   {
@@ -135,23 +1171,23 @@
     "confidence": "medium",
     "domain_signatures": [
       "appspot.com",
-      "web.app",
-      "storage.googleapis.com",
       "cloudfunctions.net",
-      "run.app"
+      "run.app",
+      "storage.googleapis.com",
+      "web.app"
     ],
     "html_signatures": [
-      "storage.googleapis.com",
-      "appspot.com"
+      "appspot.com",
+      "storage.googleapis.com"
     ],
     "script_url_signatures": [
-      "storage.googleapis.com",
-      "appspot.com"
+      "appspot.com",
+      "storage.googleapis.com"
     ],
     "js_asset_signatures": [
-      "storage.googleapis.com",
       "appspot.com",
-      "cloudfunctions.net"
+      "cloudfunctions.net",
+      "storage.googleapis.com"
     ],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [
@@ -161,13 +1197,27 @@
     "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {
-      "x-cloud-trace-context": [
-        ""
-      ],
       "server": [
         "Google Frontend"
       ]
     }
+  },
+  {
+    "name": "Google Customer Reviews",
+    "category": "Shipping",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "google.com/shopping/customerreviews"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
   },
   {
     "name": "Google Fonts",
@@ -176,16 +1226,14 @@
     "domain_signatures": [],
     "html_signatures": [
       "fonts.googleapis.com",
-      "fonts.gstatic.com",
-      "Google Fonts"
+      "fonts.gstatic.com"
     ],
     "script_url_signatures": [
       "ajax.googleapis.com/ajax/libs/webfont"
     ],
     "js_asset_signatures": [
-      "WebFont.load",
       "fonts.googleapis.com",
-      "google: { families"
+      "WebFont.load"
     ],
     "package_url_signatures": [
       "webfontloader"
@@ -201,17 +1249,107 @@
     "header_signatures": {}
   },
   {
+    "name": "Google Forms",
+    "category": "Other",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "docs.google.com/forms"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Hosted Libraries",
+    "category": "CDN",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "ajax.googleapis.com/ajax/libs"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "ajax.googleapis.com/ajax/libs"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Maps",
+    "category": "Maps",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "maps.googleapis.com/maps/api/js"
+    ],
+    "script_url_signatures": [
+      "maps.googleapis.com/maps/api/js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google My Business",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [
+      "business.site"
+    ],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Optimize",
+    "category": "A/B Testing",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "googleoptimize.com/optimize.js"
+    ],
+    "js_asset_signatures": [
+      "google_optimize"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Google Pay",
     "category": "Payments",
     "confidence": "medium",
     "domain_signatures": [],
     "html_signatures": [
-      "google-pay",
       "pay.google.com"
     ],
     "script_url_signatures": [
       "pay.google.com",
-      "googlepay"
+      "pay.js"
     ],
     "js_asset_signatures": [
       "google.payments.api",
@@ -224,7 +1362,65 @@
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [
+      "data-shopify-buttoncontainer",
       "google-pay-button"
+    ],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Publisher Tag",
+    "category": "Advertising",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "googletagservices.com/tag/js/gpt.js",
+      "pagead2.googlesyndication.com/tag/js/gpt.js",
+      "securepubads.g.doubleclick.net/tag/js/gpt.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Sign-in",
+    "category": "Security",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "accounts.google.com/o/oauth2",
+      "google-signin-client_id",
+      "google-signin-scope"
+    ],
+    "script_url_signatures": [
+      "accounts.google.com/gsi/client"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Sites",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [
+      "https://sites.google.com"
     ],
     "cookie_signatures": [],
     "header_signatures": {}
@@ -235,18 +1431,96 @@
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [
-      "gtm-",
-      "googletagmanager.com/ns.html",
-      "dataLayer"
+      "googletagmanager.com/ns.html"
     ],
     "script_url_signatures": [
       "googletagmanager.com/gtm.js"
     ],
     "js_asset_signatures": [
-      "GTM-",
-      "googletagmanager.com/gtm.js",
       "dataLayer",
-      "dataLayer.push"
+      "dataLayer.push",
+      "googletag",
+      "googletagmanager.com/gtm.js"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Tag Manager for WordPress",
+    "category": "Geolocation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/duracelltomi-google-tag-manager"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/plugins/duracelltomi-google-tag-manager"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Wallet",
+    "category": "Payment Processor",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "checkout.google.com",
+      "wallet.google.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Google Web Server",
+    "category": "Web Server",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "gws"
+      ]
+    }
+  },
+  {
+    "name": "Google Web Toolkit",
+    "category": "Web Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "gwt:property"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "__gwt_",
+      "__gwt_activeModules",
+      "__gwt_getMetaProperty",
+      "__gwt_isKnownPropertyValue",
+      "__gwt_stylesLoaded",
+      "__gwtlistener"
     ],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [],
@@ -260,17 +1534,14 @@
     "category": "Customer Support / Ecommerce App",
     "confidence": "high",
     "domain_signatures": [],
-    "html_signatures": [
-      "gorgias"
-    ],
+    "html_signatures": [],
     "script_url_signatures": [
       "config.gorgias.chat",
       "gorgias.chat"
     ],
     "js_asset_signatures": [
-      "GorgiasChat",
-      "gorgias",
-      "config.gorgias.chat"
+      "config.gorgias.chat",
+      "GorgiasChat"
     ],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [],
@@ -282,30 +1553,710 @@
     "header_signatures": {}
   },
   {
+    "name": "GoStats",
+    "category": "Analytics",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "_go_track_src",
+      "_goStatsRun",
+      "go_msie"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GotiPath",
+    "category": "CDN",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "gotipath.com",
+      "gpcdn.net"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-cache": [
+        "swiftserve.com"
+      ]
+    }
+  },
+  {
+    "name": "GOV.UK Frontend",
+    "category": "UI Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "0-9a-fA-F"
+    ],
+    "script_url_signatures": [
+      "0-9a-fA-F",
+      "govuk-frontend"
+    ],
+    "js_asset_signatures": [
+      "GOVUKFrontend"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GOV.UK Template",
+    "category": "UI Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "govuk-template.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GOV.UK Toolkit",
+    "category": "UI Framework",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "GOVUK.details",
+      "GOVUK.modules",
+      "GOVUK.primaryLinks"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Govalo",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "assets/govalo.min.js",
+      "cdn.shopify.com/extensions"
+    ],
+    "js_asset_signatures": [
+      "Govalo.meta"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "govCMS",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Drupal",
+      "govCMS",
+      "http://drupal.org"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GPT AI Power",
+    "category": "Geolocation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/gpt3-ai-content-generator"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Grab Pay Later",
+    "category": "Payment Processor",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "grab-paylater.js"
+    ],
+    "js_asset_signatures": [
+      "grab_widget_money_format",
+      "GrabWidget"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Grafana",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "com/public/build"
+    ],
+    "js_asset_signatures": [
+      "__grafana_public_path__"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Graffiti CMS",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "graffiti.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Graffiti"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "graffitibot"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "GrandNode",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "--GrandNode"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "grandnode"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "Grand.customer"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "GrapesJS",
+    "category": "Document Management System",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "grapesjs.version"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GraphCMS",
+    "category": "CMS",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "media.graphcms.com"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GraphQL",
+    "category": "Programming Language",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "graphqlMethod",
+      "store-config"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Grasp",
+    "category": "Page Builder",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [
+      "CASENGO.widget",
+      "CASENGO_INLINE_COOKIE",
+      "casengoUpdateWidget"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Grav",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "GravCMS"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Gravity Forms",
+    "category": "Forms",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "gform_body",
+      "gform_fields",
+      "gform_wrapper",
+      "wp-content/plugins/gravityforms/css"
+    ],
+    "script_url_signatures": [
+      "wp-content/plugins/gravityforms/js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GreatPages",
+    "category": "Document Management System",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "greatpages.com.br"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Green Valley CMS",
+    "category": "CMS",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "content.jsp?objectid=",
+      "DC.identifier"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Griddo",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Griddo"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Gridsome",
+    "category": "Cryptominer",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Gridsome"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Grin",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "grin-sdk.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GrocerKey",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "grocerkey-widget.s3.amazonaws.com",
+      "grocerywebsite.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GroupBy",
+    "category": "Search Engine",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.groupbycloud.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Growave",
+    "category": "Marketing Automation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "socialshopwave.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GrowingIO",
+    "category": "Analytics",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "assets.growingio.com",
+      "gio.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "gr_user_id",
+      "grwng_uid"
+    ],
+    "header_signatures": {}
+  },
+  {
     "name": "GSAP",
     "category": "JavaScript Library",
     "confidence": "high",
     "domain_signatures": [],
-    "html_signatures": [
-      "gsap"
-    ],
+    "html_signatures": [],
     "script_url_signatures": [
+      "cdn.jsdelivr.net/npm/gsap",
+      "cdnjs.cloudflare.com/ajax/libs/gsap",
       "gsap.min.js",
       "TweenMax.min.js",
-      "cdnjs.cloudflare.com/ajax/libs/gsap",
-      "cdn.jsdelivr.net/npm/gsap",
       "unpkg.com/gsap"
     ],
     "js_asset_signatures": [
       "gsap.registerPlugin",
+      "gsap.version",
+      "gsapVersions",
+      "TweenLite",
+      "TweenLite.version",
       "TweenMax",
-      "TweenLite"
+      "TweenMax.version"
     ],
     "package_url_signatures": [
       "gsap"
     ],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GTranslate",
+    "category": "Geolocation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "wp-content/plugins/gtranslate"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/plugins/gtranslate"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GTranslate app",
+    "category": "Other",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "gtranslate.io/shopify"
+    ],
+    "script_url_signatures": [
+      "gtranslate.io/shopify"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GuideIT",
+    "category": "WordPress Hosting",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "platform": [
+        "GuideIT"
+      ]
+    }
+  },
+  {
+    "name": "GumGum",
+    "category": "Advertising",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "gumgum.com"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Gumlet",
+    "category": "Returns",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.gumlet.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Gumroad",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "gumroad.com/l"
+    ],
+    "script_url_signatures": [
+      "gumroad.com/js/gumroad-embed.js",
+      "gumroad.com/js/gumroad.js",
+      "gumroad.com/packs/js"
+    ],
+    "js_asset_signatures": [
+      "createGumroadOverlay",
+      "GumroadOverlay"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_gumroad_app_session",
+      "_gumroad_guid"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "gunicorn",
+    "category": "Web Server",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "gunicorn"
+      ]
+    }
+  },
+  {
+    "name": "Gutenberg",
+    "category": "Geolocation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/gutenberg"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/plugins/gutenberg"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "GX WebManager",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "WebManager"
+    ],
     "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}

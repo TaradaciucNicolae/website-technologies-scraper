@@ -144,10 +144,20 @@ def detect_technologies(
     if javascript_assets is None:
         javascript_assets = []
 
+    soup = BeautifulSoup(html, "html.parser")
     detections: list[TechnologyDetection] = []
 
     for rule in rules:
-        evidence = collect_evidence_for_rule(rule, domain, final_url, html, normalized_headers, cookies, javascript_assets)
+        evidence = collect_evidence_for_rule(
+            rule,
+            domain,
+            final_url,
+            html,
+            soup,
+            normalized_headers,
+            cookies,
+            javascript_assets,
+        )
 
         if not evidence:
             continue
@@ -171,6 +181,7 @@ def collect_evidence_for_rule(
     domain: str,
     final_url: str | None,
     html: str,
+    soup: BeautifulSoup,
     normalized_headers: dict[str, str],
     cookies: dict[str, str],
     javascript_assets: list[JavaScriptAsset],
@@ -184,6 +195,7 @@ def collect_evidence_for_rule(
     evidence.extend(
         collect_html_evidence(
             html=html,
+            soup=soup,
             html_signatures=rule.html_signatures,
             script_url_signatures=rule.script_url_signatures,
             package_url_signatures=rule.package_url_signatures,
@@ -251,6 +263,7 @@ def collect_domain_evidence(
 # Find technology signatures inside the HTML response.
 def collect_html_evidence(
     html: str,
+    soup: BeautifulSoup,
     html_signatures: list[str],
     script_url_signatures: list[str],
     package_url_signatures: list[str],
@@ -261,14 +274,24 @@ def collect_html_evidence(
 ) -> list[TechnologyEvidence]:
 
     evidence: list[TechnologyEvidence] = []
-    soup = BeautifulSoup(html, "html.parser")
 
-    evidence.extend(collect_script_url_evidence(soup, script_url_signatures, confidence))
-    evidence.extend(collect_package_url_evidence(soup, package_url_signatures, confidence))
-    evidence.extend(collect_stylesheet_url_evidence(soup, stylesheet_url_signatures, confidence))
-    evidence.extend(collect_meta_generator_evidence(soup, meta_generator_signatures, confidence))
-    evidence.extend(collect_dom_marker_evidence(soup, dom_marker_signatures, confidence))
-    evidence.extend(collect_raw_html_evidence(html, html_signatures, confidence))
+    if script_url_signatures:
+        evidence.extend(collect_script_url_evidence(soup, script_url_signatures, confidence))
+
+    if package_url_signatures:
+        evidence.extend(collect_package_url_evidence(soup, package_url_signatures, confidence))
+
+    if stylesheet_url_signatures:
+        evidence.extend(collect_stylesheet_url_evidence(soup, stylesheet_url_signatures, confidence))
+
+    if meta_generator_signatures:
+        evidence.extend(collect_meta_generator_evidence(soup, meta_generator_signatures, confidence))
+
+    if dom_marker_signatures:
+        evidence.extend(collect_dom_marker_evidence(soup, dom_marker_signatures, confidence))
+
+    if html_signatures:
+        evidence.extend(collect_raw_html_evidence(html, html_signatures, confidence))
 
     # Return HTML evidence items for the matched signatures.
     return evidence
@@ -615,9 +638,7 @@ def collect_cookie_evidence(
         cookie_name_lower = cookie_name.lower()
 
         for signature in signatures:
-            normalized_signature = signature.lower()
-
-            if normalized_signature not in cookie_name_lower:
+            if not cookie_signature_matches(cookie_name_lower, signature):
                 continue
 
             excerpt = f"{cookie_name}={cookie_value}"
@@ -639,6 +660,19 @@ def collect_cookie_evidence(
             break
 
     return evidence
+
+
+def cookie_signature_matches(cookie_name_lower: str, signature: str) -> bool:
+    normalized_signature = signature.lower()
+
+    if not normalized_signature:
+        return False
+
+    if normalized_signature.startswith("^"):
+        expected_prefix = normalized_signature[1:]
+        return cookie_name_lower.startswith(expected_prefix)
+
+    return normalized_signature in cookie_name_lower
 
 
 # Find technology signatures inside fetched JavaScript assets.

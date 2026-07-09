@@ -4,6 +4,18 @@ import time
 import requests
 
 
+DEFAULT_REQUEST_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/126.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+}
+
+
 @dataclass
 class WebsiteFetchResult:
     domain: str
@@ -21,10 +33,18 @@ class WebsiteFetchResult:
 
 
 
-def fetch_website(domain: str, timeout_seconds: int = 10) -> WebsiteFetchResult:
+def fetch_website(
+    domain: str,
+    timeout_seconds: int = 20,
+    request_headers: dict[str, str] | None = None,
+) -> WebsiteFetchResult:
     attempted_urls: list[str] = []
     last_error: str | None = None
     start_time = time.perf_counter()
+    headers = DEFAULT_REQUEST_HEADERS.copy()
+
+    if request_headers is not None:
+        headers.update(request_headers)
 
     for transfer_protocol in ["https", "http"]:
         attempted_url = f"{transfer_protocol}://{domain}"
@@ -35,9 +55,7 @@ def fetch_website(domain: str, timeout_seconds: int = 10) -> WebsiteFetchResult:
                 attempted_url,
                 timeout=timeout_seconds,
                 allow_redirects=True,
-                headers={
-                    "User-Agent": "Website Technologies Scraper"
-                },
+                headers=headers,
             )
 
             elapsed_ms = int((time.perf_counter() - start_time) * 1000)

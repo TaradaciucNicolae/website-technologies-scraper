@@ -10,6 +10,30 @@ RULES_PATH = Path("rules/technology_rules")
 
 class TechnologyDetectorTests(unittest.TestCase):
 
+    def get_detected_names(
+        self,
+        html: str = "",
+        headers: dict[str, str] | None = None,
+        cookies: dict[str, str] | None = None,
+        javascript_assets: list[JavaScriptAsset] | None = None,
+    ) -> list[str]:
+        rules = load_technology_rules(RULES_PATH)
+
+        if headers is None:
+            headers = {}
+
+        detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
+            html=html,
+            headers=headers,
+            rules=rules,
+            cookies=cookies,
+            javascript_assets=javascript_assets,
+        )
+
+        return [detection.name for detection in detections]
+
     # Test detection using only an HTML URL/signature.
     def test_detects_shopify_from_html(self) -> None:
         rules = load_technology_rules(RULES_PATH)
@@ -117,8 +141,8 @@ class TechnologyDetectorTests(unittest.TestCase):
         detections = detect_technologies(
             domain="example.com",
             final_url="https://example.com",
-            html="<html><body>Hello</body></html>",
-            headers={"Server": "nginx"},
+            html="<html><body>Plain test page</body></html>",
+            headers={"Server": "ExampleServer"},
             rules=rules,
         )
 
@@ -347,7 +371,7 @@ class TechnologyDetectorTests(unittest.TestCase):
 
         self.assertEqual(stylesheet_evidence.source, "html")
         self.assertEqual(stylesheet_evidence.location, "link[href]")
-        self.assertEqual(stylesheet_evidence.matched_value, "wp-content")
+        self.assertEqual(stylesheet_evidence.matched_value, "/wp-content/")
         self.assertIn("wp-content", stylesheet_evidence.excerpt)
         self.assertEqual(stylesheet_evidence.confidence, "high")
 
@@ -577,6 +601,434 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertEqual(javascript_evidence.matched_value, "analytics.load")
         self.assertIn("analytics.load", javascript_evidence.excerpt)
         self.assertEqual(javascript_evidence.confidence, "high")
+
+
+    def test_min_js_alone_does_not_detect_removed_marketing_tools(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<script src="/assets/min.js"></script>'
+        )
+
+        false_positive_names = [
+            "Admitad",
+            "Apptus",
+            "Chord",
+            "Marketo Forms",
+            "Mixpanel",
+            "Q4 Cookie Monster",
+            "Quanta",
+            "Segmanta",
+            "Sitecore Engagement Cloud",
+            "Split",
+        ]
+
+        for technology_name in false_positive_names:
+            self.assertNotIn(technology_name, detected_names)
+
+
+    def test_og_image_alone_does_not_detect_cococart_or_lede(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<meta property="og:image" content="https://example.com/image.png">'
+        )
+
+        self.assertNotIn("Cococart", detected_names)
+        self.assertNotIn("Lede", detected_names)
+
+
+    def test_wp_content_alone_does_not_detect_perfmatters(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<script src="/wp-content"></script>'
+        )
+
+        self.assertNotIn("Perfmatters", detected_names)
+
+
+    def test_frontend_min_js_alone_does_not_detect_form_plugins(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<script src="/wp-content/plugins/example/assets/frontend.min.js"></script>'
+        )
+
+        self.assertNotIn("WPForms", detected_names)
+        self.assertNotIn("ProfilePress", detected_names)
+
+
+    def test_wpforms_still_detects_from_specific_plugin_path(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<script src="/wp-content/plugins/wpforms/assets/js/wpforms.js"></script>'
+        )
+
+        self.assertIn("WPForms", detected_names)
+
+
+    def test_builder_alone_does_not_detect_removed_builders(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<meta name="generator" content="Builder">'
+        )
+
+        self.assertNotIn("GoDaddy Website Builder", detected_names)
+        self.assertNotIn("Hostinger Website Builder", detected_names)
+        self.assertNotIn("BOOM", detected_names)
+        self.assertNotIn("Sapren", detected_names)
+
+
+    def test_cloud_google_and_cache_words_do_not_detect_removed_cdn_tools(self) -> None:
+        detected_from_cloud = self.get_detected_names(
+            headers={"X-Powered-By": "Cloud"}
+        )
+        detected_from_google = self.get_detected_names(
+            headers={"Via": "google"}
+        )
+        detected_from_cache = self.get_detected_names(
+            headers={"X-Served-By": "cache-abc123"}
+        )
+
+        self.assertNotIn("Elementor Cloud", detected_from_cloud)
+        self.assertNotIn("Google Cloud CDN", detected_from_google)
+        self.assertNotIn("Fastly", detected_from_cache)
+
+
+    def test_payment_card_words_are_not_reported_as_technologies(self) -> None:
+        detected_names = self.get_detected_names(
+            html="shopping-cart visa mastercard american express Apple Pay Google Pay Afterpay"
+        )
+
+        self.assertNotIn("Cart Functionality", detected_names)
+        self.assertNotIn("Visa", detected_names)
+        self.assertNotIn("Mastercard", detected_names)
+        self.assertNotIn("American Express", detected_names)
+        self.assertNotIn("Apple Pay", detected_names)
+        self.assertNotIn("Google Pay", detected_names)
+        self.assertNotIn("Afterpay", detected_names)
+
+
+    def test_removed_false_positive_rules_are_not_loaded(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
+        loaded_technology_names = {
+            rule.name
+            for rule in rules
+        }
+
+        removed_technology_names = [
+            "Adally",
+            "Ametys",
+            "AudioEye",
+            "Backdrop",
+            "Bun",
+            "Cloudinary",
+            "Contentful",
+            "ECharts",
+            "Facebook Chat Plugin",
+            "Flask",
+            "hCaptcha",
+            "Laravel",
+            "Plausible Analytics",
+            "Vercel",
+            "WordPress Multisite",
+            "Zendesk",
+            "Google Font API",
+            "WordPress Block Editor",
+            "WordPress Site Editor",
+            "Next.js Page Router SSG",
+            "Next.js Page Router SSR",
+        ]
+
+        for technology_name in removed_technology_names:
+            self.assertNotIn(technology_name, loaded_technology_names)
+
+
+    def test_social_links_do_not_detect_facebook_chat_plugin(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<a href="https://facebook.com/example-store">Facebook</a>'
+        )
+
+        self.assertNotIn("Facebook Chat Plugin", detected_names)
+
+
+    def test_components_word_does_not_detect_joomla(self) -> None:
+        detected_names = self.get_detected_names(
+            html="<div>components</div>"
+        )
+
+        self.assertNotIn("Joomla", detected_names)
+
+
+    def test_mage_inside_image_text_does_not_detect_magento(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<div class="image-gallery image-large"></div>'
+        )
+
+        self.assertNotIn("Magento", detected_names)
+
+
+    def test_contentful_paint_text_does_not_detect_contentful(self) -> None:
+        detected_names = self.get_detected_names(
+            html="<script>performance.mark('first-contentful-paint')</script>"
+        )
+
+        self.assertNotIn("Contentful", detected_names)
+
+
+    def test_googlesyndication_does_not_detect_esyndicat(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>'
+        )
+
+        self.assertNotIn("eSyndiCat", detected_names)
+
+
+    def test_zendesk_like_function_name_does_not_detect_zendesk(self) -> None:
+        javascript_assets = [
+            JavaScriptAsset(
+                url="https://example.com/assets/vendor.min.js",
+                status_code=200,
+                content_type="application/javascript",
+                content="function zE(){ return 'local helper inside bundled code'; }",
+                error=None,
+            )
+        ]
+
+        detected_names = self.get_detected_names(
+            html='<script src="/assets/vendor.min.js"></script>',
+            javascript_assets=javascript_assets,
+        )
+
+        self.assertNotIn("Zendesk", detected_names)
+
+
+    def test_next_static_path_does_not_detect_vercel(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<script src="/_next/static/chunks/main.js"></script>'
+        )
+
+        self.assertNotIn("Vercel", detected_names)
+
+
+    def test_wp_content_uploads_does_not_detect_wordpress_multisite(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<img src="/wp-content/uploads/example.jpg">'
+        )
+
+        self.assertNotIn("WordPress Multisite", detected_names)
+
+
+    def test_generic_jsdelivr_url_does_not_detect_chart_libraries(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<script src="https://cdn.jsdelivr.net/example-library.js"></script>'
+        )
+
+        self.assertNotIn("Chart.js", detected_names)
+        self.assertNotIn("ECharts", detected_names)
+
+
+    def test_api_js_alone_does_not_detect_hcaptcha(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<script src="/assets/api.js"></script>'
+        )
+
+        self.assertNotIn("hCaptcha", detected_names)
+
+
+    def test_google_option_does_not_detect_google_fonts_or_maps(self) -> None:
+        javascript_assets = [
+            JavaScriptAsset(
+                url="https://example.com/assets/app.js",
+                status_code=200,
+                content_type="application/javascript",
+                content="const options = { google: true, GoogleMap: true };",
+                error=None,
+            )
+        ]
+
+        detected_names = self.get_detected_names(
+            html='<script src="/assets/app.js"></script>',
+            javascript_assets=javascript_assets,
+        )
+
+        self.assertNotIn("Google Fonts", detected_names)
+        self.assertNotIn("Google Maps", detected_names)
+
+
+    def test_googleapis_url_does_not_detect_google_cloud(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>'
+        )
+
+        self.assertNotIn("Google Cloud", detected_names)
+
+
+    def test_leaflet_globals_do_not_detect_leaflet_without_asset_evidence(self) -> None:
+        javascript_assets = [
+            JavaScriptAsset(
+                url="https://example.com/assets/map-bundle.js",
+                status_code=200,
+                content_type="application/javascript",
+                content="var L = {}; L.map = function () {}; L.version = 'test';",
+                error=None,
+            )
+        ]
+
+        detected_names = self.get_detected_names(
+            html='<script src="/assets/map-bundle.js"></script>',
+            javascript_assets=javascript_assets,
+        )
+
+        self.assertNotIn("Leaflet", detected_names)
+
+
+    def test_tracking_js_alone_does_not_detect_livechat(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<script src="/assets/tracking.js"></script>'
+        )
+
+        self.assertNotIn("LiveChat", detected_names)
+
+
+    def test_amazonaws_asset_does_not_detect_aws(self) -> None:
+        javascript_assets = [
+            JavaScriptAsset(
+                url="https://example.com/assets/app.js",
+                status_code=200,
+                content_type="application/javascript",
+                content="const imageUrl = 'https://cdn.example.amazonaws.com/banner.jpg';",
+                error=None,
+            )
+        ]
+
+        detected_names = self.get_detected_names(
+            html='<script src="https://cdn.example.amazonaws.com/assets/app.js"></script>',
+            javascript_assets=javascript_assets,
+        )
+
+        self.assertNotIn("Amazon Web Services", detected_names)
+
+
+    def test_whatsapp_social_link_does_not_detect_whatsapp_business_chat(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<a href="https://wa.me/40123456789">WhatsApp</a>'
+        )
+
+        self.assertNotIn("WhatsApp Business Chat", detected_names)
+
+
+    def test_akamai_grn_header_detects_akamai(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={"Akamai-GRN": "0.12345678.1234567890.abcdef"}
+        )
+
+        self.assertIn("Akamai", detected_names)
+        self.assertNotIn("Akamai Bot Manager", detected_names)
+        self.assertNotIn("Akamai Web Application Protector", detected_names)
+
+
+    def test_akamai_server_timing_header_detects_akamai(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={"Server-Timing": 'ak_p; desc="123456_7890_123456"'}
+        )
+
+        self.assertIn("Akamai", detected_names)
+
+
+    def test_akamai_cookie_prefix_detects_akamai(self) -> None:
+        detected_names = self.get_detected_names(
+            cookies={"akacd_myAIDA_App_Testing": "example-value"}
+        )
+
+        self.assertIn("Akamai", detected_names)
+
+
+    def test_akamai_cookie_signature_requires_prefix(self) -> None:
+        detected_names = self.get_detected_names(
+            cookies={"example_akacd_myAIDA_App_Testing": "example-value"}
+        )
+
+        self.assertNotIn("Akamai", detected_names)
+
+
+    def test_akamai_server_header_detects_akamai(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={"Server": "AkamaiGHost"}
+        )
+
+        self.assertIn("Akamai", detected_names)
+
+
+    def test_generic_security_headers_do_not_detect_technologies(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={
+                "Strict-Transport-Security": "max-age=31536000",
+                "X-Content-Type-Options": "nosniff",
+                "Permissions-Policy": "geolocation=()",
+                "Referrer-Policy": "strict-origin-when-cross-origin",
+            }
+        )
+
+        self.assertEqual([], detected_names)
+
+
+    def test_empty_fetch_error_inputs_do_not_invent_technologies(self) -> None:
+        detected_names = self.get_detected_names(
+            html="",
+            headers={},
+            cookies={},
+        )
+
+        self.assertEqual([], detected_names)
+
+
+    def test_detects_adobe_experience_manager_from_clientlibs(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<script src="/etc.clientlibs/example/clientlib-site.min.js"></script>'
+        )
+
+        self.assertIn("Adobe Experience Manager", detected_names)
+
+
+    def test_detects_adobe_experience_manager_from_content_dam(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<img src="/content/dam/example/hero.jpg">'
+        )
+
+        self.assertIn("Adobe Experience Manager", detected_names)
+
+
+    def test_adobe_experience_manager_weak_header_alone_does_not_detect(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={"X-PR-Test": "adobecqms2"}
+        )
+
+        self.assertNotIn("Adobe Experience Manager", detected_names)
+
+
+    def test_cleaned_valid_technologies_have_expected_categories(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
+        categories_by_name = {
+            rule.name: rule.category
+            for rule in rules
+        }
+
+        expected_categories = {
+            "Contact Form 7": "Forms",
+            "WPForms": "Forms",
+            "Gravity Forms": "Forms",
+            "WPML": "Translation / Multilingual",
+            "Raygun": "Monitoring / Error Tracking",
+            "Trustpilot": "Reviews / Social Proof",
+            "Partytown": "JavaScript Performance",
+            "core-js": "JavaScript Library",
+            "Modernizr": "JavaScript Library",
+            "Beaver Builder": "Page Builder",
+            "Ahrefs": "SEO / Verification",
+            "All in One SEO": "SEO",
+            "Cloudflare Bot Management": "Security / Bot Management",
+            "FancyBox": "JavaScript Library / Lightbox",
+            "MonsterInsights": "Analytics",
+            "OWL Carousel": "JavaScript Library / Carousel",
+            "jQuery UI": "JavaScript Library / UI Library",
+            "Akamai": "CDN / Edge",
+            "Adobe Experience Manager": "CMS",
+        }
+
+        for technology_name, expected_category in expected_categories.items():
+            self.assertEqual(categories_by_name[technology_name], expected_category)
 
 
 if __name__ == "__main__":

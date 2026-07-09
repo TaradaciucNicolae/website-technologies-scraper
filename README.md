@@ -407,6 +407,14 @@ The development workflow was:
 5. Run a larger dataset and inspect the summary/discovery outputs.
 6. Repeat with more rules only when there was useful evidence.
 
+## Rule Quality
+
+Rules are kept only when the technology is relevant to website technology detection and the matching value is specific enough to justify a detection. Good signatures include vendor domains, CDN URLs, unique cookie names, vendor-specific headers, meta generator values, package names, and distinctive JavaScript globals.
+
+Generic words are avoided because they can create false positives. Examples of values that should not be used as standalone signatures are short or common terms such as `app`, `server`, `information`, `image`, `BOLD`, or `A1`.
+
+The rule set focuses on technologies that are useful for this challenge: ecommerce platforms and apps, analytics, advertising, marketing, payments, reviews, support tools, CMSs, page builders, frontend libraries, hosting, CDNs, security, consent tools, and other visible website technologies. Categories such as operating systems, documentation tools, issue trackers, IDEs, generic widgets, WordPress themes, LMS tools, webmail, and network/storage products are not included unless they also have a clear website-technology signal.
+
 ## Detection Coverage
 
 The rule set currently covers technologies from categories such as:
@@ -424,7 +432,7 @@ The rule set currently covers technologies from categories such as:
 - hosting platforms
 - monitoring and product analytics tools
 
-The rule file currently contains 200 technology rules.
+The rule files currently contain 2841 technology rules.
 
 ## Limitations
 
