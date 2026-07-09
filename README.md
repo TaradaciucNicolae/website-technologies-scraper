@@ -1,15 +1,22 @@
 # Website Technologies Scraper
 
-This project detects technologies used by websites from a list of input domains.
+This project detects technologies used by websites from a list of input domains. For every detected technology, the output includes concrete evidence that explains why the technology was detected and where the matching signal was found.
 
-For each domain, the scraper fetches the website, applies rule-based technology detection, and saves the detected technologies together with concrete evidence. The evidence explains why a technology was detected and where the matching signal was found.
+The project was built for the Veridion Website Technologies Scraper challenge. The input contains 200 cleaned domains, and the scraper can process the full list or a smaller limit during development.
 
-The project is designed around the following pipeline:
+## What The Project Does
 
-1. extract and clean input domains
-2. fetch each website
-3. detect technologies from multiple evidence sources
-4. save detailed and summary outputs
+The scraper follows this pipeline:
+
+1. Extract and clean domains from the input Parquet file.
+2. Fetch each website over HTTPS, then HTTP if needed.
+3. Collect response data such as final URL, status code, headers, cookies, HTML, redirects, and timing.
+4. Parse HTML with BeautifulSoup for structured signals.
+5. Fetch a limited number of JavaScript assets for extra detection signals.
+6. Apply rule-based technology detection.
+7. Save detailed JSON, JSONL, CSV summary, JSON summary, and discovery output files.
+
+The main reason for this structure is that technologies can expose themselves in many different places. Some appear in HTTP headers, some in cookies, some in script URLs, some in meta tags, and some only inside JavaScript files.
 
 ## Project Structure
 
@@ -17,17 +24,21 @@ The project is designed around the following pipeline:
 data/
   domains.txt
   raw/domains.snappy.parquet
+  output/discovery_candidates.json
   output/technology_detections.json
   output/technology_detections.jsonl
   output/technology_summary.csv
+  output/technology_summary.json
 
 rules/
   technology_rules.json
 
 src/
+  discovery_candidates.py
   extract_domains.py
-  website_fetcher.py
+  javascript_asset_fetcher.py
   technology_detector.py
+  website_fetcher.py
 
 tests/
   test_technology_detector.py
@@ -39,19 +50,19 @@ README.md
 
 ## Input Data
 
-The raw input file is stored at:
+The raw input file is:
 
 ```text
 data/raw/domains.snappy.parquet
 ```
 
-`src/extract_domains.py` reads the Parquet file, extracts domain values, removes empty entries and duplicates, normalizes the domains, and writes the cleaned list to:
+`src/extract_domains.py` extracts the domains, removes empty values and duplicates, normalizes the values, and writes the clean list to:
 
 ```text
 data/domains.txt
 ```
 
-Reason: the scraper should work with a clean and predictable domain list before fetching websites.
+The current cleaned domain list contains 200 domains.
 
 ## Website Fetching
 
@@ -61,7 +72,7 @@ Website fetching is implemented in:
 src/website_fetcher.py
 ```
 
-For every domain, the fetcher tries:
+For each domain, the scraper tries:
 
 1. `https://domain`
 2. `http://domain`
@@ -79,11 +90,11 @@ The fetch result stores:
 - elapsed time in milliseconds
 - content type
 - redirect count
-- error message, if fetching fails
+- error message, if the request failed
 
-Reason: technology evidence can appear in different parts of a response. Headers, cookies, final URLs, redirects, and HTML content can all provide useful detection signals.
+Cookies were added because many analytics, advertising, security, and ecommerce tools expose stable cookie names.
 
-## Technology Detection
+## Evidence Sources
 
 Technology detection is implemented in:
 
@@ -91,43 +102,50 @@ Technology detection is implemented in:
 src/technology_detector.py
 ```
 
-Detection rules are stored in:
+Rules are stored in:
 
 ```text
 rules/technology_rules.json
 ```
 
-The detector checks each website response against configurable signatures. A technology is detected when at least one signature from its rule matches.
+The detector currently uses these evidence sources:
 
-Rules can use these signature groups:
+- raw HTML signatures
+- HTTP header signatures
+- cookie names
+- domain and final URL signatures
+- script URL signatures from `<script src="...">`
+- stylesheet URL signatures from `<link href="...">`
+- meta generator tags
+- DOM markers and common attributes
+- JavaScript asset content
+- package-like CDN URLs
 
-- `domain_signatures`
-- `html_signatures`
-- `script_url_signatures`
-- `stylesheet_url_signatures`
-- `meta_generator_signatures`
-- `dom_marker_signatures`
-- `cookie_signatures`
-- `header_signatures`
+The rules are split by source:
 
-Reason: separating signatures by source makes the rules easier to understand and produces more precise evidence. For example, a match in `script[src]` is more specific than a match somewhere in the raw HTML.
+```json
+{
+  "name": "Example Technology",
+  "category": "Example Category",
+  "confidence": "high",
+  "domain_signatures": [],
+  "html_signatures": [],
+  "script_url_signatures": [],
+  "stylesheet_url_signatures": [],
+  "meta_generator_signatures": [],
+  "dom_marker_signatures": [],
+  "cookie_signatures": [],
+  "header_signatures": {},
+  "js_asset_signatures": [],
+  "package_url_signatures": []
+}
+```
 
-## Structured HTML Parsing
-
-The detector uses BeautifulSoup to parse HTML and extract structured evidence from:
-
-- script URLs: `<script src="...">`
-- stylesheet URLs: `<link href="...">`
-- meta generator tags: `<meta name="generator" ...>`
-- DOM attributes and markers
-
-Reason: structured parsing makes the evidence more accurate. Instead of only saying that a signature appeared somewhere in the HTML, the detector can report that it appeared specifically in a script URL, stylesheet URL, meta tag, or DOM attribute.
+Separating rules by source makes the evidence more precise. For example, detecting `wp-content` in a stylesheet URL is more useful than only saying it appeared somewhere in the page HTML.
 
 ## Evidence Model
 
-Each detected technology includes evidence items.
-
-Example:
+Each technology contains one or more evidence items. Every evidence item has the same structure:
 
 ```json
 {
@@ -143,43 +161,44 @@ Example:
 
 Evidence fields:
 
-- `type`: type of evidence found
-- `source`: source inspected by the detector
-- `location`: exact location of the match
-- `matched_value`: signature that matched
-- `excerpt`: concrete response snippet or value
+- `type`: kind of evidence, such as `header`, `cookie`, `script_url`, or `js_asset`
+- `source`: the data source inspected by the detector
+- `location`: the exact place where the match was found
+- `matched_value`: the signature that matched
+- `excerpt`: the concrete header, cookie, URL, HTML snippet, or JavaScript snippet
 - `confidence`: confidence level from the rule
-- `explanation`: readable explanation of the match
+- `explanation`: readable explanation of the detection
 
-Supported evidence types:
+This is important because the output should not only list technologies. It should also justify each detection.
 
-- `html_contains`
-- `script_url`
-- `stylesheet_url`
-- `meta_generator`
-- `dom_marker`
-- `header`
-- `cookie`
-- `domain`
+## JavaScript Asset Scanning
 
-Reason: the output should not only list technologies. It should also explain why each technology was detected.
+Some technologies do not appear directly in the HTML. They can be hidden inside files such as:
 
-## Example Detection Signals
+```html
+<script src="/assets/app.bundle.js"></script>
+```
 
-Examples of supported signals:
+For this reason, the project includes:
 
-- Shopify from `cdn.shopify.com` in a script URL
-- WordPress from `wp-content` in script or stylesheet URLs
-- Cloudflare from `server: cloudflare` or `cf-ray`
-- Google Analytics from `_ga` cookies or analytics script URLs
-- React from `data-reactroot`
-- Drupal from a `meta generator` tag
-- Amazon CloudFront from CloudFront headers
-- Microsoft Clarity from `_clck` or `_clsk` cookies
+```text
+src/javascript_asset_fetcher.py
+```
+
+The JavaScript asset scanner:
+
+- extracts script URLs with BeautifulSoup
+- selects up to 5 useful JavaScript assets per website
+- prioritizes external scripts, CDN files, bundles, app files, vendor files, and analytics files
+- fetches each asset with a short timeout
+- reads at most 500 KB from each JavaScript file
+- searches the content using `js_asset_signatures`
+
+This improves coverage for tools such as analytics platforms, chat widgets, ecommerce apps, frontend libraries, and monitoring scripts.
 
 ## Output Files
 
-Running the project creates output files in:
+Running the scraper writes files to:
 
 ```text
 data/output/
@@ -191,17 +210,7 @@ data/output/
 data/output/technology_detections.json
 ```
 
-This file contains the full result list. It is useful for inspecting complete detections and all evidence items.
-
-Each result contains:
-
-- domain
-- normalized URL
-- final URL
-- status
-- detected technologies
-- errors
-- fetch metadata
+Contains the full result for every processed domain, including all technologies and all evidence items.
 
 ### JSONL
 
@@ -209,9 +218,7 @@ Each result contains:
 data/output/technology_detections.jsonl
 ```
 
-This file stores one domain result per line.
-
-Reason: JSONL is easier to process line by line and works better for larger datasets.
+Stores one domain result per line. This format is useful for larger datasets because it can be processed line by line.
 
 ### CSV Summary
 
@@ -219,105 +226,135 @@ Reason: JSONL is easier to process line by line and works better for larger data
 data/output/technology_summary.csv
 ```
 
-This file contains a compact summary that can be opened in spreadsheet tools.
+Contains a compact table with domain, final URL, status, technology name, category, confidence, evidence count, evidence types, and first evidence.
 
-It includes:
+### JSON Summary
 
-- domain
-- final URL
-- status
-- number of technologies found
-- technology name
-- category
-- confidence
-- evidence count
-- evidence types
-- first evidence
-- errors
+```text
+data/output/technology_summary.json
+```
 
-Reason: the CSV output is useful for quickly reviewing results without opening the full JSON structure.
-
-## Output Record Example
-
-A result record follows this general structure:
+Contains aggregate results:
 
 ```json
 {
-  "domain": "example.com",
-  "normalized_url": "https://example.com",
-  "final_url": "https://www.example.com/",
-  "status": 200,
-  "technologies": [
+  "total_domains": 5,
+  "reachable_domains": 5,
+  "total_findings": 77,
+  "unique_technologies": 43,
+  "confidence_distribution": {
+    "high": 55,
+    "medium": 22
+  },
+  "top_technologies": [
     {
-      "name": "Shopify",
-      "category": "Ecommerce",
-      "confidence": "high",
-      "evidence": [
-        {
-          "type": "script_url",
-          "source": "html",
-          "location": "script[src]",
-          "matched_value": "cdn.shopify.com",
-          "excerpt": "https://cdn.shopify.com/app.js",
-          "confidence": "high",
-          "explanation": "Found 'cdn.shopify.com' in a script URL."
-        }
-      ]
+      "name": "Cloudflare",
+      "domains": 5
     }
-  ],
-  "errors": [],
-  "fetch_metadata": {
-    "attempted_urls": ["https://example.com"],
-    "successful_url": "https://example.com",
-    "elapsed_ms": 1234,
-    "content_type": "text/html",
-    "redirect_count": 1,
-    "cookies": {}
-  }
+  ]
 }
 ```
 
-## Installation
+### Discovery Candidates
 
-Install dependencies with:
+```text
+data/output/discovery_candidates.json
+```
+
+This file helps improve the rule set using real crawl data. Instead of guessing new rules, the scraper records sites with no detections or only a low number of detections.
+
+The current structure is:
+
+```json
+{
+  "undetected": [],
+  "detected_low_number": [],
+  "max_detection_count_shown_in_discovery": 5
+}
+```
+
+Each site record can include useful signals such as:
+
+- headers
+- cookies
+- script URLs
+- stylesheet URLs
+- JavaScript asset URLs
+- meta generator values
+- meta tags
+- package candidates from known CDN URLs
+
+This makes it easier to inspect low-detection websites and decide which new rules should be added next.
+
+## Current Generated Results
+
+The committed output files currently represent a validation run over 5 domains. The full cleaned input list contains 200 domains.
+
+Current summary from `data/output/technology_summary.json`:
+
+- domains scanned in current output: 5
+- reachable domains: 5
+- total findings: 77
+- unique technologies found: 43
+- high confidence findings: 55
+- medium confidence findings: 22
+
+Top technologies in the current output include:
+
+- Cloudflare: 5 domains
+- Google Analytics: 4 domains
+- Zendesk: 4 domains
+- jQuery: 4 domains
+- Tailwind CSS: 4 domains
+
+During development, small runs were used first to validate the logic quickly. After the rules and tests looked correct, the same pipeline could be run on the full 200-domain list.
+
+## Running The Project
+
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Dependencies:
-
-- `pandas`
-- `pyarrow`
-- `requests`
-- `beautifulsoup4`
-
-## Running the Scraper
-
-Run:
+Run on all domains:
 
 ```bash
 python main.py
 ```
 
-The script will:
+Run on a small sample:
 
-1. extract domains
-2. fetch websites
-3. detect technologies
-4. write JSON, JSONL, and CSV outputs
-5. print detection summary counts
+```bash
+python main.py --limit 5
+```
 
-At the end, it prints:
+Delete and recreate output files:
+
+```bash
+python main.py --rewrite 1
+```
+
+Append to existing output files:
+
+```bash
+python main.py --rewrite 0
+```
+
+Example quick run:
+
+```bash
+python main.py --limit 5 --rewrite 1
+```
+
+At the end, the script prints:
 
 ```text
 Different technologies found: X
 Total technologies found: Y
 ```
 
-`Different technologies found` is the number of unique technology names.
-
-`Total technologies found` is the total number of technology detections across all processed domains.
+`Different technologies found` means unique technology names. `Total technologies found` means all technology detections across all processed domains.
 
 ## Running Tests
 
@@ -327,93 +364,108 @@ Run:
 python -m unittest discover
 ```
 
-The tests cover:
+The tests cover the main detection paths:
 
-- raw HTML detection
-- header detection
-- domain detection
-- cookie detection
+- HTML evidence
+- header evidence
+- domain evidence
+- cookie evidence
 - script URL evidence
 - stylesheet URL evidence
 - meta generator evidence
 - DOM marker evidence
-- selected expanded technology rules
+- JavaScript asset evidence
+- selected expanded rules
 
-## Adding New Technology Rules
+## Development Process
 
-New technologies can be added by editing:
+The project was improved step by step instead of rewriting everything at once.
 
-```text
-rules/technology_rules.json
-```
+Completed steps:
 
-Example:
+1. Improved the evidence model so every detection has structured evidence.
+2. Added cookie collection in the fetcher and cookie signatures in the rules.
+3. Added BeautifulSoup parsing for meta generator tags, script URLs, stylesheet URLs, and DOM markers.
+4. Split rules by source: HTML, headers, cookies, meta generator, script URLs, stylesheet URLs, domain signatures, JavaScript assets, and package URLs.
+5. Added JSONL output and CSV summary output.
+6. Added limited JavaScript asset scanning with timeouts and max file size.
+7. Added `technology_summary.json` with aggregate counts and top technologies.
+8. Added `discovery_candidates.json` to inspect domains with no detections or few detections.
+9. Expanded the rule set with more CMS, ecommerce, payments, analytics, support, CDN, hosting, and frontend technologies.
 
-```json
-{
-  "name": "Example Technology",
-  "category": "Example Category",
-  "confidence": "high",
-  "domain_signatures": [],
-  "html_signatures": [],
-  "script_url_signatures": ["example-cdn.com"],
-  "stylesheet_url_signatures": [],
-  "meta_generator_signatures": [],
-  "dom_marker_signatures": [],
-  "cookie_signatures": [],
-  "header_signatures": {}
-}
-```
+The development workflow was:
 
+1. Run on a small subset of domains.
+2. Check whether expected technologies were detected.
+3. Add focused rules based on real evidence.
+4. Add or update tests for important detection paths.
+5. Run a larger dataset and inspect the summary/discovery outputs.
+6. Repeat with more rules only when there was useful evidence.
 
-## Current Detection Coverage
+## Detection Coverage
 
-The current rule set includes technologies from several categories:
+The rule set currently covers technologies from categories such as:
 
 - CMS platforms
-- ecommerce platforms
-- analytics tools
-- marketing tools
-- customer support tools
+- ecommerce platforms and Shopify apps
+- payment providers
+- analytics and advertising tools
+- marketing and CRM tools
+- support and chat tools
 - JavaScript frameworks
+- frontend libraries
 - CSS frameworks
-- backend frameworks
-- hosting providers
 - CDN and security providers
-- monitoring tools
-- build tools
+- hosting platforms
+- monitoring and product analytics tools
+
+The rule file currently contains 200 technology rules.
 
 ## Limitations
 
-The detector works only with information visible in the fetched response.
+The scraper works with the data returned by normal HTTP requests. It does not run a real browser.
 
 Important limitations:
 
-- JavaScript is not executed
-- browser-only runtime behavior is not observed
-- some backend technologies do not expose public signatures
-- some sites may block automated requests
-- some signatures may produce false positives if they are too generic
-- results depend on the HTML, headers, cookies, and URLs returned at fetch time
+- JavaScript is fetched and inspected, but it is not executed.
+- Browser-only runtime behavior is not observed.
+- Some websites block automated requests or return challenge pages.
+- Some backend technologies do not expose public signatures.
+- Some generic signatures can create false positives.
+- Results can change depending on redirects, location, cookies, A/B tests, and response time.
+- The JavaScript asset scanner is intentionally limited to avoid slow or heavy crawling.
 
-Because of these limitations, every detection includes evidence so the result can be inspected and justified.
+Because of these limitations, every detection includes evidence so the result can be reviewed.
 
-## Current Status
+## How This Could Scale To Millions Of Domains
 
-The project currently supports detection from:
+For millions of domains, the same idea should be kept, but the execution model should change.
 
-- domain and final URL
-- raw HTML
-- script URLs
-- stylesheet URLs
-- meta generator tags
-- DOM attributes
-- HTTP headers
-- cookies
+Possible scaling plan:
 
-It exports:
+- store domains in a queue instead of a text file
+- run many worker processes or containers
+- use asynchronous HTTP fetching for higher throughput
+- set strict timeouts, retry limits, and maximum response sizes
+- store raw fetch metadata and detections in a database or object storage
+- write JSONL files in batches instead of keeping everything in memory
+- deduplicate domains and normalize URLs before crawling
+- separate fetching, detection, summary generation, and discovery into separate jobs
+- monitor error rates, blocked domains, response times, and detection rates
+- update rules from discovery data, then rerun only the domains affected by new rules
 
-- detailed JSON
-- JSONL
-- CSV summary
+The current project keeps the implementation simple, but the output formats and evidence model are compatible with this kind of larger pipeline.
 
+## How New Technologies Can Be Discovered
+
+The discovery process should be data-driven:
+
+1. Run the scraper on real domains.
+2. Open `discovery_candidates.json`.
+3. Inspect the `undetected` and `detected_low_number` sections.
+4. Look at repeated headers, cookies, script domains, stylesheet domains, meta generator values, and JavaScript asset URLs.
+5. Add new rules only when there is a concrete signal.
+6. Add a focused test when the new rule covers an important detection path.
+7. Rerun the scraper and compare `technology_summary.json`.
+
+This avoids guessing rules randomly and makes the rule set easier to justify.

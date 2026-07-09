@@ -1,6 +1,12 @@
-from pathlib import Path
+﻿import argparse
 import csv
 import json
+from pathlib import Path
+from src.discovery_candidates import (
+    collect_discovery_candidates,
+    create_discovery_store,
+    save_discovery_candidates,
+)
 from src.extract_domains import extract_domains
 from src.javascript_asset_fetcher import JavaScriptAsset, fetch_javascript_assets
 from src.website_fetcher import WebsiteFetchResult, fetch_website
@@ -17,6 +23,45 @@ DOMAINS_OUTPUT_PATH = Path("data/domains.txt")
 RESULTS_OUTPUT_PATH = Path("data/output/technology_detections.json")
 RESULTS_JSONL_OUTPUT_PATH = Path("data/output/technology_detections.jsonl")
 SUMMARY_CSV_OUTPUT_PATH = Path("data/output/technology_summary.csv")
+SUMMARY_JSON_OUTPUT_PATH = Path("data/output/technology_summary.json")
+DISCOVERY_CANDIDATES_OUTPUT_PATH = Path("data/output/discovery_candidates.json")
+OUTPUT_PATHS = [
+    RESULTS_OUTPUT_PATH,
+    RESULTS_JSONL_OUTPUT_PATH,
+    SUMMARY_CSV_OUTPUT_PATH,
+    SUMMARY_JSON_OUTPUT_PATH,
+    DISCOVERY_CANDIDATES_OUTPUT_PATH,
+]
+
+
+def parse_arguments() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Fetch websites and detect technologies."
+    )
+    parser.add_argument(
+        "--rewrite",
+        type=int,
+        choices=[0, 1],
+        default=1,
+        help="Use 1 to delete old output files before writing new results. Use 0 to append new results to existing output files.",
+    )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+        help="Optional number of domains to process. Useful for quick test runs.",
+    )
+
+    return parser.parse_args()
+
+
+def delete_output_files(output_paths: list[Path]) -> None:
+    for output_path in output_paths:
+        if not output_path.exists():
+            continue
+
+        output_path.unlink()
+        print(f"Deleted old output file: {output_path}")
 
 
 def print_fetch_result(result: WebsiteFetchResult) -> None:
@@ -133,23 +178,44 @@ def build_javascript_asset_metadata(javascript_assets: list[JavaScriptAsset]) ->
 
 
 
-def save_json_results(results: list[dict], output_path: Path) -> None:
+def load_existing_json_results(output_path: Path) -> list[dict]:
+    if not output_path.exists():
+        return []
+
+    if output_path.stat().st_size == 0:
+        return []
+
+    existing_results = json.loads(output_path.read_text(encoding="utf-8"))
+
+    if not isinstance(existing_results, list):
+        return []
+
+    return existing_results
+
+
+def save_json_results(results: list[dict], output_path: Path, rewrite: int) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    if rewrite == 0:
+        existing_results = load_existing_json_results(output_path)
+        results = existing_results + results
+
     output_path.write_text(
         json.dumps(results, indent=2),
         encoding="utf-8",
     )
 
 
-def save_jsonl_results(results: list[dict], output_path: Path) -> None:
+def save_jsonl_results(results: list[dict], output_path: Path, rewrite: int) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
+    file_mode = "w"
 
-    lines: list[str] = []
+    if rewrite == 0:
+        file_mode = "a"
 
-    for result in results:
-        lines.append(json.dumps(result))
-
-    output_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    with output_path.open(file_mode, encoding="utf-8") as jsonl_file:
+        for result in results:
+            jsonl_file.write(json.dumps(result) + "\n")
 
 
 def build_summary_rows(results: list[dict]) -> list[dict]:
@@ -211,7 +277,67 @@ def build_summary_rows(results: list[dict]) -> list[dict]:
     return rows
 
 
-def save_summary_csv(rows: list[dict], output_path: Path) -> None:
+def build_summary_json(results: list[dict]) -> dict:
+    confidence_distribution: dict[str, int] = {}
+    technology_domains: dict[str, set[str]] = {}
+    total_findings = 0
+    reachable_domains = 0
+
+    for result in results:
+        status = result["status"]
+
+        if status is not None:
+            reachable_domains = reachable_domains + 1
+
+        for technology in result["technologies"]:
+            technology_name = technology["name"]
+            confidence = technology["confidence"]
+            total_findings = total_findings + 1
+
+            if confidence not in confidence_distribution:
+                confidence_distribution[confidence] = 0
+
+            confidence_distribution[confidence] = confidence_distribution[confidence] + 1
+
+            if technology_name not in technology_domains:
+                technology_domains[technology_name] = set()
+
+            technology_domains[technology_name].add(result["domain"])
+
+    top_technologies: list[dict] = []
+
+    for technology_name, domains in technology_domains.items():
+        top_technologies.append(
+            {
+                "name": technology_name,
+                "domains": len(domains),
+            }
+        )
+
+    top_technologies.sort(
+        key=lambda technology: technology["domains"],
+        reverse=True,
+    )
+
+    return {
+        "total_domains": len(results),
+        "reachable_domains": reachable_domains,
+        "total_findings": total_findings,
+        "unique_technologies": len(technology_domains),
+        "confidence_distribution": confidence_distribution,
+        "top_technologies": top_technologies[:30],
+    }
+
+
+def save_summary_json(summary: dict, output_path: Path) -> None:
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(
+        json.dumps(summary, indent=2),
+        encoding="utf-8",
+    )
+
+
+def save_summary_csv(rows: list[dict], output_path: Path, rewrite: int) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     fieldnames = [
@@ -228,19 +354,39 @@ def save_summary_csv(rows: list[dict], output_path: Path) -> None:
         "errors",
     ]
 
-    with output_path.open("w", encoding="utf-8", newline="") as csv_file:
+    file_has_content = output_path.exists() and output_path.stat().st_size > 0
+    file_mode = "w"
+
+    if rewrite == 0:
+        file_mode = "a"
+
+    with output_path.open(file_mode, encoding="utf-8", newline="") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
-        writer.writeheader()
+
+        if rewrite == 1 or not file_has_content:
+            writer.writeheader()
+
         writer.writerows(rows)
 
 
-
 def main() -> None:
+    arguments = parse_arguments()
+
+    if arguments.rewrite == 1:
+        delete_output_files(OUTPUT_PATHS)
+    else:
+        print("Rewrite disabled. New results will be appended to existing output files.")
+
     domains = extract_domains(RAW_INPUT_PATH, DOMAINS_OUTPUT_PATH)
     rules = load_technology_rules(RULES_PATH)
     results: list[dict] = []
+    discovery_store = create_discovery_store()
+    domains_to_process = domains
 
-    for domain in domains:
+    if arguments.limit is not None:
+        domains_to_process = domains[:arguments.limit]
+
+    for domain in domains_to_process:
         domain = domain.strip()
 
         if not domain:
@@ -265,18 +411,35 @@ def main() -> None:
         print(f"JavaScript assets fetched: {len(javascript_assets)}")
         print_detected_technologies(detections)
 
+        collect_discovery_candidates(
+            discovery_store=discovery_store,
+            fetch_result=result,
+            detections=detections,
+            javascript_assets=javascript_assets,
+        )
         results.append(build_result_record(result, detections, javascript_assets))
 
 
-    save_json_results(results, RESULTS_OUTPUT_PATH)
-    save_jsonl_results(results, RESULTS_JSONL_OUTPUT_PATH)
+    all_results_for_summary = results
+
+    if arguments.rewrite == 0:
+        existing_results = load_existing_json_results(RESULTS_OUTPUT_PATH)
+        all_results_for_summary = existing_results + results
+
+    save_json_results(results, RESULTS_OUTPUT_PATH, arguments.rewrite)
+    save_jsonl_results(results, RESULTS_JSONL_OUTPUT_PATH, arguments.rewrite)
 
     summary_rows = build_summary_rows(results)
-    save_summary_csv(summary_rows, SUMMARY_CSV_OUTPUT_PATH)
+    save_summary_csv(summary_rows, SUMMARY_CSV_OUTPUT_PATH, arguments.rewrite)
+    summary_json = build_summary_json(all_results_for_summary)
+    save_summary_json(summary_json, SUMMARY_JSON_OUTPUT_PATH)
+    save_discovery_candidates(discovery_store, DISCOVERY_CANDIDATES_OUTPUT_PATH, arguments.rewrite)
 
     print(f"Saved JSON results to {RESULTS_OUTPUT_PATH}")
     print(f"Saved JSONL results to {RESULTS_JSONL_OUTPUT_PATH}")
     print(f"Saved CSV summary to {SUMMARY_CSV_OUTPUT_PATH}")
+    print(f"Saved JSON summary to {SUMMARY_JSON_OUTPUT_PATH}")
+    print(f"Saved discovery candidates to {DISCOVERY_CANDIDATES_OUTPUT_PATH}")
     
     different_technologies: set[str] = set()
     total_technologies_found = 0
@@ -294,3 +457,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

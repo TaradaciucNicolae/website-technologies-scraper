@@ -1,0 +1,84 @@
+{
+  "undetected": [],
+  "detected_low_number": [
+    {
+      "domain": "1stclairavewest.com",
+      "detection_count": 3,
+      "detected": [
+        "Cloudflare",
+        "Help Scout",
+        "Tailwind CSS"
+      ],
+      "attempted_urls": [
+        "https://1stclairavewest.com",
+        "http://1stclairavewest.com"
+      ],
+      "successful_url": "http://1stclairavewest.com",
+      "final_url": "http://1stclairavewest.com/",
+      "status": 409,
+      "error": null,
+      "content_type": "text/html; charset=UTF-8",
+      "redirect_count": 0,
+      "html_length": 6468,
+      "headers": {
+        "Date": "Thu, 09 Jul 2026 18:18:19 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "6468",
+        "Connection": "close",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "same-origin",
+        "Cache-Control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+        "Expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+        "Vary": "Accept-Encoding",
+        "Server": "cloudflare",
+        "CF-RAY": "a18954a1bdc3e40a-OTP"
+      },
+      "cookies": {},
+      "script_signals": [
+        {
+          "source": "script[src]",
+          "url": "https://performance.radar.cloudflare.com/beacon.js",
+          "domain": "performance.radar.cloudflare.com",
+          "is_external": true,
+          "package_name": null
+        }
+      ],
+      "stylesheet_signals": [
+        {
+          "source": "link[href]",
+          "url": "http://1stclairavewest.com/cdn-cgi/styles/main.css",
+          "domain": "1stclairavewest.com",
+          "is_external": false,
+          "package_name": null
+        }
+      ],
+      "javascript_asset_signals": [
+        {
+          "source": "javascript_asset",
+          "url": "https://performance.radar.cloudflare.com/beacon.js",
+          "domain": "performance.radar.cloudflare.com",
+          "status_code": 200,
+          "content_type": "text/javascript;charset=UTF-8",
+          "bytes_read": 41,
+          "error": null,
+          "package_name": null
+        }
+      ],
+      "meta_generator_values": [],
+      "meta_tags": [
+        {
+          "name": "robots",
+          "property": "",
+          "content": "noindex, nofollow"
+        },
+        {
+          "name": "viewport",
+          "property": "",
+          "content": "width=device-width,initial-scale=1"
+        }
+      ],
+      "package_candidates": []
+    }
+  ],
+  "max_detection_count_shown_in_discovery": 5
+}

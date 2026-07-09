@@ -1,0 +1,132 @@
+{
+  "total_domains": 5,
+  "reachable_domains": 5,
+  "total_findings": 77,
+  "unique_technologies": 43,
+  "confidence_distribution": {
+    "high": 55,
+    "medium": 22
+  },
+  "top_technologies": [
+    {
+      "name": "Cloudflare",
+      "domains": 5
+    },
+    {
+      "name": "Google Analytics",
+      "domains": 4
+    },
+    {
+      "name": "Zendesk",
+      "domains": 4
+    },
+    {
+      "name": "jQuery",
+      "domains": 4
+    },
+    {
+      "name": "Tailwind CSS",
+      "domains": 4
+    },
+    {
+      "name": "Divi",
+      "domains": 3
+    },
+    {
+      "name": "Swiper",
+      "domains": 3
+    },
+    {
+      "name": "Magento",
+      "domains": 3
+    },
+    {
+      "name": "Iterable",
+      "domains": 3
+    },
+    {
+      "name": "Bold Commerce",
+      "domains": 2
+    },
+    {
+      "name": "Amazon Web Services",
+      "domains": 2
+    },
+    {
+      "name": "Foundation",
+      "domains": 2
+    },
+    {
+      "name": "Google Tag Manager",
+      "domains": 2
+    },
+    {
+      "name": "Leaflet",
+      "domains": 2
+    },
+    {
+      "name": "Google Fonts",
+      "domains": 2
+    },
+    {
+      "name": "Bootstrap",
+      "domains": 2
+    },
+    {
+      "name": "Webpack",
+      "domains": 2
+    },
+    {
+      "name": "Help Scout",
+      "domains": 2
+    },
+    {
+      "name": "Backbone.js",
+      "domains": 2
+    },
+    {
+      "name": "Smile.io",
+      "domains": 1
+    },
+    {
+      "name": "Ghost",
+      "domains": 1
+    },
+    {
+      "name": "Microsoft Azure",
+      "domains": 1
+    },
+    {
+      "name": "Google Cloud",
+      "domains": 1
+    },
+    {
+      "name": "Meta Pixel",
+      "domains": 1
+    },
+    {
+      "name": "Slick Carousel",
+      "domains": 1
+    },
+    {
+      "name": "Cloudinary",
+      "domains": 1
+    },
+    {
+      "name": "PostHog",
+      "domains": 1
+    },
+    {
+      "name": "WordPress",
+      "domains": 1
+    },
+    {
+      "name": "Mailchimp",
+      "domains": 1
+    },
+    {
+      "name": "PrestaShop",
+      "domains": 1
+    }
+  ]
+}

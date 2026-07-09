@@ -65,7 +65,7 @@ def should_skip_script_url(script_url: str) -> bool:
 def select_javascript_asset_urls(
     script_urls: list[str],
     base_url: str | None,
-    max_assets: int = 8,
+    max_assets: int = 5,
 ) -> list[str]:
     base_domain = ""
 
@@ -186,7 +186,7 @@ def fetch_javascript_asset(
 def fetch_javascript_assets(
     html: str,
     base_url: str | None,
-    max_assets: int = 8,
+    max_assets: int = 5,
     timeout_seconds: int = 5,
     max_bytes: int = 500_000,
 ) -> list[JavaScriptAsset]:

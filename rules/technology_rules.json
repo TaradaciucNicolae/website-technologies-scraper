@@ -6017,5 +6017,66 @@
     "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
+  },
+  {
+    "name": "Google Fonts",
+    "category": "Font Service",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "fonts.googleapis.com",
+      "fonts.gstatic.com",
+      "Google Fonts"
+    ],
+    "script_url_signatures": [
+      "ajax.googleapis.com/ajax/libs/webfont"
+    ],
+    "js_asset_signatures": [
+      "WebFont.load",
+      "fonts.googleapis.com",
+      "google: { families"
+    ],
+    "package_url_signatures": [
+      "webfontloader"
+    ],
+    "stylesheet_url_signatures": [
+      "fonts.googleapis.com/css",
+      "fonts.googleapis.com/css2",
+      "fonts.gstatic.com"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Typekit / Adobe Fonts",
+    "category": "Font Service",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "use.typekit.net",
+      "p.typekit.net",
+      "Typekit.load",
+      "Adobe Fonts"
+    ],
+    "script_url_signatures": [
+      "use.typekit.net",
+      "p.typekit.net"
+    ],
+    "js_asset_signatures": [
+      "Typekit.load",
+      "use.typekit.net",
+      "p.typekit.net"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "use.typekit.net",
+      "p.typekit.net"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
   }
 ]
