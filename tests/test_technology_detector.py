@@ -191,15 +191,19 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertEqual(shopify_detection.confidence, "high")
         self.assertGreater(len(shopify_detection.evidence), 0)
 
-        shopify_evidence = shopify_detection.evidence[0]
+        shopify_evidence = next(
+            evidence
+            for evidence in shopify_detection.evidence
+            if evidence.type == "script_url"
+        )
 
-        self.assertEqual(shopify_evidence.type, "html_contains")
+        self.assertEqual(shopify_evidence.type, "script_url")
         self.assertEqual(shopify_evidence.source, "html")
-        self.assertEqual(shopify_evidence.location, "html")
+        self.assertEqual(shopify_evidence.location, "script[src]")
         self.assertEqual(shopify_evidence.matched_value, "cdn.shopify.com")
         self.assertIn("cdn.shopify.com", shopify_evidence.excerpt)
         self.assertEqual(shopify_evidence.confidence, "high")
-        self.assertIn("HTML", shopify_evidence.explanation)
+        self.assertIn("script URL", shopify_evidence.explanation)
 
 
 
@@ -281,5 +285,72 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("_ga", cookie_evidence.excerpt)
         self.assertEqual(cookie_evidence.confidence, "high")
 
+
+
+    # Test detection using a structured meta generator tag.
+    def test_detects_wordpress_from_meta_generator(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
+
+        detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
+            html='<meta name="generator" content="WordPress 6.5">',
+            headers={},
+            rules=rules,
+        )
+
+        wordpress_detection = next(
+            detection
+            for detection in detections
+            if detection.name == "WordPress"
+        )
+
+        meta_evidence = next(
+            evidence
+            for evidence in wordpress_detection.evidence
+            if evidence.type == "meta_generator"
+        )
+
+        self.assertEqual(meta_evidence.source, "html")
+        self.assertEqual(meta_evidence.location, 'meta[name="generator"]')
+        self.assertEqual(meta_evidence.matched_value, "wordpress")
+        self.assertIn("WordPress 6.5", meta_evidence.excerpt)
+        self.assertEqual(meta_evidence.confidence, "high")
+
+
+
+
+    # Test detection using a structured stylesheet URL.
+    def test_stylesheet_url_evidence_uses_split_rules(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
+
+        detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
+            html='<link href="/wp-content/themes/theme/style.css">',
+            headers={},
+            rules=rules,
+        )
+
+        wordpress_detection = next(
+            detection
+            for detection in detections
+            if detection.name == "WordPress"
+        )
+
+        stylesheet_evidence = next(
+            evidence
+            for evidence in wordpress_detection.evidence
+            if evidence.type == "stylesheet_url"
+        )
+
+        self.assertEqual(stylesheet_evidence.source, "html")
+        self.assertEqual(stylesheet_evidence.location, "link[href]")
+        self.assertEqual(stylesheet_evidence.matched_value, "wp-content")
+        self.assertIn("wp-content", stylesheet_evidence.excerpt)
+        self.assertEqual(stylesheet_evidence.confidence, "high")
+
+
+        
 if __name__ == "__main__":
     unittest.main()
