@@ -7,6 +7,9 @@
     "successful_url": "https://100wwcstlw.org",
     "final_url": "https://100wwcstlw.org/",
     "status_code": 200,
+    "elapsed_ms": 671,
+    "content_type": "text/html",
+    "redirect_count": 0,
     "error": null,
     "technologies_found": 1,
     "technologies": [
@@ -28,8 +31,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186c757ac06eee5-OTP",
-            "excerpt": "cf-ray: a186c757ac06eee5-OTP",
+            "matched_value": "a186d011c82ce402-OTP",
+            "excerpt": "cf-ray: a186d011c82ce402-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -54,6 +57,9 @@
     "successful_url": "https://11853prospecthill.com",
     "final_url": "https://11853prospecthill.com/",
     "status_code": 200,
+    "elapsed_ms": 698,
+    "content_type": "text/html",
+    "redirect_count": 0,
     "error": null,
     "technologies_found": 6,
     "technologies": [
@@ -132,8 +138,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186c75bde030545-OTP",
-            "excerpt": "cf-ray: a186c75bde030545-OTP",
+            "matched_value": "a186d0161d0ac9e9-OTP",
+            "excerpt": "cf-ray: a186d0161d0ac9e9-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -190,6 +196,9 @@
     "successful_url": "https://11thhourracing.org",
     "final_url": "https://11thhourracing.org/",
     "status_code": 200,
+    "elapsed_ms": 1354,
+    "content_type": "text/html; charset=UTF-8",
+    "redirect_count": 0,
     "error": null,
     "technologies_found": 6,
     "technologies": [
@@ -277,8 +286,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186c760dd9ee4a8-OTP",
-            "excerpt": "cf-ray: a186c760dd9ee4a8-OTP",
+            "matched_value": "a186d01af810c9d1-OTP",
+            "excerpt": "cf-ray: a186d01af810c9d1-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -344,6 +353,9 @@
     "successful_url": "https://1planettechnologies.weebly.com",
     "final_url": "https://1planettechnologies.weebly.com/",
     "status_code": 200,
+    "elapsed_ms": 886,
+    "content_type": "text/html; charset=UTF-8",
+    "redirect_count": 0,
     "error": null,
     "technologies_found": 5,
     "technologies": [
@@ -399,8 +411,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186c769bec94b1e-OTP",
-            "excerpt": "cf-ray: a186c769bec94b1e-OTP",
+            "matched_value": "a186d023c826e443-OTP",
+            "excerpt": "cf-ray: a186d023c826e443-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -483,6 +495,9 @@
     "successful_url": "http://1stclairavewest.com",
     "final_url": "http://1stclairavewest.com/",
     "status_code": 409,
+    "elapsed_ms": 615,
+    "content_type": "text/html; charset=UTF-8",
+    "redirect_count": 0,
     "error": null,
     "technologies_found": 1,
     "technologies": [
@@ -504,8 +519,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186c771aa880543-OTP",
-            "excerpt": "cf-ray: a186c771aa880543-OTP",
+            "matched_value": "a186d0293f7be4b5-OTP",
+            "excerpt": "cf-ray: a186d0293f7be4b5-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           }
@@ -521,6 +536,9 @@
     "successful_url": "https://1stlocksheathscouts.org.uk",
     "final_url": "https://1stlocksheathscouts.org.uk/",
     "status_code": 403,
+    "elapsed_ms": 601,
+    "content_type": "text/html; charset=UTF-8",
+    "redirect_count": 0,
     "error": null,
     "technologies_found": 1,
     "technologies": [
@@ -542,8 +560,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186c775baafe402-OTP",
-            "excerpt": "cf-ray: a186c775baafe402-OTP",
+            "matched_value": "a186d02d1f2bf3a9-OTP",
+            "excerpt": "cf-ray: a186d02d1f2bf3a9-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           }
@@ -560,6 +578,9 @@
     "successful_url": "http://1ststopsupply.com",
     "final_url": "http://1ststopsupply.com/",
     "status_code": 409,
+    "elapsed_ms": 643,
+    "content_type": "text/html; charset=UTF-8",
+    "redirect_count": 0,
     "error": null,
     "technologies_found": 1,
     "technologies": [
@@ -581,8 +602,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186c77a0ca4e4b1-OTP",
-            "excerpt": "cf-ray: a186c77a0ca4e4b1-OTP",
+            "matched_value": "a186d0310e9ac9e0-OTP",
+            "excerpt": "cf-ray: a186d0310e9ac9e0-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           }
@@ -598,6 +619,9 @@
     "successful_url": "https://2-com.net",
     "final_url": "https://2-com.net/",
     "status_code": 200,
+    "elapsed_ms": 922,
+    "content_type": "text/html; charset=utf-8",
+    "redirect_count": 0,
     "error": null,
     "technologies_found": 4,
     "technologies": [
@@ -644,8 +668,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186c77e0be070d0-OTP",
-            "excerpt": "cf-ray: a186c77e0be070d0-OTP",
+            "matched_value": "a186d034dcc2c9c4-OTP",
+            "excerpt": "cf-ray: a186d034dcc2c9c4-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -711,6 +735,9 @@
     "successful_url": "https://2020wealthadvisory.com",
     "final_url": "https://2020wealthadvisory.com/",
     "status_code": 200,
+    "elapsed_ms": 630,
+    "content_type": "text/html; charset=UTF-8",
+    "redirect_count": 0,
     "error": null,
     "technologies_found": 3,
     "technologies": [
@@ -766,8 +793,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186c7835c188a37-OTP",
-            "excerpt": "cf-ray: a186c7835c188a37-OTP",
+            "matched_value": "a186d03abece0538-OTP",
+            "excerpt": "cf-ray: a186d03abece0538-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },
@@ -817,6 +844,9 @@
     "successful_url": "https://231selfstorage.com",
     "final_url": "https://231selfstorage.com/",
     "status_code": 200,
+    "elapsed_ms": 619,
+    "content_type": "text/html; charset=UTF-8",
+    "redirect_count": 0,
     "error": null,
     "technologies_found": 3,
     "technologies": [
@@ -888,8 +918,8 @@
             "type": "header",
             "source": "headers",
             "location": "cf-ray",
-            "matched_value": "a186c787aebb1bde-OTP",
-            "excerpt": "cf-ray: a186c787aebb1bde-OTP",
+            "matched_value": "a186d03edb0370d1-OTP",
+            "excerpt": "cf-ray: a186d03edb0370d1-OTP",
             "confidence": "high",
             "explanation": "Found HTTP header 'cf-ray'."
           },

@@ -1,4 +1,6 @@
 from dataclasses import dataclass
+import time
+
 import requests
 
 
@@ -12,19 +14,23 @@ class WebsiteFetchResult:
     headers: dict[str, str]
     html: str
     error: str | None
+    elapsed_ms: int | None
+    content_type: str | None
+    redirect_count: int
 
-    
+
 
 def fetch_website(domain: str, timeout_seconds: int = 10) -> WebsiteFetchResult:
     attempted_urls: list[str] = []
     last_error: str | None = None
+    start_time = time.perf_counter()
 
     for transfer_protocol in ["https", "http"]:
         attempted_url = f"{transfer_protocol}://{domain}"
         attempted_urls.append(attempted_url)
 
         try:
-            response = requests.get( 
+            response = requests.get(
                 attempted_url,
                 timeout=timeout_seconds,
                 allow_redirects=True,
@@ -32,6 +38,10 @@ def fetch_website(domain: str, timeout_seconds: int = 10) -> WebsiteFetchResult:
                     "User-Agent": "Website Technologies Scraper"
                 },
             )
+
+            elapsed_ms = int((time.perf_counter() - start_time) * 1000)
+            content_type = response.headers.get("Content-Type")
+            redirect_count = len(response.history)
 
             return WebsiteFetchResult( # Return the result if the request is successful
                 domain=domain,
@@ -42,11 +52,15 @@ def fetch_website(domain: str, timeout_seconds: int = 10) -> WebsiteFetchResult:
                 headers=dict(response.headers),
                 html=response.text,
                 error=None,
+                elapsed_ms=elapsed_ms,
+                content_type=content_type,
+                redirect_count=redirect_count,
             )
 
         except requests.RequestException as error:
             last_error = str(error)
 
+    elapsed_ms = int((time.perf_counter() - start_time) * 1000)
 
     return WebsiteFetchResult( # Return the result with error information if all attempts fail
         domain=domain,
@@ -57,5 +71,7 @@ def fetch_website(domain: str, timeout_seconds: int = 10) -> WebsiteFetchResult:
         headers={},
         html="",
         error=last_error,
+        elapsed_ms=elapsed_ms,
+        content_type=None,
+        redirect_count=0,
     )
-

@@ -23,6 +23,9 @@ def print_fetch_result(result: WebsiteFetchResult) -> None:
     print(f"Successful:   {result.successful_url or '-'}")
     print(f"Final URL:    {result.final_url or '-'}")
     print(f"Status code:  {result.status_code or '-'}")
+    print(f"Elapsed:      {result.elapsed_ms if result.elapsed_ms is not None else '-'} ms")
+    print(f"Content type: {result.content_type or '-'}")
+    print(f"Redirects:    {result.redirect_count}")
     print(f"Headers:      {len(result.headers)}")
     print(f"HTML length:  {len(result.html)} characters")
     print(f"Error:        {result.error or '-'}")
@@ -88,6 +91,9 @@ def build_result_record(
         "successful_url": fetch_result.successful_url,
         "final_url": fetch_result.final_url,
         "status_code": fetch_result.status_code,
+        "elapsed_ms": fetch_result.elapsed_ms,
+        "content_type": fetch_result.content_type,
+        "redirect_count": fetch_result.redirect_count,
         "error": fetch_result.error,
         "technologies_found": len(technologies),
         "technologies": technologies,
