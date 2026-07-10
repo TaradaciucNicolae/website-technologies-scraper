@@ -355,7 +355,7 @@
   },
   {
     "name": "DDoS-Guard",
-    "category": "Captcha",
+    "category": "Security",
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [],
@@ -389,6 +389,24 @@
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Dealer.com / DDC",
+    "category": "Automotive Platform",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "^ddc_diag_",
+      "DDC."
+    ],
     "header_signatures": {}
   },
   {
@@ -718,6 +736,23 @@
     }
   },
   {
+    "name": "Didomi",
+    "category": "Cookie Compliance",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "sdk.privacy-center.org"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Digioh",
     "category": "Other",
     "confidence": "medium",
@@ -845,6 +880,27 @@
     "header_signatures": {}
   },
   {
+    "name": "DirectAdmin",
+    "category": "Hosting Control Panel",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "DirectAdmin</a> Web Control Panel"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "DirectAdmin Daemon"
+      ]
+    }
+  },
+  {
     "name": "Directus",
     "category": "CMS",
     "confidence": "high",
@@ -862,6 +918,27 @@
         "Directus"
       ]
     }
+  },
+  {
+    "name": "DISH Website Platform",
+    "category": "Restaurant Platform",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "order.dish.co"
+    ],
+    "js_asset_signatures": [
+      "order.dish.co"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "cdn.website.dish.co"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
   },
   {
     "name": "Distributor",
@@ -883,6 +960,23 @@
         "yes"
       ]
     }
+  },
+  {
+    "name": "Discourse",
+    "category": "Forum",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Discourse"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
   },
   {
     "name": "District M",
@@ -1093,6 +1187,25 @@
     ],
     "dom_marker_signatures": [],
     "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "DokuWiki",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "DokuWiki"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "DokuWiki"
+    ],
     "header_signatures": {}
   },
   {

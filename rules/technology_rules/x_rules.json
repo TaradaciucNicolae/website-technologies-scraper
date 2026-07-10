@@ -55,6 +55,28 @@
     "header_signatures": {}
   },
   {
+    "name": "XenForo",
+    "category": "Forum",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "Forum software by XenForo",
+      "<html id=\"XenForo\"",
+      "<html id=\"XF\""
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "xf_csrf",
+      "xf_session"
+    ],
+    "header_signatures": {}
+  },
+  {
     "name": "Xeora",
     "category": "Web Framework",
     "confidence": "high",

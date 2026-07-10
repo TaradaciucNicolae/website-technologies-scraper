@@ -517,6 +517,29 @@
     "header_signatures": {}
   },
   {
+    "name": "Nette Framework",
+    "category": "Web Framework",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "data-nette-rules"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "nette-browser"
+    ],
+    "header_signatures": {
+      "x-powered-by": [
+        "Nette Framework"
+      ]
+    }
+  },
+  {
     "name": "New Relic",
     "category": "Monitoring",
     "confidence": "high",
@@ -1006,6 +1029,27 @@
     }
   },
   {
+    "name": "NodeBB",
+    "category": "Forum",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "/nodebb.min.js?"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "NodeBB"
+      ]
+    }
+  },
+  {
     "name": "NoFraud",
     "category": "Captcha",
     "confidence": "high",
@@ -1020,6 +1064,27 @@
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "nopCommerce",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "Powered by nopCommerce"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "nopCommerce"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "Nop.customer"
+    ],
     "header_signatures": {}
   },
   {

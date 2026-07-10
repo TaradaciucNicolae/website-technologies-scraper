@@ -1277,6 +1277,27 @@
     "header_signatures": {}
   },
   {
+    "name": "MediaWiki",
+    "category": "Collaboration / Wiki",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "class=\"mediawiki\"",
+      "Powered by MediaWiki",
+      "/Special:WhatLinksHere/"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "MediaWiki"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Medium",
     "category": "Blog",
     "confidence": "high",
@@ -2670,6 +2691,26 @@
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Moodle",
+    "category": "Learning Management System",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "moodlelogo"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "MOODLEID_",
+      "MoodleSession"
+    ],
     "header_signatures": {}
   },
   {

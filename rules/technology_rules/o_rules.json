@@ -172,6 +172,25 @@
     "header_signatures": {}
   },
   {
+    "name": "Oddle",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "oddle-pass-wrapper.s3.ap-southeast-1"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "enableOddlePass"
+    ],
+    "header_signatures": {}
+  },
+  {
     "name": "Odoo",
     "category": "CMS",
     "confidence": "high",
@@ -1082,6 +1101,25 @@
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "OpnForm",
+    "category": "Forms",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "api.opnform.com"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "OpnForm_session"
+    ],
     "header_signatures": {}
   },
   {

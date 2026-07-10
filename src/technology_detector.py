@@ -7,7 +7,9 @@ from src.javascript_asset_fetcher import JavaScriptAsset
 
 
 @dataclass
-class TechnologyEvidence: # Explanation that explains why a technology was detected.
+class TechnologyEvidence:
+    # Evidence is the audit trail: every detection should point to the exact
+    # signal that made the rule match.
     type: str
     source: str
     location: str
@@ -22,7 +24,7 @@ class TechnologyEvidence: # Explanation that explains why a technology was detec
 
 
 @dataclass
-class TechnologyDetection: # A technology found on a website, together with its evidence.
+class TechnologyDetection:
     name: str
     category: str
     confidence: str
@@ -30,7 +32,7 @@ class TechnologyDetection: # A technology found on a website, together with its 
 
 
 @dataclass
-class TechnologyRule: # A rule for detecting a specific technology.
+class TechnologyRule:
     name: str
     category: str
     confidence: str
@@ -56,6 +58,8 @@ def load_raw_technology_rules(rules_path: Path) -> list[dict]:
 def load_raw_technology_rules_from_directory(rules_directory: Path) -> list[dict]:
     raw_rules: list[dict] = []
 
+    # Stable file and rule ordering makes test failures and generated output
+    # easier to compare after rule updates.
     for rules_file in sorted(rules_directory.glob("*_rules.json")):
         raw_rules_from_file = json.loads(rules_file.read_text(encoding="utf-8"))
         raw_rules.extend(raw_rules_from_file)
@@ -65,7 +69,6 @@ def load_raw_technology_rules_from_directory(rules_directory: Path) -> list[dict
     return raw_rules
 
 
-# Load technology detection rules from a JSON file or from a rules directory.
 def load_technology_rules(rules_path: Path) -> list[TechnologyRule]:
     raw_rules = load_raw_technology_rules(rules_path)
 
@@ -86,11 +89,10 @@ def load_technology_rules(rules_path: Path) -> list[TechnologyRule]:
                 meta_generator_signatures=raw_rule.get("meta_generator_signatures", []),
                 dom_marker_signatures=raw_rule.get("dom_marker_signatures", []),
                 cookie_signatures=raw_rule.get("cookie_signatures", []),
-                header_signatures=raw_rule.get("header_signatures", {})
+                header_signatures=raw_rule.get("header_signatures", {}),
             )
         )
 
-    # Return a list of TechnologyRule objects used by the detector.
     return rules
 
 
@@ -120,8 +122,6 @@ def build_excerpt(text: str, matched_value: str, characters_around_match: int = 
     return excerpt
 
 
-# We detect website technologies by matching known signatures.
-# We check both the HTML response and HTTP headers (each match is returned with evidence)
 def detect_technologies(
     domain: str,
     final_url: str | None,
@@ -131,8 +131,8 @@ def detect_technologies(
     cookies: dict[str, str] | None = None,
     javascript_assets: list[JavaScriptAsset] | None = None,
 ) -> list[TechnologyDetection]:
-    
-    # Normalize the headers
+    # The detector is intentionally deterministic: rules decide the result, and
+    # every match returns evidence that can be reviewed later.
     normalized_headers = {
         key.lower(): value
         for key, value in headers.items()
@@ -171,11 +171,9 @@ def detect_technologies(
             )
         )
 
-    # Return detected technologies, each containing its evidence list.
     return detections
 
 
-# Collect all explanation items for a single technology rule.
 def collect_evidence_for_rule(
     rule: TechnologyRule,
     domain: str,
@@ -186,9 +184,10 @@ def collect_evidence_for_rule(
     cookies: dict[str, str],
     javascript_assets: list[JavaScriptAsset],
 ) -> list[TechnologyEvidence]:
-
     evidence: list[TechnologyEvidence] = []
 
+    # Separate evidence sources make the output more useful than a single broad
+    # HTML match and help reviewers understand false positives.
     evidence.extend(
         collect_domain_evidence(domain, final_url, rule.domain_signatures, rule.confidence)
     )
@@ -221,7 +220,6 @@ def collect_evidence_for_rule(
         collect_header_evidence(normalized_headers, rule.header_signatures, rule.confidence)
     )
 
-    # Return all explanation items found for this rule.
     return evidence
 
 
@@ -260,7 +258,6 @@ def collect_domain_evidence(
 
     return evidence
 
-# Find technology signatures inside the HTML response.
 def collect_html_evidence(
     html: str,
     soup: BeautifulSoup,
@@ -272,9 +269,10 @@ def collect_html_evidence(
     dom_marker_signatures: list[str],
     confidence: str,
 ) -> list[TechnologyEvidence]:
-
     evidence: list[TechnologyEvidence] = []
 
+    # URL/meta/DOM matches are usually more explainable than raw HTML matches,
+    # so they are collected as dedicated evidence types first.
     if script_url_signatures:
         evidence.extend(collect_script_url_evidence(soup, script_url_signatures, confidence))
 
@@ -293,7 +291,6 @@ def collect_html_evidence(
     if html_signatures:
         evidence.extend(collect_raw_html_evidence(html, html_signatures, confidence))
 
-    # Return HTML evidence items for the matched signatures.
     return evidence
 
 
@@ -362,6 +359,8 @@ def read_package_name_from_url_parts(path_parts: list[str]) -> str | None:
 
 
 def extract_package_name_from_cdn_url(asset_url: str) -> str | None:
+    # Known CDN URL layouts expose package names directly, which is safer than
+    # guessing from arbitrary filenames.
     parsed_url = urlparse(asset_url)
     hostname = parsed_url.netloc.lower()
     path_parts = [
@@ -626,7 +625,6 @@ def collect_raw_html_evidence(
 
 
 
-# Find technology signatures inside response cookie names.
 def collect_cookie_evidence(
     cookies: dict[str, str],
     signatures: list[str],
@@ -669,13 +667,14 @@ def cookie_signature_matches(cookie_name_lower: str, signature: str) -> bool:
         return False
 
     if normalized_signature.startswith("^"):
+        # A leading caret means prefix matching for cookie families with
+        # generated suffixes, such as security or ecommerce cookies.
         expected_prefix = normalized_signature[1:]
         return cookie_name_lower.startswith(expected_prefix)
 
     return normalized_signature in cookie_name_lower
 
 
-# Find technology signatures inside fetched JavaScript assets.
 def collect_javascript_asset_evidence(
     javascript_assets: list[JavaScriptAsset],
     signatures: list[str],
@@ -683,6 +682,8 @@ def collect_javascript_asset_evidence(
 ) -> list[TechnologyEvidence]:
     evidence: list[TechnologyEvidence] = []
 
+    # JavaScript content is useful for widgets and libraries that do not expose
+    # clear HTML markers, but asset fetching is limited before this point.
     for javascript_asset in javascript_assets:
         if javascript_asset.error is not None:
             continue
@@ -715,7 +716,6 @@ def collect_javascript_asset_evidence(
 
 
 
-# Find technology signatures inside HTTP response headers.
 def collect_header_evidence(
     normalized_headers: dict[str, str],
     header_signatures: dict[str, list[str]],
@@ -724,12 +724,7 @@ def collect_header_evidence(
     evidence: list[TechnologyEvidence] = []
 
     for header_name, signatures in header_signatures.items():
-
-        # Normalize the header name
         normalized_header_name = header_name.lower()
-
-        # In the headers dictionary, the header name is the key and the header content is the value.
-        # Example: looking up key "server" returns value "cloudflare".
         header_value = normalized_headers.get(normalized_header_name)
 
         if header_value is None:
@@ -743,6 +738,8 @@ def collect_header_evidence(
             if normalized_signature and normalized_signature not in header_value_lower:
                 continue
 
+            # An empty signature means the header's presence is specific enough
+            # to count, for example vendor-only diagnostic headers.
             if normalized_signature:
                 matched_value = signature
                 explanation = f"Found '{signature}' in HTTP header '{normalized_header_name}'."
@@ -763,5 +760,4 @@ def collect_header_evidence(
             )
             break
 
-    # Return header evidence items for the matched signatures.
     return evidence

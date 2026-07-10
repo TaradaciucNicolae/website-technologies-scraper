@@ -476,6 +476,23 @@
     "header_signatures": {}
   },
   {
+    "name": "Help Scout",
+    "category": "Customer Support",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      ".helpscout.net/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Here",
     "category": "Maps",
     "confidence": "high",
@@ -920,7 +937,7 @@
   },
   {
     "name": "Hostinger",
-    "category": "WordPress Hosting",
+    "category": "Hosting",
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [],
@@ -932,6 +949,9 @@
     "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {
+      "panel": [
+        "hpanel"
+      ],
       "platform": [
         "hostinger"
       ]
@@ -955,6 +975,25 @@
         "hcdn"
       ]
     }
+  },
+  {
+    "name": "Hostinger Website Builder",
+    "category": "Page Builder",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "userapp.zyrosite.com/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Hostinger Website Builder"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
   },
   {
     "name": "Hotaru CMS",

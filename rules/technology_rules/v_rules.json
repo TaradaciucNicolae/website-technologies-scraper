@@ -72,6 +72,28 @@
     "header_signatures": {}
   },
   {
+    "name": "Vanilla",
+    "category": "Forum",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "<body id=\"DiscussionsPage\"",
+      "<body id=\"vanilla\""
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "Vanilla"
+      ]
+    }
+  },
+  {
     "name": "Vant",
     "category": "UI Framework",
     "confidence": "high",

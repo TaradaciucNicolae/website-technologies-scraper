@@ -1774,6 +1774,48 @@
     }
   },
   {
+    "name": "WordPress Popular Posts",
+    "category": "Widget",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "/wp-content/plugins/wordpress-popular-posts/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "WordPressPopularPosts": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "WordPress Super Cache",
+    "category": "Caching",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "WP-Super-Cache"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "WP-Super-Cache": [
+        ""
+      ]
+    }
+  },
+  {
     "name": "WordPress VIP",
     "category": "PaaS",
     "confidence": "high",
@@ -1939,7 +1981,7 @@
   },
   {
     "name": "WP Engine",
-    "category": "WordPress Hosting",
+    "category": "Hosting",
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [],

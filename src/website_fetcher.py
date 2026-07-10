@@ -4,6 +4,8 @@ import time
 import requests
 
 
+# Browser-like request headers help many sites return their normal homepage
+# instead of a simplified bot or block response.
 DEFAULT_REQUEST_HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -46,6 +48,8 @@ def fetch_website(
     if request_headers is not None:
         headers.update(request_headers)
 
+    # HTTPS is the canonical version for most sites, while the HTTP fallback
+    # keeps older or misconfigured domains from being discarded too early.
     for transfer_protocol in ["https", "http"]:
         attempted_url = f"{transfer_protocol}://{domain}"
         attempted_urls.append(attempted_url)
@@ -62,7 +66,7 @@ def fetch_website(
             content_type = response.headers.get("Content-Type")
             redirect_count = len(response.history)
 
-            return WebsiteFetchResult( # Return the result if the request is successful
+            return WebsiteFetchResult(
                 domain=domain,
                 attempted_urls=attempted_urls,
                 successful_url=attempted_url,
@@ -82,7 +86,7 @@ def fetch_website(
 
     elapsed_ms = int((time.perf_counter() - start_time) * 1000)
 
-    return WebsiteFetchResult( # Return the result with error information if all attempts fail
+    return WebsiteFetchResult(
         domain=domain,
         attempted_urls=attempted_urls,
         successful_url=None,

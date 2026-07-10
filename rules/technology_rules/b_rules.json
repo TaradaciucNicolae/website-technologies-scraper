@@ -520,6 +520,24 @@
     "header_signatures": {}
   },
   {
+    "name": "Better Stack",
+    "category": "Monitoring",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "betterstack.com/",
+      "betteruptime.com/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "BetterDocs plugin",
     "category": "Geolocation",
     "confidence": "high",
@@ -1595,6 +1613,40 @@
     "header_signatures": {}
   },
   {
+    "name": "BookStack",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "bookstack_session"
+    ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Booksy",
+    "category": "Appointment Scheduling",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "booksy.com/widget/code.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "BookThatApp",
     "category": "Other",
     "confidence": "high",
@@ -2426,6 +2478,45 @@
     "header_signatures": {}
   },
   {
+    "name": "BugHerd",
+    "category": "Feedback",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "bugherd.com/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Bugzilla",
+    "category": "Issue Tracker",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "id=\"bugzilla-body\"",
+      "enter_bug.cgi"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Bugzilla"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "Bugzilla_login_request_cookie"
+    ],
+    "header_signatures": {}
+  },
+  {
     "name": "Builder.io",
     "category": "CMS",
     "confidence": "medium",
@@ -2501,7 +2592,9 @@
     "category": "Font Script",
     "confidence": "high",
     "domain_signatures": [],
-    "html_signatures": [],
+    "html_signatures": [
+      "fonts.bunny.net"
+    ],
     "script_url_signatures": [],
     "js_asset_signatures": [],
     "package_url_signatures": [],
@@ -2584,6 +2677,24 @@
     "header_signatures": {}
   },
   {
+    "name": "Buttonizer",
+    "category": "Widget",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.buttonizer.io/",
+      "wp-content/plugins/buttonizer-multifunctional-button/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Buyapowa",
     "category": "Ticket Booking",
     "confidence": "high",
@@ -2595,6 +2706,23 @@
     "js_asset_signatures": [
       "Buyapowa.CanaryCheck"
     ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Buy with Prime",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "code.buywithprime.amazon.com/"
+    ],
+    "js_asset_signatures": [],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],

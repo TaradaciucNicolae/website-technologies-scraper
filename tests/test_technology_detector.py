@@ -759,6 +759,14 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("PHP", detected_names)
 
 
+    def test_detects_php_from_session_cookie(self) -> None:
+        detected_names = self.get_detected_names(
+            cookies={"PHPSESSID": "example-session"}
+        )
+
+        self.assertIn("PHP", detected_names)
+
+
     def test_detects_wp_engine_from_x_powered_by_header(self) -> None:
         detected_names = self.get_detected_names(
             headers={"X-Powered-By": "WP Engine"}
@@ -767,12 +775,55 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("WP Engine", detected_names)
 
 
+    def test_detects_elementor_cloud_from_x_powered_by_header(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={"X-Powered-By": "Elementor Cloud"}
+        )
+
+        self.assertIn("Elementor Cloud", detected_names)
+
+
+    def test_detects_luxury_presence_from_x_powered_by_header(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={"X-Powered-By": "Luxury Presence"}
+        )
+
+        self.assertIn("Luxury Presence", detected_names)
+
+
+    def test_detects_canva_websites_from_csp_header(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={"Content-Security-Policy": "default-src 'self' https://csp.canva.com https://www.canva.com"}
+        )
+
+        self.assertIn("Canva Websites", detected_names)
+
+
     def test_detects_kinsta_from_vendor_header(self) -> None:
         detected_names = self.get_detected_names(
             headers={"X-Kinsta-Cache": "HIT"}
         )
 
         self.assertIn("Kinsta", detected_names)
+
+
+    def test_detects_dealer_com_ddc_from_diagnostic_cookie(self) -> None:
+        detected_names = self.get_detected_names(
+            cookies={"ddc_diag_akam_clientIP": "127.0.0.1"}
+        )
+
+        self.assertIn("Dealer.com / DDC", detected_names)
+
+
+    def test_detects_salesforce_commerce_cloud_from_demandware_cookies(self) -> None:
+        detected_names = self.get_detected_names(
+            cookies={
+                "dwac_example": "value",
+                "dwsid": "session",
+            }
+        )
+
+        self.assertIn("Salesforce Commerce Cloud", detected_names)
 
 
     def test_detects_ddos_guard_from_cookie_prefix(self) -> None:
@@ -789,6 +840,38 @@ class TechnologyDetectorTests(unittest.TestCase):
         )
 
         self.assertIn("Cloudflare Web Analytics", detected_names)
+
+
+    def test_detects_swfobject_from_script_url(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<script src="/assets/swfobject.js"></script>'
+        )
+
+        self.assertIn("SWFObject", detected_names)
+
+
+    def test_detects_asp_net_from_session_cookie(self) -> None:
+        detected_names = self.get_detected_names(
+            cookies={"ASP.NET_SessionId": "example-session"}
+        )
+
+        self.assertIn("ASP.NET", detected_names)
+
+
+    def test_detects_java_from_jsessionid_cookie(self) -> None:
+        detected_names = self.get_detected_names(
+            cookies={"JSESSIONID": "example-session"}
+        )
+
+        self.assertIn("Java", detected_names)
+
+
+    def test_detects_sucuri_from_cloudproxy_server_header(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={"Server": "Sucuri/Cloudproxy"}
+        )
+
+        self.assertIn("Sucuri", detected_names)
 
 
     def test_detects_breakdance_from_cookie_name(self) -> None:

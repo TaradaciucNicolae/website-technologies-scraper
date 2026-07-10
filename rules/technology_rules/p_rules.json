@@ -335,6 +335,27 @@
     "header_signatures": {}
   },
   {
+    "name": "ParkLogic",
+    "category": "Domain Parking",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "parklogic.com"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "permissions-policy": [
+        "parklogic.com"
+      ]
+    }
+  },
+  {
     "name": "Parmin Cloud",
     "category": "IaaS",
     "confidence": "high",
@@ -596,6 +617,25 @@
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "PayHere",
+    "category": "Payment Processor",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "app.payhere.co"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_pay_here_session"
+    ],
     "header_signatures": {}
   },
   {
@@ -1841,6 +1881,27 @@
     "header_signatures": {}
   },
   {
+    "name": "Plaid",
+    "category": "Payment Processor",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.plaid.com/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "content-security-policy": [
+        "cdn.plaid.com/"
+      ]
+    }
+  },
+  {
     "name": "Plasmic",
     "category": "Document Management System",
     "confidence": "medium",
@@ -2000,6 +2061,30 @@
     "header_signatures": {
       "x-plenty-shop": [
         "Ceres"
+      ]
+    }
+  },
+  {
+    "name": "Plesk",
+    "category": "Hosting Control Panel",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "common.js?plesk"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "Plesk"
+      ],
+      "x-powered-by-plesk": [
+        "Plesk"
       ]
     }
   },
@@ -2875,6 +2960,26 @@
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "ProfilePress",
+    "category": "Forms",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "/wp-content/plugins/wp-user-avatar/",
+      "/wp-content/plugins/wp-user-avatar-pro/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "ppwp_wp_session"
+    ],
     "header_signatures": {}
   },
   {

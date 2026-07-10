@@ -521,6 +521,25 @@
     "header_signatures": {}
   },
   {
+    "name": "ElasticPress",
+    "category": "Search Engine",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-elasticpress-query": [
+        ""
+      ]
+    }
+  },
+  {
     "name": "ElasticSuite",
     "category": "Search Engine",
     "confidence": "high",
@@ -612,6 +631,34 @@
     "header_signatures": {}
   },
   {
+    "name": "Elementor Cloud",
+    "category": "Hosting",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "ec-cdn-status": [
+        ""
+      ],
+      "ec-cdn-supported": [
+        ""
+      ],
+      "ec-source": [
+        ""
+      ],
+      "x-powered-by": [
+        "Elementor Cloud"
+      ]
+    }
+  },
+  {
     "name": "Elementor Header & Footer Builder",
     "category": "Geolocation",
     "confidence": "high",
@@ -678,6 +725,23 @@
     "meta_generator_signatures": [
       "Eleventy"
     ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Elfsight",
+    "category": "Widget",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "elfsight.com/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
@@ -868,6 +932,23 @@
     "html_signatures": [],
     "script_url_signatures": [
       "wp-content/plugins/youtube-embed-plus"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "EmbedSocial",
+    "category": "Social Media Widget",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "embedsocial.com/"
     ],
     "js_asset_signatures": [],
     "package_url_signatures": [],
@@ -1221,6 +1302,25 @@
     "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
+  },
+  {
+    "name": "ePages",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-epages-requestid": [
+        ""
+      ]
+    }
   },
   {
     "name": "Epom",

@@ -77,6 +77,8 @@ def build_asset_signal(
     asset_url: str,
     base_url: str | None,
 ) -> dict:
+    # Discovery keeps domains and package names beside the raw URL so repeated
+    # unknown assets can be grouped into future rule candidates.
     absolute_url = get_absolute_url(asset_url, base_url)
     package_name = extract_package_name_from_cdn_url(absolute_url)
 
@@ -233,6 +235,8 @@ def build_site_record(
     detections: list[TechnologyDetection],
     javascript_assets: list[JavaScriptAsset],
 ) -> dict:
+    # Discovery records are intentionally richer than normal result records:
+    # they are for rule research, not for the public detection schema.
     base_url = fetch_result.final_url or fetch_result.successful_url
     soup = BeautifulSoup(fetch_result.html, "html.parser")
     script_signals = collect_script_signals(soup, base_url)
@@ -274,6 +278,8 @@ def collect_discovery_candidates(
 ) -> None:
     detection_count = len(detections)
 
+    # High-detection pages already have enough evidence; the useful research
+    # signal is concentrated in undetected or low-detection pages.
     if detection_count > MAX_DETECTION_COUNT_SHOWN_IN_DISCOVERY:
         return
 
@@ -320,6 +326,8 @@ def load_existing_discovery_candidates(output_path: Path) -> list[dict]:
     existing_undetected_sites = existing_discovery_candidates.get("undetected")
     existing_detected_low_number_sites = existing_discovery_candidates.get("detected_low_number")
 
+    # Older files used a single "sites" list; accepting both shapes lets append
+    # mode work across local development runs.
     if isinstance(existing_undetected_sites, list) or isinstance(existing_detected_low_number_sites, list):
         existing_sites: list[dict] = []
 

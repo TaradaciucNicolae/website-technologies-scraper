@@ -513,6 +513,25 @@
     "header_signatures": {}
   },
   {
+    "name": "Teachable",
+    "category": "LMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      ".teachablecdn.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_gat_teachableTracker"
+    ],
+    "header_signatures": {}
+  },
+  {
     "name": "Teads",
     "category": "Advertising",
     "confidence": "high",
@@ -867,6 +886,23 @@
     }
   },
   {
+    "name": "The SEO Framework",
+    "category": "SEO",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "The SEO Framework by Sybre Waaijer"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "The.com",
     "category": "Web Framework",
     "confidence": "high",
@@ -1044,6 +1080,26 @@
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Thinkific",
+    "category": "LMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn-thinkific.com",
+      "cdn.thinkific.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_thinkific_session"
+    ],
     "header_signatures": {}
   },
   {

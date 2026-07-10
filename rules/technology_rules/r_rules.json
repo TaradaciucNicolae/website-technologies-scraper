@@ -55,6 +55,29 @@
     "header_signatures": {}
   },
   {
+    "name": "RainLoop",
+    "category": "Email",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "rainloop/v/"
+    ],
+    "script_url_signatures": [
+      "rainloop/v/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server": [
+        "RainLoop"
+      ]
+    }
+  },
+  {
     "name": "Rakuten",
     "category": "Affiliate Program",
     "confidence": "high",

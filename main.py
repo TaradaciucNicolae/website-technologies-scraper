@@ -123,7 +123,6 @@ def build_result_record(
     detections: list[TechnologyDetection],
     javascript_assets: list[JavaScriptAsset] | None = None,
 ) -> dict:
-
     if javascript_assets is None:
         javascript_assets = []
 
@@ -159,6 +158,8 @@ def build_result_record(
     if fetch_result.error is not None:
         errors.append(fetch_result.error)
 
+    # This is the public result shape used by all exports, so timeout handling
+    # and discovery reporting stay outside it to keep the output schema stable.
     return {
         "domain": fetch_result.domain,
         "normalized_url": fetch_result.successful_url,
@@ -199,6 +200,8 @@ def process_domain(
     domain: str,
     rules,
 ) -> tuple[WebsiteFetchResult, list[JavaScriptAsset], list[TechnologyDetection]]:
+    # One domain is processed as a small static pipeline: homepage, selected JS
+    # assets, then deterministic rule matching over all collected evidence.
     result = fetch_website(domain)
     javascript_assets = fetch_javascript_assets(
         html=result.html,
@@ -234,6 +237,8 @@ def process_domain_with_timeout(
     rules,
     domain_timeout_seconds: float,
 ) -> tuple[WebsiteFetchResult, list[JavaScriptAsset], list[TechnologyDetection]] | None:
+    # A separate process can be terminated when a domain gets stuck in network
+    # work; this keeps one slow site from blocking the whole scan.
     result_queue: Queue = Queue()
     process = Process(
         target=process_domain_worker,
@@ -463,6 +468,8 @@ def main() -> None:
         print("Rewrite disabled. New results will be appended to existing output files.")
 
     domains = extract_domains(RAW_INPUT_PATH, DOMAINS_OUTPUT_PATH)
+    # Rules are loaded once and reused for every domain so detection is
+    # deterministic across JSON, JSONL, CSV, summary, and discovery outputs.
     rules = load_technology_rules(RULES_PATH)
     results: list[dict] = []
     discovery_store = create_discovery_store()
@@ -492,6 +499,8 @@ def main() -> None:
         print(f"JavaScript assets fetched: {len(javascript_assets)}")
         print_detected_technologies(detections)
 
+        # Discovery candidates help future rule writing without changing the
+        # current detection result.
         collect_discovery_candidates(
             discovery_store=discovery_store,
             fetch_result=result,
@@ -504,6 +513,7 @@ def main() -> None:
     all_results_for_summary = results
 
     if arguments.rewrite == 0:
+        # Appended runs still produce a summary over the combined JSON result set.
         existing_results = load_existing_json_results(RESULTS_OUTPUT_PATH)
         all_results_for_summary = existing_results + results
 

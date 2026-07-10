@@ -219,6 +219,43 @@
     "header_signatures": {}
   },
   {
+    "name": "Camera Slideshow",
+    "category": "JavaScript Library",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "/web.camera/",
+      "camera.min.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "camera.css"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Campaign Monitor",
+    "category": "Email Marketing",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "createsend1.com/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Canto",
     "category": "Augmented Reality",
     "confidence": "high",
@@ -254,6 +291,67 @@
     "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
+  },
+  {
+    "name": "Canny",
+    "category": "Feedback",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "content-security-policy": [
+        "canny.io"
+      ]
+    }
+  },
+  {
+    "name": "Canva Websites",
+    "category": "Website Builder",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "content-security-policy": [
+        "canva.com",
+        "csp.canva.com"
+      ],
+      "x-deployment-id": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "Canvas LMS",
+    "category": "LMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-canvas-meta": [
+        "login/canvas"
+      ]
+    }
   },
   {
     "name": "CanvasJS",
@@ -1027,6 +1125,23 @@
     "header_signatures": {}
   },
   {
+    "name": "Checkfront",
+    "category": "Appointment Scheduling",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "checkfront.com/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Chekkit",
     "category": "Page Builder",
     "confidence": "medium",
@@ -1128,6 +1243,23 @@
       "ch_client",
       "ch_color_site_link"
     ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Chili Piper",
+    "category": "Scheduling",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "js.chilipiper.com/marketing.js"
+    ],
+    "js_asset_signatures": [],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
@@ -1648,6 +1780,23 @@
     "html_signatures": [],
     "script_url_signatures": [
       "cdn.clinch.co"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Cloudbeds",
+    "category": "Reservation",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cloudbeds.com/"
     ],
     "js_asset_signatures": [],
     "package_url_signatures": [],
@@ -2583,6 +2732,23 @@
     "header_signatures": {}
   },
   {
+    "name": "Contao",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Contao Open Source CMS"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Contenido",
     "category": "CMS",
     "confidence": "high",
@@ -3141,6 +3307,26 @@
     "header_signatures": {}
   },
   {
+    "name": "CoreMedia",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      ".coremedia.cloud/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "CoreMedia CMS",
+      "CoreMedia Content Cloud"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "CoRover",
     "category": "Page Builder",
     "confidence": "high",
@@ -3436,6 +3622,30 @@
     "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
+  },
+  {
+    "name": "cPanel",
+    "category": "Hosting Control Panel",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "<!-- cPanel"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "cprelogin",
+      "cpsession"
+    ],
+    "header_signatures": {
+      "server": [
+        "cpsrvd"
+      ]
+    }
   },
   {
     "name": "Cratejoy",
@@ -3745,6 +3955,25 @@
       "fn_buy_together_apply_discount",
       "fn_calculate_total_shipping",
       "fn_compare_strings"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "CSSUA",
+    "category": "JavaScript Library",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cssua.min.js"
+    ],
+    "js_asset_signatures": [
+      "cssua"
     ],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [],

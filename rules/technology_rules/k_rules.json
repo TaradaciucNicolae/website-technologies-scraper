@@ -197,8 +197,31 @@
     "header_signatures": {}
   },
   {
+    "name": "Kentico CMS",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "/CMSPages/GetResource.ashx",
+      "/kentico.resource"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Kentico CMS"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "CMSCookieLevel",
+      "CMSPreferredCulture"
+    ],
+    "header_signatures": {}
+  },
+  {
     "name": "Kinsta",
-    "category": "WordPress Hosting",
+    "category": "Hosting",
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [],

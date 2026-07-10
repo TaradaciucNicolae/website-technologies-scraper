@@ -248,6 +248,7 @@
     "cookie_signatures": [],
     "header_signatures": {
       "server": [
+        "Microsoft-IIS",
         "?IIS",
         "Microsoft-"
       ]

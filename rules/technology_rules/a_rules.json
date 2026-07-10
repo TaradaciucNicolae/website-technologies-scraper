@@ -638,6 +638,23 @@
     }
   },
   {
+    "name": "Acuity Scheduling",
+    "category": "Scheduling",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "acuityscheduling.com"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "AD EBiS",
     "category": "Advertising",
     "confidence": "high",
@@ -841,6 +858,23 @@
       "AddSearchClient",
       "AddSearchUI"
     ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "AddThis",
+    "category": "Social Sharing",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "addthis.com/js/"
+    ],
+    "js_asset_signatures": [],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
@@ -1827,6 +1861,29 @@
     "header_signatures": {}
   },
   {
+    "name": "Agility CMS",
+    "category": "CMS",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "cdn.agilitycms.com/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Agility CMS"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-pr-test": [
+        "adobecq"
+      ]
+    }
+  },
+  {
     "name": "Ahoy",
     "category": "Analytics",
     "confidence": "high",
@@ -2001,7 +2058,7 @@
   },
   {
     "name": "Akamai Bot Manager",
-    "category": "Captcha",
+    "category": "Security",
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [],
@@ -3831,7 +3888,7 @@
   },
   {
     "name": "Aruba.it",
-    "category": "WordPress Hosting",
+    "category": "Hosting",
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [],
@@ -3940,7 +3997,7 @@
   },
   {
     "name": "ASP.NET",
-    "category": "Backend Framework",
+    "category": "Web Framework",
     "confidence": "high",
     "domain_signatures": [],
     "html_signatures": [],
@@ -4129,6 +4186,49 @@
     "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
+  },
+  {
+    "name": "Atlassian Confluence",
+    "category": "Collaboration / Wiki",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-confluence-request-time": [
+        ""
+      ]
+    }
+  },
+  {
+    "name": "Atlassian Statuspage",
+    "category": "Monitoring / Status Page",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "statuspage.io/powered-by"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-statuspage-skip-logging": [
+        ""
+      ],
+      "x-statuspage-version": [
+        ""
+      ]
+    }
   },
   {
     "name": "Atatus",

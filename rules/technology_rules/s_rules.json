@@ -233,12 +233,20 @@
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [
+      "__cq_dnt",
+      "cqcid",
+      "cquid",
+      "dwac_",
       "dw_dnt",
+      "dwanonymous_",
       "dwsid"
     ],
     "header_signatures": {
       "server": [
         "Demandware"
+      ],
+      "x-dw-request-base-id": [
+        ""
       ]
     }
   },
@@ -531,6 +539,27 @@
     "header_signatures": {
       "server": [
         "NetWeaver"
+      ]
+    }
+  },
+  {
+    "name": "SAP Commerce Cloud",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "_hybris"
+    ],
+    "header_signatures": {
+      "x-sap-pad": [
+        ""
       ]
     }
   },
@@ -2559,6 +2588,37 @@
     "header_signatures": {}
   },
   {
+    "name": "Shopware",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "/engine/Shopware/",
+      "/jquery.shopware.min.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "sw-context-token": [
+        ""
+      ],
+      "sw-invalidation-states": [
+        ""
+      ],
+      "sw-language-id": [
+        ""
+      ],
+      "sw-version-id": [
+        ""
+      ]
+    }
+  },
+  {
     "name": "ShopWired",
     "category": "Ecommerce",
     "confidence": "high",
@@ -3097,6 +3157,30 @@
     "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
+  },
+  {
+    "name": "Sirv",
+    "category": "Digital Asset Management",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "scripts.sirv.com"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-sirv-cache": [
+        ""
+      ],
+      "x-sirv-server": [
+        ""
+      ]
+    }
   },
   {
     "name": "Site Meter",
@@ -3801,6 +3885,26 @@
     "package_url_signatures": [],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Slider Revolution",
+    "category": "Widget",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "/wp-content/plugins/revslider/",
+      "jquery.themepunch.revolution.min.js"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Slider Revolution"
+    ],
     "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
@@ -6533,6 +6637,12 @@
     "header_signatures": {
       "server": [
         "Sucuri"
+      ],
+      "x-sucuri-cache": [
+        ""
+      ],
+      "x-sucuri-id": [
+        ""
       ]
     }
   },
@@ -6911,6 +7021,26 @@
     "cookie_signatures": [
       "swell-session"
     ],
+    "header_signatures": {}
+  },
+  {
+    "name": "SWFObject",
+    "category": "JavaScript Library",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "swfobject.js",
+      "swfobject_modified.js"
+    ],
+    "js_asset_signatures": [
+      "SWFObject"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
     "header_signatures": {}
   },
   {

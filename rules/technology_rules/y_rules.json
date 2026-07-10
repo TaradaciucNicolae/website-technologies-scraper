@@ -149,6 +149,27 @@
     }
   },
   {
+    "name": "Yandex SmartCaptcha",
+    "category": "Captcha",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "Yandex SmartCaptcha"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-yandex-captcha": [
+        ""
+      ]
+    }
+  },
+  {
     "name": "Yandex.Cloud CDN",
     "category": "CDN",
     "confidence": "medium",
@@ -423,6 +444,25 @@
     "stylesheet_url_signatures": [
       "wp-content/plugins/duplicate-post"
     ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Yoast SEO",
+    "category": "SEO",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "This site is optimized with the Yoast SEO plugin",
+      "This site is optimized with the Yoast WordPress SEO plugin",
+      "This site is optimized with the Yoast SEO Premium plugin"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [],

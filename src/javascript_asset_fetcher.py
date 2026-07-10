@@ -47,6 +47,8 @@ def should_skip_script_url(script_url: str) -> bool:
     script_url_lower = script_url.lower()
     parsed_url = urlparse(script_url)
 
+    # Pseudo URLs are not fetchable network assets and add noise to the JS scan,
+    # so only real HTTP(S) script URLs are kept.
     if script_url_lower.startswith("data:"):
         return True
 
@@ -74,6 +76,8 @@ def select_javascript_asset_urls(
 
     scored_script_urls: list[tuple[int, int, str]] = []
 
+    # Fetching every script can dominate runtime; scoring keeps the scan small
+    # while favoring CDNs, bundles, vendor files, and analytics scripts.
     for index, script_url in enumerate(script_urls):
         score = score_script_url(script_url, base_domain)
         scored_script_urls.append((score, index, script_url))
@@ -148,6 +152,8 @@ def fetch_javascript_asset(
 
         content_bytes = bytearray()
 
+        # Stream with a byte cap so very large bundles cannot consume the whole
+        # per-domain budget by themselves.
         for chunk in response.iter_content(chunk_size=8192):
             if not chunk:
                 continue

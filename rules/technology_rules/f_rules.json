@@ -1,5 +1,30 @@
 [
   {
+    "name": "F5 BigIP",
+    "category": "Load Balancer / Security",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "LastMRH_Session",
+      "MRHSession",
+      "MRHSequence",
+      "F5_ST",
+      "F5_fullWT"
+    ],
+    "header_signatures": {
+      "server": [
+        "BIG-IP"
+      ]
+    }
+  },
+  {
     "name": "Facebook Login",
     "category": "Security",
     "confidence": "medium",
@@ -127,6 +152,25 @@
     "stylesheet_url_signatures": [
       "cdn.fanplayr.com"
     ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "FareHarbor",
+    "category": "Appointment Scheduling",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "fareharbor.com/embeds"
+    ],
+    "script_url_signatures": [
+      "fareharbor.com/embeds/api/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [],
@@ -1383,6 +1427,23 @@
     "header_signatures": {}
   },
   {
+    "name": "Formsite",
+    "category": "Forms",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      ".formsite.com/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "ForoshGostar",
     "category": "Ecommerce",
     "confidence": "high",
@@ -1478,6 +1539,35 @@
     "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
+  },
+  {
+    "name": "Foswiki",
+    "category": "Collaboration / Wiki",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [
+      "foswikiCopyright",
+      "foswikiMain",
+      "foswikiPage"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [
+      "FOSWIKISTRIKEONE",
+      "SFOSWIKISID"
+    ],
+    "header_signatures": {
+      "x-foswikiaction": [
+        ""
+      ],
+      "x-foswikiuri": [
+        ""
+      ]
+    }
   },
   {
     "name": "Four",

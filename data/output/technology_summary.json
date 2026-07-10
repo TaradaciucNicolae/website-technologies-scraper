@@ -1,132 +1,44 @@
 {
-  "total_domains": 181,
-  "reachable_domains": 173,
-  "total_findings": 970,
-  "unique_technologies": 192,
+  "total_domains": 4,
+  "reachable_domains": 4,
+  "total_findings": 13,
+  "unique_technologies": 8,
   "confidence_distribution": {
-    "high": 848,
-    "medium": 122
+    "high": 12,
+    "medium": 1
   },
   "top_technologies": [
     {
-      "name": "WordPress",
-      "domains": 65
-    },
-    {
-      "name": "jQuery",
-      "domains": 54
-    },
-    {
       "name": "Cloudflare",
-      "domains": 46
-    },
-    {
-      "name": "Google Fonts",
-      "domains": 43
-    },
-    {
-      "name": "Apache HTTP Server",
-      "domains": 41
-    },
-    {
-      "name": "Font Awesome",
-      "domains": 34
-    },
-    {
-      "name": "Google Analytics",
-      "domains": 31
-    },
-    {
-      "name": "reCAPTCHA",
-      "domains": 27
-    },
-    {
-      "name": "Nginx",
-      "domains": 25
-    },
-    {
-      "name": "PHP",
-      "domains": 22
+      "domains": 4
     },
     {
       "name": "Cloudflare Bot Management",
-      "domains": 20
+      "domains": 3
     },
     {
-      "name": "Google Tag Manager",
-      "domains": 20
+      "name": "Canva Websites",
+      "domains": 1
     },
     {
-      "name": "Swiper",
-      "domains": 20
+      "name": "Luxury Presence",
+      "domains": 1
     },
     {
-      "name": "Webpack",
-      "domains": 18
+      "name": "Kinsta",
+      "domains": 1
     },
     {
-      "name": "Squarespace",
-      "domains": 17
+      "name": "WordPress",
+      "domains": 1
     },
     {
-      "name": "core-js",
-      "domains": 14
+      "name": "Cloudflare Web Analytics",
+      "domains": 1
     },
     {
-      "name": "Elementor",
-      "domains": 14
-    },
-    {
-      "name": "Akamai",
-      "domains": 14
-    },
-    {
-      "name": "WooCommerce",
-      "domains": 14
-    },
-    {
-      "name": "Bootstrap",
-      "domains": 13
-    },
-    {
-      "name": "LiteSpeed",
-      "domains": 13
-    },
-    {
-      "name": "Varnish",
-      "domains": 12
-    },
-    {
-      "name": "Contact Form 7",
-      "domains": 12
-    },
-    {
-      "name": "Wix",
-      "domains": 11
-    },
-    {
-      "name": "Fastly",
-      "domains": 10
-    },
-    {
-      "name": "Hotjar",
-      "domains": 9
-    },
-    {
-      "name": "Slick Carousel",
-      "domains": 9
-    },
-    {
-      "name": "Moment.js",
-      "domains": 8
-    },
-    {
-      "name": "Akamai Bot Manager",
-      "domains": 8
-    },
-    {
-      "name": "Popper.js",
-      "domains": 7
+      "name": "Tailwind CSS",
+      "domains": 1
     }
   ]
 }

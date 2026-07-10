@@ -543,6 +543,23 @@
     "header_signatures": {}
   },
   {
+    "name": "Jotform",
+    "category": "Forms",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      ".jotform.com/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "jPlayer",
     "category": "Video Player",
     "confidence": "high",
@@ -620,6 +637,25 @@
     "js_asset_signatures": [
       "devbridgeAutocomplete",
       "jQuery.devbridgeAutocomplete"
+    ],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "jQuery Easing",
+    "category": "JavaScript Library",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "jquery.easing.js"
+    ],
+    "js_asset_signatures": [
+      "jQuery.easing"
     ],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [],
