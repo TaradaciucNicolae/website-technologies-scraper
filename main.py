@@ -232,11 +232,34 @@ def process_domain_worker(
         result_queue.put(("error", str(error)))
 
 
+def build_failed_domain_result(
+    domain: str,
+    error_message: str,
+    elapsed_ms: int | None = None,
+) -> tuple[WebsiteFetchResult, list[JavaScriptAsset], list[TechnologyDetection]]:
+    fetch_result = WebsiteFetchResult(
+        domain=domain,
+        attempted_urls=[f"https://{domain}", f"http://{domain}"],
+        successful_url=None,
+        final_url=None,
+        status_code=None,
+        headers={},
+        cookies={},
+        html="",
+        error=error_message,
+        elapsed_ms=elapsed_ms,
+        content_type=None,
+        redirect_count=0,
+    )
+
+    return fetch_result, [], []
+
+
 def process_domain_with_timeout(
     domain: str,
     rules,
     domain_timeout_seconds: float,
-) -> tuple[WebsiteFetchResult, list[JavaScriptAsset], list[TechnologyDetection]] | None:
+) -> tuple[WebsiteFetchResult, list[JavaScriptAsset], list[TechnologyDetection]]:
     # A separate process can be terminated when a domain gets stuck in network
     # work; this keeps one slow site from blocking the whole scan.
     result_queue: Queue = Queue()
@@ -255,14 +278,21 @@ def process_domain_with_timeout(
         process.terminate()
         process.join()
         result_queue.close()
-        return None
+        return build_failed_domain_result(
+            domain=domain,
+            error_message=f"Processing exceeded {domain_timeout_seconds:g} seconds.",
+            elapsed_ms=int(domain_timeout_seconds * 1000),
+        )
 
     process.join()
     result_queue.close()
 
     if status == "error":
         print(f"Skipping {domain} because processing failed: {domain_result}")
-        return None
+        return build_failed_domain_result(
+            domain=domain,
+            error_message=f"Processing failed: {domain_result}",
+        )
 
     return domain_result
 
@@ -489,9 +519,6 @@ def main() -> None:
             rules=rules,
             domain_timeout_seconds=arguments.domain_timeout,
         )
-
-        if domain_result is None:
-            continue
 
         result, javascript_assets, detections = domain_result
 

@@ -1003,6 +1003,98 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Magento", detected_names)
 
 
+    def test_squarespace_static_versioned_css_does_not_detect_magento(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<link rel="stylesheet" href="https://static1.squarespace.com/static/versioned-site-css/example.css">'
+        )
+
+        self.assertIn("Squarespace", detected_names)
+        self.assertNotIn("Magento", detected_names)
+
+
+    def test_squarespace_word_inside_js_asset_does_not_detect_squarespace(self) -> None:
+        javascript_assets = [
+            JavaScriptAsset(
+                url="https://www.googletagmanager.com/gtm.js?id=GTM-TEST",
+                status_code=200,
+                content_type="application/javascript",
+                content='var internalPlatformName = "Squarespace";',
+                error=None,
+            )
+        ]
+
+        detected_names = self.get_detected_names(
+            html='<script src="https://www.googletagmanager.com/gtm.js?id=GTM-TEST"></script>',
+            javascript_assets=javascript_assets,
+        )
+
+        self.assertNotIn("Squarespace", detected_names)
+
+
+    def test_medallia_is_not_detected_from_generic_map_bundle_content(self) -> None:
+        javascript_assets = [
+            JavaScriptAsset(
+                url="https://maps.googleapis.com/maps/api/js",
+                status_code=200,
+                content_type="application/javascript",
+                content="function k_track(){ return google.maps; }",
+                error=None,
+            )
+        ]
+
+        detected_names = self.get_detected_names(
+            html='<script src="https://maps.googleapis.com/maps/api/js"></script>',
+            javascript_assets=javascript_assets,
+        )
+
+        self.assertNotIn("Medallia", detected_names)
+
+
+    def test_generic_bundle_words_do_not_detect_afterpay_angular_or_sailthru(self) -> None:
+        javascript_assets = [
+            JavaScriptAsset(
+                url="https://example.com/assets/vendor.bundle.js",
+                status_code=200,
+                content_type="application/javascript",
+                content='var AfterPay = {}; var Zone = "zone.js"; var Sailthru = {};',
+                error=None,
+            )
+        ]
+
+        detected_names = self.get_detected_names(
+            html='<script src="/assets/vendor.bundle.js"></script>',
+            javascript_assets=javascript_assets,
+        )
+
+        self.assertNotIn("Afterpay", detected_names)
+        self.assertNotIn("Angular", detected_names)
+        self.assertNotIn("Sailthru", detected_names)
+
+
+    def test_detection_evidence_is_capped_per_technology(self) -> None:
+        rules = load_technology_rules(RULES_PATH)
+        html = "".join(
+            f'<script src="https://example.com/assets/jquery.min.js?asset={index}"></script>'
+            for index in range(20)
+        )
+
+        detections = detect_technologies(
+            domain="example.com",
+            final_url="https://example.com",
+            html=html,
+            headers={},
+            rules=rules,
+        )
+
+        jquery_detection = next(
+            detection
+            for detection in detections
+            if detection.name == "jQuery"
+        )
+
+        self.assertLessEqual(len(jquery_detection.evidence), 10)
+
+
     def test_contentful_paint_text_does_not_detect_contentful(self) -> None:
         detected_names = self.get_detected_names(
             html="<script>performance.mark('first-contentful-paint')</script>"

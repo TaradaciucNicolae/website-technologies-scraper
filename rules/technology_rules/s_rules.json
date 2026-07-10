@@ -96,7 +96,6 @@
       "ak.sail-horizon.com"
     ],
     "js_asset_signatures": [
-      "Sailthru",
       "sailthruIdentify",
       "sailthruNewsletterRegistration",
       "trackSailthruUser"
@@ -5557,14 +5556,15 @@
       "squarespace.com"
     ],
     "html_signatures": [
-      "squarespace"
+      "squarespace-cdn"
     ],
     "script_url_signatures": [
       "squarespace.com/universal",
+      "squarespace-cdn",
+      "static.squarespace.com",
       "static1.squarespace.com"
     ],
     "js_asset_signatures": [
-      "Squarespace",
       "SQUARESPACE_CONTEXT",
       "Static.SQUARESPACE_CONTEXT",
       "Static.SQUARESPACE_CONTEXT.templateVersion",
@@ -5573,6 +5573,8 @@
     "package_url_signatures": [],
     "stylesheet_url_signatures": [
       "squarespace.com/universal",
+      "squarespace-cdn",
+      "static.squarespace.com",
       "static1.squarespace.com"
     ],
     "meta_generator_signatures": [],
@@ -5601,19 +5603,14 @@
     "html_signatures": [],
     "script_url_signatures": [],
     "js_asset_signatures": [
-      "SQUARESPACE_ROLLUPS.squarespace-commerce",
-      "Static.SQUARESPACE_CONTEXT.templateVersion"
+      "SQUARESPACE_ROLLUPS.squarespace-commerce"
     ],
     "package_url_signatures": [],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [],
-    "header_signatures": {
-      "server": [
-        "Squarespace"
-      ]
-    }
+    "header_signatures": {}
   },
   {
     "name": "Squeezely",

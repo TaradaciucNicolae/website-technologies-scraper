@@ -6,6 +6,9 @@ from bs4 import BeautifulSoup
 from src.javascript_asset_fetcher import JavaScriptAsset
 
 
+MAX_EVIDENCE_ITEMS_PER_TECHNOLOGY = 10
+
+
 @dataclass
 class TechnologyEvidence:
     # Evidence is the audit trail: every detection should point to the exact
@@ -167,7 +170,7 @@ def detect_technologies(
                 name=rule.name,
                 category=rule.category,
                 confidence=rule.confidence,
-                evidence=evidence
+                evidence=evidence[:MAX_EVIDENCE_ITEMS_PER_TECHNOLOGY],
             )
         )
 

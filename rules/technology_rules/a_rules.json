@@ -1797,7 +1797,6 @@
       "static.afterpay.com"
     ],
     "js_asset_signatures": [
-      "AfterPay",
       "afterpay.com",
       "Afterpay.version",
       "afterpay_product",
@@ -3020,15 +3019,12 @@
       "@angular/core",
       "ng-version",
       "ng.coreTokens",
-      "ng.probe",
-      "zone.js"
+      "ng.probe"
     ],
     "package_url_signatures": [
       "@angular/common",
       "@angular/core",
-      "@angular/router",
-      "rxjs",
-      "zone.js"
+      "@angular/router"
     ],
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],

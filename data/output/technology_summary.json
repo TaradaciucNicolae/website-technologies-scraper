@@ -1,44 +1,132 @@
 {
-  "total_domains": 4,
-  "reachable_domains": 4,
-  "total_findings": 13,
-  "unique_technologies": 8,
+  "total_domains": 200,
+  "reachable_domains": 173,
+  "total_findings": 992,
+  "unique_technologies": 203,
   "confidence_distribution": {
-    "high": 12,
-    "medium": 1
+    "high": 863,
+    "medium": 129
   },
   "top_technologies": [
     {
+      "name": "WordPress",
+      "domains": 64
+    },
+    {
+      "name": "jQuery",
+      "domains": 53
+    },
+    {
       "name": "Cloudflare",
-      "domains": 4
+      "domains": 47
+    },
+    {
+      "name": "Google Fonts",
+      "domains": 44
+    },
+    {
+      "name": "Apache HTTP Server",
+      "domains": 39
+    },
+    {
+      "name": "Font Awesome",
+      "domains": 33
+    },
+    {
+      "name": "Google Analytics",
+      "domains": 30
+    },
+    {
+      "name": "reCAPTCHA",
+      "domains": 28
+    },
+    {
+      "name": "Nginx",
+      "domains": 25
+    },
+    {
+      "name": "PHP",
+      "domains": 22
+    },
+    {
+      "name": "jQuery Easing",
+      "domains": 21
     },
     {
       "name": "Cloudflare Bot Management",
-      "domains": 3
+      "domains": 20
     },
     {
-      "name": "Canva Websites",
-      "domains": 1
+      "name": "Google Tag Manager",
+      "domains": 19
     },
     {
-      "name": "Luxury Presence",
-      "domains": 1
+      "name": "Webpack",
+      "domains": 18
     },
     {
-      "name": "Kinsta",
-      "domains": 1
+      "name": "core-js",
+      "domains": 17
     },
     {
-      "name": "WordPress",
-      "domains": 1
+      "name": "Swiper",
+      "domains": 17
     },
     {
-      "name": "Cloudflare Web Analytics",
-      "domains": 1
+      "name": "Akamai",
+      "domains": 14
     },
     {
-      "name": "Tailwind CSS",
-      "domains": 1
+      "name": "WooCommerce",
+      "domains": 14
+    },
+    {
+      "name": "Elementor",
+      "domains": 13
+    },
+    {
+      "name": "LiteSpeed",
+      "domains": 13
+    },
+    {
+      "name": "Yoast SEO",
+      "domains": 13
+    },
+    {
+      "name": "Bootstrap",
+      "domains": 12
+    },
+    {
+      "name": "Varnish",
+      "domains": 12
+    },
+    {
+      "name": "Contact Form 7",
+      "domains": 12
+    },
+    {
+      "name": "Wix",
+      "domains": 11
+    },
+    {
+      "name": "Fastly",
+      "domains": 10
+    },
+    {
+      "name": "Slick Carousel",
+      "domains": 9
+    },
+    {
+      "name": "Moment.js",
+      "domains": 9
+    },
+    {
+      "name": "Hotjar",
+      "domains": 8
+    },
+    {
+      "name": "Akamai Bot Manager",
+      "domains": 8
     }
   ]
 }
