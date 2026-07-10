@@ -14,6 +14,7 @@ class JavaScriptAsset:
     error: str | None
 
 
+# Extracts absolute, fetchable script URLs from HTML using the final page URL as the base.
 def extract_script_urls(html: str, base_url: str | None) -> list[str]:
     if base_url is None:
         return []
@@ -43,6 +44,7 @@ def extract_script_urls(html: str, base_url: str | None) -> list[str]:
     return script_urls
 
 
+# Filters out script pseudo-URLs or unsupported schemes that cannot be fetched as network assets.
 def should_skip_script_url(script_url: str) -> bool:
     script_url_lower = script_url.lower()
     parsed_url = urlparse(script_url)
@@ -64,6 +66,7 @@ def should_skip_script_url(script_url: str) -> bool:
     return False
 
 
+# Selects the highest-value JavaScript asset URLs to fetch while respecting the per-domain asset cap.
 def select_javascript_asset_urls(
     script_urls: list[str],
     base_url: str | None,
@@ -92,6 +95,7 @@ def select_javascript_asset_urls(
     return selected_urls
 
 
+# Scores a script URL so external, CDN, bundle, vendor, and analytics scripts are prioritized.
 def score_script_url(script_url: str, base_domain: str) -> int:
     score = 0
     script_url_lower = script_url.lower()
@@ -124,6 +128,7 @@ def score_script_url(script_url: str, base_domain: str) -> int:
     return score
 
 
+# Fetches one JavaScript asset with timeout and byte limits, returning content or an error record.
 def fetch_javascript_asset(
     script_url: str,
     timeout_seconds: int = 5,
@@ -189,6 +194,7 @@ def fetch_javascript_asset(
         )
 
 
+# Extracts, prioritizes, and fetches the limited JavaScript assets used as extra detection evidence.
 def fetch_javascript_assets(
     html: str,
     base_url: str | None,

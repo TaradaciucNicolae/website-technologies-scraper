@@ -35,6 +35,8 @@ class WebsiteFetchResult:
 
 
 
+# Fetches a website homepage over HTTPS with HTTP fallback and returns response
+# metadata, cookies, and HTML for technology detection.
 def fetch_website(
     domain: str,
     timeout_seconds: int = 20,

@@ -1,104 +1,22 @@
-from dataclasses import dataclass
-import json
-from pathlib import Path
-from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 from src.javascript_asset_fetcher import JavaScriptAsset
+from src.technology_rules import (
+    TechnologyDetection,
+    TechnologyEvidence,
+    TechnologyRule,
+    extract_package_name_from_cdn_url,
+    load_raw_technology_rules,
+    load_raw_technology_rules_from_directory,
+    load_technology_rules,
+    read_package_name_from_url_parts,
+    remove_package_version,
+)
 
 
 MAX_EVIDENCE_ITEMS_PER_TECHNOLOGY = 10
 
 
-@dataclass
-class TechnologyEvidence:
-    # Evidence is the audit trail: every detection should point to the exact
-    # signal that made the rule match.
-    type: str
-    source: str
-    location: str
-    matched_value: str
-    excerpt: str
-    confidence: str
-    explanation: str
-
-    @property
-    def matched(self) -> str:
-        return self.matched_value
-
-
-@dataclass
-class TechnologyDetection:
-    name: str
-    category: str
-    confidence: str
-    evidence: list[TechnologyEvidence]
-
-
-@dataclass
-class TechnologyRule:
-    name: str
-    category: str
-    confidence: str
-    domain_signatures: list[str]
-    html_signatures: list[str]
-    script_url_signatures: list[str]
-    js_asset_signatures: list[str]
-    package_url_signatures: list[str]
-    stylesheet_url_signatures: list[str]
-    meta_generator_signatures: list[str]
-    dom_marker_signatures: list[str]
-    cookie_signatures: list[str]
-    header_signatures: dict[str, list[str]]
-
-
-def load_raw_technology_rules(rules_path: Path) -> list[dict]:
-    if rules_path.is_dir():
-        return load_raw_technology_rules_from_directory(rules_path)
-
-    return json.loads(rules_path.read_text(encoding="utf-8"))
-
-
-def load_raw_technology_rules_from_directory(rules_directory: Path) -> list[dict]:
-    raw_rules: list[dict] = []
-
-    # Stable file and rule ordering makes test failures and generated output
-    # easier to compare after rule updates.
-    for rules_file in sorted(rules_directory.glob("*_rules.json")):
-        raw_rules_from_file = json.loads(rules_file.read_text(encoding="utf-8"))
-        raw_rules.extend(raw_rules_from_file)
-
-    raw_rules.sort(key=lambda raw_rule: raw_rule["name"].lower())
-
-    return raw_rules
-
-
-def load_technology_rules(rules_path: Path) -> list[TechnologyRule]:
-    raw_rules = load_raw_technology_rules(rules_path)
-
-    rules: list[TechnologyRule] = []
-
-    for raw_rule in raw_rules:
-        rules.append(
-            TechnologyRule(
-                name=raw_rule["name"],
-                category=raw_rule["category"],
-                confidence=raw_rule["confidence"],
-                domain_signatures=raw_rule.get("domain_signatures", []),
-                html_signatures=raw_rule.get("html_signatures", []),
-                script_url_signatures=raw_rule.get("script_url_signatures", []),
-                js_asset_signatures=raw_rule.get("js_asset_signatures", []),
-                package_url_signatures=raw_rule.get("package_url_signatures", []),
-                stylesheet_url_signatures=raw_rule.get("stylesheet_url_signatures", []),
-                meta_generator_signatures=raw_rule.get("meta_generator_signatures", []),
-                dom_marker_signatures=raw_rule.get("dom_marker_signatures", []),
-                cookie_signatures=raw_rule.get("cookie_signatures", []),
-                header_signatures=raw_rule.get("header_signatures", {}),
-            )
-        )
-
-    return rules
-
-
+# Builds a short excerpt around a matched signature so evidence remains readable in output files.
 def build_excerpt(text: str, matched_value: str, characters_around_match: int = 60) -> str:
     if not text:
         return ""
@@ -125,6 +43,7 @@ def build_excerpt(text: str, matched_value: str, characters_around_match: int = 
     return excerpt
 
 
+# Applies all technology rules to one fetched domain and returns detections with capped evidence.
 def detect_technologies(
     domain: str,
     final_url: str | None,
@@ -177,6 +96,7 @@ def detect_technologies(
     return detections
 
 
+# Collects all evidence types for one rule across URLs, HTML, cookies, fetched JS assets, and headers.
 def collect_evidence_for_rule(
     rule: TechnologyRule,
     domain: str,
@@ -226,6 +146,7 @@ def collect_evidence_for_rule(
     return evidence
 
 
+# Finds technology signatures in the original domain and final redirected URL.
 def collect_domain_evidence(
     domain: str,
     final_url: str | None,
@@ -261,6 +182,9 @@ def collect_domain_evidence(
 
     return evidence
 
+
+# Collects HTML-derived evidence from script URLs, package URLs, stylesheets,
+# meta tags, DOM markers, and raw HTML.
 def collect_html_evidence(
     html: str,
     soup: BeautifulSoup,
@@ -297,6 +221,7 @@ def collect_html_evidence(
     return evidence
 
 
+# Finds technology signatures inside script src URLs extracted from the parsed HTML.
 def collect_script_url_evidence(
     soup: BeautifulSoup,
     signatures: list[str],
@@ -338,57 +263,7 @@ def collect_script_url_evidence(
     return evidence
 
 
-def remove_package_version(package_part: str) -> str:
-    if package_part.startswith("@"):
-        return package_part
-
-    return package_part.split("@")[0]
-
-
-def read_package_name_from_url_parts(path_parts: list[str]) -> str | None:
-    if not path_parts:
-        return None
-
-    first_part = remove_package_version(path_parts[0])
-
-    if first_part.startswith("@"):
-        if len(path_parts) < 2:
-            return None
-
-        second_part = remove_package_version(path_parts[1])
-        return f"{first_part}/{second_part}".lower()
-
-    return first_part.lower()
-
-
-def extract_package_name_from_cdn_url(asset_url: str) -> str | None:
-    # Known CDN URL layouts expose package names directly, which is safer than
-    # guessing from arbitrary filenames.
-    parsed_url = urlparse(asset_url)
-    hostname = parsed_url.netloc.lower()
-    path_parts = [
-        part
-        for part in parsed_url.path.split("/")
-        if part
-    ]
-
-    if hostname == "cdn.jsdelivr.net":
-        if len(path_parts) >= 2 and path_parts[0] == "npm":
-            return read_package_name_from_url_parts(path_parts[1:])
-
-    if hostname in ["unpkg.com", "esm.unpkg.com"]:
-        return read_package_name_from_url_parts(path_parts)
-
-    if hostname == "cdnjs.cloudflare.com":
-        if len(path_parts) >= 3 and path_parts[0] == "ajax" and path_parts[1] == "libs":
-            return path_parts[2].lower()
-
-    if hostname in ["esm.sh", "cdn.skypack.dev"]:
-        return read_package_name_from_url_parts(path_parts)
-
-    return None
-
-
+# Collects package-name evidence from script and stylesheet URLs hosted on known package CDNs.
 def collect_package_url_evidence(
     soup: BeautifulSoup,
     signatures: list[str],
@@ -439,6 +314,7 @@ def collect_package_url_evidence(
     return evidence
 
 
+# Builds one package URL evidence item when a known CDN package name matches the rule.
 def build_package_url_evidence(
     asset_url: str,
     location: str,
@@ -464,6 +340,7 @@ def build_package_url_evidence(
     )
 
 
+# Finds technology signatures inside stylesheet href URLs extracted from the parsed HTML.
 def collect_stylesheet_url_evidence(
     soup: BeautifulSoup,
     signatures: list[str],
@@ -505,6 +382,7 @@ def collect_stylesheet_url_evidence(
     return evidence
 
 
+# Finds technology signatures exposed through meta name="generator" tags.
 def collect_meta_generator_evidence(
     soup: BeautifulSoup,
     signatures: list[str],
@@ -545,8 +423,7 @@ def collect_meta_generator_evidence(
 
     return evidence
 
-
-
+# Finds technology signatures in HTML tag attributes such as classes, data attributes, and framework markers.
 def collect_dom_marker_evidence(
     soup: BeautifulSoup,
     signatures: list[str],
@@ -588,6 +465,8 @@ def collect_dom_marker_evidence(
 
     return evidence
 
+
+# Finds technology signatures anywhere in the raw HTML response as a fallback evidence source.
 def collect_raw_html_evidence(
     html: str,
     signatures: list[str],
@@ -620,14 +499,7 @@ def collect_raw_html_evidence(
 
     return evidence
 
-
-
-
-
-
-
-
-
+# Finds technology signatures in response cookie names, including optional prefix signatures.
 def collect_cookie_evidence(
     cookies: dict[str, str],
     signatures: list[str],
@@ -663,6 +535,7 @@ def collect_cookie_evidence(
     return evidence
 
 
+# Checks whether a cookie name matches an exact/contains signature or a caret-prefixed cookie family.
 def cookie_signature_matches(cookie_name_lower: str, signature: str) -> bool:
     normalized_signature = signature.lower()
 
@@ -678,6 +551,7 @@ def cookie_signature_matches(cookie_name_lower: str, signature: str) -> bool:
     return normalized_signature in cookie_name_lower
 
 
+# Finds technology signatures inside the content of fetched JavaScript assets.
 def collect_javascript_asset_evidence(
     javascript_assets: list[JavaScriptAsset],
     signatures: list[str],
@@ -717,8 +591,7 @@ def collect_javascript_asset_evidence(
 
     return evidence
 
-
-
+# Finds technology signatures inside normalized HTTP response headers.
 def collect_header_evidence(
     normalized_headers: dict[str, str],
     header_signatures: dict[str, list[str]],

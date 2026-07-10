@@ -5,7 +5,7 @@ from urllib.parse import urljoin, urlparse
 from bs4 import BeautifulSoup
 
 from src.javascript_asset_fetcher import JavaScriptAsset
-from src.technology_detector import TechnologyDetection, extract_package_name_from_cdn_url
+from src.technology_rules import TechnologyDetection, extract_package_name_from_cdn_url
 from src.website_fetcher import WebsiteFetchResult
 
 
@@ -14,12 +14,14 @@ from src.website_fetcher import WebsiteFetchResult
 MAX_DETECTION_COUNT_SHOWN_IN_DISCOVERY = 5
 
 
+# Creates the in-memory discovery store used to collect low-detection domains during a run.
 def create_discovery_store() -> dict:
     return {
         "sites": []
     }
 
 
+# Resolves a possibly relative asset URL against the page URL for consistent discovery records.
 def get_absolute_url(asset_url: str, base_url: str | None) -> str:
     if base_url is None:
         return asset_url
@@ -27,6 +29,7 @@ def get_absolute_url(asset_url: str, base_url: str | None) -> str:
     return urljoin(base_url, asset_url)
 
 
+# Extracts the lowercase network domain from a URL so repeated external assets can be grouped.
 def get_url_domain(asset_url: str | None) -> str:
     if asset_url is None:
         return ""
@@ -34,6 +37,7 @@ def get_url_domain(asset_url: str | None) -> str:
     return urlparse(asset_url).netloc.lower()
 
 
+# Checks whether an asset URL points to a different host than the fetched page.
 def is_external_url(asset_url: str, base_url: str | None) -> bool:
     asset_domain = get_url_domain(asset_url)
     base_domain = get_url_domain(base_url)
@@ -47,6 +51,7 @@ def is_external_url(asset_url: str, base_url: str | None) -> bool:
     return asset_domain != base_domain
 
 
+# Decides whether a link tag should be treated as stylesheet evidence for discovery.
 def is_stylesheet_link(link_tag) -> bool:
     stylesheet_url = str(link_tag.get("href", ""))
     stylesheet_url_lower = stylesheet_url.lower()
@@ -72,6 +77,7 @@ def is_stylesheet_link(link_tag) -> bool:
     return False
 
 
+# Builds one normalized asset signal with URL, domain, external flag, and optional package name.
 def build_asset_signal(
     source: str,
     asset_url: str,
@@ -91,6 +97,7 @@ def build_asset_signal(
     }
 
 
+# Collects script source URLs from the page as discovery signals for possible future rules.
 def collect_script_signals(soup: BeautifulSoup, base_url: str | None) -> list[dict]:
     script_signals: list[dict] = []
 
@@ -111,6 +118,7 @@ def collect_script_signals(soup: BeautifulSoup, base_url: str | None) -> list[di
     return script_signals
 
 
+# Collects stylesheet URLs from link tags as discovery signals for CSS/CDN/font technologies.
 def collect_stylesheet_signals(soup: BeautifulSoup, base_url: str | None) -> list[dict]:
     stylesheet_signals: list[dict] = []
 
@@ -134,6 +142,7 @@ def collect_stylesheet_signals(soup: BeautifulSoup, base_url: str | None) -> lis
     return stylesheet_signals
 
 
+# Extracts values from meta generator tags because they often identify CMS or builder tools.
 def collect_meta_generator_values(soup: BeautifulSoup) -> list[str]:
     meta_generator_values: list[str] = []
 
@@ -151,6 +160,7 @@ def collect_meta_generator_values(soup: BeautifulSoup) -> list[str]:
     return meta_generator_values
 
 
+# Builds shortened meta tag summaries so discovery output can be inspected without huge HTML blobs.
 def collect_meta_tag_summaries(soup: BeautifulSoup) -> list[dict]:
     meta_tag_summaries: list[dict] = []
 
@@ -176,6 +186,7 @@ def collect_meta_tag_summaries(soup: BeautifulSoup) -> list[dict]:
     return meta_tag_summaries
 
 
+# Converts fetched JavaScript assets into discovery records with URL, domain, size, and package hints.
 def build_javascript_asset_signals(javascript_assets: list[JavaScriptAsset]) -> list[dict]:
     javascript_asset_signals: list[dict] = []
 
@@ -196,6 +207,7 @@ def build_javascript_asset_signals(javascript_assets: list[JavaScriptAsset]) -> 
     return javascript_asset_signals
 
 
+# Combines script, stylesheet, and JS asset package hints into candidate package signals.
 def build_package_candidates(
     script_signals: list[dict],
     stylesheet_signals: list[dict],
@@ -221,6 +233,7 @@ def build_package_candidates(
     return package_candidates
 
 
+# Extracts detected technology names for compact discovery reporting.
 def build_detected_technology_names(detections: list[TechnologyDetection]) -> list[str]:
     detected_technology_names: list[str] = []
 
@@ -230,13 +243,15 @@ def build_detected_technology_names(detections: list[TechnologyDetection]) -> li
     return detected_technology_names
 
 
+# Builds the detailed record saved in discovery_candidates.json for a domain
+# with zero or few detections, so its headers, cookies, assets, and meta tags can be reviewed later.
 def build_site_record(
     fetch_result: WebsiteFetchResult,
     detections: list[TechnologyDetection],
     javascript_assets: list[JavaScriptAsset],
 ) -> dict:
-    # Discovery records are intentionally richer than normal result records:
-    # they are for rule research, not for the public detection schema.
+    # This record keeps extra raw signals that are not part of the normal
+    # detections output, because they may explain missing detections or suggest new rules.
     base_url = fetch_result.final_url or fetch_result.successful_url
     soup = BeautifulSoup(fetch_result.html, "html.parser")
     script_signals = collect_script_signals(soup, base_url)
@@ -270,6 +285,7 @@ def build_site_record(
     }
 
 
+# Adds a domain to discovery output when it has no detections or only a small number of detections.
 def collect_discovery_candidates(
     discovery_store: dict,
     fetch_result: WebsiteFetchResult,
@@ -288,6 +304,7 @@ def collect_discovery_candidates(
     )
 
 
+# Sorts discovery sites by detection count and domain to make manual review predictable.
 def sort_discovery_sites(sites: list[dict]) -> list[dict]:
     return sorted(
         sites,
@@ -298,6 +315,7 @@ def sort_discovery_sites(sites: list[dict]) -> list[dict]:
     )
 
 
+# Splits discovery sites into undetected and low-detection groups for easier rule research.
 def split_discovery_sites_by_detection_count(sites: list[dict]) -> tuple[list[dict], list[dict]]:
     undetected_sites: list[dict] = []
     detected_low_number_sites: list[dict] = []
@@ -311,6 +329,7 @@ def split_discovery_sites_by_detection_count(sites: list[dict]) -> tuple[list[di
     return undetected_sites, detected_low_number_sites
 
 
+# Loads existing discovery candidates so append mode can merge old and new research records.
 def load_existing_discovery_candidates(output_path: Path) -> list[dict]:
     if not output_path.exists():
         return []
@@ -326,8 +345,8 @@ def load_existing_discovery_candidates(output_path: Path) -> list[dict]:
     existing_undetected_sites = existing_discovery_candidates.get("undetected")
     existing_detected_low_number_sites = existing_discovery_candidates.get("detected_low_number")
 
-    # Older files used a single "sites" list; accepting both shapes lets append
-    # mode work across local development runs.
+    # Supports both the current discovery format and older files that stored all
+    # candidates under "sites", so append mode can reuse previous output safely.
     if isinstance(existing_undetected_sites, list) or isinstance(existing_detected_low_number_sites, list):
         existing_sites: list[dict] = []
 
@@ -347,6 +366,7 @@ def load_existing_discovery_candidates(output_path: Path) -> list[dict]:
     return []
 
 
+# Saves discovery candidates in the current undetected/low-detection output structure.
 def save_discovery_candidates(discovery_store: dict, output_path: Path, rewrite: int) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     sites = discovery_store["sites"]

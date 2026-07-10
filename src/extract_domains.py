@@ -3,6 +3,8 @@ from pathlib import Path
 import pandas as pd
 
 
+# Reads the raw Parquet dataset, normalizes the domain column, and writes the
+# configured domain list file before returning the domains.
 def extract_domains(raw_input_path: Path, output_path: Path) -> list[str]:
 
     if not raw_input_path.exists():
