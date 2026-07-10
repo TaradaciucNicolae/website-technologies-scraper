@@ -1,28 +1,28 @@
 {
   "total_domains": 200,
-  "reachable_domains": 173,
-  "total_findings": 992,
-  "unique_technologies": 203,
+  "reachable_domains": 168,
+  "total_findings": 941,
+  "unique_technologies": 200,
   "confidence_distribution": {
-    "high": 863,
-    "medium": 129
+    "high": 818,
+    "medium": 123
   },
   "top_technologies": [
     {
       "name": "WordPress",
-      "domains": 64
+      "domains": 62
     },
     {
       "name": "jQuery",
-      "domains": 53
+      "domains": 50
     },
     {
       "name": "Cloudflare",
-      "domains": 47
+      "domains": 45
     },
     {
       "name": "Google Fonts",
-      "domains": 44
+      "domains": 42
     },
     {
       "name": "Apache HTTP Server",
@@ -34,11 +34,11 @@
     },
     {
       "name": "Google Analytics",
-      "domains": 30
+      "domains": 27
     },
     {
       "name": "reCAPTCHA",
-      "domains": 28
+      "domains": 25
     },
     {
       "name": "Nginx",
@@ -54,10 +54,6 @@
     },
     {
       "name": "Cloudflare Bot Management",
-      "domains": 20
-    },
-    {
-      "name": "Google Tag Manager",
       "domains": 19
     },
     {
@@ -65,35 +61,35 @@
       "domains": 18
     },
     {
-      "name": "core-js",
+      "name": "Swiper",
+      "domains": 18
+    },
+    {
+      "name": "Google Tag Manager",
       "domains": 17
     },
     {
-      "name": "Swiper",
-      "domains": 17
+      "name": "core-js",
+      "domains": 15
     },
     {
       "name": "Akamai",
       "domains": 14
     },
     {
-      "name": "WooCommerce",
+      "name": "Yoast SEO",
       "domains": 14
-    },
-    {
-      "name": "Elementor",
-      "domains": 13
     },
     {
       "name": "LiteSpeed",
       "domains": 13
     },
     {
-      "name": "Yoast SEO",
+      "name": "WooCommerce",
       "domains": 13
     },
     {
-      "name": "Bootstrap",
+      "name": "Elementor",
       "domains": 12
     },
     {
@@ -101,11 +97,15 @@
       "domains": 12
     },
     {
-      "name": "Contact Form 7",
-      "domains": 12
+      "name": "Bootstrap",
+      "domains": 11
     },
     {
       "name": "Wix",
+      "domains": 11
+    },
+    {
+      "name": "Contact Form 7",
       "domains": 11
     },
     {
@@ -113,20 +113,20 @@
       "domains": 10
     },
     {
-      "name": "Slick Carousel",
-      "domains": 9
-    },
-    {
       "name": "Moment.js",
-      "domains": 9
-    },
-    {
-      "name": "Hotjar",
       "domains": 8
     },
     {
       "name": "Akamai Bot Manager",
       "domains": 8
+    },
+    {
+      "name": "WP Engine",
+      "domains": 7
+    },
+    {
+      "name": "OWL Carousel",
+      "domains": 7
     }
   ]
 }
