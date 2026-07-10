@@ -8,15 +8,18 @@ from src.website_fetcher import DEFAULT_REQUEST_HEADERS, fetch_website
 
 class FakeCookies:
 
+    # Stores fake response cookies so fetcher tests can mimic requests' cookie jar.
     def __init__(self, cookies: dict[str, str]) -> None:
         self.cookies = cookies
 
+    # Returns fake cookies in the same dictionary shape used by requests.
     def get_dict(self) -> dict[str, str]:
         return self.cookies
 
 
 class FakeResponse:
 
+    # Builds a fake HTTP response with headers, cookies, HTML, and redirect history for fetcher tests.
     def __init__(self) -> None:
         self.url = "https://example.com/blocked"
         self.status_code = 403
@@ -35,6 +38,7 @@ class FakeResponse:
 
 class WebsiteFetcherTests(unittest.TestCase):
 
+    # Verifies that non-2xx responses still preserve useful headers and cookies for detection.
     @patch("src.website_fetcher.requests.get")
     def test_fetch_website_preserves_headers_and_cookies_for_403(self, mock_get) -> None:
         mock_get.return_value = FakeResponse()
@@ -48,6 +52,7 @@ class WebsiteFetcherTests(unittest.TestCase):
         self.assertIsNone(result.error)
 
 
+    # Verifies that network exceptions return an error result with empty response fields.
     @patch("src.website_fetcher.requests.get")
     def test_fetch_website_keeps_error_when_no_http_response_exists(self, mock_get) -> None:
         mock_get.side_effect = requests.Timeout("connection timed out")
@@ -62,6 +67,7 @@ class WebsiteFetcherTests(unittest.TestCase):
         self.assertIn("connection timed out", result.error)
 
 
+    # Verifies that homepage requests include the browser-like default headers.
     @patch("src.website_fetcher.requests.get")
     def test_fetch_website_uses_browser_like_default_headers(self, mock_get) -> None:
         mock_get.return_value = FakeResponse()

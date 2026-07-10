@@ -2,7 +2,8 @@ import unittest
 from pathlib import Path
 
 from src.javascript_asset_fetcher import JavaScriptAsset
-from src.technology_detector import detect_technologies, load_technology_rules
+from src.technology_detector import detect_technologies
+from src.technology_rules import load_technology_rules
 
 
 RULES_PATH = Path("rules/technology_rules")
@@ -10,6 +11,7 @@ RULES_PATH = Path("rules/technology_rules")
 
 class TechnologyDetectorTests(unittest.TestCase):
 
+    # Runs the detector with common defaults and returns only technology names for concise assertions.
     def get_detected_names(
         self,
         html: str = "",
@@ -34,7 +36,7 @@ class TechnologyDetectorTests(unittest.TestCase):
 
         return [detection.name for detection in detections]
 
-    # Test detection using only an HTML URL/signature.
+    # Verifies that Shopify is detected from its official CDN script URL.
     def test_detects_shopify_from_html(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -52,7 +54,7 @@ class TechnologyDetectorTests(unittest.TestCase):
 
 
 
-    # Test detection using only an HTML path/signature.
+    # Verifies that WordPress is detected from a wp-content asset path.
     def test_detects_wordpress_from_html(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -70,7 +72,7 @@ class TechnologyDetectorTests(unittest.TestCase):
 
 
 
-    # # Test detection using only a header value.
+    # Verifies that Cloudflare is detected from the server header value.
     def test_detects_cloudflare_from_header_value(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -87,7 +89,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Cloudflare", detected_names)
 
 
-    # Test that header evidence contains detailed fields.
+    # Verifies that header evidence records source, location, matched value, excerpt, and confidence.
     def test_header_evidence_uses_new_evidence_fields(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -116,7 +118,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("server", header_evidence.explanation.lower())
 
 
-    # Test detection using only the presence of a header.
+    # Verifies that Cloudflare is detected from the presence of a vendor-specific header.
     def test_detects_cloudflare_from_header_presence(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -134,7 +136,7 @@ class TechnologyDetectorTests(unittest.TestCase):
 
 
 
-    # Test that no technology is detected when HTML and headers do not match any rule.
+    # Verifies that unrelated HTML and headers do not produce detections.
     def test_returns_empty_list_when_no_rule_matches(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -149,7 +151,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertEqual(detections, [])
 
 
-    # Test detection when HTML and headers contain multiple technology signatures.
+    # Verifies that multiple independent signatures can produce multiple detections in one page.
     def test_detects_multiple_technologies_from_html_and_headers(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -176,7 +178,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Cloudflare", detected_names)
 
 
-    # Test that detection works even when HTML and headers use uppercase letters.
+    # Verifies that signature matching is case-insensitive for HTML and headers.
     def test_detects_signatures_case_insensitively(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -194,7 +196,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Cloudflare", detected_names)
 
 
-    # Test that a detected technology includes evidence explaining the match.
+    # Verifies that a detection includes structured evidence explaining the matching signal.
     def test_detection_includes_evidence_details(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -232,7 +234,7 @@ class TechnologyDetectorTests(unittest.TestCase):
 
 
 
-    # Test detection using only the domain name.
+    # Verifies that domain signatures can detect hosted platforms such as Weebly.
     def test_detects_weebly_from_domain(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -249,7 +251,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Weebly", detected_names)
 
 
-    # Test that domain evidence contains detailed fields.
+    # Verifies that domain evidence records the URL source, matched value, excerpt, and confidence.
     def test_domain_evidence_uses_new_evidence_fields(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -277,9 +279,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertEqual(domain_evidence.confidence, "high")
         self.assertIn("domain", domain_evidence.explanation.lower())
 
-
-
-            # Test detection using only a cookie name.
+    # Verifies that Google Analytics is detected from its analytics cookie name.
     def test_detects_google_analytics_from_cookie_name(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -312,7 +312,7 @@ class TechnologyDetectorTests(unittest.TestCase):
 
 
 
-    # Test detection using a structured meta generator tag.
+    # Verifies that WordPress is detected from a structured meta generator tag.
     def test_detects_wordpress_from_meta_generator(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -345,7 +345,7 @@ class TechnologyDetectorTests(unittest.TestCase):
 
 
 
-    # Test detection using a structured stylesheet URL.
+    # Verifies that stylesheet URL evidence is captured separately from raw HTML evidence.
     def test_stylesheet_url_evidence_uses_split_rules(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -375,7 +375,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("wp-content", stylesheet_evidence.excerpt)
         self.assertEqual(stylesheet_evidence.confidence, "high")
 
-    # Test detection using a structured DOM marker.
+    # Verifies that React is detected from a structured DOM marker.
     def test_detects_react_from_dom_marker(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -406,7 +406,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertEqual(dom_evidence.confidence, "medium")
 
 
-    # Test a new CMS rule using the meta generator tag.
+    # Verifies that Drupal is detected from a CMS meta generator value.
     def test_detects_drupal_from_meta_generator(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -437,7 +437,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertEqual(meta_evidence.confidence, "high")
 
 
-    # Test a new JavaScript framework rule using a DOM marker.
+    # Verifies that Angular is detected from its DOM version marker.
     def test_detects_angular_from_dom_marker(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -468,7 +468,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertEqual(dom_evidence.confidence, "high")
 
 
-    # Test a new CDN rule using HTTP headers.
+    # Verifies that Amazon CloudFront is detected from its server header.
     def test_detects_cloudfront_from_header(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -499,7 +499,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertEqual(header_evidence.confidence, "high")
 
 
-    # Test a new analytics rule using a cookie name.
+    # Verifies that Microsoft Clarity is detected from its analytics cookie.
     def test_detects_microsoft_clarity_from_cookie(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -531,7 +531,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertEqual(cookie_evidence.confidence, "high")
 
 
-    # Test generic package detection from a known CDN package URL.
+    # Verifies that known CDN package URLs produce package_url evidence.
     def test_detects_react_from_cdn_package_url(self) -> None:
         rules = load_technology_rules(RULES_PATH)
 
@@ -562,7 +562,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertEqual(package_evidence.confidence, "medium")
 
 
-    # Test detection from the content of a fetched JavaScript asset.
+    # Verifies that fetched JavaScript asset content can produce detection evidence.
     def test_detects_segment_from_javascript_asset(self) -> None:
         rules = load_technology_rules(RULES_PATH)
         javascript_assets = [
@@ -603,6 +603,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertEqual(javascript_evidence.confidence, "high")
 
 
+    # Verifies that generic min.js asset names do not trigger removed marketing technologies.
     def test_min_js_alone_does_not_detect_removed_marketing_tools(self) -> None:
         detected_names = self.get_detected_names(
             html='<script src="/assets/min.js"></script>'
@@ -625,6 +626,7 @@ class TechnologyDetectorTests(unittest.TestCase):
             self.assertNotIn(technology_name, detected_names)
 
 
+    # Verifies that generic Open Graph image metadata does not detect unrelated tools.
     def test_og_image_alone_does_not_detect_cococart_or_lede(self) -> None:
         detected_names = self.get_detected_names(
             html='<meta property="og:image" content="https://example.com/image.png">'
@@ -634,6 +636,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Lede", detected_names)
 
 
+    # Verifies that a bare wp-content path is not enough to detect Perfmatters.
     def test_wp_content_alone_does_not_detect_perfmatters(self) -> None:
         detected_names = self.get_detected_names(
             html='<script src="/wp-content"></script>'
@@ -642,6 +645,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Perfmatters", detected_names)
 
 
+    # Verifies that generic frontend.min.js plugin assets do not detect form plugins.
     def test_frontend_min_js_alone_does_not_detect_form_plugins(self) -> None:
         detected_names = self.get_detected_names(
             html='<script src="/wp-content/plugins/example/assets/frontend.min.js"></script>'
@@ -651,6 +655,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("ProfilePress", detected_names)
 
 
+    # Verifies that WPForms is still detected from its specific WordPress plugin path.
     def test_wpforms_still_detects_from_specific_plugin_path(self) -> None:
         detected_names = self.get_detected_names(
             html='<script src="/wp-content/plugins/wpforms/assets/js/wpforms.js"></script>'
@@ -659,6 +664,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("WPForms", detected_names)
 
 
+    # Verifies that a generic Builder generator value does not detect removed builder tools.
     def test_builder_alone_does_not_detect_removed_builders(self) -> None:
         detected_names = self.get_detected_names(
             html='<meta name="generator" content="Builder">'
@@ -670,6 +676,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Sapren", detected_names)
 
 
+    # Verifies that Wix is detected from specific Wix server, request, and static asset headers.
     def test_detects_wix_from_specific_headers(self) -> None:
         detected_names = self.get_detected_names(
             headers={
@@ -682,6 +689,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Wix", detected_names)
 
 
+    # Verifies that GoDaddy Website Builder is detected from DPS headers, builder URLs, and site cookies.
     def test_detects_godaddy_website_builder_from_specific_signals(self) -> None:
         detected_names = self.get_detected_names(
             headers={
@@ -694,6 +702,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("GoDaddy Website Builder", detected_names)
 
 
+    # Verifies that TYPO3 CMS is detected from distinctive TYPO3 asset paths.
     def test_detects_typo3_from_asset_paths(self) -> None:
         detected_names = self.get_detected_names(
             html='<link href="/typo3/sysext/t3skin/stylesheets/standalone/errorpage-message.css" rel="stylesheet">'
@@ -702,6 +711,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("TYPO3 CMS", detected_names)
 
 
+    # Verifies that Aruba.it is detected from its proxy server and cache headers.
     def test_detects_aruba_from_proxy_headers(self) -> None:
         detected_names = self.get_detected_names(
             headers={
@@ -713,6 +723,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Aruba.it", detected_names)
 
 
+    # Verifies that NetObjects Fusion is detected from a meta generator value.
     def test_detects_netobjects_fusion_from_meta_generator(self) -> None:
         detected_names = self.get_detected_names(
             html='<meta name="generator" content="NetObjects Fusion 5.0 for Windows">'
@@ -721,6 +732,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("NetObjects Fusion", detected_names)
 
 
+    # Verifies that nazwa.pl CDN is detected from vendor-specific CDN headers.
     def test_detects_nazwa_cdn_from_headers(self) -> None:
         detected_names = self.get_detected_names(
             headers={
@@ -732,6 +744,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("nazwa.pl CDN", detected_names)
 
 
+    # Verifies that Engintron is detected from its server-powered-by header.
     def test_detects_engintron_from_header(self) -> None:
         detected_names = self.get_detected_names(
             headers={"X-Server-Powered-By": "Engintron"}
@@ -740,6 +753,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Engintron", detected_names)
 
 
+    # Verifies that Simply.com hosting is detected from server and SimplyCom headers.
     def test_detects_simply_com_from_headers(self) -> None:
         detected_names = self.get_detected_names(
             headers={
@@ -751,6 +765,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Simply.com", detected_names)
 
 
+    # Verifies that PHP is detected from an X-Powered-By PHP version header.
     def test_detects_php_from_x_powered_by_header(self) -> None:
         detected_names = self.get_detected_names(
             headers={"X-Powered-By": "PHP/8.2"}
@@ -759,6 +774,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("PHP", detected_names)
 
 
+    # Verifies that PHP is detected from the PHPSESSID session cookie.
     def test_detects_php_from_session_cookie(self) -> None:
         detected_names = self.get_detected_names(
             cookies={"PHPSESSID": "example-session"}
@@ -767,6 +783,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("PHP", detected_names)
 
 
+    # Verifies that WP Engine is detected from its X-Powered-By header.
     def test_detects_wp_engine_from_x_powered_by_header(self) -> None:
         detected_names = self.get_detected_names(
             headers={"X-Powered-By": "WP Engine"}
@@ -775,6 +792,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("WP Engine", detected_names)
 
 
+    # Verifies that Elementor Cloud is detected from its X-Powered-By header.
     def test_detects_elementor_cloud_from_x_powered_by_header(self) -> None:
         detected_names = self.get_detected_names(
             headers={"X-Powered-By": "Elementor Cloud"}
@@ -783,6 +801,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Elementor Cloud", detected_names)
 
 
+    # Verifies that Luxury Presence is detected from its X-Powered-By header.
     def test_detects_luxury_presence_from_x_powered_by_header(self) -> None:
         detected_names = self.get_detected_names(
             headers={"X-Powered-By": "Luxury Presence"}
@@ -791,6 +810,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Luxury Presence", detected_names)
 
 
+    # Verifies that Canva Websites is detected from Canva-specific CSP evidence.
     def test_detects_canva_websites_from_csp_header(self) -> None:
         detected_names = self.get_detected_names(
             headers={"Content-Security-Policy": "default-src 'self' https://csp.canva.com https://www.canva.com"}
@@ -799,6 +819,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Canva Websites", detected_names)
 
 
+    # Verifies that Kinsta is detected from a vendor-specific cache header.
     def test_detects_kinsta_from_vendor_header(self) -> None:
         detected_names = self.get_detected_names(
             headers={"X-Kinsta-Cache": "HIT"}
@@ -807,6 +828,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Kinsta", detected_names)
 
 
+    # Verifies that Dealer.com / DDC is detected from diagnostic DDC cookie names.
     def test_detects_dealer_com_ddc_from_diagnostic_cookie(self) -> None:
         detected_names = self.get_detected_names(
             cookies={"ddc_diag_akam_clientIP": "127.0.0.1"}
@@ -815,6 +837,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Dealer.com / DDC", detected_names)
 
 
+    # Verifies that Salesforce Commerce Cloud is detected from Demandware cookies.
     def test_detects_salesforce_commerce_cloud_from_demandware_cookies(self) -> None:
         detected_names = self.get_detected_names(
             cookies={
@@ -826,6 +849,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Salesforce Commerce Cloud", detected_names)
 
 
+    # Verifies that DDoS-Guard is detected from its cookie prefix.
     def test_detects_ddos_guard_from_cookie_prefix(self) -> None:
         detected_names = self.get_detected_names(
             cookies={"__ddg1_": "example-value"}
@@ -834,6 +858,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("DDoS-Guard", detected_names)
 
 
+    # Verifies that Cloudflare Web Analytics is detected from its beacon script URL.
     def test_detects_cloudflare_web_analytics_from_script_url(self) -> None:
         detected_names = self.get_detected_names(
             html='<script src="https://performance.radar.cloudflare.com/beacon.js"></script>'
@@ -842,6 +867,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Cloudflare Web Analytics", detected_names)
 
 
+    # Verifies that SWFObject is detected from its script filename.
     def test_detects_swfobject_from_script_url(self) -> None:
         detected_names = self.get_detected_names(
             html='<script src="/assets/swfobject.js"></script>'
@@ -850,6 +876,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("SWFObject", detected_names)
 
 
+    # Verifies that ASP.NET is detected from its session cookie.
     def test_detects_asp_net_from_session_cookie(self) -> None:
         detected_names = self.get_detected_names(
             cookies={"ASP.NET_SessionId": "example-session"}
@@ -858,6 +885,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("ASP.NET", detected_names)
 
 
+    # Verifies that Java is detected from the JSESSIONID cookie.
     def test_detects_java_from_jsessionid_cookie(self) -> None:
         detected_names = self.get_detected_names(
             cookies={"JSESSIONID": "example-session"}
@@ -866,6 +894,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Java", detected_names)
 
 
+    # Verifies that Sucuri is detected from its Cloudproxy server header.
     def test_detects_sucuri_from_cloudproxy_server_header(self) -> None:
         detected_names = self.get_detected_names(
             headers={"Server": "Sucuri/Cloudproxy"}
@@ -874,6 +903,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Sucuri", detected_names)
 
 
+    # Verifies that Breakdance is detected from its visitor/session cookie names.
     def test_detects_breakdance_from_cookie_name(self) -> None:
         detected_names = self.get_detected_names(
             cookies={"breakdance_view_count": "1"}
@@ -882,6 +912,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Breakdance", detected_names)
 
 
+    # Verifies that WP Accessibility is detected from its exact WordPress plugin path.
     def test_detects_wp_accessibility_from_plugin_path(self) -> None:
         detected_names = self.get_detected_names(
             html='<link rel="stylesheet" href="/wp-content/plugins/wp-accessibility/css/wpa-style.css">'
@@ -890,6 +921,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("WP Accessibility", detected_names)
 
 
+    # Verifies that Fastly is detected from a specific server-timing marker.
     def test_detects_fastly_from_server_timing(self) -> None:
         detected_names = self.get_detected_names(
             headers={"Server-Timing": "cache;desc=hit, varnish;desc=hit_hit, dc;desc=fastly_g"}
@@ -898,6 +930,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Fastly", detected_names)
 
 
+    # Verifies that Varnish is detected from server-timing cache evidence.
     def test_detects_varnish_from_server_timing(self) -> None:
         detected_names = self.get_detected_names(
             headers={"Server-Timing": "cache;desc=hit, varnish;desc=hit_hit"}
@@ -906,6 +939,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Varnish", detected_names)
 
 
+    # Verifies that Akamai Bot Manager is detected from a vendor bot-management cookie.
     def test_detects_akamai_bot_manager_from_vendor_cookie(self) -> None:
         detected_names = self.get_detected_names(
             cookies={"_abck": "example-value"}
@@ -914,6 +948,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Akamai Bot Manager", detected_names)
 
 
+    # Verifies that generic cloud, google, and cache words do not trigger removed CDN rules.
     def test_cloud_google_and_cache_words_do_not_detect_removed_cdn_tools(self) -> None:
         detected_from_cloud = self.get_detected_names(
             headers={"X-Powered-By": "Cloud"}
@@ -930,6 +965,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Fastly", detected_from_cache)
 
 
+    # Verifies that payment card words in ordinary text are not reported as payment technologies.
     def test_payment_card_words_are_not_reported_as_technologies(self) -> None:
         detected_names = self.get_detected_names(
             html="shopping-cart visa mastercard american express Apple Pay Google Pay Afterpay"
@@ -944,6 +980,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Afterpay", detected_names)
 
 
+    # Verifies that intentionally removed false-positive technologies are no longer loaded as rules.
     def test_removed_false_positive_rules_are_not_loaded(self) -> None:
         rules = load_technology_rules(RULES_PATH)
         loaded_technology_names = {
@@ -979,6 +1016,7 @@ class TechnologyDetectorTests(unittest.TestCase):
             self.assertNotIn(technology_name, loaded_technology_names)
 
 
+    # Verifies that a normal Facebook social link does not detect Facebook Chat Plugin.
     def test_social_links_do_not_detect_facebook_chat_plugin(self) -> None:
         detected_names = self.get_detected_names(
             html='<a href="https://facebook.com/example-store">Facebook</a>'
@@ -987,6 +1025,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Facebook Chat Plugin", detected_names)
 
 
+    # Verifies that the generic word components does not detect Joomla.
     def test_components_word_does_not_detect_joomla(self) -> None:
         detected_names = self.get_detected_names(
             html="<div>components</div>"
@@ -995,6 +1034,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Joomla", detected_names)
 
 
+    # Verifies that the substring mage inside image-related text does not detect Magento.
     def test_mage_inside_image_text_does_not_detect_magento(self) -> None:
         detected_names = self.get_detected_names(
             html='<div class="image-gallery image-large"></div>'
@@ -1003,6 +1043,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Magento", detected_names)
 
 
+    # Verifies that Squarespace static/versioned CSS does not create a Magento false positive.
     def test_squarespace_static_versioned_css_does_not_detect_magento(self) -> None:
         detected_names = self.get_detected_names(
             html='<link rel="stylesheet" href="https://static1.squarespace.com/static/versioned-site-css/example.css">'
@@ -1012,6 +1053,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Magento", detected_names)
 
 
+    # Verifies that a bare Squarespace word inside a third-party JS asset does not detect Squarespace.
     def test_squarespace_word_inside_js_asset_does_not_detect_squarespace(self) -> None:
         javascript_assets = [
             JavaScriptAsset(
@@ -1031,6 +1073,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Squarespace", detected_names)
 
 
+    # Verifies that generic map bundle content does not create a Medallia false positive.
     def test_medallia_is_not_detected_from_generic_map_bundle_content(self) -> None:
         javascript_assets = [
             JavaScriptAsset(
@@ -1050,6 +1093,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Medallia", detected_names)
 
 
+    # Verifies that generic bundle words do not detect Afterpay, Angular, or Sailthru.
     def test_generic_bundle_words_do_not_detect_afterpay_angular_or_sailthru(self) -> None:
         javascript_assets = [
             JavaScriptAsset(
@@ -1071,6 +1115,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Sailthru", detected_names)
 
 
+    # Verifies that each technology keeps at most the configured number of evidence items.
     def test_detection_evidence_is_capped_per_technology(self) -> None:
         rules = load_technology_rules(RULES_PATH)
         html = "".join(
@@ -1095,6 +1140,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertLessEqual(len(jquery_detection.evidence), 10)
 
 
+    # Verifies that first-contentful-paint text does not detect Contentful.
     def test_contentful_paint_text_does_not_detect_contentful(self) -> None:
         detected_names = self.get_detected_names(
             html="<script>performance.mark('first-contentful-paint')</script>"
@@ -1103,6 +1149,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Contentful", detected_names)
 
 
+    # Verifies that googlesyndication ad URLs do not detect eSyndiCat.
     def test_googlesyndication_does_not_detect_esyndicat(self) -> None:
         detected_names = self.get_detected_names(
             html='<script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>'
@@ -1111,6 +1158,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("eSyndiCat", detected_names)
 
 
+    # Verifies that a local zE helper function inside a bundle does not detect Zendesk.
     def test_zendesk_like_function_name_does_not_detect_zendesk(self) -> None:
         javascript_assets = [
             JavaScriptAsset(
@@ -1130,6 +1178,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Zendesk", detected_names)
 
 
+    # Verifies that a generic Next.js static path does not detect Vercel hosting.
     def test_next_static_path_does_not_detect_vercel(self) -> None:
         detected_names = self.get_detected_names(
             html='<script src="/_next/static/chunks/main.js"></script>'
@@ -1138,6 +1187,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Vercel", detected_names)
 
 
+    # Verifies that normal WordPress uploads do not detect WordPress Multisite.
     def test_wp_content_uploads_does_not_detect_wordpress_multisite(self) -> None:
         detected_names = self.get_detected_names(
             html='<img src="/wp-content/uploads/example.jpg">'
@@ -1146,6 +1196,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("WordPress Multisite", detected_names)
 
 
+    # Verifies that a generic jsDelivr URL does not detect chart libraries.
     def test_generic_jsdelivr_url_does_not_detect_chart_libraries(self) -> None:
         detected_names = self.get_detected_names(
             html='<script src="https://cdn.jsdelivr.net/example-library.js"></script>'
@@ -1155,6 +1206,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("ECharts", detected_names)
 
 
+    # Verifies that an api.js filename alone does not detect hCaptcha.
     def test_api_js_alone_does_not_detect_hcaptcha(self) -> None:
         detected_names = self.get_detected_names(
             html='<script src="/assets/api.js"></script>'
@@ -1163,6 +1215,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("hCaptcha", detected_names)
 
 
+    # Verifies that generic google options inside JS do not detect Google Fonts or Maps.
     def test_google_option_does_not_detect_google_fonts_or_maps(self) -> None:
         javascript_assets = [
             JavaScriptAsset(
@@ -1183,6 +1236,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Google Maps", detected_names)
 
 
+    # Verifies that Google hosted library URLs do not detect Google Cloud.
     def test_googleapis_url_does_not_detect_google_cloud(self) -> None:
         detected_names = self.get_detected_names(
             html='<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>'
@@ -1191,6 +1245,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Google Cloud", detected_names)
 
 
+    # Verifies that Leaflet-like globals in JS are not enough without asset evidence.
     def test_leaflet_globals_do_not_detect_leaflet_without_asset_evidence(self) -> None:
         javascript_assets = [
             JavaScriptAsset(
@@ -1210,6 +1265,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Leaflet", detected_names)
 
 
+    # Verifies that a generic tracking.js filename does not detect LiveChat.
     def test_tracking_js_alone_does_not_detect_livechat(self) -> None:
         detected_names = self.get_detected_names(
             html='<script src="/assets/tracking.js"></script>'
@@ -1218,6 +1274,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("LiveChat", detected_names)
 
 
+    # Verifies that an amazonaws asset reference does not detect AWS by itself.
     def test_amazonaws_asset_does_not_detect_aws(self) -> None:
         javascript_assets = [
             JavaScriptAsset(
@@ -1237,6 +1294,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Amazon Web Services", detected_names)
 
 
+    # Verifies that a WhatsApp social link does not detect WhatsApp Business Chat.
     def test_whatsapp_social_link_does_not_detect_whatsapp_business_chat(self) -> None:
         detected_names = self.get_detected_names(
             html='<a href="https://wa.me/40123456789">WhatsApp</a>'
@@ -1245,6 +1303,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("WhatsApp Business Chat", detected_names)
 
 
+    # Verifies that the Akamai-GRN header detects Akamai but not bot-management products.
     def test_akamai_grn_header_detects_akamai(self) -> None:
         detected_names = self.get_detected_names(
             headers={"Akamai-GRN": "0.12345678.1234567890.abcdef"}
@@ -1255,6 +1314,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Akamai Web Application Protector", detected_names)
 
 
+    # Verifies that Akamai server-timing evidence detects Akamai.
     def test_akamai_server_timing_header_detects_akamai(self) -> None:
         detected_names = self.get_detected_names(
             headers={"Server-Timing": 'ak_p; desc="123456_7890_123456"'}
@@ -1263,6 +1323,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Akamai", detected_names)
 
 
+    # Verifies that Akamai cookie prefixes detect Akamai.
     def test_akamai_cookie_prefix_detects_akamai(self) -> None:
         detected_names = self.get_detected_names(
             cookies={"akacd_myAIDA_App_Testing": "example-value"}
@@ -1271,6 +1332,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Akamai", detected_names)
 
 
+    # Verifies that Akamai cookie signatures require the expected prefix position.
     def test_akamai_cookie_signature_requires_prefix(self) -> None:
         detected_names = self.get_detected_names(
             cookies={"example_akacd_myAIDA_App_Testing": "example-value"}
@@ -1279,6 +1341,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Akamai", detected_names)
 
 
+    # Verifies that the AkamaiGHost server header detects Akamai.
     def test_akamai_server_header_detects_akamai(self) -> None:
         detected_names = self.get_detected_names(
             headers={"Server": "AkamaiGHost"}
@@ -1287,6 +1350,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Akamai", detected_names)
 
 
+    # Verifies that generic security headers alone do not invent technologies.
     def test_generic_security_headers_do_not_detect_technologies(self) -> None:
         detected_names = self.get_detected_names(
             headers={
@@ -1300,6 +1364,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertEqual([], detected_names)
 
 
+    # Verifies that empty failed-fetch inputs do not produce technology detections.
     def test_empty_fetch_error_inputs_do_not_invent_technologies(self) -> None:
         detected_names = self.get_detected_names(
             html="",
@@ -1310,6 +1375,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertEqual([], detected_names)
 
 
+    # Verifies that Adobe Experience Manager is detected from clientlibs paths.
     def test_detects_adobe_experience_manager_from_clientlibs(self) -> None:
         detected_names = self.get_detected_names(
             html='<script src="/etc.clientlibs/example/clientlib-site.min.js"></script>'
@@ -1318,6 +1384,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Adobe Experience Manager", detected_names)
 
 
+    # Verifies that Adobe Experience Manager is detected from content/dam asset paths.
     def test_detects_adobe_experience_manager_from_content_dam(self) -> None:
         detected_names = self.get_detected_names(
             html='<img src="/content/dam/example/hero.jpg">'
@@ -1326,6 +1393,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertIn("Adobe Experience Manager", detected_names)
 
 
+    # Verifies that a weak AEM-like proxy header alone is not enough for detection.
     def test_adobe_experience_manager_weak_header_alone_does_not_detect(self) -> None:
         detected_names = self.get_detected_names(
             headers={"X-PR-Test": "adobecqms2"}
@@ -1334,6 +1402,7 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Adobe Experience Manager", detected_names)
 
 
+    # Verifies that important cleaned rules keep the expected technology categories.
     def test_cleaned_valid_technologies_have_expected_categories(self) -> None:
         rules = load_technology_rules(RULES_PATH)
         categories_by_name = {
