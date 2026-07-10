@@ -66,7 +66,7 @@ python main.py --rewrite 1 --domain-timeout 15
 | Reachable domains | 168 |
 | Domains with at least one technology | 168 |
 | Total detections | 941 |
-| Unique technologies found | 200 |  (pure coincidence)
+| Unique technologies found | 200 (pure coincidence, not intended to be equal to the number of input domains) |
 | Average technologies per input domain | 4.71 |
 | Average technologies per reachable domain | 5.60 |
 | High confidence detections | 818 |
