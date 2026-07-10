@@ -348,7 +348,6 @@ The project mainly uses `high` and `medium` confidence. Low-confidence rules are
 
 - `high`: explicit and vendor-specific evidence, such as official script URLs, exact headers, unique cookies, meta generator values, or official CDN paths.
 - `medium`: strong but slightly less direct evidence, such as a reliable HTML marker, package URL, JavaScript library marker, or asset path.
-- `low`: weak signals. These are usually not included in the rule set.
 
 Examples of high-confidence evidence:
 
