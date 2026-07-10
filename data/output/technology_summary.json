@@ -1,83 +1,79 @@
 {
-  "total_domains": 200,
-  "reachable_domains": 189,
-  "total_findings": 1093,
-  "unique_technologies": 204,
+  "total_domains": 180,
+  "reachable_domains": 172,
+  "total_findings": 876,
+  "unique_technologies": 169,
   "confidence_distribution": {
-    "high": 962,
-    "medium": 131
+    "high": 778,
+    "medium": 98
   },
   "top_technologies": [
     {
       "name": "WordPress",
-      "domains": 69
+      "domains": 64
     },
     {
       "name": "jQuery",
-      "domains": 62
+      "domains": 54
     },
     {
       "name": "Cloudflare",
-      "domains": 51
+      "domains": 46
     },
     {
       "name": "Google Fonts",
-      "domains": 50
-    },
-    {
-      "name": "Google Analytics",
-      "domains": 43
+      "domains": 42
     },
     {
       "name": "Apache HTTP Server",
-      "domains": 43
+      "domains": 40
     },
     {
       "name": "Font Awesome",
-      "domains": 37
-    },
-    {
-      "name": "reCAPTCHA",
       "domains": 34
     },
     {
-      "name": "Nginx",
-      "domains": 28
+      "name": "Google Analytics",
+      "domains": 30
     },
     {
-      "name": "Google Tag Manager",
+      "name": "reCAPTCHA",
       "domains": 27
     },
     {
-      "name": "Webpack",
-      "domains": 24
-    },
-    {
-      "name": "core-js",
-      "domains": 22
-    },
-    {
-      "name": "Squarespace",
-      "domains": 22
-    },
-    {
-      "name": "Swiper",
-      "domains": 22
+      "name": "Nginx",
+      "domains": 25
     },
     {
       "name": "Cloudflare Bot Management",
-      "domains": 21
+      "domains": 20
     },
     {
-      "name": "Akamai",
+      "name": "Google Tag Manager",
+      "domains": 20
+    },
+    {
+      "name": "Webpack",
+      "domains": 18
+    },
+    {
+      "name": "Swiper",
+      "domains": 18
+    },
+    {
+      "name": "Squarespace",
+      "domains": 17
+    },
+    {
+      "name": "core-js",
       "domains": 15
     },
     {
-      "name": "Bootstrap",
+      "name": "Elementor",
       "domains": 14
     },
     {
-      "name": "Elementor",
+      "name": "Akamai",
       "domains": 14
     },
     {
@@ -89,11 +85,7 @@
       "domains": 13
     },
     {
-      "name": "Moment.js",
-      "domains": 12
-    },
-    {
-      "name": "Hotjar",
+      "name": "Bootstrap",
       "domains": 12
     },
     {
@@ -101,32 +93,40 @@
       "domains": 12
     },
     {
+      "name": "Hotjar",
+      "domains": 9
+    },
+    {
       "name": "Slick Carousel",
-      "domains": 11
-    },
-    {
-      "name": "Afterpay",
-      "domains": 10
-    },
-    {
-      "name": "Meta Pixel",
-      "domains": 10
-    },
-    {
-      "name": "Typekit / Adobe Fonts",
       "domains": 9
     },
     {
-      "name": "Lodash",
-      "domains": 9
+      "name": "Moment.js",
+      "domains": 8
+    },
+    {
+      "name": "Popper.js",
+      "domains": 7
     },
     {
       "name": "Google Hosted Libraries",
-      "domains": 8
+      "domains": 7
     },
     {
-      "name": "PHP",
-      "domains": 8
+      "name": "Lodash",
+      "domains": 7
+    },
+    {
+      "name": "OWL Carousel",
+      "domains": 7
+    },
+    {
+      "name": "Afterpay",
+      "domains": 6
+    },
+    {
+      "name": "Typekit / Adobe Fonts",
+      "domains": 6
     }
   ]
 }

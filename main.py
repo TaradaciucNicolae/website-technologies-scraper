@@ -1,7 +1,9 @@
 ﻿import argparse
 import csv
 import json
+from multiprocessing import Process, Queue
 from pathlib import Path
+from queue import Empty
 from src.discovery_candidates import (
     collect_discovery_candidates,
     create_discovery_store,
@@ -50,6 +52,12 @@ def parse_arguments() -> argparse.Namespace:
         type=int,
         default=None,
         help="Optional number of domains to process. Useful for quick test runs.",
+    )
+    parser.add_argument(
+        "--domain-timeout",
+        type=float,
+        default=15,
+        help="Maximum time in seconds allowed for processing one domain.",
     )
 
     return parser.parse_args()
@@ -175,6 +183,73 @@ def build_javascript_asset_metadata(javascript_assets: list[JavaScriptAsset]) ->
         )
 
     return asset_metadata_items
+
+
+def process_domain(
+    domain: str,
+    rules,
+) -> tuple[WebsiteFetchResult, list[JavaScriptAsset], list[TechnologyDetection]]:
+    result = fetch_website(domain)
+    javascript_assets = fetch_javascript_assets(
+        html=result.html,
+        base_url=result.final_url,
+    )
+    detections = detect_technologies(
+        domain=result.domain,
+        final_url=result.final_url,
+        html=result.html,
+        headers=result.headers,
+        rules=rules,
+        cookies=result.cookies,
+        javascript_assets=javascript_assets,
+    )
+
+    return result, javascript_assets, detections
+
+
+def process_domain_worker(
+    domain: str,
+    rules,
+    result_queue: Queue,
+) -> None:
+    try:
+        domain_result = process_domain(domain, rules)
+        result_queue.put(("ok", domain_result))
+    except Exception as error:
+        result_queue.put(("error", str(error)))
+
+
+def process_domain_with_timeout(
+    domain: str,
+    rules,
+    domain_timeout_seconds: float,
+) -> tuple[WebsiteFetchResult, list[JavaScriptAsset], list[TechnologyDetection]] | None:
+    result_queue: Queue = Queue()
+    process = Process(
+        target=process_domain_worker,
+        args=(domain, rules, result_queue),
+    )
+    process.start()
+
+    try:
+        status, domain_result = result_queue.get(timeout=domain_timeout_seconds)
+    except Empty:
+        print(
+            f"Skipping {domain} because it exceeded {domain_timeout_seconds:g} seconds."
+        )
+        process.terminate()
+        process.join()
+        result_queue.close()
+        return None
+
+    process.join()
+    result_queue.close()
+
+    if status == "error":
+        print(f"Skipping {domain} because processing failed: {domain_result}")
+        return None
+
+    return domain_result
 
 
 
@@ -392,20 +467,16 @@ def main() -> None:
         if not domain:
             continue
 
-        result = fetch_website(domain)
-        javascript_assets = fetch_javascript_assets(
-            html=result.html,
-            base_url=result.final_url,
-        )
-        detections = detect_technologies(
-            domain=result.domain,
-            final_url=result.final_url,
-            html=result.html,
-            headers=result.headers,
+        domain_result = process_domain_with_timeout(
+            domain=domain,
             rules=rules,
-            cookies=result.cookies,
-            javascript_assets=javascript_assets,
+            domain_timeout_seconds=arguments.domain_timeout,
         )
+
+        if domain_result is None:
+            continue
+
+        result, javascript_assets, detections = domain_result
 
         print_fetch_result(result)
         print(f"JavaScript assets fetched: {len(javascript_assets)}")
