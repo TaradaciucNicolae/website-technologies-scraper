@@ -132,7 +132,7 @@
   {
     "name": "Varnish",
     "category": "Caching",
-    "confidence": "high",
+    "confidence": "medium",
     "domain_signatures": [],
     "html_signatures": [],
     "script_url_signatures": [],
@@ -141,8 +141,13 @@
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
-    "cookie_signatures": [],
+    "cookie_signatures": [
+      "ssr-caching"
+    ],
     "header_signatures": {
+      "server-timing": [
+        "varnish"
+      ],
       "via": [
         "varnish"
       ]

@@ -466,6 +466,23 @@
     "header_signatures": {}
   },
   {
+    "name": "NetObjects Fusion",
+    "category": "Website Builder",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "NetObjects Fusion"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Neto",
     "category": "Ecommerce",
     "confidence": "high",
@@ -794,6 +811,28 @@
     "header_signatures": {
       "server": [
         "Nexuspipe.com"
+      ]
+    }
+  },
+  {
+    "name": "nazwa.pl CDN",
+    "category": "CDN",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-cdn-nazwa.pl-location": [
+        ""
+      ],
+      "x-cdn-nazwa.pl-cache": [
+        ""
       ]
     }
   },

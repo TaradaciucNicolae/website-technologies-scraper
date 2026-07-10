@@ -2004,7 +2004,11 @@
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
-    "cookie_signatures": [],
+    "cookie_signatures": [
+      "breakdance_view_count",
+      "breakdance_session_count",
+      "breakdance_last_session_id"
+    ],
     "header_signatures": {}
   },
   {

@@ -295,6 +295,25 @@
     }
   },
   {
+    "name": "Fastly",
+    "category": "CDN",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "server-timing": [
+        "fastly_g"
+      ]
+    }
+  },
+  {
     "name": "FastPixel",
     "category": "Caching",
     "confidence": "medium",

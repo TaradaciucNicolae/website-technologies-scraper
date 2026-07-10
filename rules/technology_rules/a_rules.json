@@ -188,6 +188,44 @@
     "header_signatures": {}
   },
   {
+    "name": "Accessibility Checker",
+    "category": "Accessibility",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/accessibility-checker/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/plugins/accessibility-checker/"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
+    "name": "Accessibility New Window Warnings",
+    "category": "Accessibility",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/accessibility-new-window-warnings/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/plugins/accessibility-new-window-warnings/"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Accessibility Toolbar Plugin",
     "category": "Accessibility",
     "confidence": "medium",
@@ -1974,11 +2012,18 @@
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
     "cookie_signatures": [
+      "_abck",
+      "AKA_A2",
       "ak_bmsc",
+      "ddc_akam_bot",
       "bm_sv",
       "bm_sz"
     ],
-    "header_signatures": {}
+    "header_signatures": {
+      "x-akamai-transformed": [
+        ""
+      ]
+    }
   },
   {
     "name": "Akamai mPulse",
@@ -1997,6 +2042,25 @@
     "cookie_signatures": [
       "akaas_AB-Testing"
     ],
+    "header_signatures": {}
+  },
+  {
+    "name": "Album and Image Gallery Plus Lightbox",
+    "category": "Photo Gallery",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/album-and-image-gallery-plus-lightbox/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/plugins/album-and-image-gallery-plus-lightbox/"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
     "header_signatures": {}
   },
   {
@@ -3781,6 +3845,12 @@
     "header_signatures": {
       "x-servername": [
         "aruba.it"
+      ],
+      "server": [
+        "aruba-proxy"
+      ],
+      "x-aruba-cache": [
+        ""
       ]
     }
   },

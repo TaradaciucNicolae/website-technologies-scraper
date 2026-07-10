@@ -1596,6 +1596,25 @@
     "header_signatures": {}
   },
   {
+    "name": "Titan Digital Agency Theme",
+    "category": "WordPress Theme",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/themes/titan-digital-agency/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/themes/titan-digital-agency/"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "TN Express Web",
     "category": "CMS",
     "confidence": "high",
@@ -2772,11 +2791,23 @@
     "category": "CMS",
     "confidence": "high",
     "domain_signatures": [],
-    "html_signatures": [],
-    "script_url_signatures": [],
+    "html_signatures": [
+      "typo3/sysext/",
+      "typo3conf/",
+      "typo3temp/"
+    ],
+    "script_url_signatures": [
+      "typo3/sysext/",
+      "typo3conf/",
+      "typo3temp/"
+    ],
     "js_asset_signatures": [],
     "package_url_signatures": [],
-    "stylesheet_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "typo3/sysext/",
+      "typo3conf/",
+      "typo3temp/"
+    ],
     "meta_generator_signatures": [
       "s+CMS",
       "TYPO3"

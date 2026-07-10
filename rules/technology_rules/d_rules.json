@@ -365,7 +365,9 @@
     "stylesheet_url_signatures": [],
     "meta_generator_signatures": [],
     "dom_marker_signatures": [],
-    "cookie_signatures": [],
+    "cookie_signatures": [
+      "^__ddg"
+    ],
     "header_signatures": {
       "server": [
         "ddos-guard"

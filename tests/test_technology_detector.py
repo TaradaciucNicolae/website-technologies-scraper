@@ -670,6 +670,167 @@ class TechnologyDetectorTests(unittest.TestCase):
         self.assertNotIn("Sapren", detected_names)
 
 
+    def test_detects_wix_from_specific_headers(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={
+                "Server": "Pepyaka",
+                "X-Wix-Request-Id": "1730000000.123456789",
+                "Link": "<https://static.wixstatic.com>; rel=preconnect",
+            }
+        )
+
+        self.assertIn("Wix", detected_names)
+
+
+    def test_detects_godaddy_website_builder_from_specific_signals(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={
+                "Server": "DPS/2.0.0-beta+sha-test",
+                "Link": "<https://img1.wsimg.com/ceph-p3-01/website-builder-data-prod/static/widgets/UX.js>; rel=preload",
+            },
+            cookies={"dps_site_id": "example-site-id"},
+        )
+
+        self.assertIn("GoDaddy Website Builder", detected_names)
+
+
+    def test_detects_typo3_from_asset_paths(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<link href="/typo3/sysext/t3skin/stylesheets/standalone/errorpage-message.css" rel="stylesheet">'
+        )
+
+        self.assertIn("TYPO3 CMS", detected_names)
+
+
+    def test_detects_aruba_from_proxy_headers(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={
+                "Server": "aruba-proxy",
+                "X-Aruba-Cache": "MISS",
+            }
+        )
+
+        self.assertIn("Aruba.it", detected_names)
+
+
+    def test_detects_netobjects_fusion_from_meta_generator(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<meta name="generator" content="NetObjects Fusion 5.0 for Windows">'
+        )
+
+        self.assertIn("NetObjects Fusion", detected_names)
+
+
+    def test_detects_nazwa_cdn_from_headers(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={
+                "X-CDN-nazwa.pl-location": "AMS",
+                "X-CDN-nazwa.pl-cache": "HIT",
+            }
+        )
+
+        self.assertIn("nazwa.pl CDN", detected_names)
+
+
+    def test_detects_engintron_from_header(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={"X-Server-Powered-By": "Engintron"}
+        )
+
+        self.assertIn("Engintron", detected_names)
+
+
+    def test_detects_simply_com_from_headers(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={
+                "Server": "Simply.com",
+                "SimplyCom-Server": "Apache",
+            }
+        )
+
+        self.assertIn("Simply.com", detected_names)
+
+
+    def test_detects_php_from_x_powered_by_header(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={"X-Powered-By": "PHP/8.2"}
+        )
+
+        self.assertIn("PHP", detected_names)
+
+
+    def test_detects_wp_engine_from_x_powered_by_header(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={"X-Powered-By": "WP Engine"}
+        )
+
+        self.assertIn("WP Engine", detected_names)
+
+
+    def test_detects_kinsta_from_vendor_header(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={"X-Kinsta-Cache": "HIT"}
+        )
+
+        self.assertIn("Kinsta", detected_names)
+
+
+    def test_detects_ddos_guard_from_cookie_prefix(self) -> None:
+        detected_names = self.get_detected_names(
+            cookies={"__ddg1_": "example-value"}
+        )
+
+        self.assertIn("DDoS-Guard", detected_names)
+
+
+    def test_detects_cloudflare_web_analytics_from_script_url(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<script src="https://performance.radar.cloudflare.com/beacon.js"></script>'
+        )
+
+        self.assertIn("Cloudflare Web Analytics", detected_names)
+
+
+    def test_detects_breakdance_from_cookie_name(self) -> None:
+        detected_names = self.get_detected_names(
+            cookies={"breakdance_view_count": "1"}
+        )
+
+        self.assertIn("Breakdance", detected_names)
+
+
+    def test_detects_wp_accessibility_from_plugin_path(self) -> None:
+        detected_names = self.get_detected_names(
+            html='<link rel="stylesheet" href="/wp-content/plugins/wp-accessibility/css/wpa-style.css">'
+        )
+
+        self.assertIn("WP Accessibility", detected_names)
+
+
+    def test_detects_fastly_from_server_timing(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={"Server-Timing": "cache;desc=hit, varnish;desc=hit_hit, dc;desc=fastly_g"}
+        )
+
+        self.assertIn("Fastly", detected_names)
+
+
+    def test_detects_varnish_from_server_timing(self) -> None:
+        detected_names = self.get_detected_names(
+            headers={"Server-Timing": "cache;desc=hit, varnish;desc=hit_hit"}
+        )
+
+        self.assertIn("Varnish", detected_names)
+
+
+    def test_detects_akamai_bot_manager_from_vendor_cookie(self) -> None:
+        detected_names = self.get_detected_names(
+            cookies={"_abck": "example-value"}
+        )
+
+        self.assertIn("Akamai Bot Manager", detected_names)
+
+
     def test_cloud_google_and_cache_words_do_not_detect_removed_cdn_tools(self) -> None:
         detected_from_cloud = self.get_detected_names(
             headers={"X-Powered-By": "Cloud"}

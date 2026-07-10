@@ -1416,7 +1416,18 @@
       "wix_browser_sess",
       "wixsession"
     ],
-    "header_signatures": {}
+    "header_signatures": {
+      "server": [
+        "Pepyaka"
+      ],
+      "link": [
+        "static.parastorage.com",
+        "static.wixstatic.com"
+      ],
+      "x-wix-request-id": [
+        ""
+      ]
+    }
   },
   {
     "name": "Wix Answers",
@@ -1891,6 +1902,25 @@
     "header_signatures": {}
   },
   {
+    "name": "WP Accessibility",
+    "category": "Accessibility",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/plugins/wp-accessibility/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/plugins/wp-accessibility/"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "WP Automatic",
     "category": "Geolocation",
     "confidence": "high",
@@ -1906,6 +1936,25 @@
     "dom_marker_signatures": [],
     "cookie_signatures": [],
     "header_signatures": {}
+  },
+  {
+    "name": "WP Engine",
+    "category": "WordPress Hosting",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {
+      "x-powered-by": [
+        "WP Engine"
+      ]
+    }
   },
   {
     "name": "WP Fastest Cache",

@@ -1876,6 +1876,25 @@
     }
   },
   {
+    "name": "Microsoft Word",
+    "category": "Document Authoring",
+    "confidence": "medium",
+    "domain_signatures": [],
+    "html_signatures": [
+      "Word.Document"
+    ],
+    "script_url_signatures": [],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [],
+    "meta_generator_signatures": [
+      "Microsoft Word"
+    ],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Milestone CMS",
     "category": "CMS",
     "confidence": "high",

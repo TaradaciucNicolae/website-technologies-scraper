@@ -316,6 +316,25 @@
     "header_signatures": {}
   },
   {
+    "name": "Parabola Theme",
+    "category": "WordPress Theme",
+    "confidence": "high",
+    "domain_signatures": [],
+    "html_signatures": [],
+    "script_url_signatures": [
+      "wp-content/themes/parabola/"
+    ],
+    "js_asset_signatures": [],
+    "package_url_signatures": [],
+    "stylesheet_url_signatures": [
+      "wp-content/themes/parabola/"
+    ],
+    "meta_generator_signatures": [],
+    "dom_marker_signatures": [],
+    "cookie_signatures": [],
+    "header_signatures": {}
+  },
+  {
     "name": "Parmin Cloud",
     "category": "IaaS",
     "confidence": "high",
@@ -1289,10 +1308,10 @@
     ],
     "header_signatures": {
       "server": [
-        "php/?"
+        "PHP/"
       ],
       "x-powered-by": [
-        "php/?"
+        "PHP/"
       ]
     }
   },

@@ -1,16 +1,16 @@
 {
-  "total_domains": 180,
-  "reachable_domains": 172,
-  "total_findings": 876,
-  "unique_technologies": 169,
+  "total_domains": 181,
+  "reachable_domains": 173,
+  "total_findings": 970,
+  "unique_technologies": 192,
   "confidence_distribution": {
-    "high": 778,
-    "medium": 98
+    "high": 848,
+    "medium": 122
   },
   "top_technologies": [
     {
       "name": "WordPress",
-      "domains": 64
+      "domains": 65
     },
     {
       "name": "jQuery",
@@ -22,11 +22,11 @@
     },
     {
       "name": "Google Fonts",
-      "domains": 42
+      "domains": 43
     },
     {
       "name": "Apache HTTP Server",
-      "domains": 40
+      "domains": 41
     },
     {
       "name": "Font Awesome",
@@ -34,7 +34,7 @@
     },
     {
       "name": "Google Analytics",
-      "domains": 30
+      "domains": 31
     },
     {
       "name": "reCAPTCHA",
@@ -45,6 +45,10 @@
       "domains": 25
     },
     {
+      "name": "PHP",
+      "domains": 22
+    },
+    {
       "name": "Cloudflare Bot Management",
       "domains": 20
     },
@@ -53,11 +57,11 @@
       "domains": 20
     },
     {
-      "name": "Webpack",
-      "domains": 18
+      "name": "Swiper",
+      "domains": 20
     },
     {
-      "name": "Swiper",
+      "name": "Webpack",
       "domains": 18
     },
     {
@@ -66,7 +70,7 @@
     },
     {
       "name": "core-js",
-      "domains": 15
+      "domains": 14
     },
     {
       "name": "Elementor",
@@ -81,16 +85,28 @@
       "domains": 14
     },
     {
+      "name": "Bootstrap",
+      "domains": 13
+    },
+    {
       "name": "LiteSpeed",
       "domains": 13
     },
     {
-      "name": "Bootstrap",
+      "name": "Varnish",
       "domains": 12
     },
     {
       "name": "Contact Form 7",
       "domains": 12
+    },
+    {
+      "name": "Wix",
+      "domains": 11
+    },
+    {
+      "name": "Fastly",
+      "domains": 10
     },
     {
       "name": "Hotjar",
@@ -105,28 +121,12 @@
       "domains": 8
     },
     {
+      "name": "Akamai Bot Manager",
+      "domains": 8
+    },
+    {
       "name": "Popper.js",
       "domains": 7
-    },
-    {
-      "name": "Google Hosted Libraries",
-      "domains": 7
-    },
-    {
-      "name": "Lodash",
-      "domains": 7
-    },
-    {
-      "name": "OWL Carousel",
-      "domains": 7
-    },
-    {
-      "name": "Afterpay",
-      "domains": 6
-    },
-    {
-      "name": "Typekit / Adobe Fonts",
-      "domains": 6
     }
   ]
 }

@@ -1,6 +1,7 @@
 ﻿import argparse
 import csv
 import json
+import sys
 from multiprocessing import Process, Queue
 from pathlib import Path
 from queue import Empty
@@ -18,6 +19,15 @@ from src.technology_detector import (
     detect_technologies,
     load_technology_rules,
 )
+
+
+def configure_utf8_output() -> None:
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
+
+
+configure_utf8_output()
 
 RULES_PATH = Path("rules/technology_rules")
 RAW_INPUT_PATH = Path("data/raw/domains.snappy.parquet")
